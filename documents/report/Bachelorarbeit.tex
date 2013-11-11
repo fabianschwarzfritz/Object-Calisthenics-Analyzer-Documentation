@@ -7,6 +7,7 @@ headsepline, 					% horizontale Linie unter Kolumnentitel
 %abstracton,					% Überschrift beim Abstract einschalten, Abstract muss dazu in {abstract}-Umgebung stehen
 %DIV11,							% auskommentieren, um den Seitenspiegel zu vergrößern
 BCOR6mm,						% Bindekorrektur, die den Seitenspiegel um 6mm nach rechts verschiebt,
+english
 ]{scrreprt}			
 \usepackage{ucs} 				% Dokument in utf8-Codierung schreiben und speichern
 \usepackage[utf8x]{inputenc} 	% ermöglicht die direkte Eingabe von Umlauten
@@ -32,11 +33,11 @@ BCOR6mm,						% Bindekorrektur, die den Seitenspiegel um 6mm nach rechts verschi
 
 \newcommand{\titel}{Evaluation and Prototypical Implementation of Tool Support to Validate the Object Calisthenics}
 \newcommand{\untertitel}{längerer Untertitel mit genauerer Tehemenbezeichnung}
-\newcommand{\arbeit}{Bachelorarbeit}
-\newcommand{\studiengang}{Bowling}
-\newcommand{\autor}{Walter Sobchak}
+\newcommand{\arbeit}{Student research paper}
+\newcommand{\studiengang}{Applied Computer Science}
+\newcommand{\autor}{Fabian Schwarz-Fritz}
 \newcommand{\matrikelnr}{123 456}
-\newcommand{\kurs}{TIT07B1}
+\newcommand{\kurs}{TINF11B2}
 \newcommand{\firma}{SAP AG, Walldorf}
 \newcommand{\abgabe}{\today}
 \newcommand{\betreuerdhbw}{Daniel Lindner}
@@ -70,6 +71,7 @@ BCOR6mm,						% Bindekorrektur, die den Seitenspiegel um 6mm nach rechts verschi
 %                     Beginn des Dokumenteninhalts
 % -------------------------------------------------------------------------------------------
 \begin{document}
+\selectlanguage{english}					% Sprache englisch
 \setcounter{secnumdepth}{3}					% Nummerierungstiefe fürs Inhaltsverzeichnis
 \setcounter{tocdepth}{3}
 \sffamily									% für die Titelei serifenlose Schrift verwenden
@@ -88,7 +90,7 @@ BCOR6mm,						% Bindekorrektur, die den Seitenspiegel um 6mm nach rechts verschi
 \pagebreak
 
 % --------------------------------------------------------------------------------------------
-%                    Inhalt der Bachelorarbeit
+%                    Inhalt der 
 %---------------------------------------------------------------------------------------------
 \pagenumbering{arabic}						% arabische Seitenzahlen für den Hauptteil
 \pagestyle{fancy}					
@@ -96,7 +98,6 @@ BCOR6mm,						% Bindekorrektur, die den Seitenspiegel um 6mm nach rechts verschi
 
 \include{Inhalt/einleitung}
 %\include{Inhalt/vorlagen}
-\include{Inhalt/description}
 \include{Inhalt/hauptteil}
 \include{Inhalt/zusammenfassung}
 
