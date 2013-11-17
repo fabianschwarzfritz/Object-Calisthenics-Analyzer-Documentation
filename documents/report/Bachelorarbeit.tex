@@ -23,7 +23,11 @@ english
 \usepackage{xcolor} 			% einfache Verwendung von Farben in nahezu allen Farbmodellen
 \usepackage[intoc]{nomencl} 	% zur Erstellung des Abkürzungsberzeichnisses
 \usepackage{fancyhdr}			% Zusatzpaket zur Gestaltung von Fuß und Kopfzeilen
-
+\usepackage[htt]{hyphenat} 		%Line break of classnames
+\usepackage{tikz}				%AST tree package
+\usepackage{fullpage}
+\usepackage{calc}
+\usetikzlibrary{positioning,shadows,arrows,trees,shapes,fit}		%use the tree part of the package
 % -----------------------------------------------------------------------------------------------------------------
 % Zum Aktualisieren des Abkürzungsverzeichnisses bitte auf der Kommandozeile folgenden Befehl aufrufen :
 %  makeindex Bachelorarbeit.nlo -s nomencl.ist -o Bachelorarbeit.nls
@@ -33,15 +37,15 @@ english
 
 \newcommand{\titel}{Validating the Object Calisthenics}
 \newcommand{\untertitel}{Evaluation and Prototypical Implementation of Tool Support}
-\newcommand{\arbeit}{Student research paper}
+\newcommand{\arbeit}{Student Research Paper}
 \newcommand{\studiengang}{Applied Computer Science}
 \newcommand{\autor}{Fabian Schwarz-Fritz}
-\newcommand{\matrikelnr}{123 456}
+\newcommand{\matrikelnr}{212024979}
 \newcommand{\kurs}{TINF11B2}
 \newcommand{\firma}{SAP AG, Walldorf}
 \newcommand{\abgabe}{\today}
 \newcommand{\betreuerdhbw}{Daniel Lindner}
-\newcommand{\betreuerfirma}{Soft­ware­schnei­de­rei GmbH}
+\newcommand{\betreuerfirma}{Soft­ware­schnei­de­rei GmbH, Karls­ru­he}
 
 \newcommand{\jahr}{2014}			% für Angabe im Copyright-Vermerk der Titelseite
 
@@ -52,8 +56,17 @@ english
 
 \renewcommand{\nomname}{Abbreviations}
 
+% Code listing configuration: 
+\newcommand{\classname}[1]{\texttt{#1}}
+\lstset{numbers=left}
+\lstset{backgroundcolor=\color{white}}
+\lstset{frame=single}
+\lstset{breaklines=true}
+\lstset{morecomment=[l]{//}}
+
 % -------------------------------------------------------------------------------------------
 % Definition der Kopf- und Fußzeilen
+\setlength{\headsep}{30pt}
 \lhead{}								% Kopf links
 \chead{}								% Kopf mitte
 \rhead{\sffamily{\titel}}				% Kopf rechts
@@ -99,7 +112,7 @@ english
 %\include{Inhalt/einleitung}
 %\include{Inhalt/vorlagen}
 \include{Inhalt/hauptteil}
-\include{Inhalt/zusammenfassung}
+%\include{Inhalt/zusammenfassung}
 
 
 
@@ -108,12 +121,38 @@ english
 \begin{thebibliography}{999999}
 
 \bibitem[FoBa03]{foobar2003} Foo, John; Bar, Belinda: \emph{Titel : Untertitel},\\ Verlagsort: Verlag, Jahr der Auflage. S. 10-20
-\bibitem[Le01]{levy2001} Autor Name: \emph{Titel des Buches}, New York: Penguin Books, 2001
+\bibitem[Le01]{levy2001} Autor Name: \emph{Titel des Buches}, New York: Penguin Books, 2001.
 
-\bibitem[OC]{oc2008} Bay, Jeff: 
-\emph{The ThoughtWorks Anthology : Essays on Software Technology and Innovation}, \\ Raletgh, North California [u.a.]: The Pragmatic Bookshelft, 2008 
+LITERATUR: 
 
-\bibitem[TW]{twWeb} Thoughtworks inc. URL: thoughtworks.com/about-us
+\bibitem[Bay, 2008]{bay2008} Bay, Jeff: 
+\emph{Object Calisthenics}. \\ In: ThoughtWorks inc. (eds): 
+\emph{The ThoughtWorks Anthology. Essays on Software Technology and Innovation}. \\ Raleigh, North California; Dallas, Texas: The Pragmatic Bookshelf, 2008, p. 70--80.
+
+\bibitem[ThoughtWorks inc., 2008]{oc2008} ThoughtWorks inc. (eds): 
+\emph{The ThoughtWorks Anthology. Essays on Software Technology and Innovation}. \\ Raleigh, North California; Dallas, Texas: The Pragmatic Bookshelf, 2008.
+
+\bibitem[Gamma et al., 1994]{gof} Gamma, Eric; Helm, Richard; Johnson, Ralph; Vlissides,  John:
+\emph{Design Patterns. Elements of Reusable Object-Oriented Software}. \\ Amsterdam: Addison-Wesley Longman, 1994.
+  
+\bibitem[Martin, 2008]{cc} Martin, Robert Cecil:
+\emph{Clean Code. A Handbook of Agile Software Craftsmanship}. \\ n.p., Prentice Hall International, 2008.
+
+\bibitem[Fowler et al., 1999]{ref} Fowler, Martin:
+\emph{Refactoring. Improving the Design of Existing Code}. \\ Amsterdam: Addison-Wesley Longman, 1999. 
+
+\bibitem[Evans, 2003]{ddd} Evans, Eric:
+\emph{Domain-Driven Design. Tackling Complexity in the Heart of Software}. \\ Amsterdam: Addison-Wesley Longman, 2003. 
+
+asdfklsajkflj INTERNET
+
+
+\bibitem[Eclipse Documentation]{eclipseDocu} The Eclipse Foundation: 
+\emph{Eclipse documentation - Eclipse Kepler}. \\ URL http://help.eclipse.org/kepler/index.jsp.
+
+\bibitem[Wikipedia]{wiki} Wikipedia. The Free Encyclopedia. \\ URL http://www.wikipedia.org. 
+
+\bibitem[ToughtWorks inc.]{twWeb} Thoughtworks inc. \\ URL thoughtworks.com/about-us  (17 November 2013).
 
 \end{thebibliography}
 
