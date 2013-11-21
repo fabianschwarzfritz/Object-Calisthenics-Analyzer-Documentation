@@ -1,11 +1,20 @@
 \chapter{Introduction}
-=== What is the purpose of this paper? What is the content of the next two sections?
+%What is the purpose of this paper? What is the content of the next two sections?
+Jeff Bay's "Object Calisthenics" \cite{bay2008} are nine rules that train the software developer to write better object oriented code.  He created the concrete rules out of general software principals and patterns. These rules shall be applied in a short excercise, usually about two to four hours. With these concrete rules the trainee doing the excercise can improve his software development skills, which is helping him when applying general software principals and patterns to real world software projects. The excercise and the reasons for it are described in this chapter, in section \cite{i:excercising}.\\
 
-=== What shall be reached in the end of this paper?
+%=== What shall be reached in the end of this paper?
+This paper is divided into three chapters.
 
-"asdfasdf" \cite{bay2008}
+Chapter \ref{Description} describes Jeff Bay's rule and why he was led to the nine rules. It poses Jeff Bay's reasons for today's problems of software development.
+The chapter describes every rule step by step. Within the step by step description for ever rule, an source code example is given. A bad example firstly exemplifies how the code looks like without the rule. A good example, validating the rule, then shows the advantages of the resulting source code when applying the rule. These examples are described shortly. After describing the examples, it researches concepts behind the rule. It describes the problems that would occur without the rule. After explaining the problems behind the rule and Jeff Bay's rule, a more detailed analysis ensues. In this detailed analysis, patterns and principals are described and ideas and concepts are examined. Section \ref{d:background} describes these principles detailed for every rule, step by step. In the end, the section \ref{d:discussion} furthermore discusses the rules shortly.
+
+Chapter \ref{Evaluation} investigates possible tool support to validate the Object Calisthenics. First, the section \ref{e:advantages} describes general advantages of tool support. The section \ref{e:evaluation} goes through every rule presents the possibilities to validate the given rule. Advantages and disadvantages of the implementation are explained and a short conclusion of every rule is drawn. Section \ref{e:result} then summarizes the results of the evaluation of rule validation. Lastly, section \ref{e:future} further ideas of rule validation and links for further work.
+
+The last chapter \ref{Prototype} describes a prototypical implementation done during this research. The prototype shows the practicability of the evaluation results.
 
 \section{Exercizing Better Object Oriented Programming Skills: a Concept by Jeff Bay}
+\label{i:excercising}
+Jeff Bay's "Object Calisthenics" \cite{bay2008} is chapter from a book "The Thoughtworks Anthology" \cite{oc2008}. in the chapter he describes nine rules to that should be applied in  trainings. 
 
 === What are the Object Calisthenics in general (nine rules...) 
 
@@ -132,6 +141,7 @@ focus
 
 
 \section{The Rules and their Background}
+\label{d:background}
 === This chapter describes the rules of the Object Calisthenics itself. 
 
 === Reference to introduciton, to make sure the reader know that this is an exercise... The exercise: repeat strict coding standards and stuff from introduction shortly
@@ -185,6 +195,8 @@ asdf
 \subsection{Rule 9: "Don’t Use Any Getters/Setters/Properties"}
 asdf
 \section{Discussing the Rules}
+\label{d:discussion}
+\ref{d:discussion}
 === This chapter is discussing the rules shortly. 
 
 === Use quotes from Jeff's text: He also gives a short summary of his text in the end
@@ -233,6 +245,7 @@ all in all: Duplication of code and idea
 \chapter{Tool Support to Validate the Object Calisthenics - Evaluation}
 \label{Evaluation}
 \section{Advantages of Tool Support}
+\label{e:advantages}
 === What is a tool? Why do tools help? What makes tools strong? Why do tools matter for developers?
 Possible outcome of tool support for the OC's? Already described in the Introduction (chapter 1). Describe this more in detail here if necessary. 
 \section{Working Environment}
@@ -250,6 +263,7 @@ Possible outcome of tool support for the OC's? Already described in the Introduc
 Say that the validation in the next section is exactly implemented as described. One validation implementation example is explained exemplary in the Prototype chapter.
 
 \section{Evaluation of Rule Validation}
+\label{e:evaluation}
 === Say that the prioritization of the rules (in terms of the rule validation) and the "ranking" is given in the end. The sections of this chapter are "rule specific", even if the next subsections refer to each other.
 
 === FOREACH Rule/Subsection IN Rules/Subsections:
@@ -324,9 +338,11 @@ asdf
 \subsection{Validation of Rule 9}
 asdf
 \section{Result of the Evaluation}
+\label{e:result}
 === Give a summary on how hard it was to implement the rules. Where does the rule validator fail. Summarize results of the evaluation. 
 Be positive: Do not forget to emphasize the good and working parts of the evaluation tool and accent the positive outcome of them.
 \section{Future Work}
+\label{e:future}
 === Be philosophical: What is still to be done in terms of rule validation. 
 
 === If many rules cannot be validated: Future work might be a software where the user can "mark" structures as given. (Example: If it is not possible to determine if a class is a wrapper class, the user could "mark" it as a wrapper class and the validation algorithm might work...)
@@ -334,6 +350,7 @@ Be positive: Do not forget to emphasize the good and working parts of the evalua
 === If many rules can be validated: Future work might be the configuration of the rule validator. "pluggable" rules that the user can implement himself? Or "configurable" rule: Use of 2/3/4 instance variables per class. 
 
 \chapter{Prototypical Implementation of Tool Support}
+\label{Prototype}
 === This chapter describes the implementation of the prototype. 
 \section{Requirements}
 === Describe requirements for the prototype. Depends on how "good" the prototype is....

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  17 NOV 2013 16:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  21 NOV 2013 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1041,12 +1041,22 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              Support for \float@addtolists may be removed from
 (scrreprt)              `scrreprt' soon .
 
-(c:/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-32.def
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
+
+LaTeX Warning: Citation `i:excercising' on page 1 undefined on input line 3.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[1
+
+
+] (c:/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [1
-
-
-]
+)
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -1054,8 +1064,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
 Chapter 2.
-[3
+[4
 
 ] (./listings/ElseVisitor.java
 LaTeX Font Info:    Try loading font information for TS1+ppl on input line 12.
@@ -1069,14 +1086,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4])
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5]
+[5])
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -1091,17 +1101,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-Chapter 3.
-[8
-
-]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
+[8]
+Chapter 3.
+[9
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -1109,14 +1119,21 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
 Chapter 4.
-[11
+[12
 
 ]
 Chapter 5.
-) [12
+) [13
 
-] [13
+] [14
 
 
 ] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux)
@@ -1124,15 +1141,18 @@ Chapter 5.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 17851 strings out of 493308
- 334948 string characters out of 6141367
- 516863 words of memory out of 5000000
- 20840 multiletter control sequences out of 15000+600000
- 35225 words of font info for 76 fonts, out of 8000000 for 9000
+ 17864 strings out of 493308
+ 335110 string characters out of 6141367
+ 516980 words of memory out of 5000000
+ 20851 multiletter control sequences out of 15000+600000
+ 36674 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,12n,76p,600b,1646s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,76p,934b,1646s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
 ive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2013/texmf-dist/fon
 ts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2013/texmf-dist/fonts/type1/
@@ -1148,12 +1168,13 @@ per/sfsx1200.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx14
 40.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb><c:
 /texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb><c:/texlive/2
 013/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2013/texmf-
-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type
-1/urw/palatino/uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (21 pages, 342902 bytes).
+dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type
+1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/palatino/
+uplri8a.pfb>
+Output written on Bachelorarbeit.pdf (22 pages, 354448 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 171 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
