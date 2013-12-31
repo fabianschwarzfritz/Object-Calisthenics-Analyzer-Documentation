@@ -10,13 +10,13 @@
 \contentsline {chapter}{\numberline {2}Object Calisthenics by Jeff Bay - Patterns and Principals}{4}
 \contentsline {section}{\numberline {2.1}Advantages of Object Oriented Programming}{4}
 \contentsline {subsection}{\numberline {2.1.1}Problems of procedural code}{4}
-\contentsline {section}{\numberline {2.2}The Rules and their Background}{6}
+\contentsline {section}{\numberline {2.2}The Rules and their Background}{7}
 \contentsline {subsection}{\numberline {2.2.1}Rule 1: "Use One Level of Indentation per Method"}{7}
 \contentsline {subsection}{\numberline {2.2.2}Rule 2: "Don\IeC {\textquoteright }t Use the else Keyword"}{8}
 \contentsline {subsection}{\numberline {2.2.3}Rule 3: "Wrap All Primitives and Strings"}{8}
 \contentsline {subsection}{\numberline {2.2.4}Rule 4: "Use Only One Dot per Line"}{8}
-\contentsline {subsection}{\numberline {2.2.5}Rule 5: "Don't Abbreviate"}{8}
-\contentsline {subsection}{\numberline {2.2.6}Rule 6: "Keep All Entities Small"}{8}
+\contentsline {subsection}{\numberline {2.2.5}Rule 5: "Don't Abbreviate"}{9}
+\contentsline {subsection}{\numberline {2.2.6}Rule 6: "Keep All Entities Small"}{9}
 \contentsline {subsection}{\numberline {2.2.7}Rule 7: "Don\IeC {\textquoteright }t Use Any Classes with More Than Two Instance Variables"}{9}
 \contentsline {subsection}{\numberline {2.2.8}Rule 8: "Use First-Class Collections"}{9}
 \contentsline {subsection}{\numberline {2.2.9}Rule 9: "Don\IeC {\textquoteright }t Use Any Getters/Setters/Properties"}{9}
@@ -24,26 +24,26 @@
 \contentsline {subsection}{\numberline {2.3.1}Similarities}{9}
 \contentsline {subsection}{\numberline {2.3.2}Precedence}{9}
 \contentsline {subsection}{\numberline {2.3.3}Conclusion and Outcome}{9}
-\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{10}
-\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{10}
-\contentsline {section}{\numberline {3.2}Working Environment}{10}
-\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{10}
-\contentsline {subsection}{\numberline {3.3.1}Validation of Rule 1}{11}
-\contentsline {subsection}{\numberline {3.3.2}Validation of Rule 2}{11}
-\contentsline {subsection}{\numberline {3.3.3}Validation of Rule 3}{11}
-\contentsline {subsection}{\numberline {3.3.4}Validation of Rule 4}{11}
-\contentsline {subsection}{\numberline {3.3.5}Validation of Rule 5}{11}
-\contentsline {subsection}{\numberline {3.3.6}Validation of Rule 6}{11}
-\contentsline {subsection}{\numberline {3.3.7}Validation of Rule 7}{12}
-\contentsline {subsection}{\numberline {3.3.8}Validation of Rule 8}{12}
-\contentsline {subsection}{\numberline {3.3.9}Validation of Rule 9}{12}
-\contentsline {section}{\numberline {3.4}Result of the Evaluation}{12}
-\contentsline {section}{\numberline {3.5}Future Work}{12}
-\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{13}
-\contentsline {section}{\numberline {4.1}Requirements}{13}
-\contentsline {section}{\numberline {4.2}Architecture}{13}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{13}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{13}
-\contentsline {section}{\numberline {4.5}Outlook and Future Work}{13}
-\contentsline {chapter}{\numberline {5}Conclusion}{14}
-\contentsline {chapter}{Bibliography}{15}
+\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{11}
+\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{11}
+\contentsline {section}{\numberline {3.2}Working Environment}{11}
+\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{11}
+\contentsline {subsection}{\numberline {3.3.1}Validation of Rule 1}{12}
+\contentsline {subsection}{\numberline {3.3.2}Validation of Rule 2}{12}
+\contentsline {subsection}{\numberline {3.3.3}Validation of Rule 3}{12}
+\contentsline {subsection}{\numberline {3.3.4}Validation of Rule 4}{12}
+\contentsline {subsection}{\numberline {3.3.5}Validation of Rule 5}{12}
+\contentsline {subsection}{\numberline {3.3.6}Validation of Rule 6}{12}
+\contentsline {subsection}{\numberline {3.3.7}Validation of Rule 7}{13}
+\contentsline {subsection}{\numberline {3.3.8}Validation of Rule 8}{13}
+\contentsline {subsection}{\numberline {3.3.9}Validation of Rule 9}{13}
+\contentsline {section}{\numberline {3.4}Result of the Evaluation}{13}
+\contentsline {section}{\numberline {3.5}Future Work}{13}
+\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{14}
+\contentsline {section}{\numberline {4.1}Requirements}{14}
+\contentsline {section}{\numberline {4.2}Architecture}{14}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{14}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{14}
+\contentsline {section}{\numberline {4.5}Outlook and Future Work}{14}
+\contentsline {chapter}{\numberline {5}Conclusion}{15}
+\contentsline {chapter}{Bibliography}{16}
