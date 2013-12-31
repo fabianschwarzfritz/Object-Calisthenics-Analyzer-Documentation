@@ -60,6 +60,13 @@ As already mentioned, the ensuing chapter \ref{Evaluation} discusses tool suppor
 
 \chapter{Object Calisthenics by Jeff Bay - Patterns and Principals}
 \label{Description}
+This chapter describes the patterns and principals behind the Object Calisthenics. 
+
+Firstly, in section \ref{d:advantagesoo} the advantages of the Object Calisthenics are described. Before explaining the advantages of Object Orientation, the problems of non object oriented code are discussed. 
+
+In the second section \ref{d:background}, Jeff Bay's rules for better object oriented programming are described step by step. Every rule is described, explained and a good and bad example are given. The examples conduce to understand the problem and the solution given by the rule. Furthermore patterns and principals behind the rules are explained. 
+
+
 === This chapter describes the patterns and principals behind the Object Calisthenics. 
 
 === General introduction and introduction of the paper. Qualities, research stuff.
@@ -69,6 +76,23 @@ As already mentioned, the ensuing chapter \ref{Evaluation} discusses tool suppor
 === Important for this chapter: Use correct quotations when talking about Jeff's ideas and rules. Use correct quotations when referencing to other books that are given in the research material. 
 
 \section{Advantages of Object Oriented Programming}
+\label{d:advantagesoo}
+There seem to be problems with procedural, non object oriented code in software. By saying non object oriented software, procedural code is meant. Jeff Bay lists the most important ones in \cite[p.70]{oc2008}. These disadvantages and problems of procedural source code are explained in the following. 
+
+\subsection{Problems of procedural code} 
+In procedural code the behavior is described by step by step operations resulting in an algorithm. 
+
+These operations, also called commands, usually access multiple data structures storing and managing data during the execution time. In procedural code steps can be consolidated by using methods with output and input parameters. Therefore procedural code provides a solution for structuring algorithms. 
+
+But there is another problem remaining. By simply looking at the data structures, the developer cannot see possible operations on the data structure. Of course, he is able to see what is stored in the data structure. However, he is not able to see which operations can be executed on the data structure and how the data structure is supposed to be used. He can only get that information by reading through the algorithm step by step and remembering the possible operations on the data structure. In procedural code there is not clear coherence between the data structure and its problem specific operations. Furthermore there is no encapsulation of the data structures, hiding the implementation from the abstract definition of possible operations. 
+
+\subsection*{Maintainability}
+The just described problem of the low cohesion of data structure and problem specific operations makes maintainability of procedural code hard. Source code of long lasting software has to be maintained years after the initial design and the first implementation. In old and large code bases changes are hard to conduct. This is because the cohesion of behavior and data structures and the bad encapsulation between the different data structures is low. To be able to compensate the cohesion, relatively much documentation and much time to read the code is necessary. Therefore the low cohesion makes the conduction of maintenance software changes hard. 
+
+\subsection*{Not understandable}
+The just described problem of the 
+
+
 === Describe the advantages of Object Oriented Programming according to Jeff...
 
 ===RESEARCH===
