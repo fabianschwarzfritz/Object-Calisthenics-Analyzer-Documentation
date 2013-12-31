@@ -66,15 +66,6 @@ Firstly, in section \ref{d:advantagesoo} the advantages of the Object Calistheni
 
 In the second section \ref{d:background}, Jeff Bay's rules for better object oriented programming are described step by step. Every rule is described, explained and a good and bad example are given. The examples conduce to understand the problem and the solution given by the rule. Furthermore patterns and principals behind the rules are explained. 
 
-
-=== This chapter describes the patterns and principals behind the Object Calisthenics. 
-
-=== General introduction and introduction of the paper. Qualities, research stuff.
-
-=== Describe the structure of the sections
-
-=== Important for this chapter: Use correct quotations when talking about Jeff's ideas and rules. Use correct quotations when referencing to other books that are given in the research material. 
-
 \section{Advantages of Object Oriented Programming}
 \label{d:advantagesoo}
 There seem to be problems with procedural, non object oriented code in software. By saying non object oriented software, procedural code is meant. Jeff Bay lists the most important ones in \cite[p.70]{oc2008}. These disadvantages and problems of procedural source code are explained in the following. 
@@ -82,39 +73,49 @@ There seem to be problems with procedural, non object oriented code in software.
 \subsection{Problems of procedural code} 
 In procedural code the behavior is described by step by step operations resulting in an algorithm. 
 
-These operations, also called commands, usually access multiple data structures storing and managing data during the execution time. In procedural code steps can be consolidated by using methods with output and input parameters. Therefore procedural code provides a solution for structuring algorithms. 
+\subsection*{No bundle of data and behavior}
+The operations, also called commands, in procedural code usually access multiple data structures storing and managing data during the execution time. In procedural code steps can be consolidated by using methods with output and input parameters. Methods can summarize multiple commands to an abstract step that can be executed by a caller. Therefore procedural code provides a solution for structuring algorithms.
 
-But there is another problem remaining. By simply looking at the data structures, the developer cannot see possible operations on the data structure. Of course, he is able to see what is stored in the data structure. However, he is not able to see which operations can be executed on the data structure and how the data structure is supposed to be used. He can only get that information by reading through the algorithm step by step and remembering the possible operations on the data structure. In procedural code there is not clear coherence between the data structure and its problem specific operations. Furthermore there is no encapsulation of the data structures, hiding the implementation from the abstract definition of possible operations. 
+But there is another problem remaining. By simply looking at the data structures, the developer cannot see possible operations on the data structure. Of course, he is able to see what is stored in the data structure. However, he is not able to see which operations can be executed on the data structure and how the data structure is supposed to be used. He can only get that information by reading through the algorithm step by step and remembering the possible operations on the data structure. In procedural code there is not clear coherence between the data structure and its problem specific operations. There is no solution for the problem of bundling data and behavior given in procedural software development. 
+
+Furthermore there is no encapsulation of the data structures, hiding the implementation from the abstract definition of possible operations. Also, procedural software lacks of encapsulation. The concept of scoping therefore realizing encapsulation is not given in procedural code. 
 
 \subsection*{Maintainability}
+\label{problem:maintainability}
 The just described problem of the low cohesion of data structure and problem specific operations makes maintainability of procedural code hard. Source code of long lasting software has to be maintained years after the initial design and the first implementation. In old and large code bases changes are hard to conduct. This is because the cohesion of behavior and data structures and the bad encapsulation between the different data structures is low. To be able to compensate the cohesion, relatively much documentation and much time to read the code is necessary. Therefore the low cohesion makes the conduction of maintenance software changes hard. 
 
 \subsection*{Not understandable}
-The just described problem of the 
+Another problem, closely related to the problem of maintainbility, is the understandability of code. As already said, the problem of the low cohesion makes it hard to dedicate the operations to the data structures. The difficulty to dedicate operations to the appropriate data structures makes the understanding of the code hard. By  reading through a part of an algorithm, the developer does not know which operations will be executed on which data structure. Secondly, when there are multiple operations on many different data structures, the developer has to remember all these state changes of the data structures. Therefore procedural code is often hard to understand. 
+
+\subsection*{No modularity}
+In modern software development the separation in different modules is a core concept.
+
+Modular programming "breaks down program functions into modules, each of which accomplishes one function and contains all the source code and variables needed to accomplish that function."\cite{about}. In \cite{about} Juergen Haas also states that the concept of modularity enables the programmer to debug and maintain difficult source code more easily. 
+
+A module only contains all necessary information and operations to perform the steps necessary. All other information is not visible by the module, it is hidden in other modules that are responsible for other tasks. However, within one module the developer is not distracted by other operations or data structures that are not related to the module, because they are hidden. 
+
+\subsection*{Structure}
+As already said, procedural code is only structured in different algorithm steps. The data structures are can't be encapsulated. This makes structuring procedural code extremely hard, because there is no mechanism enabling the developer to give structure by hiding information. The only way to give structure is to sort different methods in different files. But even if a data structure and its functions are put in a different file, the data structure is not hidden from the other files. The data structure can be manipulated in every other position of the program.
+
+\subsection*{Overview}
+This point is closely related to the just explained problem of structuring the program. The only way to sort or separate something can be done by using separate files. But still, this does not solve the problem of information hiding and therefore an overview is not given. 
+
+In procedural code it is not possible to put problem related data into a abstract data types.
+
+\subsection*{No reusability}
+In procedural code it is hard to reuse code. This is a result of the missing encapsulation and the missing modularity that was explained previously.
+
+As already said in procedural code, a method often interacts with many variables of the system that are not encapsulated. A method can interact with all system variables. This leads the developer to not separate the program into different parts with their own responsibility and their own well encapsulated data structures and operations. 
+
+When using multiple files in procedural code, at some point the order of inclusion of these files has to be determined. When another file is imported there is no guarantee that the included files does already execute an operation. Furthermore, cyclic dependencies can occur that have to be resolved manually. 
+
+However in object oriented software the concept of encapsulation, respectively scoping, of data structures is integrated in the concept of object orientation.  In good object oriented software every module and object has a clear scope and is well encapsulated. This makes it easy to reuse the object or module. Firstly, it's dependencies are clear visible. They are not order specific, because they do not determine the order of the inclusion of files, but they determine the types that are used by the class. Secondly, the inner state expressed by data structures is hidden from everything that is not part of the module. The developer does not have to apprehend other modules to change internal states of the module. Thirdly, the operations that can be executed on the object are well defined. The developer can document those interfaces to help developers using the interface to understand how the module or object works.
 
 
-=== Describe the advantages of Object Oriented Programming according to Jeff...
 
-===RESEARCH===
-poorly written code, procedural code
+------------------------
 
-Describe each very shortly: 
 
-no reusability
-
-hard to maintain
-
-overview
-
-structure
-
-no bundle o data and behavior
-
-no modularity
-
-not understandable
-
-maintainability is hard
 
 OO saves us! --> But ... because
 
