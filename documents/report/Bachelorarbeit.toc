@@ -11,40 +11,47 @@
 \contentsline {section}{\numberline {2.1}Problems of procedural code}{4}
 \contentsline {subsection}{\numberline {2.1.1}Problems of procedural code}{4}
 \contentsline {section}{\numberline {2.2}Advantages of object orientation}{6}
-\contentsline {section}{\numberline {2.3}The Rules and their Background}{8}
-\contentsline {subsection}{\numberline {2.3.1}Rule 1: "Use One Level of Indentation per Method"}{8}
-\contentsline {subsection}{\numberline {2.3.2}Rule 2: "Don\IeC {\textquoteright }t Use the else Keyword"}{10}
-\contentsline {subsection}{\numberline {2.3.3}Rule 3: "Wrap All Primitives and Strings"}{10}
-\contentsline {subsection}{\numberline {2.3.4}Rule 4: "Use Only One Dot per Line"}{10}
-\contentsline {subsection}{\numberline {2.3.5}Rule 5: "Don't Abbreviate"}{10}
-\contentsline {subsection}{\numberline {2.3.6}Rule 6: "Keep All Entities Small"}{10}
-\contentsline {subsection}{\numberline {2.3.7}Rule 7: "Don\IeC {\textquoteright }t Use Any Classes with More Than Two Instance Variables"}{10}
-\contentsline {subsection}{\numberline {2.3.8}Rule 8: "Use First-Class Collections"}{10}
-\contentsline {subsection}{\numberline {2.3.9}Rule 9: "Don\IeC {\textquoteright }t Use Any Getters/Setters/Properties"}{10}
-\contentsline {section}{\numberline {2.4}Discussing the Rules}{10}
-\contentsline {subsection}{\numberline {2.4.1}Similarities}{10}
-\contentsline {subsection}{\numberline {2.4.2}Precedence}{11}
-\contentsline {subsection}{\numberline {2.4.3}Conclusion and Outcome}{11}
-\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{12}
-\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{12}
-\contentsline {section}{\numberline {3.2}Working Environment}{12}
-\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{12}
-\contentsline {subsection}{\numberline {3.3.1}Validation of Rule 1}{13}
-\contentsline {subsection}{\numberline {3.3.2}Validation of Rule 2}{13}
-\contentsline {subsection}{\numberline {3.3.3}Validation of Rule 3}{13}
-\contentsline {subsection}{\numberline {3.3.4}Validation of Rule 4}{13}
-\contentsline {subsection}{\numberline {3.3.5}Validation of Rule 5}{13}
-\contentsline {subsection}{\numberline {3.3.6}Validation of Rule 6}{13}
-\contentsline {subsection}{\numberline {3.3.7}Validation of Rule 7}{14}
-\contentsline {subsection}{\numberline {3.3.8}Validation of Rule 8}{14}
-\contentsline {subsection}{\numberline {3.3.9}Validation of Rule 9}{14}
-\contentsline {section}{\numberline {3.4}Result of the Evaluation}{14}
-\contentsline {section}{\numberline {3.5}Future Work}{14}
-\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{15}
-\contentsline {section}{\numberline {4.1}Requirements}{15}
-\contentsline {section}{\numberline {4.2}Architecture}{15}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{15}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{15}
-\contentsline {section}{\numberline {4.5}Outlook and Future Work}{15}
-\contentsline {chapter}{\numberline {5}Conclusion}{16}
-\contentsline {chapter}{Bibliography}{17}
+\contentsline {subsection}{\numberline {2.2.1}Cohesion}{8}
+\contentsline {subsection}{\numberline {2.2.2}coupling}{8}
+\contentsline {subsection}{\numberline {2.2.3}duplication}{9}
+\contentsline {subsection}{\numberline {2.2.4}encapsulation}{9}
+\contentsline {subsection}{\numberline {2.2.5}testability}{9}
+\contentsline {subsection}{\numberline {2.2.6}readablitiy}{9}
+\contentsline {subsection}{\numberline {2.2.7}focus}{10}
+\contentsline {section}{\numberline {2.3}The Rules and their Background}{10}
+\contentsline {subsection}{\numberline {2.3.1}Rule 1: "Use One Level of Indentation per Method"}{11}
+\contentsline {subsection}{\numberline {2.3.2}Rule 2: "Don\IeC {\textquoteright }t Use the else Keyword"}{12}
+\contentsline {subsection}{\numberline {2.3.3}Rule 3: "Wrap All Primitives and Strings"}{12}
+\contentsline {subsection}{\numberline {2.3.4}Rule 4: "Use Only One Dot per Line"}{12}
+\contentsline {subsection}{\numberline {2.3.5}Rule 5: "Don't Abbreviate"}{12}
+\contentsline {subsection}{\numberline {2.3.6}Rule 6: "Keep All Entities Small"}{12}
+\contentsline {subsection}{\numberline {2.3.7}Rule 7: "Don\IeC {\textquoteright }t Use Any Classes with More Than Two Instance Variables"}{12}
+\contentsline {subsection}{\numberline {2.3.8}Rule 8: "Use First-Class Collections"}{12}
+\contentsline {subsection}{\numberline {2.3.9}Rule 9: "Don\IeC {\textquoteright }t Use Any Getters/Setters/Properties"}{13}
+\contentsline {section}{\numberline {2.4}Discussing the Rules}{13}
+\contentsline {subsection}{\numberline {2.4.1}Similarities}{13}
+\contentsline {subsection}{\numberline {2.4.2}Precedence}{13}
+\contentsline {subsection}{\numberline {2.4.3}Conclusion and Outcome}{13}
+\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{14}
+\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{14}
+\contentsline {section}{\numberline {3.2}Working Environment}{14}
+\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{14}
+\contentsline {subsection}{\numberline {3.3.1}Validation of Rule 1}{15}
+\contentsline {subsection}{\numberline {3.3.2}Validation of Rule 2}{15}
+\contentsline {subsection}{\numberline {3.3.3}Validation of Rule 3}{15}
+\contentsline {subsection}{\numberline {3.3.4}Validation of Rule 4}{15}
+\contentsline {subsection}{\numberline {3.3.5}Validation of Rule 5}{15}
+\contentsline {subsection}{\numberline {3.3.6}Validation of Rule 6}{15}
+\contentsline {subsection}{\numberline {3.3.7}Validation of Rule 7}{16}
+\contentsline {subsection}{\numberline {3.3.8}Validation of Rule 8}{16}
+\contentsline {subsection}{\numberline {3.3.9}Validation of Rule 9}{16}
+\contentsline {section}{\numberline {3.4}Result of the Evaluation}{16}
+\contentsline {section}{\numberline {3.5}Future Work}{16}
+\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{17}
+\contentsline {section}{\numberline {4.1}Requirements}{17}
+\contentsline {section}{\numberline {4.2}Architecture}{17}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{17}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{17}
+\contentsline {section}{\numberline {4.5}Outlook and Future Work}{17}
+\contentsline {chapter}{\numberline {5}Conclusion}{18}
+\contentsline {chapter}{Bibliography}{19}

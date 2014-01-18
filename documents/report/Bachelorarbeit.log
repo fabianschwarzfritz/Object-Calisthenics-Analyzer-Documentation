@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  4 JAN 2014 16:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  18 JAN 2014 20:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,37 +710,67 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v2.10 (rcs-revision 1.2)
 (c:/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 braryfit.code.tex
 File: tikzlibraryfit.code.tex 2008/06/21 v2.10 (rcs-revision 1.3)
+) (c:/texlive/2013/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2012/10/29 v1.38 Support for acronyms (Tobias Oetiker)
+
+(c:/texlive/2013/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5 Variant command support
 )
-\@nomenclaturefile=\write4
-\openout4 = `Bachelorarbeit.nlo'.
+(c:/texlive/2013/texmf-dist/tex/generic/xstring/xstring.sty
+(c:/texlive/2013/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write4
+\integerpart=\count122
+\decimalpart=\count123
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\AC@clearlist=\toks30
+)
+\@nomenclaturefile=\write5
+\openout5 = `Bachelorarbeit.nlo'.
 
 
 Writing nomenclature file Bachelorarbeit.nlo
-(./Inhalt/abkuerzungen.tex) (./Bachelorarbeit.aux (./Inhalt/titelseite.aux)
-(./Inhalt/erklaerung.aux) (./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux))
+(./Inhalt/abkuerzungen.tex
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 	\acro
+          {DHBW}{Duale Hochschule Baden-Württemberg}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 9.
+(c:/texlive/2013/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)) (./Bachelorarbeit.aux
+(./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux) (./Inhalt/abstract.aux)
+(./Inhalt/hauptteil.aux))
 \openout1 = `Bachelorarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 86.
-
-(c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 87.
+ (c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 86.
-
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 87.
 (c:/texlive/2013/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
@@ -749,17 +779,17 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (c:/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
+\scratchcounter=\count124
 \scratchdimen=\dimen158
 \scratchbox=\box58
-\nofMPsegments=\count123
-\nofMParguments=\count124
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count125
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count127
 \MPscratchDim=\dimen159
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks32
 ) (c:/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -809,110 +839,107 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \big@size=\dimen160
-\c@lstlisting=\count128
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 86.
+\c@lstlisting=\count130
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 87.
 
 (c:/texlive/2013/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 86.
+(Font)              using `T1/cmtt/m/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/it' undefined
-(Font)              using `T1/cmtt/b/n' instead on input line 86.
+(Font)              using `T1/cmtt/b/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/sl' undefined
-(Font)              using `T1/cmtt/b/n' instead on input line 86.
+(Font)              using `T1/cmtt/b/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/sc' undefined
-(Font)              using `T1/cmtt/b/n' instead on input line 86.
+(Font)              using `T1/cmtt/b/n' instead on input line 87.
 
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 86.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 87.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/it' tried instead on input line 86.
+(Font)              Font shape `T1/cmtt/m/it' tried instead on input line 87.
 
 LaTeX Font Warning: Font shape `T1/cmtt/bx/sl' undefined
-(Font)              using `T1/cmtt/bx/n' instead on input line 86.
+(Font)              using `T1/cmtt/bx/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/bx/sc' undefined
-(Font)              using `T1/cmtt/bx/n' instead on input line 86.
+(Font)              using `T1/cmtt/bx/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/sb/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 86.
+(Font)              using `T1/cmtt/m/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/sb/it' undefined
-(Font)              using `T1/cmtt/sb/n' instead on input line 86.
+(Font)              using `T1/cmtt/sb/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/sb/sl' undefined
-(Font)              using `T1/cmtt/sb/n' instead on input line 86.
+(Font)              using `T1/cmtt/sb/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/sb/sc' undefined
-(Font)              using `T1/cmtt/sb/n' instead on input line 86.
+(Font)              using `T1/cmtt/sb/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/c/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 86.
+(Font)              using `T1/cmtt/m/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/c/it' undefined
-(Font)              using `T1/cmtt/c/n' instead on input line 86.
+(Font)              using `T1/cmtt/c/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/c/sl' undefined
-(Font)              using `T1/cmtt/c/n' instead on input line 86.
+(Font)              using `T1/cmtt/c/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/c/sc' undefined
-(Font)              using `T1/cmtt/c/n' instead on input line 86.
+(Font)              using `T1/cmtt/c/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/l/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 86.
+(Font)              using `T1/cmtt/m/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/l/it' undefined
-(Font)              using `T1/cmtt/l/n' instead on input line 86.
+(Font)              using `T1/cmtt/l/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/l/sl' undefined
-(Font)              using `T1/cmtt/l/n' instead on input line 86.
+(Font)              using `T1/cmtt/l/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/l/sc' undefined
-(Font)              using `T1/cmtt/l/n' instead on input line 86.
+(Font)              using `T1/cmtt/l/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/m/ui' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 86.
+(Font)              using `T1/cmtt/m/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/bx/ui' undefined
-(Font)              using `T1/cmtt/bx/n' instead on input line 86.
+(Font)              using `T1/cmtt/bx/n' instead on input line 87.
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/m/In' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 86.
+(Font)              using `T1/cmtt/m/n' instead on input line 87.
 
-ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 90.
+ABD: EveryShipout initializing macros [1
 
-(c:/texlive/2013/texmf-dist/tex/latex/base/t1cmss.fd
-File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
+{c:/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `Inhalt/titelseite.aux'.
 
  (./Inhalt/titelseite.tex
-<Bilder/logo_dhbw.jpg, id=20, 86.9649pt x 44.3256pt>
+<Bilder/logo_dhbw.jpg, id=26, 86.9649pt x 44.3256pt>
 File: Bilder/logo_dhbw.jpg Graphic file (type jpg)
 
 <use Bilder/logo_dhbw.jpg>
@@ -963,16 +990,13 @@ LaTeX Font Info:    Try loading font information for TS1+cmss on input line 44.
 
 (c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [1
+) [2
 
 
-
-{c:/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Bilder/logo_d
-hbw.jpg>])
+ <./Bilder/logo_dhbw.jpg>])
 \openout2 = `Inhalt/erklaerung.aux'.
 
-
-(./Inhalt/erklaerung.tex
+ (./Inhalt/erklaerung.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
@@ -1011,21 +1035,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
 
 ])
-\tf@toc=\write5
-\openout5 = `Bachelorarbeit.toc'.
+\tf@toc=\write6
+\openout6 = `Bachelorarbeit.toc'.
 
 
 (./Bachelorarbeit.nls [4]) [5
 
 ] (./Bachelorarbeit.lof)
-\tf@lof=\write6
-\openout6 = `Bachelorarbeit.lof'.
+\tf@lof=\write7
+\openout7 = `Bachelorarbeit.lof'.
 
  [6
 
 ] (./Bachelorarbeit.lot)
-\tf@lot=\write7
-\openout7 = `Bachelorarbeit.lot'.
+\tf@lot=\write8
+\openout8 = `Bachelorarbeit.lot'.
 
  [7
 
@@ -1162,10 +1186,6 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [3]
 Chapter 2.
 
-LaTeX Warning: Reference `d:advantagesoo' on page 4 undefined on input line 65.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
@@ -1214,20 +1234,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--121
  []
 
 
-LaTeX Warning: Reference `[' on page 6 undefined on input line 122.
-
-
-LaTeX Warning: Reference `[' on page 6 undefined on input line 124.
-
-
-LaTeX Warning: Reference `[' on page 6 undefined on input line 126.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--131
-
- []
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -1249,7 +1255,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--137
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--143
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
 
  []
 
@@ -1259,7 +1275,22 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7] (./listings/ElseVisitor.java
+[7]
+
+LaTeX Warning: Citation `wiki:cohesion' on page 8 undefined on input line 153.
+
+
+Overfull \hbox (4.20015pt too wide) in paragraph at lines 153--156
+\T1/ppl/m/n/10.95 Cohesion de-scribes "de-gree to which the el-e-ments of a mod
+-ule be-long together"[[]].
+ []
+
+
+LaTeX Warning: Citation `wiki:loosecoupling' on page 8 undefined on input line 
+161.
+
+Package acronym Info: Label `acro:DIP' newly defined as it shall be overridden
+although it is yet undefined on input line 164.
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -1267,10 +1298,6 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 12.
- (c:/texlive/2013/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-))
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -1279,23 +1306,34 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [9]
 
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Reference `coupling' on page 10 undefined on input line 191.
 
-[10]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]
-Chapter 3.
-[12
+[10] (./listings/ElseVisitor.java
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 12.
 
-]
+(c:/texlive/2013/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11])
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
@@ -1303,21 +1341,32 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
+Chapter 3.
+[14
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[15]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
 Chapter 4.
-[15
+[17
 
 ]
 Chapter 5.
-) [16
+) [18
 
-] [17
+] [19
 
 
 ] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux)
@@ -1328,15 +1377,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 17870 strings out of 493308
- 335203 string characters out of 6141367
- 562016 words of memory out of 5000000
- 20857 multiletter control sequences out of 15000+600000
+ 18370 strings out of 493308
+ 342151 string characters out of 6141367
+ 559534 words of memory out of 5000000
+ 21344 multiletter control sequences out of 15000+600000
  36674 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,12n,76p,972b,1644s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,76p,1607b,1646s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2013/texm
 f-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2013/texmf-dist/fon
 ts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2013/texmf-dist/fonts/type1/
@@ -1355,10 +1407,10 @@ per/sfsx1200.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx14
 dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type
 1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/palatino/
 uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (25 pages, 360472 bytes).
+Output written on Bachelorarbeit.pdf (28 pages, 371610 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
+ 190 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 

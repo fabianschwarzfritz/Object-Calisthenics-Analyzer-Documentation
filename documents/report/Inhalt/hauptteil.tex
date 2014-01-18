@@ -119,11 +119,11 @@ The described problems and disadvantages that where described in the previous ch
 %TODO describe history of ooo shortly. 
 All in all it is generally stated that object orientation and its related principals saves us from the problems, described in \ref{d:problemsprocedural} and provides a proper solution. \\
 
-According to Jeff Bay the change from programming in an procedural way towards programming object oriented style is hard to learn. "Transitioning from procedural development to object-oriented design requires a major shift in thinking that is more difficult than it seems" \ref[p. 70]{bay2008}. 
+According to Jeff Bay the change from programming in an procedural way towards programming object oriented style is hard to learn. "Transitioning from procedural development to object-oriented design requires a major shift in thinking that is more difficult than it seems" \cite[p. 70]{bay2008}. 
 %TODO 2 te quelle die zeigt, dass das lernen von oo von procedural schwer ist
-According to Jeff Bay, however, the procedural way of thinking is still in the mind of many developers. "Transitioning from procedural development to object-oriented design requires a major shift in thinking that is more difficult than it seems" \ref[p. 70]{bay2008}. %TODO hier 2 te qeulle und noch eien satz? sosnt halber absatz zitiert...
+According to Jeff Bay, however, the procedural way of thinking is still in the mind of many developers. "Transitioning from procedural development to object-oriented design requires a major shift in thinking that is more difficult than it seems" \cite[p. 70]{bay2008}. %TODO hier 2 te qeulle und noch eien satz? sosnt halber absatz zitiert...
 "Many developers assume they’re doing a good job with OO design, when in reality they’re unconsciously
-stuck in procedural habits that are hard to break" \ref[p.70]{bay2008}.
+stuck in procedural habits that are hard to break" \cite[p.70]{bay2008}.
 Not only the problem of the difficulty to learn a different way of thinking and coding when changing from procedural to object oriented code is a problem. But also the fact that it is easy for a developer to write procedural code. The disadvantages of procedural code are do not occur immediately. Many of the problems when dealing with procedural source code occur late. That means that the developer does not get an immediate feedback about the quality of his code while writing it, but realizes the bad design of the procedural written code after he conducted a change. \\
 %todo dies noch belege. Ist es nur die motivation oder steckt da ncoh mehr dahinter? was sagen andere?
 %vielleicht in mf's refactoring
@@ -147,23 +147,22 @@ Jeff Bay however enhances the advantages by "core concepts" and "core qualities"
 %cohesion, loose coupling, zero duplication, encapsulation, testability, readability and focus
 Bay does not further explain these qualities. In the next paragraph I will go through all the qualities and explain them shortly. \\
 
-He states that in %\ref jeffbay!!!!
-dann qualities beschreiben
+Because Jeff Bay's exercise was already described in \ref{i:exercising}, after the description of the code qualities, the detailed explanation of Jeff Bays nine rules will follow. 
 
 \subsection{Cohesion}
-Cohesion describes how focused a class is. Does the module does only do what is supposed to do - and delegate everything that is not exactly part of the unit - then the module's cohesion is high. Furthermore cohesion describes how strong classes belong together? If there are two classes with a very similar purpose, then the focus of the two classes are high - but they are implementing quite similar behavior. Then the classes have a low cohesion. 
-Vice versa, if there are two classes with two clearly specified and minimalist behaviors. And the behavior of the classes can be clearly separated from each other, then the classes' cohesion is high. The cohesion is high when "modules are grouped  because they all contribute to a single, well defined task" \ref{wiki:cohesion} %TODO wiki cohesion link and reference
-High cohesion is considered better, because %TODO
+Cohesion describes "degree to which the elements of a module belong together"\cite{cohesionBook}. It is a software measurement describing how strongly related pieces of functionality are. Therefore it describes how well the units of a system are grouped. When units, dedicated to a simliar purpose, are part of the same group and no nonrelated unit is part of the group, the group has a high cohesion. A module with high cohesion has strongly related and very focused responsibilities\cite{wiki:cohesion}. Generally cohesion is not described as an enumerable number, but one is distinguishing between high cohesion and low cohesion. Low cohesion is considered bad whereas high cohesion is considered good.
+There are different advantages of high cohesion. In object orientation for example, when methods of a class have a similar responsibilities, the object tends to have a high cohesion. All object's methods are dedicated to the one task dedicated for the object. The object does not provide any other methods and does not perform any other tasks that are not related its actual task. Therefore it is easy for the developer to understand the behaviour of the object and to understand what the object is doing, when it is interacting within application. High cohesion can also enhance the readability of code, because the reader is not distracted by method calls that are related to other tasks than the dedicated one. It is ensured that the operations of the implemented methods is only related to the task that the methods shall perform. 
+Low cohesion in contrast is bad, because the just described advantages of focus, readability and easiness to understand. The cohsion is decreased from high cohesion to low cohesion, when different aspects are implemented in one class. The result is a system that is mroe difficult to maintain and to understand system. 
 
 \subsection{coupling}
+\label{coupling}
 %TODO use "class A, class B"
 Coupling is a metric that describes the knowledge of a class about its surrounding objects. Loose coupling can be described by two attributes. Firstly, if a class knows less about the surrounding classes and only uses well defined, generic interfaces to those classes. It does not have knowledge about the concrete implementation of the class. Secondly, if the state of a class does not depend on the state of another state, or at least only depends on the state provided by the class directly, and not by other classes provided by that class but only uses the provided methods. 
-When this is not the case, the classes are strongly coupled. The "lack of coupling means that the elements of our system are better isolated from each other and from change" \ref{wiki:loosecoupling}. 
+When this is not the case, the classes are strongly coupled. The "lack of coupling means that the elements of our system are better isolated from each other and from change" \cite{wiki:loosecoupling}. 
 % TODO quote is wrong!
 Because the changes of an classes interface, for example when conducting a refactoring, do only spread to the directly related neighbor classes, loose coupling is considered a good object oriented style. It is easier to change loosely coupled classes than strongly coupled classes. 
 Another aspect of loose coupling is the \acf{DIP}. 
-Martin describes the \acf{DIP} in \ref{cc} as following: 
-% TODO insert quot loosely coupling 
+Martin describes the \acf{DIP} in \cite{cc} as following: "In essence, the DIP says that our classes should depend upon abstractions, not on concrete details" \cite{cc}.
 
 \subsection{duplication}
 If there is no duplicated code in software, then the quality of zero duplication is fulfilled. If there is no duplication of components or algorithms, the components are reusable and do not have to be rewritten in a similar way. In some cases the component can be slightly adapted, but in the end it is working for all parts of the software that use the component. 
@@ -172,7 +171,7 @@ The metric indicating no duplication in source code is called code duplication.
 \subsection{encapsulation}
 When a class or a module hides its internal state it is considered encapsulated. When class B is well encapsulated and there are well defined methods that can be executed, then a class A using class B, can depend on the methods, therefore the provided operations. 
 There is no part in the implementation of class A where it depends on a variable of class B. Then class A does not depend on the inner state of class B. Therefore class B can implement its algorithms and state management independent form all using classes. 
-Well encapsulated classes "restict component's access"\ref{}. Furthermore, well encapsulated classes "bundle [...] methods that implement operations on data"\ref{}. The date is then "hidden behind the specified methods"\ref{}.
+Well encapsulated classes "restict component's access"\cite[Encapsulation]{wiki}. Furthermore, well encapsulated classes "bundle [...] methods that implement operations on data"\cite[Encapuslation]{wiki}. The date is then "hidden behind the specified methods"\cite[Encapsulation]{wiki}.
 
 \subsection{testability}
 Testability described how testable a class or module is testable. There is no metric describing the degree of testability but there are some metrics describing the tests itself. 
@@ -182,37 +181,17 @@ And there is branch coverage, indicating how many of the possible branches of th
 
 \subsection{readablitiy}
 % TODO hier stehen geblieben
+Readability basically consists of three different aspects. 
+The first aspect refers to the easiness of understanding a certain amount of source code. It is basically the metric for the quality readability.  The more source code can be understood within a specified amount of time, the more readable the code is. This makes readable code important. But it is one central qualities in software, because much time is spent with reading existing code. In \cite{cc}, Martin describes quotes Grady Booch and Dave Thomas on statements about the readability of source code. Grady Booch describes readability in the following way. "Clean code is simple and direct. Clean code reads like well-written prose. Clean code never obscures the designer’s intent but rather is full of crisp abstractions and straightforward lines of control." \cite[p. 8]{cc}. He clearly sets the focus the style of the resulting code. According to thim, the code should be very easy to understand and read like an easily understandable book. Dave Thomas focues more on the fact that readable code is also readable for others. Even more he the problem of naming variables, functions and units. Furthermore he states that minimal and clear dependencies make code cleaner and more readable, because it thereby is readily comprehensable. "Clean code can be read, and enhanced by a developer other than its original author. [..] It has meaningful names. It  Provides one way rather than many ways for doing one thing. It has minimal dependencies, which are explicitly defined, and provides a clear and minimal  API."\cite[p. 9]{cc}. 
+Two other aspects are important when looking at the readability of source code. It is generally known that well placed documentation at parts of the code that are hard to understand, help the reader to grasp the code he reads. Therefore good documentation enhances the readability of source code.
 
+In \cite{cc} Martin describes the third important factor for ensuring readability. Martins "step down rule" is a rule ensuring the separation of different layers of abstraction. Classes or components describe different levels of abstractions. Abstract level classas are usually the "top-level" entry point when calling a module or a libray, whereas low level classes execute very problem specific operations. The step down rule states that this hierarchical ordering of functions exists. In addition it says that all functions that are declared in one class should all be on the same level of abstractions. Furthermore very method of a higher level should only call functions declarated on a lower level. The result is a composition of functions going from a abstract to a concrete level. For the reader of the code it is easier to understand the resulting code because he know exactly in which level of abstraction he is located. He can therefore navigate more easily to the desired code positions. Furthermore he doesn't have to understand every detail of the whole code, but can use the the higher levels of abstraction to understand quickly what the code is doing. 
+
+\subsection{focus}
+The last quality Jeff Bay describes in \cite{oc2008} is focus. Focus is the description of "doing one thing". Every unit is dedicated to one task it has to manage and fullfill successfully. Focus describes not only this dedication, but furthermore states that the unit shouldn't do anything more. Consequently, the module contains no operations that are not related to that task. If it has to trigger other tasks that are not related to its dedication, it uses methods on other units that are specialized on this task. This means the module delegates all tasks that are not part of its dedication to other units. These units themselves are dedicated to the delegated task. Focus is very similar to the just described \ref{coupling}.
 
 ------------------------
-
-
-
-OO saves us! --> But ... because
-
-Comparision of procedural versus object oriented programming
-procedural: step by step, seldom informaiton hiding, actions mainulate data. Actions are spread all ove rthe programming
-
-oo: "bundle" with capabilities, hides structures, delegates tasks that are not done by the object itself to other objects, objects model real world behaviour, decoupled and separated in different modules. "what" leads to "how": encapsulation, abstraction, inheritance, polymorphism
-
-advantages of oop: modules, reusable maintainable, simplicity (describe each shortly) 
-
-Describe each quality, a bit more detailes, but also short and concise: 
-
-cohesion
-
-loose coupling
-
-zero duplication
-
-encapsulation
-
-testability
-
-readability
-
-focus
-
+% TODO hier stehe geblieben
 
 \section{The Rules and their Background}
 \label{d:background}
