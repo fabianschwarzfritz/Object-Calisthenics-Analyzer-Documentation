@@ -37,6 +37,8 @@ Improving the quality of software's implementation by little training sessions -
 
 As already said, the background of every rule is described in chapter \ref{Description}.
 
+%TODO checken: ist klargestellt, das (research seite 7):  - strict coding standards, used without doubts during the excercise ==> unerstand 100 percent pure object orientaiton "in perfection" in a small project. --=> Remember the lessons learned when coding  in the "wildlife". 
+
 \section{Tool Support to Validate the Object Calisthenics}
 %=== Describe the outcome of a tool validating the rules of the Object Calisthenics.
 %=== How might it support the developer?
@@ -150,8 +152,11 @@ Bay does not further explain these qualities. In the next paragraph I will go th
 Because Jeff Bay's exercise was already described in \ref{i:exercising}, after the description of the code qualities, the detailed explanation of Jeff Bays nine rules will follow. 
 
 \subsection{Cohesion}
-Cohesion describes "degree to which the elements of a module belong together"\cite{cohesionBook}. It is a software measurement describing how strongly related pieces of functionality are. Therefore it describes how well the units of a system are grouped. When units, dedicated to a simliar purpose, are part of the same group and no nonrelated unit is part of the group, the group has a high cohesion. A module with high cohesion has strongly related and very focused responsibilities\cite{wiki:cohesion}. Generally cohesion is not described as an enumerable number, but one is distinguishing between high cohesion and low cohesion. Low cohesion is considered bad whereas high cohesion is considered good.
-There are different advantages of high cohesion. In object orientation for example, when methods of a class have a similar responsibilities, the object tends to have a high cohesion. All object's methods are dedicated to the one task dedicated for the object. The object does not provide any other methods and does not perform any other tasks that are not related its actual task. Therefore it is easy for the developer to understand the behaviour of the object and to understand what the object is doing, when it is interacting within application. High cohesion can also enhance the readability of code, because the reader is not distracted by method calls that are related to other tasks than the dedicated one. It is ensured that the operations of the implemented methods is only related to the task that the methods shall perform. 
+\label{cohesion}
+Cohesion describes "degree to which the elements of a module belong together"\cite{cohesionBook}. It is a software measurement describing how strongly related pieces of functionality are. Therefore it describes how well the units of a system are grouped. When units, dedicated to a simliar purpose, are part of the same group and no nonrelated unit is part of the group, the group has a high cohesion. A module with high cohesion has strongly related and very focused responsibilities\cite{wiki:cohesion}. Generally cohesion is not described as an enumerable number, but one is distinguishing between high cohesion and low cohesion. Low cohesion is considered bad whereas high cohesion is considered good.\\
+
+There are different advantages of high cohesion. In object orientation for example, when methods of a class have a similar responsibilities, the object tends to have a high cohesion. All object's methods are dedicated to the one task dedicated for the object. The object does not provide any other methods and does not perform any other tasks that are not related its actual task. Therefore it is easy for the developer to understand the behaviour of the object and to understand what the object is doing, when it is interacting within application. High cohesion can also enhance the readability of code, because the reader is not distracted by method calls that are related to other tasks than the dedicated one. It is ensured that the operations of the implemented methods is only related to the task that the methods shall perform. \\
+
 Low cohesion in contrast is bad, because the just described advantages of focus, readability and easiness to understand. The cohsion is decreased from high cohesion to low cohesion, when different aspects are implemented in one class. The result is a system that is mroe difficult to maintain and to understand system. 
 
 \subsection{coupling}
@@ -182,23 +187,23 @@ And there is branch coverage, indicating how many of the possible branches of th
 \subsection{readablitiy}
 % TODO hier stehen geblieben
 Readability basically consists of three different aspects. 
-The first aspect refers to the easiness of understanding a certain amount of source code. It is basically the metric for the quality readability.  The more source code can be understood within a specified amount of time, the more readable the code is. This makes readable code important. But it is one central qualities in software, because much time is spent with reading existing code. In \cite{cc}, Martin describes quotes Grady Booch and Dave Thomas on statements about the readability of source code. Grady Booch describes readability in the following way. "Clean code is simple and direct. Clean code reads like well-written prose. Clean code never obscures the designer’s intent but rather is full of crisp abstractions and straightforward lines of control." \cite[p. 8]{cc}. He clearly sets the focus the style of the resulting code. According to thim, the code should be very easy to understand and read like an easily understandable book. Dave Thomas focues more on the fact that readable code is also readable for others. Even more he the problem of naming variables, functions and units. Furthermore he states that minimal and clear dependencies make code cleaner and more readable, because it thereby is readily comprehensable. "Clean code can be read, and enhanced by a developer other than its original author. [..] It has meaningful names. It  Provides one way rather than many ways for doing one thing. It has minimal dependencies, which are explicitly defined, and provides a clear and minimal  API."\cite[p. 9]{cc}. 
-Two other aspects are important when looking at the readability of source code. It is generally known that well placed documentation at parts of the code that are hard to understand, help the reader to grasp the code he reads. Therefore good documentation enhances the readability of source code.
+The first aspect refers to the easiness of understanding a certain amount of source code. It is basically the metric for the quality readability.  The more source code can be understood within a specified amount of time, the more readable the code is. This makes readable code important. But it is one central qualities in software, because much time is spent with reading existing code. In \cite{cc}, Martin describes quotes Grady Booch and Dave Thomas on statements about the readability of source code. Grady Booch describes readability in the following way. "Clean code is simple and direct. Clean code reads like well-written prose. Clean code never obscures the designer’s intent but rather is full of crisp abstractions and straightforward lines of control." \cite[p. 8]{cc}. He clearly sets the focus the style of the resulting code. According to thim, the code should be very easy to understand and read like an easily understandable book. Dave Thomas focues more on the fact that readable code is also readable for others. Even more he the problem of naming variables, functions and units. Furthermore he states that minimal and clear dependencies make code cleaner and more readable, because it thereby is readily comprehensable. "Clean code can be read, and enhanced by a developer other than its original author. [..] It has meaningful names. It  Provides one way rather than many ways for doing one thing. It has minimal dependencies, which are explicitly defined, and provides a clear and minimal  API."\cite[p. 9]{cc}. \\
+
+Two other aspects are important when looking at the readability of source code. It is generally known that well placed documentation at parts of the code that are hard to understand, help the reader to grasp the code he reads. Therefore good documentation enhances the readability of source code.\\
 
 In \cite{cc} Martin describes the third important factor for ensuring readability. Martins "step down rule" is a rule ensuring the separation of different layers of abstraction. Classes or components describe different levels of abstractions. Abstract level classas are usually the "top-level" entry point when calling a module or a libray, whereas low level classes execute very problem specific operations. The step down rule states that this hierarchical ordering of functions exists. In addition it says that all functions that are declared in one class should all be on the same level of abstractions. Furthermore very method of a higher level should only call functions declarated on a lower level. The result is a composition of functions going from a abstract to a concrete level. For the reader of the code it is easier to understand the resulting code because he know exactly in which level of abstraction he is located. He can therefore navigate more easily to the desired code positions. Furthermore he doesn't have to understand every detail of the whole code, but can use the the higher levels of abstraction to understand quickly what the code is doing. 
 
 \subsection{focus}
-The last quality Jeff Bay describes in \cite{oc2008} is focus. Focus is the description of "doing one thing". Every unit is dedicated to one task it has to manage and fullfill successfully. Focus describes not only this dedication, but furthermore states that the unit shouldn't do anything more. Consequently, the module contains no operations that are not related to that task. If it has to trigger other tasks that are not related to its dedication, it uses methods on other units that are specialized on this task. This means the module delegates all tasks that are not part of its dedication to other units. These units themselves are dedicated to the delegated task. Focus is very similar to the just described \ref{coupling}.
+\label{focus}
+The last quality Jeff Bay describes in \cite{oc2008} is focus. Focus is the description of "doing one thing". Every unit is dedicated to one task it has to manage and fullfill successfully. Focus describes not only this dedication, but furthermore states that the unit shouldn't do anything more. Consequently, the module contains no operations that are not related to that task. If it has to trigger other tasks that are not related to its dedication, it uses methods on other units that are specialized on this task. This means the module delegates all tasks that are not part of its dedication to other units. These units themselves are dedicated to the delegated task. Focus is very similar to the just described quality coupling in chapter \ref{i:exercising}.
 
 ------------------------
 % TODO hier stehe geblieben
 
 \section{The Rules and their Background}
 \label{d:background}
-=== This chapter describes the rules of the Object Calisthenics itself. 
-
-=== Reference to introduciton, to make sure the reader know that this is an exercise... The exercise: repeat strict coding standards and stuff from introduction shortly
-
+ The instruction on how to conduct the excercise was already describe in the beginning, in chapter \ref{i:exercising}. This chapter describes the rules of the Objct Calisthenics itself. \\
+ In the chapter I will go through every rule, step-by-step. Every every section will describe the patterns an principals behind the rules, elucidate design patterns and best practices that correspond with the rules. Each rule will furthermore exempify the rule by a good and a bad example. 
 
 === FOR EACH rule/subsection IN rules/subsections: 
 Every rule is described one after the other with the information that is already documented in the commited work of the "research" phase: 
@@ -216,24 +221,102 @@ Every rule is described one after the other with the information that is already
  - The outcome of every rule is then summarized.
 
 \subsection{Rule 1: "Use One Level of Indentation per Method"}
-I am able to add code directly in the text 
+\label{describe:rule1}
+With his first rule, "Use One Level of Indentation per Method", Jeff Bay's tries to tackle the problem of low cohesion and ensure that one class is only operating on one level of abstraction. These two problems and their solutions are presented in the following. 
 
-\begin{lstlisting}
-Listings
-\end{lstlisting}
+The metric cohesion, which was already described in \ref{cohesion}, describes how well an object is focused and how well it is dedicated to one single task. The principle of "doing one thing", that Fowler describes in \cite{cc}, was already mentioned in \ref{focus}. Jeff Bay's Rule "Use One Leve of Indentation per Method" takes the principle of cohesion which is often applied on a class level and applies it on the method level. By doing so he ensures that a method is only doing what it is supposed to do and therefore delegates all non-relevant tasks. \\
 
- in the text. 
-Furthermore it is possible refer to a file: 
+There are two important principles behind the rule. 
 
-\lstinputlisting{listings/ElseVisitor.java}
+The idea of delgating all non releveant work and therefore raise the cohesion can be done in the following way.
+This is ensuring that the method is only manipulating data that is related directly to the method. This means ensuring the method does not mainpulate data that is accessed via muliple getter methods, other method calls or iterations. Such an access would change data that is not related direclty to the object itself. Therefor a foreign object would mainpulate the data of another object - instead of calling a method on the object. As already described other, just called "forign objects", can be accessed via method calls and control structures like while, for and do-while loops. Therefore when accessing an object with nested control structures, the methods is likely to change such "foreign object". There are two rule by Jeff Bay that prohibit such a "deep" access to those "foreign objects"' data structures. One is this rule, restricting the nesting of control-structures and the other rule is Rule 4 "Use only one dot per line" restricting the "deep" access via chained method calls. \\
 
-which is cool!
+As already mentioned, there is another principle that plays an important role, when looking at the rule. The idea of "one level of abstraction", which is described by Martin Fowler in \cite{cc}, is the other one. The basic ide of the "one level of abstraction" principle was already introduced in \ref{readability}. Martin Fowler states that a method should only operate within one level of abstraction and delegate all other tasks that are on a lower level to another class. Fowler states the rule as important, because it hard for humans to follow. "This may be the hardest of these heuristics to interpret and follow. Though the idea is plain enough, humans are just far too good at seamlessly mixing levels of abstraction". When a method is operation on two levels of abstraction, no always, but often using nested control structures in order to acces the "deeper" objects and to conduct data manipulation on a lower level. Transfering those operations no only results in a better abstraction. After a split up of tasks in oebject on different levels, the cohesion of the objects raises. Furthermore the object on a abstract level does not have to do operations on a low level, but is using another object to undertake the task. The result in many cases is that the object on the abstract level does not have to use that much control structures do perform the task, because it simply delegates all work that is not on its abstraction level. Therefore the nesting of control structures disappears automatically. In his Rule, however, Jeff Bay prohibits the nesting of control structure and therewith forces the developer to use differen levels of abstraction ab initio. \\
 
-Furthermore like this class \classname{ElseVisitor} and I also like \classname{SomeOtherClass}. \classname{IfThereIsAStupidLineBreakInTheClassName} - what happens then?
+The following code example describes a bad and a good example of the rule. The first example is showing a possible implementation and the second example is showing a refactore example, which satisfies the rule and as a high cohesion and only operates on one level of abstraction. 
+
+For reasons of simplicity, the following java examples do not contain imports and the main method is always in the class that is used first. 
+\\
+The problem implemented to exemplify is quite simple: A school has multiple classes with students. The goal is to get the avearge age of all students in the school. 
+
+\lstinputlisting{listings/rule1/example1/School.java}
+\label{listing:rule1example1}
+
+As the listing \ref{listing:rule1example1} shows, the method \textit{count} simply iterates over all classes of the school, then reads out all students of the class and counts their number. This operation uses nested for loops to determine the number of students. A first improvement would be to use multimple methods to get rid of the nested control structures. This is depicted in \ref{listing:rule1example2}. In this example, the control structures are not nested anymore, but method calls are used to conduct the counting of the deeper data. The deeper data in this case are the \textit{Student}s because their are contained by the \textit{SchoolClass}. 
+
+\lstinputlisting{listings/rule1/example2/School.java}
+\label{listing:rule1example2}
+
+Even if \ref{listing:rule1example2} now fullfils the rule, there is still problem remaining. The class \textit{School} is still operating on the data that is contained by the class \textit{SchoolClass}. However the number of students in a school and the number of students in a class are two different concerns and they should not only be separated but be well placed in their corresponding classes. Then the the result is a higher cohesion, because the operations are placed perecisely at the classes. Therefore extracting the method that is counting the students of a class to the \textit{SchoolClass} is a step, improving the code even more. Listing \ref{listing:rule1example2:school} and \ref{listing:rule1example2:schoolclass} show the two classes with their corresponding counting methods, that are now located to the proper classes. 
+
+\lstinputlisting{listings/rule1/example3/School.java}
+\label{listing:rule1example3:school}
+\lstinputlisting{listings/rule1/example3/SchoolClass.java}
+\label{listing:rule1example3:schoolclass}
+\\
+
+The example shows exemplifies how Rule 1 "Use One Level of Indentation per Method" can improve the readability of code and the cohesion of the classes. The resulting classes are therefore easier to test, easier to understand and more focused on doing on dedicated task. The graphic in \ref{picture:rule1abstraction} shows exactly this. The operations on a deep abstraction level or operations on nested structures are not done on the abstract level. In contrast, the abstract level uses the lower level object to conduct low level operations. 
+
+\includegraphics{Bilder/Rule1Abstraction.PNG}
+\label{picture:rule1abstraction}
 
 \subsection{Rule 2: "Don’t Use the else Keyword"}
+\label{describe:rule2}
+Jeff Bay's Rule 2 "Don’t Use the else Keyword", tackles the lack of understanding and usage of polymorphism. 
+In \ref{oc2008} he states that many developers learn if/else constructs from day one. Therefore they are used to the usage of the construct. Even worse they learn the proper usage of polymorphism later on in their career. As a result the "way of thinking" in if/else constructs is still firmly established in developers' brains.
+\\
+
+As commonly stated, the exesive use of conditionals leads to code that is hardly readble. Even worse it leads to code duplication. This is because the deveoper does not see the usage of an if/else construct from the outside of the classe. Therefore if he does not know the class where object is used, he simply rewrites the behaviour that is already implemented in another method. Assumed there would be an object that had a clear description of the implemented behaviour and could be reused, then this erros would not occur. Furthermore the conditional within the method could also be implemented by different implementation behind a common interface. The setting of the direction would then not happen when passing the if/else construct, but the method would simply call another method of an object and the concrete implementation of a common interface determines the code that is executed. 
+\\
+
+There are several ways to reduce the usage of if/else conditionals and increase the overview and readability of the coding. The three ways of doing so are: early return, the Null Object Pattern and the Strategy or State pattern. These three approaches are exemplified in the next paragraph. 
+\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 asdf
 \subsection{Rule 3: "Wrap All Primitives and Strings"}
+
+%%%%%%%%%%%%%%%%%%%%% BAD exmaple, becaus eit does not show rule 1----Second, better example, -------
+
+The following code example describes a bad and a good example of the rule. The first example is showing a possible implementation and the second example is showing a refactore example, which satisfies the rule and as a high cohesion and only operates on one level of abstraction. 
+
+For reasons of simplicity, the following java examples do not contain imports and the main method is always in the class that is used first. 
+
+%\lstinputlisting{listings/rule1/bad/HtmlHello.java}
+\label{listing:rule1bad}
+
+The example \ref{listing:rule1bad} shows a class used to create an \acf{HTML} element containing an auto incremented identifier \textit{id} and a String \textit{content}. In the method \textit{sayHello} an \acf{HTML} element is assembled an printed on the given \textit{PrintStream} of the method. The method appends the \acf{HTML}, a technical markup language and a domain dependent variable, and the\textit{content}, to the printer. The techincal \acf{HTML} is a formatting information on a low level. The content however is a domain dependent information, that is not dependent on the markup that is used. This is a violation of the "one level of abstraction" principle.\\
+
+A solution is to extract the markup from the domain dependent information. In the following, an improved version of the problem is shown. In this example the high level information \textit{content} and the low level markup information are separated strictly. The new class \textit{HtmlElement} now represents a \acf{HTML} element with an \textit{id} and a \textit{content}. The class depicted in listing \label{listing:rule1good:element} is listed show the \textit{HtmlElement}. 
+
+%\lstinputlisting{listings/rule1/good/HtmlElement.java}
+\label{listing:rule1good:element}
+
+Even if the new introduced class \textit{HtmlElement} is on a low level, very close to the markup language and not domain dependant, it is abstracting a simple structure of a regular \acf{HTML} element. Therefore the class can be reused by other classes 
+%%%%%%%%%%%%%%%%%%%%% BAD exmaple, becaus eit does not show rule 1
+
+
+
+
 asdf
 \subsection{Rule 4: "Use Only One Dot per Line"}
 asdf

@@ -1,5 +1,5 @@
 % Präambel
-\documentclass[11pt,a4paper,oneside, 
+\documentclass[12pt,a4paper,oneside, 
 liststotoc, 					% Tabellen- und Abbildungsverzeichnis ins Inhaltsverzeichnis
 bibtotoc,						% Literaturverzeichnis ins Inhaltsverzeichnis aufnehmen
 titlepage, 						% Titlepage-Umgebung statt \maketitle
@@ -8,7 +8,7 @@ headsepline, 					% horizontale Linie unter Kolumnentitel
 %DIV11,							% auskommentieren, um den Seitenspiegel zu vergrößern
 BCOR6mm,						% Bindekorrektur, die den Seitenspiegel um 6mm nach rechts verschiebt,
 english
-]{scrreprt}			
+]{scrreprt}		
 \usepackage{ucs} 				% Dokument in utf8-Codierung schreiben und speichern
 \usepackage[utf8x]{inputenc} 	% ermöglicht die direkte Eingabe von Umlauten
 \usepackage[ngerman]{babel} 	% deutsche Trennungsregeln und Übersetzung der festcodierten Überschriften
@@ -29,6 +29,7 @@ english
 \usepackage{calc}
 \usetikzlibrary{positioning,shadows,arrows,trees,shapes,fit}		%use the tree part of the package
 \usepackage[printonlyused]{acronym}
+\usepackage{times}
 % -----------------------------------------------------------------------------------------------------------------
 % Zum Aktualisieren des Abkürzungsverzeichnisses bitte auf der Kommandozeile folgenden Befehl aufrufen :
 %  makeindex Bachelorarbeit.nlo -s nomencl.ist -o Bachelorarbeit.nls

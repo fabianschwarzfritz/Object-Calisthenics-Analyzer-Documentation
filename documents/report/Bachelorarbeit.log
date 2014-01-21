@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  18 JAN 2014 20:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  21 JAN 2014 21:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -38,11 +38,11 @@ Package tocbasic Info: omitting babel extension for `lof'
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
 (tocbasic)             for `lot' on input line 119.
-Package scrreprt Info: You've used obsolete option `11pt'.
-(scrreprt)             \KOMAExecuteOptions{fontsize=11pt} will be
+Package scrreprt Info: You've used obsolete option `12pt'.
+(scrreprt)             \KOMAExecuteOptions{fontsize=12pt} will be
 (scrreprt)             used instead.
-(scrreprt)             You may simply replace `11pt'
-(scrreprt)             by `fontsize=11pt'.
+(scrreprt)             You may simply replace `12pt'
+(scrreprt)             by `fontsize=12pt'.
 Class scrreprt Info: You've used standard option `oneside'.
 (scrreprt)           This is correct!
 (scrreprt)           Internally I'm using `twoside=false'.
@@ -68,10 +68,10 @@ Class scrreprt Warning: You've used obsolete option `bibtotoc'.
 (scrreprt)              usage of option `bibtotoc' by `bibliography=totoc'.
 
 Class scrreprt Info: Switching compatibility level to `first'.
-Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input l
+Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input l
 ine 1367.
-(c:/texlive/2013/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2012/07/29 v3.11b KOMA-Script font size class option (11p
+(c:/texlive/2013/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2012/07/29 v3.11b KOMA-Script font size class option (12p
 t)
 )
 (c:/texlive/2013/texmf-dist/tex/latex/koma-script/typearea.sty
@@ -99,21 +99,21 @@ Package typearea Info: You've used standard option `oneside'.
 \ta@vblk=\skip43
 \ta@temp=\skip44
 Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 10
+(typearea)             DIV  = 12
 (typearea)             BCOR = 17.07164pt
 (typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 406.30542pt
+(typearea)              \textwidth      = 435.32722pt
 (typearea)              DIV departure   = -3%
-(typearea)              \evensidemargin = 31.86708pt
-(typearea)              \oddsidemargin  = 31.86708pt
+(typearea)              \evensidemargin = 17.35619pt
+(typearea)              \oddsidemargin  = 17.35619pt
 (typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 555.00024pt
-(typearea)              \topmargin      = 12.2347pt
-(typearea)              \headheight     = 17.0pt
-(typearea)              \headsep        = 20.40001pt
-(typearea)              \topskip        = 11.0pt
-(typearea)              \footskip       = 47.60002pt
-(typearea)              \baselineskip   = 13.6pt
+(typearea)              \textheight     = 606.5pt
+(typearea)              \topmargin      = -1.84941pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
 (typearea)              on input line 1213.
 )
 \c@part=\count80
@@ -726,6 +726,9 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks30
 )
+(c:/texlive/2013/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
 \@nomenclaturefile=\write5
 \openout5 = `Bachelorarbeit.nlo'.
 
@@ -741,676 +744,28 @@ Type  H <return>  for immediate help.
                                                   
 l.5 	\acro
           {DHBW}{Duale Hochschule Baden-Württemberg}
+? h
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 9.
-(c:/texlive/2013/texmf-dist/tex/latex/base/t1cmss.fd
-File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)) (./Bachelorarbeit.aux
-(./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux) (./Inhalt/abstract.aux)
-(./Inhalt/hauptteil.aux))
-\openout1 = `Bachelorarbeit.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 87.
- (c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 87.
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/t1ppl.fd
-File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-)
-(c:/texlive/2013/texmf-dist/tex/latex/ucs/ucsencs.def
-File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
-)
-(c:/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
-\scratchdimen=\dimen158
-\scratchbox=\box58
-\nofMPsegments=\count125
-\nofMParguments=\count126
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count127
-\MPscratchDim=\dimen159
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
-\everyMPtoPDFconversion=\toks32
-) (c:/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(c:/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(c:/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(c:/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(c:/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(c:/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(c:/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(c:/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(c:/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(c:/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-\big@size=\dimen160
-\c@lstlisting=\count130
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 87.
-
-(c:/texlive/2013/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-
-LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/b/it' undefined
-(Font)              using `T1/cmtt/b/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/b/sl' undefined
-(Font)              using `T1/cmtt/b/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/b/sc' undefined
-(Font)              using `T1/cmtt/b/n' instead on input line 87.
-
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 87.
-LaTeX Font Info:    Font shape `T1/cmtt/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/it' tried instead on input line 87.
-
-LaTeX Font Warning: Font shape `T1/cmtt/bx/sl' undefined
-(Font)              using `T1/cmtt/bx/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/bx/sc' undefined
-(Font)              using `T1/cmtt/bx/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/sb/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/sb/it' undefined
-(Font)              using `T1/cmtt/sb/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/sb/sl' undefined
-(Font)              using `T1/cmtt/sb/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/sb/sc' undefined
-(Font)              using `T1/cmtt/sb/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/c/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/c/it' undefined
-(Font)              using `T1/cmtt/c/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/c/sl' undefined
-(Font)              using `T1/cmtt/c/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/c/sc' undefined
-(Font)              using `T1/cmtt/c/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/l/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/l/it' undefined
-(Font)              using `T1/cmtt/l/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/l/sl' undefined
-(Font)              using `T1/cmtt/l/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/l/sc' undefined
-(Font)              using `T1/cmtt/l/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/m/ui' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/bx/ui' undefined
-(Font)              using `T1/cmtt/bx/n' instead on input line 87.
-
-
-LaTeX Font Warning: Font shape `T1/cmtt/m/In' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 87.
-
-ABD: EveryShipout initializing macros [1
-
-{c:/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-\openout2 = `Inhalt/titelseite.aux'.
-
- (./Inhalt/titelseite.tex
-<Bilder/logo_dhbw.jpg, id=26, 86.9649pt x 44.3256pt>
-File: Bilder/logo_dhbw.jpg Graphic file (type jpg)
-
-<use Bilder/logo_dhbw.jpg>
-Package pdftex.def Info: Bilder/logo_dhbw.jpg used on input line 7.
-(pdftex.def)             Requested size: 173.92935pt x 88.65097pt.
-
-
-LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <20.74> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 12.
-
-
-LaTeX Font Warning: Font shape `T1/cmss/bx/sc' undefined
-(Font)              using `T1/cmss/bx/n' instead on input line 12.
-
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 25.
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ppl.fd
-File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
-)
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 25.
-
-
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/omlzplm.fd
-File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
-)
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 25.
-
-
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/omszplm.fd
-File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
-)
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 25.
-
-
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/omxzplm.fd
-File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
-)
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 25.
-
-
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/ot1zplm.fd
-File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-)
-(c:/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-)
-LaTeX Font Info:    Try loading font information for TS1+cmss on input line 44.
-
-
-(c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmss.fd
-File: ts1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [2
-
-
- <./Bilder/logo_dhbw.jpg>])
-\openout2 = `Inhalt/erklaerung.aux'.
-
- (./Inhalt/erklaerung.tex
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <10.95> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 17.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-) [1
-
-
-
-]
-\openout2 = `Inhalt/abstract.aux'.
-
- (./Inhalt/abstract.tex) [2
-
-
-
-] (./Bachelorarbeit.toc [3
-
-
-])
-\tf@toc=\write6
-\openout6 = `Bachelorarbeit.toc'.
-
-
-(./Bachelorarbeit.nls [4]) [5
-
-] (./Bachelorarbeit.lof)
-\tf@lof=\write7
-\openout7 = `Bachelorarbeit.lof'.
-
- [6
-
-] (./Bachelorarbeit.lot)
-\tf@lot=\write8
-\openout8 = `Bachelorarbeit.lot'.
-
- [7
-
-]
-\openout2 = `Inhalt/hauptteil.aux'.
-
- (./Inhalt/hauptteil.tex
-Chapter 1.
-
-Class scrreprt Warning: \float@addtolists detected!
-(scrreprt)              You should use the features of package `tocbasic'
-(scrreprt)              instead of \float@addtolists.
-(scrreprt)              Support for \float@addtolists may be removed from
-(scrreprt)              `scrreprt' soon .
-
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
-
-LaTeX Warning: Citation `i:exercising' on page 1 undefined on input line 3.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
-
- []
-
-
-Overfull \hbox (109.44345pt too wide) in paragraph at lines 20--21
-[]\T1/ppl/m/n/10.95 The book "The thought-works an-thol-ogy. Es-says on Soft-wa
-re Tech-nol-ogy and Innovation"[[],
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-[1
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
-
- []
-
-(c:/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--35
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3]
-Chapter 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
-
- []
-
-[4
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--121
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--149
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7]
-
-LaTeX Warning: Citation `wiki:cohesion' on page 8 undefined on input line 153.
-
-
-Overfull \hbox (4.20015pt too wide) in paragraph at lines 153--156
-\T1/ppl/m/n/10.95 Cohesion de-scribes "de-gree to which the el-e-ments of a mod
--ule be-long together"[[]].
- []
-
-
-LaTeX Warning: Citation `wiki:loosecoupling' on page 8 undefined on input line 
-161.
-
-Package acronym Info: Label `acro:DIP' newly defined as it shall be overridden
-although it is yet undefined on input line 164.
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[9]
-
-LaTeX Warning: Reference `coupling' on page 10 undefined on input line 191.
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10] (./listings/ElseVisitor.java
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 12.
-
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11])
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[12]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[13]
-Chapter 3.
-[14
-
-]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16]
-Chapter 4.
-[17
-
-]
-Chapter 5.
-) [18
-
-] [19
-
-
-] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux)
-(./Inhalt/erklaerung.aux) (./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux))
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+? H
+Sorry, I already gave what help I could...
+Maybe you should try asking a human?
+An error might have occurred before I noticed any problems.
+``If all else fails, read the instructions.''
+
+? x
+ 
 Here is how much of TeX's memory you used:
- 18370 strings out of 493308
- 342151 string characters out of 6141367
- 559534 words of memory out of 5000000
- 21344 multiletter control sequences out of 15000+600000
- 36674 words of font info for 78 fonts, out of 8000000 for 9000
+ 15777 strings out of 493308
+ 306303 string characters out of 6141367
+ 421560 words of memory out of 5000000
+ 18920 multiletter control sequences out of 15000+600000
+ 4702 words of font info for 16 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,12n,76p,1607b,1646s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2013/texm
-f-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2013/texmf-dist/fon
-ts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2013/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/ma
-thpazo/fplmri.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfcc1
-095.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb><c
-:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><c:/texlive/
-2013/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb><c:/texlive/2013/texmf
--dist/fonts/type1/public/cm-super/sfss1440.pfb><c:/texlive/2013/texmf-dist/font
-s/type1/public/cm-super/sfsx1000.pfb><c:/texlive/2013/texmf-dist/fonts/type1/pu
-blic/cm-super/sfsx1095.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-su
-per/sfsx1200.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx14
-40.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb><c:
-/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb><c:/texlive/2
-013/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2013/texmf-
-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type
-1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/palatino/
-uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (28 pages, 371610 bytes).
+ 65i,1n,71p,425b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 19 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
