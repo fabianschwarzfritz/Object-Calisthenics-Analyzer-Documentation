@@ -266,15 +266,66 @@ Jeff Bay's Rule 2 "Don’t Use the else Keyword", tackles the lack of understand
 In \ref{oc2008} he states that many developers learn if/else constructs from day one. Therefore they are used to the usage of the construct. Even worse they learn the proper usage of polymorphism later on in their career. As a result the "way of thinking" in if/else constructs is still firmly established in developers' brains.
 \\
 
-As commonly stated, the exesive use of conditionals leads to code that is hardly readble. Even worse it leads to code duplication. This is because the deveoper does not see the usage of an if/else construct from the outside of the classe. Therefore if he does not know the class where object is used, he simply rewrites the behaviour that is already implemented in another method. Assumed there would be an object that had a clear description of the implemented behaviour and could be reused, then this erros would not occur. Furthermore the conditional within the method could also be implemented by different implementation behind a common interface. The setting of the direction would then not happen when passing the if/else construct, but the method would simply call another method of an object and the concrete implementation of a common interface determines the code that is executed. 
+As commonly stated, the exesive use of conditionals leads to code that is hardly readble. Even worse it leads to code duplication. This is because the deveoper does not see the usage of an if/else construct from the outside of the classe. Therefore if he does not know the class where object is used, he simply rewrites the behaviour that is already implemented in another method. Assumed there would be an object that had a clear description of the implemented behaviour and could be reused, then this erros would not occur. Furthermore the conditional within the method could also be implemented by different implementation behind a common interface, which is the basic idea of polymorphism. The setting of the direction would then not happen when passing the if/else construct, but the method would simply call another method of an object and the concrete implementation of a common interface determines the code that is executed. 
+\\
+
+In order to increase the reusability and conduct a better separation of concerns, Jeff bay restricts the usage of if else constructs, conretely the usage of the else keyword.
 \\
 
 There are several ways to reduce the usage of if/else conditionals and increase the overview and readability of the coding. The three ways of doing so are: early return, the Null Object Pattern and the Strategy or State pattern. These three approaches are exemplified in the next paragraph. 
 \\
 
+\subsection*{Early return}
+Early return is a very simple way of decreasing the amount of if/else conditionals. Its goal is mainly based on removing unused else keywords. Listing \ref{listing:rule1example1} shows method with conditionals. The code also contains "else" keywords, even if they would not be necessary. When the block of the first if clause would use the return statement to early-return from the method, the else keyword would not be needed.
+\lstinputlisting{listings/rule2/example1/}
+\label{listing:rule1example1}
+\lstinputlisting{listing/rule2/example2/}
+\label{listing:rule1example2}
+The second example, shown in \ref{listing:rule1example2}, shows the solution that was just proposed. As clearly visible there is no else keyword used anymore, but the control is also done by early returns. The advantage of this approach occurs when reading through the method stop by step. When seeing a return statement while reading through the method, the developer know immediately what happens. The reader of the method know that no other statement "weiter unten" of the method will be executed. It is very clear that the method "weitergeben " the control and that the execution is continued in the method of the callee. There is no long decision making by conditionals that navigate through the different cases anymore, but a clear end of the method - simliar to the semicolon or the dot in a sentence. Therefore, according to Jeff Bay, the practice of using early returns the readabliity is increased. \\
 
+However others state that the opposite is the case and that the variable that is returned should always be defined at the beginning of the method. This makes use of the advantage that the developer already knows at the beginning of the method which variable is returned - a clear advantage in contrast to the early return approach. However, when reading through a method the developer always has to remember the variable that is returned and how it was changed. Furthermore, when returning a default value, the value is initialized in the beginning of the method - but the return statement and the return variabla are in the end of the method. Therefore the developer might have to look up the default value of the variable again. Whereas when using the the early return approach, this is prevented more likely. ???? genua genug???
+\\
 
+\subsection*{Null Object Pattern}
+The use of the Null Object Pattern is way of getting rid of if/else constructs. The pattern is mainly used in static typed language, like Java for example. When a method is returning the value null, a problem occurs for the callee. He has to check with a condition if the reference on the return value is null or is null. An example for such a null check is shown in \ref{listing:nullobject1}. This constructs tries to achieve the execution of some lines of code only if a value is not null. However this has to be checked with an if condition. With the Null Object Pattern, polymorphism instead of if contisions is used to achieve the shown behavior.
+\begin{lstlisting}
+Object value = a.method();
+if(value == null) {
+	...
+}
+\end{lstlisting}
+\label{listing:nullobject1}
+The Null Object Pattern commonly has two implementation behind one common interface. One implementation however contains the code in which of the if clause's body that is shown in \ref{listing:nullobject1}, and the other object simply contains no code. The two classes are shown in the following. The \ref{listing:nullobject2} shows the Null Object itself and the other listing \ref{listing:nullobject3} shows the implementation containg the code. Within the method \textit{method()}, a concrete implementation of the common interface \ref{listing:nullobjectoperationinterface} is returned. If the object shall be \textit{null}, an implementation of the Null Object \textit{NullObject} is returned, if not the \ref{listing:nullobject3} is returned. By doing so, the call check of the conditions in the calle disappears, as depicted in listing \ref{nullobject4}.
+\begin{lstlisting}
+Object value = a.method();
+if(value == null) {
+	...
+}
+\end{lstlisting}
+\label{listing:nullobject4}
 
+The callee shown in \ref{listing:nullobject4} got rid of the if/else construct by the use of polymorphism. Another advantage is that the behavior of the object is not in the callee object, but is pushed within the object itself with the use of polymorphism. The result is a better allocation of the behavior to the objects.
+\\
+
+\subsection*{State and Strategy pattern}
+The third way of getting rid of else keywords is via polymorphism - concretely the state pattern. A conditional structure has the one and only task to execute an additional block of statements or to decide which block is executed. In object orientation this can also be conducted with the use of polymorphism, and this offers multiple advantages, that will be explained later. 
+The use of polymorphism means, in most cases, applying the strategy pattern. This will be explained firstly. \\
+
+\\
+The strategie pattern is a software pattern allowing different ???polymorph??? implementations, that are hidden gehind a common interface. Which version of the method is executed is not determined within the object itself, but the concrete implementation of the object is determined by another object. The used implementation is "plugged" in by a deciding instance that determines the strategy that is used. The object itself, however does not care about the object that is used anymore, but simply calls the method of the common interface. An example of this is shown in ... and ... . The first example shows a method not using polymoprhism, and the second, refactored example, shows the same method with polymorphism.
+
+%% TODO codebeispiele einfuegen und kurz erlauter.
+% TODO notzen kontrollieren - alles dabei?
+%% TODO darstellung grafisch strategy pattern
+
+%% TODO nur kurze erlaeuterung des state pattern
+The state pattern is very similar to the strategy pattern, and can be seen as specialization of it. The state pattern also makes use of polymorphism. In contrast to the strategy pattern, the implementaiton used next can be changed by an implementation itself. In the state pattern, the different implementations of the common interface are representing the object's state. The objects state is expressed by the concrete state implementation, that is hidden gehind the common interface, which is valid for all states. Therefore a state can change the state to another state.\\
+
+The \acf{UML} diagram of patter in shown in \ref{picture:statepattern}. The graphic shows the \textit{Context}, in which the \textit{State} is used. The \textit{ConcreteStateA} and the \textit{ConcreteStateB} are the concrete implementations of the common interface \textit{State}. The state implementations  \textit{ConcreteStateA} and \textit{ConcreteStateB} can change the state to another state. They can change the state to every implementation of the \textit{State} interface, therefore \textit{ConcreteStateA} can change the state to \textit{ConcreteStateB}. 
+\includegraphics{Bilder/StatePattern.PNG}
+\label{picture:statepattern}
+
+The usage of state that describe the respective conditions can be a replacement for the extensive use of if/else constructs.
 
 
 
