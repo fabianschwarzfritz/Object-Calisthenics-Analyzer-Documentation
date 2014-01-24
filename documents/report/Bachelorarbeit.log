@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  22 JAN 2014 08:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  24 JAN 2014 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -745,15 +745,21 @@ Type  H <return>  for immediate help.
 l.5 	\acro
           {DHBW}{Duale Hochschule Baden-Württemberg}
 ? 
-LaTeX Font Info:    Try loading font information for T1+phv on input line 11.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 12.
 (c:/texlive/2013/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 11.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 12.
 ) (./Bachelorarbeit.aux
 (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux) (./Inhalt/abstract.aux)
 (./Inhalt/hauptteil.aux
+
+LaTeX Warning: Label `listing:rule1example1' multiply defined.
+
+
+LaTeX Warning: Label `listing:rule1example2' multiply defined.
+
 
 LaTeX Warning: Label `listing:rule1good:element' multiply defined.
 
@@ -929,17 +935,13 @@ LaTeX Font Warning: Font shape `T1/pcr/bx/ui' undefined
 LaTeX Font Warning: Font shape `T1/pcr/m/In' undefined
 (Font)              using `T1/pcr/m/n' instead on input line 88.
 
-ABD: EveryShipout initializing macros
-! I can't write on file `Bachelorarbeit.pdf'.
-(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
-Please type another file name for output: 
-[1
+ABD: EveryShipout initializing macros [1
 
 {c:/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `Inhalt/titelseite.aux'.
 
-
-(./Inhalt/titelseite.tex <Bilder/logo_dhbw.jpg, id=26, 86.9649pt x 44.3256pt>
+ (./Inhalt/titelseite.tex
+<Bilder/logo_dhbw.jpg, id=26, 86.9649pt x 44.3256pt>
 File: Bilder/logo_dhbw.jpg Graphic file (type jpg)
 
 <use Bilder/logo_dhbw.jpg>
@@ -1467,33 +1469,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--288
  []
 
 
-LaTeX Warning: Reference `listing:nullobject1' on page 17 undefined on input li
-ne 290.
-
-
-LaTeX Warning: Reference `listing:nullobject1' on page 17 undefined on input li
-ne 298.
-
-
-LaTeX Warning: Reference `listing:nullobject2' on page 17 undefined on input li
-ne 298.
-
-
-LaTeX Warning: Reference `listing:nullobject3' on page 17 undefined on input li
-ne 298.
-
-
-LaTeX Warning: Reference `listing:nullobjectoperationinterface' on page 17 unde
-fined on input line 298.
-
-
-LaTeX Warning: Reference `listing:nullobject3' on page 17 undefined on input li
-ne 298.
-
-
-LaTeX Warning: Reference `nullobject4' on page 17 undefined on input line 298.
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -1501,8 +1476,23 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [17]
 
-LaTeX Warning: Reference `listing:nullobject4' on page 18 undefined on input li
-ne 307.
+LaTeX Warning: Reference `listing:nullobject2' on page 18 undefined on input li
+ne 298.
+
+
+LaTeX Warning: Reference `listing:nullobject3' on page 18 undefined on input li
+ne 298.
+
+
+LaTeX Warning: Reference `listing:nullobjectoperationinterface' on page 18 unde
+fined on input line 298.
+
+
+LaTeX Warning: Reference `listing:nullobject3' on page 18 undefined on input li
+ne 298.
+
+
+LaTeX Warning: Reference `nullobject4' on page 18 undefined on input line 298.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 307--309
@@ -1522,39 +1512,24 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.315 T
-       he strategie pattern is a software pattern allowing different ???poly...
+       he strategie pattern is a software pattern allowing different polymor...
 
 ? 
+Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
+although it is yet undefined on input line 315.
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
-
+Overfull \hbox (16.64732pt too wide) in paragraph at lines 315--316
+\T1/ptm/m/n/12 cre-ate con-fig-urable al-go-rithms with dif-fer-ent be-haviour 
+of the implementation[[],
  []
 
-Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
-although it is yet undefined on input line 324.
+<Bilder/StrategyPattern.png, id=117, 256.96pt x 160.6pt>
+File: Bilder/StrategyPattern.png Graphic file (type png)
 
-Package acronym Warning: Acronym `UML' is not defined on input line 324.
+<use Bilder/StrategyPattern.png>
+Package pdftex.def Info: Bilder/StrategyPattern.png used on input line 317.
+(pdftex.def)             Requested size: 256.95937pt x 160.5996pt.
 
-
-Package acronym Warning: Acronym `UML' is not defined on input line 324.
-
-
-LaTeX Warning: Reference `picture:statepattern' on page 18 undefined on input l
-ine 324.
-
-
-LaTeX Warning: File `Bilder/StatePattern.PNG' not found on input line 325.
-
-
-! Package pdftex.def Error: File `Bilder/StatePattern.PNG' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.325 \includegraphics{Bilder/StatePattern.PNG}
-                                               
-? 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1562,11 +1537,41 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18]
-Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
-although it is yet undefined on input line 358.
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
+
+! LaTeX Error: Unknown graphics extension: .svg.png.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.329 ...ludegraphics{Bilder/StatePattern.svg.png}
+                                                  
+? 
+Package acronym Info: Label `acro:LSP' newly defined as it shall be overridden
+although it is yet undefined on input line 332.
+
+Overfull \hbox (14.2356pt too wide) in paragraph at lines 332--333
+\T1/ptm/m/n/12 ca-pus-late code. They break pro-ce-du-ral text lines into well 
+en-cap-su-lated units[[]].
+ []
+
+
+Overfull \hbox (54.90326pt too wide) in paragraph at lines 332--333
+\T1/ptm/m/n/12 The re-sult-ing code is eas-ier to reuse and to mod-ify and "mak
+es them interchangeable"[[]].
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
  []
 
@@ -1576,25 +1581,133 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[19 <./Bilder/StrategyPattern.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+LaTeX Warning: Reference `listing:rule3example1' on page 20 undefined on input 
+line 347.
+
+! Undefined control sequence.
+l.347 ...d by the dice is indicated by the \textis
+                                                  {Dice}. However resulting ...
+
+? 
+! Illegal parameter number in definition of \reserved@a.
+<to be read again> 
+                   r
+l.347 ...lting integer of the \textit{Dice#roll()}
+                                                   method is used to iterate...
+
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+<argument> Dice##
+                 roll()
+l.347 ...lting integer of the \textit{Dice#roll()}
+                                                   method is used to iterate...
+
+? 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20]
+[20] (./listings/rule3/example1/Game.java) (./listings/rule3/example1/Dice.java
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 6.
+(c:/texlive/2013/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+))
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
-Chapter 3.
-[22
+[21] (./listings/rule3/example2/Game.java) (./listings/rule3/example2/Dice.java
+) (./listings/rule3/example2/Action.java)
 
-]
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.360 
+      
+? 
+Package acronym Info: Label `acro:DDD' newly defined as it shall be overridden
+although it is yet undefined on input line 361.
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 361.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 361.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 361.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 361.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 361.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 361.
+
+
+! LaTeX Error: Environment exampleblock undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.363 \begin{exampleblock}
+                          {Beispielblocktitel}
+? 
+
+! LaTeX Error: \begin{document} ended by \end{exampleblock}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.365 \end{exampleblock}
+                        
+? 
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
+
+although it is yet undefined on input line 396.
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1609,14 +1722,32 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [24]
-Chapter 4.
+Chapter 3.
 [25
 
 ]
-Chapter 5.
-) [26
 
-] [27
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
+Chapter 4.
+[28
+
+]
+Chapter 5.
+) [29
+
+] [30
 
 
 ]
@@ -1626,7 +1757,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
+[31] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
 (./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1639,26 +1770,25 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18492 strings out of 493308
- 343441 string characters out of 6141367
- 536186 words of memory out of 5000000
- 21448 multiletter control sequences out of 15000+600000
- 79518 words of font info for 97 fonts, out of 8000000 for 9000
+ 18570 strings out of 493308
+ 345216 string characters out of 6141367
+ 545551 words of memory out of 5000000
+ 21506 multiletter control sequences out of 15000+600000
+ 79533 words of font info for 97 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,12n,76p,1740b,1646s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,76p,1740b,1663s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2013/texm
 f-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2013/texmf-dist/fonts
-/type1/urw/courier/ucrr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helve
-tic/uhvb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-<c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/20
-13/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/f
-onts/type1/urw/palatino/uplri8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw
-/times/utmb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-<c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (38 pages, 235754 bytes).
+/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helv
+etic/uhvr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pf
+b><c:/texlive/2013/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2
+013/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb><c:/texlive/2013/texmf-dist
+/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Bachelorarbeit.pdf (41 pages, 248375 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 201 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -266,7 +266,7 @@ Jeff Bay's Rule 2 "Don’t Use the else Keyword", tackles the lack of understand
 In \ref{oc2008} he states that many developers learn if/else constructs from day one. Therefore they are used to the usage of the construct. Even worse they learn the proper usage of polymorphism later on in their career. As a result the "way of thinking" in if/else constructs is still firmly established in developers' brains.
 \\
 
-As commonly stated, the exesive use of conditionals leads to code that is hardly readble. Even worse it leads to code duplication. This is because the deveoper does not see the usage of an if/else construct from the outside of the classe. Therefore if he does not know the class where object is used, he simply rewrites the behaviour that is already implemented in another method. Assumed there would be an object that had a clear description of the implemented behaviour and could be reused, then this erros would not occur. Furthermore the conditional within the method could also be implemented by different implementation behind a common interface, which is the basic idea of polymorphism. The setting of the direction would then not happen when passing the if/else construct, but the method would simply call another method of an object and the concrete implementation of a common interface determines the code that is executed. 
+As commonly stated, the exesive use of conditionals leads to code that is hardly readble. \cite{gof} also state that. "Like long procedures, large conditional statements are undesirable" \cite{gof}. Even worse, it leads to code duplication because the code with a lot of conditionals "is difficult to extend and to modify"\cite{gof}. This is because the deveoper does not see the usage of an if/else construct from the outside of the classe. Therefore if he does not know the class where object is used, he simply rewrites the behaviour that is already implemented in another method. Assumed there would be an object that had a clear description of the implemented behaviour and could be reused, then this erros would not occur. Furthermore the conditional within the method could also be implemented by different implementation behind a common interface, which is the basic idea of polymorphism. The setting of the direction would then not happen when passing the if/else construct, but the method would simply call another method of an object and the concrete implementation of a common interface determines the code that is executed. 
 \\
 
 In order to increase the reusability and conduct a better separation of concerns, Jeff bay restricts the usage of if else constructs, conretely the usage of the else keyword.
@@ -312,39 +312,82 @@ The third way of getting rid of else keywords is via polymorphism - concretely t
 The use of polymorphism means, in most cases, applying the strategy pattern. This will be explained firstly. \\
 
 \\
-The strategie pattern is a software pattern allowing different ???polymorph??? implementations, that are hidden gehind a common interface. Which version of the method is executed is not determined within the object itself, but the concrete implementation of the object is determined by another object. The used implementation is "plugged" in by a deciding instance that determines the strategy that is used. The object itself, however does not care about the object that is used anymore, but simply calls the method of the common interface. An example of this is shown in ... and ... . The first example shows a method not using polymoprhism, and the second, refactored example, shows the same method with polymorphism.
+The strategie pattern is a software pattern allowing different polymorphic implementations, that are hidden gehind a common interface. Which version of the method is executed is not determined within the object itself, but the concrete implementation of the object is determined by another object. The used implementation is "plugged" in by a deciding instance that determines the strategy that is used. The object itself, however does not care about the object that is used anymore, but simply calls the method of the common interface. The strategy pattern is used to create configurable algorithms with different behaviour of the implementation\cite[p. 349]{gof}. The output on a given input however is defined by the common strategy interface. The \acf{UML} diagram of the strategy pattern is shown picture \ref{picture:strategypattern}. An example of this is shown in listing ???. The first example shows a method not using polymoprhism, and the second, refactored example, shows the same method with polymorphism.
+
+\includegraphics{Bilder/StrategyPattern}
+\label{picture:strategypattern}
 
 %% TODO codebeispiele einfuegen und kurz erlauter.
 % TODO notzen kontrollieren - alles dabei?
 %% TODO darstellung grafisch strategy pattern
 
 %% TODO nur kurze erlaeuterung des state pattern
-The state pattern is very similar to the strategy pattern, and can be seen as specialization of it. The state pattern also makes use of polymorphism. In contrast to the strategy pattern, the implementaiton used next can be changed by an implementation itself. In the state pattern, the different implementations of the common interface are representing the object's state. The objects state is expressed by the concrete state implementation, that is hidden gehind the common interface, which is valid for all states. Therefore a state can change the state to another state.\\
+Like the strategy pattern, the state pattern is a behavioural software pattern as well. The state pattern can be seen as specialization of it. The state pattern also makes use of polymorphism. In contrast to the strategy pattern, the implementation used next can be changed by an implementation itself. In the state pattern, the different implementations of the common interface are representing the object's state. The objects state is expressed by the concrete state implementation, that is hidden gehind the common interface, which is valid for all states. Therefore a state can change the state to another state.\\
 
-The \acf{UML} diagram of patter in shown in \ref{picture:statepattern}. The graphic shows the \textit{Context}, in which the \textit{State} is used. The \textit{ConcreteStateA} and the \textit{ConcreteStateB} are the concrete implementations of the common interface \textit{State}. The state implementations  \textit{ConcreteStateA} and \textit{ConcreteStateB} can change the state to another state. They can change the state to every implementation of the \textit{State} interface, therefore \textit{ConcreteStateA} can change the state to \textit{ConcreteStateB}. 
-\includegraphics{Bilder/StatePattern.PNG}
+The \acf{UML} diagram of patter in shown in \ref{picture:statepattern}. The graphic shows the \textit{Context}, in which the \textit{State} is used. The \textit{ConcreteStateA} and the \textit{ConcreteStateB} are the concrete implementations of the common interface \textit{State}. The state implementations  \textit{ConcreteStateA} and \textit{ConcreteStateB} can change the state to another state. They can change the state to every implementation of the \textit{State} interface, therefore \textit{ConcreteStateA} can change the state to \textit{ConcreteStateB}.
+All in all, the state pattern is clean way to encapsulate the change of behviour during runtime. In this patter not only the concrete implementation is encapsulated like in the strategy pattern, but also the transition from one state to another state is well encapsulated. \\
+\includegraphics{Bilder/StatePattern.svg.png}
 \label{picture:statepattern}
 
-The usage of state that describe the respective conditions can be a replacement for the extensive use of if/else constructs.
+The just described strategy and state pattern make heavy use of polymorphism to bettern encapuslate code. They break procedural text lines into well encapsulated units\cite{gof}. The resulting code is easier to reuse and to modify and "makes them interchangeable"\cite{gof}. The interchangable polymorphic units should follow the \acf{LSP} rigorously.\\
 
+The \acf{LSP} states that "a computer program, if S is a subtype of T, then objects of type T may be replaced with objects of type S (i.e., objects of type S may be substituted for objects of type T) without altering any of the desirable properties of that program (correctness, task performed, etc.)."\cite[Liskov Substitution Priniple]{wiki}. When a class overrides a method of a class or implements a method of an interface, the implementation should always behave as given by the abstract method definition. Therefore it is the principle that a subclass of a class (or an interface) should behave exactly as stated in the documentation of the abstract or overwritten method. In the result the output of a given method with a given input, is always the same and independant which of the polymorphic implementations were used. \\
 
+ To guarantee the correctness of the class that is using the interchangable classes, each of the concrete implementations of those classes have to behave exactly as their abstract specifications eg. interfaces. There interfaces should be well documented and provide a clear description of what is expected to be the output on every possible given imput. The documentaiton can then describe the speicalties of the concrete implementations. However, under no circumstances the subclasses should disagree the interface's documentation but should follow the \acf{LSP} very strictly. \\
 
+ All in all, these patterns enable the developer to "move multiconditinals and branches to own strategy [or state] classes"\cite{gof} and by this dramatically reduce the use of conditionals. By pushing login into interchangable own components, the cohesion of the class increases. It has less if/else conditionals and is, in result more readable and focused. The focus increases because the class does not determine the code to apply with conditionals to then treat them differently. Instead it uses method calls with the hidden and interchangable logic. To engage developers to use the described patterns and to benefit from their advantage, Jeff Bay permits the use of the \textit{else} keyword with this rule. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-asdf
 \subsection{Rule 3: "Wrap All Primitives and Strings"}
+Jeff Bays third rule "wrap all primitives and strings" tries to force the developer to push logic close the data. The basic problem this rule tackles is that most primitive values only relate to their meanding  by its varable names. \\
+
+Primitive values however are variously used in software. They occur as parameters, loop counter, return values and temporary variables. However, in all of these cases the meaning of the variable is only reflected by its name. They reflect meaning, but at the same time do not offer the associated behavior. In the following, a bad and a good example is shown. \\
+
+To explain this issue vivid, the following, bad example is given. The example used here is very simple. Imagine rolling a dice. The number, generated by the dice indicates the number of jumps you have to do. In the application the random method represents a complex process. The application however, consists of two classes. The \textit{Dice} represents the real world dice and is accountable for generating a random number. The other class, \textit{Game}, triggers the action of rolling the dice. Furthermore it is responsible for printing the results of the dice. The game represents how to process with the result of the data.   \\
+
+The first example is depicted below in listing \ref{listing:rule3example1}. As you can see, the behaviour that indicates the number generated by the dice is indicated by the \textis{Dice}. However resulting number is returned by the dice. With this number, the \textit{Game} determines how the  display shall be displayed. The \textit{Game} takes uses a for loop iteration to process the data. The processing of data is represented by this loop. The fact that the resulting integer of the \textit{Dice#roll()} method is used to iterate is only represented by the variable name of the varible. Therefore if there are many different or more complex data pricessings, then it gets confusing very fast. How well code is understood is only represented by the variable names. From where the data is manipulated can only be determined by knowing the program or reading the documentation. This is because the behaviour is not located where the data is. This bad example shows this very clearly. The behavior that is determined by the \textit{Game} is only the way of printing: \textit{System.out.println()}. The other code, the for loop in this case that represents the complex processing of data, is not determined by the \textit{Game}. It is rather determined by the \textit{Dice}. 
+\lstinputlisting{listings/rule3/example1/Game.java}
+\lstinputlisting{listings/rule3/example1/Dice.java}
+\label{listing:rule3example1}
+
+The second example shows the first example, but re-written. In this example, the behavior is very close at the data. As you can see, the \textit{Game} now only determines the way of displaying the data. The processing is done by the \textit{Dice}. As a result, the \textit{Dice} now has handle the iteration and the text that is printed. By letting the dice determine this behavior, in this case the text that is printed and the iteration, only the \textit{Dice} know how to handle the generated results. All other classes that make use of the \textit{Dice}, can only manipulate how the result is printed via the \textit{Action} interface. 
+When considering more complex code with multiple operations and data sets, this way of programming would not lead to confusing code. Because, in contrast to example one, the behavior that can be used to mainpulate the data is at the same place like the data. The behavior is not scattered in classes using the domain object \textit{Dice}. Furthermore the possible operations on the data can be only changed by changing the class that is providing the data. This makes the represented process of "rolling a dice" more transparent. If there is a extension for this process, then the change will be done in the \textit{Dice} class. Whereas in example one, the change could have been made anywhere. But then nobody else that used the \textit{Dice} would be informed about such a change, and therefore there is high risk of code douplication. 
+\lstinputlisting{listings/rule3/example2/Game.java}
+\lstinputlisting{listings/rule3/example2/Dice.java}
+\lstinputlisting{listings/rule3/example2/Action.java}
+\label{listing:rule3example1}
+
+\\
+
+The idea of pushing behavior very close to the data comes from the approach of \acf{DDD}. The idea of \acf{DDD} is to privide a domain model that represents problem specific scenarios. All problem specific behavior and all cases that represent the real world are represented by the domain model. The domain model if furthermore free of framework specific ???things??? like annotations or imports. The idea of \acf{DDD} comes from Eric Evans and he firstly presented it in \cite{ddd}. 
+In \cite{ddd} the author separates between different types of objects. These are presented shortly in the following. 
+
+\textbr{Entities} are the |top level" representations of the domain model. They provide the main entry point in the representing process. For example, this could be a class \textit{Contract} in a software that manages sales. 
+A \textbf{Value Object} is an object containing attributes, but has no conceptual identity. This is the counterexample for an object that bundles behavior and data. 
+An \textbf{Aggregate} is a collection of objects. Because the aggregate bundles multiple other objects, it is the object responsible for changes of its associated objects. It is the counterpart for all objects that want to conducte changes in the top level as well as in the sub objects. 
+A \textbf{Service} offers operations that are not domain dependant
+\begin{exampleblock}{Beispielblocktitel}
+        Beispielblocktext
+\end{exampleblock}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%% BAD exmaple, becaus eit does not show rule 1----Second, better example, -------
 
