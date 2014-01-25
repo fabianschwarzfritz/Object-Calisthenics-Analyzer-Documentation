@@ -59,12 +59,59 @@ english
 \renewcommand{\nomname}{Abbreviations}
 
 % Code listing configuration: 
-\newcommand{\classname}[1]{\texttt{#1}}
-\lstset{numbers=left}
-\lstset{backgroundcolor=\color{white}}
-\lstset{frame=single}
-\lstset{breaklines=true}
-\lstset{morecomment=[l]{//}}
+
+\usepackage{listings}
+  \usepackage{courier}
+ \lstset{
+         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         %numbers=left,               % Ort der Zeilennummern
+         numberstyle=\tiny,          % Stil der Zeilennummern
+         %stepnumber=2,               % Abstand zwischen den Zeilennummern
+         numbersep=5pt,              % Abstand der Nummern zum Text
+         tabsize=2,                  % Groesse von Tabs
+         extendedchars=true,         %
+         breaklines=true,            % Zeilen werden Umgebrochen
+         keywordstyle=\color{red},
+    		frame=b,         
+ %        keywordstyle=[1]\textbf,    % Stil der Keywords
+ %        keywordstyle=[2]\textbf,    %
+ %        keywordstyle=[3]\textbf,    %
+ %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+         stringstyle=\color{white}\ttfamily, % Farbe der String
+         showspaces=false,           % Leerzeichen anzeigen ?
+         showtabs=false,             % Tabs anzeigen ?
+         xleftmargin=17pt,
+         framexleftmargin=17pt,
+         framexrightmargin=5pt,
+         framexbottommargin=4pt,
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false      % Leerzeichen in Strings anzeigen ?        
+ }
+ \lstloadlanguages{% Check Dokumentation for further languages ...
+         %[Visual]Basic
+         %Pascal
+         %C
+         %C++
+         %XML
+         %HTML
+         Java
+ }
+    %\DeclareCaptionFont{blue}{\color{blue}} 
+
+  %\captionsetup[lstlisting]{singlelinecheck=false, labelfont={blue}, textfont={blue}}
+  \usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
+
+%\newcommand{\classname}[1]{\texttt{#1}}
+%\lstset{numbers=left}
+%\lstset{backgroundcolor=\color{white}}
+%\lstset{frame=single}
+%\lstset{breaklines=true}
+%\lstset{morecomment=[l]{//}}
+
 
 % -------------------------------------------------------------------------------------------
 % Definition der Kopf- und Fußzeilen
@@ -145,7 +192,7 @@ LITERATUR:
 \bibitem{ref} Fowler, Martin:
 \emph{Refactoring. Improving the Design of Existing Code}. \\ Amsterdam: Addison-Wesley Longman, 1999. 
 
-\bibitem{ddd} Evans, Eric:
+\bibitem{dddbook} Evans, Eric:
 \emph{Domain-Driven Design. Tackling Complexity in the Heart of Software}. \\ Amsterdam: Addison-Wesley Longman, 2003. 
 
 \bibitem{cohesionBook} Yourdon, Edward; Constantine, Larry:
@@ -153,6 +200,9 @@ LITERATUR:
 
 asdfklsajkflj INTERNET
 
+
+\bibitem[Brandapp.com]{ba.com} Appleton, Brad:
+\emph{Introducing Demeter and its Laws}. \\ URL http://www.bradapp.com/docs/demeter-intro.html
 
 \bibitem[Eclipse Documentation]{eclipseDocu} The Eclipse Foundation: 
 \emph{Eclipse documentation - Eclipse Kepler}. \\ URL http://help.eclipse.org/kepler/index.jsp.

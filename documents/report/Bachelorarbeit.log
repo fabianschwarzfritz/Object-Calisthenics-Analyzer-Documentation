@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  25 JAN 2014 10:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  25 JAN 2014 14:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,6 +729,30 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 (c:/texlive/2013/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
+(c:/texlive/2013/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(c:/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+(c:/texlive/2013/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(c:/texlive/2013/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen158
+\captionmargin@=\dimen159
+\captionwidth=\dimen160
+\caption@tempdima=\dimen161
+\caption@indent=\dimen162
+\caption@parindent=\dimen163
+\caption@hangindent=\dimen164
+)
+Package caption Info: KOMA-Script document class.
+\c@ContinuedFloat=\count124
+Package caption Info: listings package is loaded.
+)
 \@nomenclaturefile=\write5
 \openout5 = `Bachelorarbeit.nlo'.
 
@@ -753,41 +777,58 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 12.
 ) (./Bachelorarbeit.aux
 (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux) (./Inhalt/abstract.aux)
-(./Inhalt/hauptteil.aux
+(./Inhalt/hauptteil.aux) (./Inhalt/appendixListing.aux
 
-LaTeX Warning: Label `listing:rule1example1' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule1example2' multiply defined.
+LaTeX Warning: Label `aaaaa' multiply defined.
 
 
-LaTeX Warning: Label `listing:rule3example1' multiply defined.
+LaTeX Warning: Label `aaaaa' multiply defined.
 
 
-LaTeX Warning: Label `listing:rule1good:element' multiply defined.
+LaTeX Warning: Label `aaaaa' multiply defined.
 
-))
+
+LaTeX Warning: Label `aaaaa' multiply defined.
+
+
+LaTeX Warning: Label `aaaaa' multiply defined.
+
+
+LaTeX Warning: Label `aaaaa' multiply defined.
+
+
+LaTeX Warning: Label `aaaaa' multiply defined.
+
+
+LaTeX Warning: Label `aaaaa' multiply defined.
+
+
+LaTeX Warning: Label `aaaaa' multiply defined.
+
+) (./Inhalt/appendixImages.aux))
 \openout1 = `Bachelorarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 88.
- (c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 135.
+
+
+(c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 88.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 135.
 
 (c:/texlive/2013/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -797,16 +838,16 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (c:/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
-\scratchdimen=\dimen158
+\scratchcounter=\count125
+\scratchdimen=\dimen165
 \scratchbox=\box58
-\nofMPsegments=\count125
-\nofMParguments=\count126
+\nofMPsegments=\count126
+\nofMParguments=\count127
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count127
-\MPscratchDim=\dimen159
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen166
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
 \everyMPtoPDFconversion=\toks32
 ) (c:/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -856,89 +897,92 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\big@size=\dimen160
-\c@lstlisting=\count130
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 88.
+\big@size=\dimen167
+\c@lstlisting=\count131
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 135.
 
 (c:/texlive/2013/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <12> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 88.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 135.
 LaTeX Font Info:    Font shape `T1/pcr/b/it' in size <12> not available
-(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 88.
+(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 135.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 88.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 135.
 LaTeX Font Info:    Font shape `T1/pcr/bx/it' in size <12> not available
-(Font)              Font shape `T1/pcr/b/it' tried instead on input line 88.
+(Font)              Font shape `T1/pcr/b/it' tried instead on input line 135.
 LaTeX Font Info:    Font shape `T1/pcr/b/it' in size <12> not available
-(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 88.
+(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 135.
 LaTeX Font Info:    Font shape `T1/pcr/bx/sl' in size <12> not available
-(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 88.
+(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 135.
 LaTeX Font Info:    Font shape `T1/pcr/bx/sc' in size <12> not available
-(Font)              Font shape `T1/pcr/b/sc' tried instead on input line 88.
+(Font)              Font shape `T1/pcr/b/sc' tried instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/sb/n' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 88.
+(Font)              using `T1/pcr/m/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/sb/it' undefined
-(Font)              using `T1/pcr/sb/n' instead on input line 88.
+(Font)              using `T1/pcr/sb/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/sb/sl' undefined
-(Font)              using `T1/pcr/sb/n' instead on input line 88.
+(Font)              using `T1/pcr/sb/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/sb/sc' undefined
-(Font)              using `T1/pcr/sb/n' instead on input line 88.
+(Font)              using `T1/pcr/sb/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/c/n' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 88.
+(Font)              using `T1/pcr/m/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/c/it' undefined
-(Font)              using `T1/pcr/c/n' instead on input line 88.
+(Font)              using `T1/pcr/c/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/c/sl' undefined
-(Font)              using `T1/pcr/c/n' instead on input line 88.
+(Font)              using `T1/pcr/c/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/c/sc' undefined
-(Font)              using `T1/pcr/c/n' instead on input line 88.
+(Font)              using `T1/pcr/c/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/l/n' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 88.
+(Font)              using `T1/pcr/m/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/l/it' undefined
-(Font)              using `T1/pcr/l/n' instead on input line 88.
+(Font)              using `T1/pcr/l/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/l/sl' undefined
-(Font)              using `T1/pcr/l/n' instead on input line 88.
+(Font)              using `T1/pcr/l/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/l/sc' undefined
-(Font)              using `T1/pcr/l/n' instead on input line 88.
+(Font)              using `T1/pcr/l/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/m/ui' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 88.
+(Font)              using `T1/pcr/m/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/bx/ui' undefined
-(Font)              using `T1/pcr/bx/n' instead on input line 88.
+(Font)              using `T1/pcr/bx/n' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/m/In' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 88.
+(Font)              using `T1/pcr/m/n' instead on input line 135.
 
-ABD: EveryShipout initializing macros [1
+ABD: EveryShipout initializing macros
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ [1
 
 {c:/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `Inhalt/titelseite.aux'.
@@ -1047,7 +1091,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 ]) [4
 
-] (./Bachelorarbeit.lof)
+] (./Bachelorarbeit.lof
+Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
+although it is yet undefined on input line 9.
+)
 \tf@lof=\write7
 \openout7 = `Bachelorarbeit.lof'.
 
@@ -1274,11 +1321,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--153
 
  []
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 158.
-
-LaTeX Warning: Citation `wiki:cohesion' on page 8 undefined on input line 158.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
@@ -1296,12 +1338,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 167--176
 
-LaTeX Warning: Citation `wiki:loosecoupling' on page 9 undefined on input line 
-168.
+ []
 
 Package acronym Info: Label `acro:DIP' newly defined as it shall be overridden
-although it is yet undefined on input line 171.
+although it is yet undefined on input line 177.
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1309,12 +1351,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 191--193
+Underfull \hbox (badness 10000) in paragraph at lines 199--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
@@ -1332,20 +1374,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
  []
 
 
-LaTeX Warning: Reference `readability' on page 12 undefined on input line 236.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
@@ -1355,47 +1394,101 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12] (./listings/rule1/example1/School.java)
-(./listings/rule1/example2/School.java
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 243--245
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--255
+
+ []
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 261.
+
+LaTeX Warning: Reference `oc2008' on page 13 undefined on input line 261.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--263
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13])
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
 
-LaTeX Warning: Reference `listing:rule1example2:school' on page 14 undefined on
- input line 252.
+ []
 
 
-LaTeX Warning: Reference `listing:rule1example2:schoolclass' on page 14 undefin
-ed on input line 252.
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
 
-(./listings/rule1/example3/School.java
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--280
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]) (./listings/rule1/example3/SchoolClass.java)
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
 
-! LaTeX Error: There's no line here to end.
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 
-      
-? 
-<Bilder/Rule1Abstraction.PNG, id=101, 394.47375pt x 249.18094pt>
-File: Bilder/Rule1Abstraction.PNG Graphic file (type png)
 
-<use Bilder/Rule1Abstraction.PNG>
-Package pdftex.def Info: Bilder/Rule1Abstraction.PNG used on input line 262.
-(pdftex.def)             Requested size: 394.47278pt x 249.18031pt.
+LaTeX Warning: Reference `listing:nullobject2' on page 15 undefined on input li
+ne 285.
+
+
+LaTeX Warning: Reference `listing:nullobject3' on page 15 undefined on input li
+ne 285.
+
+
+LaTeX Warning: Reference `listing:nullobjectoperationinterface' on page 15 unde
+fined on input line 285.
+
+
+LaTeX Warning: Reference `listing:nullobject3' on page 15 undefined on input li
+ne 285.
+
+
+LaTeX Warning: Reference `nullobject4' on page 15 undefined on input line 285.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--294
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1404,26 +1497,24 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15]
-
-LaTeX Warning: Reference `oc2008' on page 16 undefined on input line 268.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 267--270
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
+Underfull \hbox (badness 10000) in paragraph at lines 304--306
+
+ []
+
+Package acronym Info: Label `acro:LSP' newly defined as it shall be overridden
+although it is yet undefined on input line 307.
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--276
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--279
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 
  []
 
@@ -1433,7 +1524,134 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16 <./Bilder/Rule1Abstraction.PNG>]
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 325--328
+
+ []
+
+Package acronym Info: Label `acro:DDD' newly defined as it shall be overridden
+although it is yet undefined on input line 329.
+! Too many }'s.
+l.336 ...used if the represented behavior "[isn't}
+                                                   natural to model as objec...
+
+? 
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
+Chapter 3.
+[21
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23]
+Chapter 4.
+[24
+
+]
+Chapter 5.
+) [25
+
+]
+\openout2 = `Inhalt/appendixListing.aux'.
+
+ (./Inhalt/appendixListing.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 1.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1--1
+[][][][][][][] 
+ []
+
+(./listings/rule1/example1/School.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 4--4
+[][][][][][][] 
+ []
+
+(./listings/rule1/example2/School.java
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26
+
+
+])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 7--7
+[][][][][][][] 
+ []
+
+(./listings/rule1/example3/School.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 9--9
+[][][][][][][] 
+ []
+
+(./listings/rule1/example3/SchoolClass.java)
 
 ! Package Listings Error: File `listings/rule2/example1/(.tex)' not found.
 
@@ -1449,70 +1667,19 @@ or enter new name. (Default extension: tex)
 
 Enter file name: 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--287
+! Package keyval Error: implemented by using a conditional undefined.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--290
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17]
-
-LaTeX Warning: Reference `listing:nullobject2' on page 18 undefined on input li
-ne 300.
-
-
-LaTeX Warning: Reference `listing:nullobject3' on page 18 undefined on input li
-ne 300.
-
-
-LaTeX Warning: Reference `listing:nullobjectoperationinterface' on page 18 unde
-fined on input line 300.
-
-
-LaTeX Warning: Reference `listing:nullobject3' on page 18 undefined on input li
-ne 300.
-
-
-LaTeX Warning: Reference `nullobject4' on page 18 undefined on input line 300.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--311
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 313--315
-
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
+See the keyval package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.317 T
-       he strategie pattern is a software pattern allowing different polymor...
-
+l.17 ...check, implemented by using a conditional]
+                                                  
 ? 
-Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
-although it is yet undefined on input line 317.
-<Bilder/StrategyPattern.png, id=114, 256.96pt x 160.6pt>
-File: Bilder/StrategyPattern.png Graphic file (type png)
 
-<use Bilder/StrategyPattern.png>
-Package pdftex.def Info: Bilder/StrategyPattern.png used on input line 319.
-(pdftex.def)             Requested size: 256.95937pt x 160.5996pt.
+Overfull \hbox (6.0pt too wide) in paragraph at lines 17--17
+[][][][][][][] 
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1520,10 +1687,62 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
-
+[27]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 33--33
+[][][][][][][] 
  []
+
+(./listings/rule3/example1/Game.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 34--34
+[][][][][][][] 
+ []
+
+(./listings/rule3/example1/Dice.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 38--38
+[][][][][][][] 
+ []
+
+(./listings/rule3/example2/Game.java
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 39--39
+[][][][][][][] 
+ []
+
+(./listings/rule3/example2/Dice.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 40--40
+[][][][][][][] 
+ []
+
+(./listings/rule3/example2/Action.java))
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+\openout2 = `Inhalt/appendixImages.aux'.
+
+ (./Inhalt/appendixImages.tex
+<Bilder/Rule1Abstraction.png, id=156, 394.47375pt x 249.18094pt>
+File: Bilder/Rule1Abstraction.png Graphic file (type png)
+
+<use Bilder/Rule1Abstraction.png>
+Package pdftex.def Info: Bilder/Rule1Abstraction.png used on input line 4.
+(pdftex.def)             Requested size: 394.47278pt x 249.18031pt.
+
+<Bilder/StrategyPattern.png, id=158, 256.96pt x 160.6pt>
+File: Bilder/StrategyPattern.png Graphic file (type png)
+
+<use Bilder/StrategyPattern.png>
+Package pdftex.def Info: Bilder/StrategyPattern.png used on input line 12.
+(pdftex.def)             Requested size: 256.95937pt x 160.5996pt.
 
 
 ! LaTeX Error: Unknown graphics extension: .svg.png.
@@ -1532,184 +1751,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.331 ...ludegraphics{Bilder/StatePattern.svg.png}
+l.19 \includegraphics{Bilder/StatePattern.svg.png}
                                                   
 ? 
-Package acronym Info: Label `acro:LSP' newly defined as it shall be overridden
-although it is yet undefined on input line 334.
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
-
- []
-
+)
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <./Bilder/StrategyPattern.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
-
- []
+[30 <./Bilder/Rule1Abstraction.png> <./Bilder/StrategyPattern.png (PNG copy)>]
+[31
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
-
- []
-
-! Undefined control sequence.
-l.349 ...d by the dice is indicated by the \textis
-                                                  {Dice}. However resulting ...
-
-? 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   r
-l.349 ...lting integer of the \textit{Dice#roll()}
-                                                   method is used to iterate...
-
-? 
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> Dice##
-                 roll()
-l.349 ...lting integer of the \textit{Dice#roll()}
-                                                   method is used to iterate...
-
-? 
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20] (./listings/rule3/example1/Game.java) (./listings/rule3/example1/Dice.java
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 6.
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-))
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21] (./listings/rule3/example2/Game.java) (./listings/rule3/example2/Dice.java
-) (./listings/rule3/example2/Action.java)
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.362 
-      
-? 
-Package acronym Info: Label `acro:DDD' newly defined as it shall be overridden
-although it is yet undefined on input line 363.
-! Undefined control sequence.
-l.366 \textbr
-             {Entities} are the |top level" representations of the domain mo...
-
-? 
-
-! LaTeX Error: Environment exampleblock undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.370 \begin{exampleblock}
-                          {Beispielblocktitel}
-? 
-
-! LaTeX Error: \begin{document} ended by \end{exampleblock}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.372 \end{exampleblock}
-                        
-? 
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22]
-Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
-
-although it is yet undefined on input line 403.
-
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[25]
-Chapter 3.
-[26
-
-]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[27]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[28]
-Chapter 4.
-[29
-
-]
-Chapter 5.
-) [30
-
-] [31
 
 
 ]
@@ -1720,7 +1775,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
-(./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux))
+(./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux) (./Inhalt/appendixListing.aux)
+(./Inhalt/appendixImages.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1732,25 +1788,27 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18569 strings out of 493308
- 345202 string characters out of 6141367
- 545461 words of memory out of 5000000
- 21505 multiletter control sequences out of 15000+600000
- 79533 words of font info for 97 fonts, out of 8000000 for 9000
+ 19649 strings out of 493308
+ 365254 string characters out of 6141367
+ 552831 words of memory out of 5000000
+ 22559 multiletter control sequences out of 15000+600000
+ 90835 words of font info for 113 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,12n,76p,1740b,1663s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,76p,1952b,1707s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2013/texm
 f-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2013/texmf-dist/fonts
-/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helv
-etic/uhvr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pf
-b><c:/texlive/2013/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2
-013/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb><c:/texlive/2013/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (41 pages, 250114 bytes).
+/type1/urw/courier/ucrr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helve
+tic/uhvb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+<c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/20
+13/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/f
+onts/type1/urw/palatino/uplri8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb
+><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2013/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Bachelorarbeit.pdf (41 pages, 264936 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
+ 209 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  130 words of extra memory for PDF output out of 10000 (max. 10000000)
 

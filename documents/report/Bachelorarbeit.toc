@@ -11,18 +11,18 @@
 \contentsline {section}{\numberline {2.1}Problems of Procedural Code}{4}
 \contentsline {section}{\numberline {2.2}Advantages of Object Orientation}{7}
 \contentsline {section}{\numberline {2.3}The Rules and their Background}{11}
-\contentsline {section}{\numberline {2.4}Discussion}{24}
-\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{26}
-\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{26}
-\contentsline {section}{\numberline {3.2}Working Environment}{26}
-\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{26}
-\contentsline {section}{\numberline {3.4}Result of the Evaluation}{28}
-\contentsline {section}{\numberline {3.5}Future Work}{28}
-\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{29}
-\contentsline {section}{\numberline {4.1}Requirements}{29}
-\contentsline {section}{\numberline {4.2}Architecture}{29}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{29}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{29}
-\contentsline {section}{\numberline {4.5}Outlook and Future Work}{29}
-\contentsline {chapter}{\numberline {5}Conclusion}{30}
+\contentsline {section}{\numberline {2.4}Discussion}{20}
+\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{21}
+\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{21}
+\contentsline {section}{\numberline {3.2}Working Environment}{21}
+\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{21}
+\contentsline {section}{\numberline {3.4}Result of the Evaluation}{23}
+\contentsline {section}{\numberline {3.5}Future Work}{23}
+\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{24}
+\contentsline {section}{\numberline {4.1}Requirements}{24}
+\contentsline {section}{\numberline {4.2}Architecture}{24}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{24}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{24}
+\contentsline {section}{\numberline {4.5}Outlook and Future Work}{24}
+\contentsline {chapter}{\numberline {5}Conclusion}{25}
 \contentsline {chapter}{Bibliography}{31}
