@@ -236,9 +236,13 @@ The metric cohesion describes how well an object is focused and how well it is d
 There are two important principles behind the rule. 
 
 The idea of delgating all non releveant work and therefore raise the cohesion can be done in the following way.
-This is ensuring that the method is only manipulating data that is related directly to the method. This means ensuring the method does not mainpulate data that is accessed via muliple getter methods, other method calls or iterations. Such an access would change data that is not related directly to the object itself. Therefor a foreign object would mainpulate the data of another object \- instead of calling a method on the object. As already described other, just called "foreign objects", can be accessed via method calls and control structures like while, for and do-while loops. Therefore when accessing an object with nested control structures, the methods is likely to change such foreign object. There are two rule by Jeff Bay that prohibit such a "deep" access to those foreign objects' data structures. One is this rule, restricting the nesting of control-structures and the other rule is Rule 4 use only one dot per line restricting the deep access via chained method calls. \\
+This is ensuring that the method is only manipulating data that is related directly to the method. Hence ensuring the method does not mainpulate data that is accessed via muliple getter methods, other method calls or iterations. Such an access would change data that is not related directly to the object itself. Therefor a foreign object would mainpulate the data of another object \- instead of calling a method on the object. As already described other, just called "foreign objects", can be accessed via method calls and control structures like while, for and do-while loops. Therefore when accessing an object with nested control structures, the methods is likely to change such foreign object. There are two rule by Jeff Bay that prohibit such a "deep" access to those foreign objects' data structures. One is this rule, restricting the nesting of control-structures and the other rule is Rule 4 use only one dot per line restricting the deep access via chained method calls. \\
 
-As already mentioned, there is another principle that plays an important role, when looking at the rule. The idea of "one level of abstraction", which is described by Robert C. Martin in \cite{cc}, is the other one. The basic idea of the "one level of abstraction" principle was already introduced when describing readability in section \ref{readability}. Robert C. Martin states that a method should only operate within one level of abstraction and delegate all other tasks that are on a lower level to another class. He states the rule as important, because it hard for developers to follow. "This may be the hardest of these heuristics to interpret and follow. Though the idea is plain enough, humans are just far too good at seamlessly mixing levels of abstraction."\cite{cc}. When a method is operation on two levels of abstraction, not always, but often using nested control structures in order to acces the deeper objects and to conduct data manipulation on a lower level. Transfering those operations not only results in a better abstraction, but also increases the cohesion of the affected objects. After splitting up tasks in objects that operate on different levels of abstraction, the cohesion of the objects raises. The objects are more concentrated and only operate on one abstraction level. The object on a abstract level does not have to do operations on a low level, but is using another object to undertake the task. The result in many cases is that the object on the abstract level does not have to use that much control structures do perform the task, because it simply delegates all work that is not on its abstraction level. Therefore the nesting of control structures disappears automatically. In his rule, however, Jeff Bay prohibits the nesting of control structure and therewith forces the developer to use different levels of abstraction from the beginning. \\
+As already mentioned, there is another principle that plays an important role, when looking at the rule. The idea of "one level of abstraction", which is described by Robert C. Martin in \cite{cc}, is the other one. The basic idea of the "one level of abstraction" principle was already introduced when describing readability in section \ref{readability}. Robert C. Martin states that a method should only operate within one level of abstraction and delegate all other tasks that are on a lower level to another class. He states the rule as important, because it hard for developers to follow. "This may be the hardest of these heuristics to interpret and follow. Though the idea is plain enough, humans are just far too good at seamlessly mixing levels of abstraction."\cite{cc}. When a method is operation on two levels of abstraction, not always, but often using nested control structures in order to acces the deeper objects and to conduct data manipulation on a lower level. Transfering those operations not only results in a better abstraction, but also increases the cohesion of the affected objects. After splitting up tasks in objects that operate on different levels of abstraction, the cohesion of the objects raises. The objects are more concentrated and only operate on one abstraction level. The object on a abstract level does not have to do operations on a low level, but is using another object to undertake the task. The result in many cases is that the object on the abstract level does not have to use that much control structures do perform the task, because it simply delegates all work that is not on its abstraction level. Therefore the nesting of control structures disappears automatically. In his rule, however, Jeff Bay prohibits the nesting of control structure and therewith forces the developer to use different levels of abstraction from the beginning. 
+\\
+
+The reduce of the nesting of loops and conditionals furthermore reduces the metric cyclomatic complexity to a minimum. The metric "measures the number of linearly independent paths through a program's source code" \cite[Cyclomatic complexity]{wiki} on the level of a method. By reducing the number of allowed nested statements the number different paths is pushed to a minimum.
+\\
 
 The following code example describes a bad and a good example of the rule. The first example is showing a possible implementation and the second example is showing a refactored example, which satisfies the rule. In addition it has a high cohesion and only operates on one level of abstraction. 
 \\
@@ -336,7 +340,7 @@ A \textbf{value object} is an object containing attributes, but has no conceptua
 \\
 An \textbf{aggregate} is a collection of objects. Because the aggregate bundles multiple other objects, it is the object responsible for changes of its associated objects. It is the counterpart for all objects that want to conducte changes in the top level as well as in the sub objects. 
 \\
-A \textbf{service} offers operations that belong to multiple domain objects. Service objects are usually stateless and easily reusable. A service object is only used if the represented behavior "[isn't} natural to model as object."\cite[p. 103]{dddbook}. This is seen as the better alternative than pushing the behavior in other object where the behavior does not belong to or would add meaningless behavior. "Servicesare a common pattern in technical frameworks, but they can also apply in the domain layer."\cite[p. 103]{dddbook}.
+A \textbf{service} offers operations that belong to multiple domain objects. Service objects are usually stateless and easily reusable. A service object is only used if the represented behavior "[isn't] natural to model as object."\cite[p. 103]{dddbook}. This is seen as the better alternative than pushing the behavior in other object where the behavior does not belong to or would add meaningless behavior. "Servicesare a common pattern in technical frameworks, but they can also apply in the domain layer."\cite[p. 103]{dddbook}.
 \\
 \textbf{Repository} objects provide methods to manage the persistency of domain objects like value objects, entity or aggregates. The repository encapsulates database or framework specific logic and libraries and provides all necessary operations that are necessary to manage the database persistency.
 \\
@@ -375,14 +379,56 @@ The just described ideas of mocks obviously also apply for other, slightly diffe
 
 For me personally, applying this rule was the biggest challenge and the awareness of the described coherences significanly improved the way I designed, created and changed code. 
 
-
-
-
-
 \subsection*{Rule 5: "Don't Abbreviate"}
-asdf
+Jeff Bay's rule 5, "don't abbreviate" permits any abbreviation in class, method, and variable names. The rule permits any abbreviation that might be confusing for another developer that is unaware of it. As a result he permits all of them, guaranteeing simple and understandable names.
+\\
+
+He sates that abbreviations are confusing and badly readable \cite{oc2008}. Furthermore, he argues that a long method name, which is consitent of multiple words indicated bad code. If there are multiple words involved in on method name it might be an indication that multiple different tasks are located in one method.  Jeff Bay summarizes it the following way: "This might be a sign of misplaced respnsibility or a missing class" \cite{oc2008}.\\
+
+To prevent the develoer from using abbreviations the restricts proposes his own naming convention for method name. However these rule is also useful for the naming of variables and classes because for those artifacts the same just described problems of readiability occurs.\\
+
+Firstly an artifact should only consist of two words maximum. Rober C. Martin also proposes that in \cite[p. 19]{cc} by introducing the "avid[ance of] disinformation" and the "us[age of] intention-revealing names". 
+\\
+
+Secondly, Jeff Bay proposes another hint for methods names. They should always make use of the context in which they are declared.
+\\
+
+In the following block, there examples for bad method and class names are given. The naming of those artifacts is then improved and the improved names are depicted. 
+\\
+
+A class \textit{Car} with the method \textit{startEngine} can be simplified by changing the method name to \textit{start}. Imagine a car in a real world and imagine situation where you speak to a friend directly. The easy and more colloquial language would be \textit{"let's go, start the car"} rather than \textit{"let's go start the car's engine"}. This is simply because the description "start" describes the conducted action as well as "start the engine" \- from the perspective of someone using a car.\\
+
+A class \textit{LaptopScreen} describes the screen of a laptop and is created and managed by a class \textit{Laptop}. Given this class only has the operations \textit{adjustBrightness(BrithnessLevel brightnesslevel)} and \textit{changeScreenResolution(ScreenResolution resolution)}. In this example the class names are used as placeholders for the instance variable names of these types, simply assuming that the name might be similar. Often such a variable is named with the lower case version of the classe name: name or respectively laptopScreen. However the best solution is when the variable name describes the context in which the type is used and does not duplicate the information that was already given via the type.  
+
+In this example there are several improvements that can be done to improve the naming. The first improvement is regarding the class name. Because the \textit{LaptopScreen} is only used in the context of a \textit{Laptop}, the duplication of the word "laptop" is unnecessary.
+
+The second improvement is on method level. The type of the parameter \textit{BrithnessLevel} already give information about what is adjusted. Therefore repeating "brigthness" in the method name is a duplication. In addition it is clear that when adjusting the brightness, there is a linear scale \- maybe percentage or maybe numbers. The fact that is is a the "level" of the brightness is clear from the context of the laptop screen. All in all, the method name cna be reduced to \textit{adjust(Brithness level)}. The same principals, that where described for the brightness level can be applied for the change of the laptop's screen resolution, resulting in a method name that might be called \textit{change(Resolution resolution)}.
+
+After the renaming of the methods, they changed from \textit{LaptopScreen.changeScreenResolution(ScreenResolution resolution)}  and \textit{LaptopScreen.adjustBrightness(BrithnessLevel brightnesslevel)} to \textit{Screen.adjust(Brightness level)} and \textit{Screen.change(Resolution resolution)}. Clearly visible is the reduction of the name by removing duplication of intormation. 
+\\
+
+The third example will adress the problem addresse originally by the rule, which is also anchored in its name. The prohibition to use any abbreviations. An example for this is given in the next, third and last example. 
+
+Image in a class \textit{NSString} which is widely used in apple iOS framework and comes from the programming language Objective-C. Every string in this language is an \textit{NSString}. In fact most of the base classes of the language start with "NS". The abbreviation NS stands for NeXT \- the name of the company which created the programming language Objective-C. NS therefore is just an abbreviation which is \- even worse \- only use to specify the context in which it is used. This is an example, where the abbreviation is integrated in one of the core entities of the language. Even if the creation of the language was long ago, there could have been a change of the class name to remove such a bad readable and confusing name.
+
+Many other frameworks also use abbreviations, for example the \acf{GWT} with its class \acf{GWTCreate}. In his paper, Jeff Bay does not give further examples for abbreviations. He simpy encourages developers not to use any of them to avert confusion from the start.
+\\
+
+As shown in the examples and the restrictions of the rule, given by Jeff Bay, there are various ways to improve names of classes, methods and variable names. 
+
 \subsection*{Rule 6: "Keep All Entities Small"}
-asdf
+Jeff Bays rule six, "keep all entities small", prohibits to write classes "with more than fifty lines and no package that's more than ten files.". Long classes are commonly known as hardly readable and understandable because simply the variance and the number of statements make difficult to understand. 
+\\
+
+Classes that consist of very many lines of code are hard to overview and to understand. They are likely to multiple behaviors and do not follow the pattern of "doing one thing" as stated in \cite{cc}. Long classes with many lines of code do more than one thing and mostly have more than one purpose. Therefore they shall be splitted up in diffent units with a high cohesion, focus and a clear separation of concerns and a differentiation of the levels of abstraction. 
+\\
+
+According to Jeff Bay, when refactoring existing code and splitting up large classes into several smaller units, package reveal their real purpose. Whereas classes will become unit that only fulfill one dedicated task, packages bundle those small units and provide bigger process. "As your classes become smaller and have fewer responsibilities and as you limit package size you will start to see that packages represent clusters of related classes that work together to achieve one goal." \cite{oc2008}. Furthermore resulting package provide a small functionality. The rules of cohesion, focus, overview, structure which applies for classes, definitely also apply for packages. Even more \- whereas the package might not have had an identity before, it now serves to one bigger task that is represented in different units, hence classes. 
+\\
+
+Giving and example for long classes would go beyond the scope of the discussion about code examples, therefore no example is given.
+
+
 \subsection*{Rule 7: "Don’t Use Any Classes with More Than Two Instance Variables"}
 asdf
 \subsection*{Rule 8: "Use First-Class Collections"}
