@@ -356,7 +356,7 @@ The fourth rule of Jeff Bay, "use only one dot per line", increases the cohesion
 According to Jeff Bay, lines of code with multiple dot indicate such "misplaces responsiblities" \cite{oc2008}. If a line with multiple dots occurs, it is indicated that the developer "violate[s] encapsulation" \cite{oc2008}. Such lines indicate that there is an object acting "as a middleman" \cite{oc2008}. "It knows too much about too many people" \cite{oc2008}. By this, Jeff Bay means that an object A is using another object B to access object instances in object C to manipulate C's instance variable or call a method on instance C. As a result, the actual operation is located in object A but the data is located is in object C. This violates the \acf{LoD}. The essence of \acf{LoD} is exactly what is just explained. According to \acf{LoD} a object is only allowed to talk to "itself, its parameters, any objects it creates [\dots] [and] its direct component objects" \cite{ba.com}. These communication partners are sometimes called "friends" of the objects. They are known by the object because they where deliberately passed to the object or where created by the object itself.  
 \\
 
-The usage of another object or method that is executed on the return value of another object is not allowed in one single line. Then \acf{LoD} is not violated. Of course it is still possible to conduct those bad chained method calls in two lines with only one dot in each line \- however, this is bad practice. In addition, according to rule six, the developer is only allowed to use a very limited amount of lines in one class. These two rule force the developer to stick with the \acf{LoD}.
+The usage of another object or method that is executed on the return value of another object is not allowed in one single line. Then \acf{LoD} is not violated. Of course it is still possible to conduct those bad chained method calls in two lines with only one dot in each line \- however, this is bad practice. In \cite{paperboy}, David Bock calls this "lots of temporary object", because the object reference will only be used over two or three lines. Then it is never necessary again. In addition, according to rule six, the developer is only allowed to use a very limited amount of lines in one class. These two rule force the developer to stick with the \acf{LoD}.
 \\
 
 Before examining \acf{LoD} more deeply, a bad and a good example is given in the following. 
@@ -430,7 +430,42 @@ Giving and example for long classes would go beyond the scope of the discussion 
 
 
 \subsection*{Rule 7: "Don’t Use Any Classes with More Than Two Instance Variables"}
-asdf
+Jeff Bays rule seven, "don't use any classes with more than two instance variables" strongly focuses on the decrease of cohesion.
+\\
+
+Jeff Bay underlines that "most classes should simply be responsible for handling a single state varible, but a few will require two." \cite{oc2008} This is because sometimes there has to be something like a coordination between two object instances that has to be managed. Then this managing object is allowed to constist of two instance variables. All other classes that do not fulfill that purpose should only have one instance variable in order to fulfill rule seven.
+\\
+
+The rule is similar to rule three, which is also about bundling behavior in classes. However this rule tackle the problem of the bundling of many non related behavior in one class. If only one or two instance variables are available, it is nearly impossible to put behavior of multiple concerns in one class. By restricing the number of instance variable Jeff Bay forces the developer to write highly cohesive classes that focus on doing one thing. The challenge for the developer might furthermore be the problem of finding those small differences, which are rich in detail. 
+\\
+
+The following shows an example of a class with more than two instance variables. The class can be split up further to enable a more detailed description of the real world. It matches the idea of unravelling the model that comes from \acf{DDD}, beeing described in \acf{dddbook}.
+\\
+
+Listing \ref{listing:rule7example1:car} show a model presentation of a \textit{Car}. The car bundles other representations, like \textit{SteeringWheel}, a \textit{Radio}, all the given \textit{edals} and the \textit{Doors} it is consisting of. In addition the class has a method: \textit{Car.start()}. It is a very simple example of a model representation. However the method \textit{start()} lacks in cohesion and focus. Indeed all operations in the method have to do with starting perparing the car to start, they behave differently and are located somewhere else. The doors are in the exterior of the car, the steering wheel and the pedals of the car are part of the driver's cockpit and the radio is located in the center of the console.
+
+In this example, not only the low cohesion of the \textit{Car} is problematic, but also the lack of modularity. Imagine a you want to map a \textit{RallyCar}. Usually rally cars do not have a radio. Therefore the developer whould have to implement the a RallyCar without a radio. But actually all the other structure is the same: The \textit{RallyCar} also has pedals, it also has doors and it has a steering wheel, too. Before expounding the solution of this modelling problem, the better variant of modelling a \texti{Car} is shown. 
+\\
+
+Listing \ref{listing:rule7example2:car} shows the second version of the car. As the \textit{Car} in the first example, it also has the same method. However it is only consisting of the \textit{Interior} and the \textit{Exterior}, shown in listing \ref{listing:rule7example2:interior} and \ref{listing:rule7example2:exterior}. These classes hold the references to the \texit{CenterConsole} and the \textit{Cockpit} shown in \ref{listing:rule7example2:centerconsole} and \ref{listing:rule7example2:cockpit}. The splitting of these two classes into more sophisticated structures which then hold the classes that the developer originally wanted to represent: \textit{SteeringWheel}, \textit{Radio}, \textit{Doors} and \text{Pedals}. Maybe this sophisticated structure looks like an overhead,  it becomes clear that the opposite is true. The method \textit{Car.start()} got significanly simpler and increased in cohesion. Furthermore it now delegates the work to the model classes \textit{Interior} and \textit{Exterior}. These no delegate execute the work for the classes they are responsible for. The same principle applies for the \textit{Interior} class. 
+\\
+
+Before comparing the examples in detail it has to be said that the interface of the \texti{Car} is the same for both examples. \textit{Car} represents a top level entry point for a component making use of this entity. In example two, which consists of more classes, but also in example one the top level entity or entry point \textit{Car} could be the main starting point for using the package. Therfore a user would not be affected by the refactory that was conducted. 
+\\
+
+In comparison the new model is split up in more classes. By doing so, these classes have have a higher cohesion: They delegate more work and do one thing better. However when splitting up the method \textit{Car.start()} from the first example shown in listing \ref{listing:rule7example1:car}, it is necessary to clearly name and implement the delegation methods to enable the subsequent developer to understand the model. The risk in this approach of splitting up things in detailed model lies in the introduction of new aggregate types. 
+\\
+
+In example one, \textit{Car} was the only aggregate of all the classes. In example two, there are more aggregate classes, \textit{Interior}, \textit{Exterior}, \textit{CenterConsole} and \textit{Cockpit}. Even if all the aggregates handle multiple instance variable (like \text{Exterior}), they are responsible for their contained sub instances. The problem that might occur during development is the introduction of new aggregate types, that do no necessarily exist in the real world. For example the \textit{Interior} and the \textit{Exterior} are barely imagineable, they are less concrete than for example \textit{Pedals}. If the break down in detailed entities results in many "unreal" classes, the developer should rething the model's design. 
+\\
+
+Despite the just described problem, following this rule highly increases the cohesion of classes. Bugs and errors, especially bugs that occur when working with model aggregate, can be clearly located and spottet. he separation of the classes' concerns and the squeezing down of the model results to a better abstracted, easily interchangable model. They are clearly placed in their corresponding part in the domain model and form a detailed representation of the holisitc model. The attention to detail of the developer, resulting in perfectly describing models and high cohesive classes is the goal of this rule. Guaranteeing the awareness for the described problems and its beneficial solutions is the goal of this rule. 
+
+
+
+
+
+
 \subsection*{Rule 8: "Use First-Class Collections"}
 asdf
 \subsection*{Rule 9: "Don’t Use Any Getters/Setters/Properties"}

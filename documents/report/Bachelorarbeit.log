@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  25 JAN 2014 16:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  25 JAN 2014 18:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -779,31 +779,10 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux) (./Inhalt/abstract.aux)
 (./Inhalt/hauptteil.aux) (./Inhalt/appendixListing.aux
 
-LaTeX Warning: Label `aaaaa' multiply defined.
+LaTeX Warning: Label `listing:rule3example2' multiply defined.
 
 
-LaTeX Warning: Label `aaaaa' multiply defined.
-
-
-LaTeX Warning: Label `aaaaa' multiply defined.
-
-
-LaTeX Warning: Label `aaaaa' multiply defined.
-
-
-LaTeX Warning: Label `aaaaa' multiply defined.
-
-
-LaTeX Warning: Label `aaaaa' multiply defined.
-
-
-LaTeX Warning: Label `aaaaa' multiply defined.
-
-
-LaTeX Warning: Label `aaaaa' multiply defined.
-
-
-LaTeX Warning: Label `aaaaa' multiply defined.
+LaTeX Warning: Label `listing:rule3example2' multiply defined.
 
 ) (./Inhalt/appendixImages.aux))
 \openout1 = `Bachelorarbeit.aux'.
@@ -1443,9 +1422,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--273
  []
 
 
+LaTeX Warning: Reference `listing:rule2example1' on page 14 undefined on input 
+line 277.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
+
+
+LaTeX Warning: Reference `listing:rule2example2' on page 14 undefined on input 
+line 280.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 280--281
@@ -1464,9 +1451,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 282--284
  []
 
 
+LaTeX Warning: Reference `listing:nullobject1' on page 15 undefined on input li
+ne 286.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
  []
+
+
+LaTeX Warning: Reference `listing:nullobject1' on page 15 undefined on input li
+ne 289.
 
 
 LaTeX Warning: Reference `listing:nullobject2' on page 15 undefined on input li
@@ -1486,6 +1481,10 @@ ne 289.
 
 
 LaTeX Warning: Reference `nullobject4' on page 15 undefined on input line 289.
+
+
+LaTeX Warning: Reference `listing:nullobject4' on page 15 undefined on input li
+ne 291.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 291--293
@@ -1693,11 +1692,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--409
 
  []
 
-Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
+Package acronym Info: Label `acro:GWT' newly defined as it shall be overridden
+although it is yet undefined on input line 414.
 
-although it is yet undefined on input line 413.
+Package acronym Warning: Acronym `GWT' is not defined on input line 414.
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--415
+
+Package acronym Warning: Acronym `GWT' is not defined on input line 414.
+
+Package acronym Info: Label `acro:GWTCreate' newly defined as it shall be overr
+idden
+although it is yet undefined on input line 414.
+
+Package acronym Warning: Acronym `GWTCreate' is not defined on input line 414.
+
+
+Package acronym Warning: Acronym `GWTCreate' is not defined on input line 414.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--428
 
  []
 
@@ -1715,17 +1743,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23]
-Chapter 3.
-[24
-
-]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
+[24]
+Chapter 3.
+[25
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1733,12 +1761,19 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
 Chapter 4.
-[27
+[28
 
 ]
 Chapter 5.
-) [28
+) [29
 
 ]
 \openout2 = `Inhalt/appendixListing.aux'.
@@ -1765,7 +1800,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29
+[30
 
 
 ])
@@ -1794,18 +1829,103 @@ or enter new name. (Default extension: tex)
 
 Enter file name: 
 
-! Package keyval Error: implemented by using a conditional undefined.
+! Undefined control sequence.
+\lstlisting ->\def \lstenv@name 
+                                {lstlisting}\begingroup \lst@setcatcodes \ca...
+l.22 \end{lstlisting}
+                     
+? 
+! Package Listings Error: Extra \endlstlisting.
 
-See the keyval package documentation for explanation.
+See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 ...check, implemented by using a conditional]
-                                                  
+l.22 \end{lstlisting}
+                     
 ? 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 17--17
-[][][][][][][] 
+! LaTeX Error: \begin{[} on input line 17 ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \end{lstlisting}
+                     
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.22 \end{lstlisting}
+                     
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.22 \end{lstlisting}
+                     
+? 
+
+Overfull \hbox (277.55733pt too wide) detected at line 22
+\OML/zplm/m/it/12 label \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 listing \OT1/zplm/
+m/n/12 : \OML/zplm/m/it/12 nullobject\OT1/ppl/m/n/12 1, \OML/zplm/m/it/12 capti
+on \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 Nullcheck\OT1/ppl/m/n/12 , \OML/zplm/m/
+it/12 implementedbyusingaconditional\OT1/zplm/m/n/12 ][]\OML/zplm/m/it/12 Objec
+tvalue \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 a\OT1/ppl/m/n/12 .\OML/zplm/m/it/12
+ method\OT1/zplm/m/n/12 ()\OT1/ppl/m/n/12 ; \OML/zplm/m/it/12 if\OT1/zplm/m/n/1
+2 (\OML/zplm/m/it/12 value \OT1/zplm/m/n/12 == \OML/zplm/m/it/12 null\OT1/zplm/
+m/n/12 )[]
+ []
+
+
+! Undefined control sequence.
+\lstlisting ->\def \lstenv@name 
+                                {lstlisting}\begingroup \lst@setcatcodes \ca...
+l.30 \end{lstlisting}
+                     
+? 
+! Package Listings Error: Extra \endlstlisting.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \end{lstlisting}
+                     
+? 
+
+! LaTeX Error: \begin{[} on input line 25 ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \end{lstlisting}
+                     
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.30 \end{lstlisting}
+                     
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.30 \end{lstlisting}
+                     
+? 
+
+Overfull \hbox (277.55733pt too wide) detected at line 30
+\OML/zplm/m/it/12 label \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 listing \OT1/zplm/
+m/n/12 : \OML/zplm/m/it/12 nullobject\OT1/ppl/m/n/12 4, \OML/zplm/m/it/12 capti
+on \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 Nullcheck\OT1/ppl/m/n/12 , \OML/zplm/m/
+it/12 implementedbyusingaconditional\OT1/zplm/m/n/12 ][]\OML/zplm/m/it/12 Objec
+tvalue \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 a\OT1/ppl/m/n/12 .\OML/zplm/m/it/12
+ method\OT1/zplm/m/n/12 ()\OT1/ppl/m/n/12 ; \OML/zplm/m/it/12 if\OT1/zplm/m/n/1
+2 (\OML/zplm/m/it/12 value \OT1/zplm/m/n/12 == \OML/zplm/m/it/12 null\OT1/zplm/
+m/n/12 )[]
  []
 
 
@@ -1814,34 +1934,29 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]
+[31]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 33--33
 [][][][][][][] 
  []
 
-(./listings/rule3/example1/Game.java)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 34--34
-[][][][][][][] 
- []
-
-(./listings/rule3/example1/Dice.java)
+(./listings/rule3/example1/Game.java) (./listings/rule3/example1/Dice.java)
 Overfull \hbox (6.0pt too wide) in paragraph at lines 38--38
 [][][][][][][] 
  []
 
-(./listings/rule3/example2/Game.java
+(./listings/rule3/example2/Game.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 39--39
+[][][][][][][] 
+ []
+
+(./listings/rule3/example2/Dice.java
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 39--39
-[][][][][][][] 
- []
-
-(./listings/rule3/example2/Dice.java)
+[32])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 40--40
 [][][][][][][] 
  []
@@ -1853,18 +1968,18 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32]
+[33]
 \openout2 = `Inhalt/appendixImages.aux'.
 
  (./Inhalt/appendixImages.tex
-<Bilder/Rule1Abstraction.png, id=165, 394.47375pt x 249.18094pt>
+<Bilder/Rule1Abstraction.png, id=169, 394.47375pt x 249.18094pt>
 File: Bilder/Rule1Abstraction.png Graphic file (type png)
 
 <use Bilder/Rule1Abstraction.png>
 Package pdftex.def Info: Bilder/Rule1Abstraction.png used on input line 4.
 (pdftex.def)             Requested size: 394.47278pt x 249.18031pt.
 
-<Bilder/StrategyPattern.png, id=167, 256.96pt x 160.6pt>
+<Bilder/StrategyPattern.png, id=171, 256.96pt x 160.6pt>
 File: Bilder/StrategyPattern.png Graphic file (type png)
 
 <use Bilder/StrategyPattern.png>
@@ -1888,8 +2003,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33 <./Bilder/Rule1Abstraction.png> <./Bilder/StrategyPattern.png (PNG copy)>]
-[34
+[34 <./Bilder/Rule1Abstraction.png> <./Bilder/StrategyPattern.png (PNG copy)>]
+[35
 
 
 
@@ -1901,7 +2016,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
+[36] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
 (./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux) (./Inhalt/appendixListing.aux)
 (./Inhalt/appendixImages.aux))
 
@@ -1915,27 +2030,28 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19664 strings out of 493308
- 365385 string characters out of 6141367
- 552925 words of memory out of 5000000
- 22571 multiletter control sequences out of 15000+600000
- 97357 words of font info for 118 fonts, out of 8000000 for 9000
+ 19665 strings out of 493308
+ 365365 string characters out of 6141367
+ 552905 words of memory out of 5000000
+ 22569 multiletter control sequences out of 15000+600000
+ 93336 words of font info for 119 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,12n,76p,1949b,1707s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,76p,1949b,1709s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2013/texm
-f-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2013/texmf-dist/fonts
-/type1/urw/courier/ucrr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helve
-tic/uhvb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-<c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/20
-13/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/f
-onts/type1/urw/palatino/uplri8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw
-/times/utmb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb
-><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2013/
-texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (44 pages, 274095 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2013/texmf-dist/fon
+ts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw
+/courier/ucrr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
+.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texliv
+e/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2013/texmf-d
+ist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1
+/urw/palatino/uplri8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utm
+b8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texli
+ve/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2013/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Bachelorarbeit.pdf (45 pages, 291953 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
+ 226 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  130 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,17 +12,17 @@
 \contentsline {section}{\numberline {2.2}Advantages of Object Orientation}{7}
 \contentsline {section}{\numberline {2.3}The Rules and their Background}{11}
 \contentsline {section}{\numberline {2.4}Discussion}{23}
-\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{24}
-\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{24}
-\contentsline {section}{\numberline {3.2}Working Environment}{24}
-\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{24}
-\contentsline {section}{\numberline {3.4}Result of the Evaluation}{26}
-\contentsline {section}{\numberline {3.5}Future Work}{26}
-\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{27}
-\contentsline {section}{\numberline {4.1}Requirements}{27}
-\contentsline {section}{\numberline {4.2}Architecture}{27}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{27}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{27}
-\contentsline {section}{\numberline {4.5}Outlook and Future Work}{27}
-\contentsline {chapter}{\numberline {5}Conclusion}{28}
-\contentsline {chapter}{Bibliography}{34}
+\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{25}
+\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{25}
+\contentsline {section}{\numberline {3.2}Working Environment}{25}
+\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{25}
+\contentsline {section}{\numberline {3.4}Result of the Evaluation}{27}
+\contentsline {section}{\numberline {3.5}Future Work}{27}
+\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{28}
+\contentsline {section}{\numberline {4.1}Requirements}{28}
+\contentsline {section}{\numberline {4.2}Architecture}{28}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{28}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{28}
+\contentsline {section}{\numberline {4.5}Outlook and Future Work}{28}
+\contentsline {chapter}{\numberline {5}Conclusion}{29}
+\contentsline {chapter}{Bibliography}{35}
