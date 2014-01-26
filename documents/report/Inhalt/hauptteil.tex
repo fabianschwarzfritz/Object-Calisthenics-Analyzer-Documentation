@@ -389,7 +389,7 @@ In this example there are several improvements that can be done to improve the n
 
 The second improvement is on method level. The type of the parameter \textit{BrithnessLevel} already gives information about what is adjusted. Therefore repeating "brigthness" in the method name is a duplication. In addition it is clear that when adjusting the brightness, there is a linear scale -- maybe percentage or maybe numbers. The fact that it is a the "level" of the brightness is clear from the context of the laptop screen. All in all, the method name can be reduced to \textit{adjust(Brithness level)}. The same principals, that where described for the brightness level can be applied for the change of the laptop's screen resolution, resulting in a method name that might be called \textit{change(Resolution resolution)}.
 
-After the renaming of the methods, they changed from \\ \textit{LaptopScreen.changeScreenResolution(ScreenResolution resolution)}  and \\\textit{LaptopScreen.adjustBrightness(BrithnessLevel brightnesslevel)} to \textit{Screen.adjust(Brightness level)} and \\\textit{Screen.change(Resolution resolution)}. Clearly visible is the reduction of the name by removing duplication of information. 
+After the renaming of the methods, they changed from \\ \textit{LaptopScreen.changeScreenResolution(ScreenResolution resolution)}  and \\\textit{LaptopScreen.adjustBrightness(BrithnessLevel brightnesslevel)} to \textit{Screen.adjust(Brightness level)} and \textit{Screen.change(Resolution resolution)}. Clearly visible is the reduction of the name by removing duplication of information. 
 \\
 
 The third example will address the problem addresse originally by the rule, which is also anchored in its name. The prohibition to use any abbreviations. An example for this is given in the next, third and last example. 
@@ -471,6 +471,27 @@ In the new introduced \textit{Doors} class all methods that can be exectued on m
 As already stated, this rule tackles a very similar problem as rule three. Adding behavior wrapping collections or primitives into own classes. This enables the compiler to apply a type check and furthermore is the only chance to add behavior to those types without scattering operations it in surrounding classes. 
 
 \subsection*{Rule 9: "Don’t Use Any Getters/Setters/Properties"}
+Jeff Bay's last rule, "don't use any getters/setters/prpoperties" that he presents in \cite{oc2008}, tries to encourage the "tell, don't ask" principle. He claims that not to mean to use any getter/setters/properties in order to encapsulate objects properly.
+\\
+
+In \cite[p. 79]{oc2008} Jeff Bay describes that this rule tackles direct violations of encapsulation. By using getters the developer can simply ask for any instance variable of an object. Therefore the caller can abitraty manipulate the reference the called object is having a reference on. Even worse, when conduction operations on such references, the bundling between behavior and data is not given anymore. The data is in one class, whereas the operations are in another class. 
+\\
+
+Jeff Bay encourages the developer to "look for and place behavior into a single place in the object model". By doing to the encapsulation is not violated anymore and no object can change anothers objects, passing its control. The principle of well encpsulation and a more command-like programming style is also described by the principle "Tell, don't ask!" \cite{telldontask}. The original authors of the "Tell, don't ask!" principle describe their original idea in \ref{telldontaskoriginal}.
+\\
+
+The following show a bad example, not fulfilling rule nine. In listing \ref{listing:rule9example1:speaker} a \textit{Speaker} is shown. It has a value that can be manipulated via getter and setter methods. This is done in \ref{listing:rule9example1:Main}. The \textit{Main} class uses the speaker and manipulates its value via the getters and setters. Because the \textit{Speaker} class does not offer any capabilities for checking the validity of the range it has to be done in the main class. Considering multiple classes manipulating the class with the shown getter and setter methods, the behavior is not located in one place. It is scattered on all surrounding classes. 
+\\
+
+The second example shows the refactored version. As shown in the listing \ref{listing:rule9example2:speaker} the speaker now offer clear defined methods that include an integrity check on the volume: \textit{adjustVolume(int volume)} and \textit{turnup()}. As a result, the usage of the \textit{Speaker} class is tremendously easier to read and to overlook. Its usage is shown in \textit{Main} (\ref{listing:rule9example2:main}) is very easy. 
+\\
+
+Instead of asking for the value, as shown in the first example, it not tells the \textit{Speaker} what to do. The code has now become easier to read and to maintain. It is easier to read because the code reads more like a text. The semantic is clearly in the method names and from a perspective of an object using a \textit{Speaker}, the method names sound like clear commands. In example one, there was no command-style language -- instead it was the manipulation of the inner state of the object. Furthermore the object is easier to test, too. A mock can simply be written for the \textit{Speaker} class. An example for a mock is shown in \ref{listing:rule9example2:mock}. As clearly depicted, the resulting code is easier to mock and a class using it, in this case the \textit{Main} class. Satisfying the "Tell, don't ask!" principle also increases the focus \textit{Main} class: It just give commands and does not have to conducte any further calculation. The implementation is delegated to the \textit{Speaker} class. 
+\\
+
+Rule nine, which is essentially encouraging to well defined encapsulated unit, is similar to many other rule. However, it insistently underlines the importance of the bundling of data and behavior and well defined encapsulation. 
+
+
 asdf
 \section{Discussion}
 \label{d:discussion}

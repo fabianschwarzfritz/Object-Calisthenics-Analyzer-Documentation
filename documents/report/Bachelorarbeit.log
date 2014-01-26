@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  26 JAN 2014 11:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  26 JAN 2014 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -767,14 +767,14 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.4 	\acro
-          {DHBW}{Duale Hochschule Baden-Wuerttemberg}
+          {DIP}{Dependency Inversion Principle}
 ? 
-LaTeX Font Info:    Try loading font information for T1+phv on input line 13.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 11.
 (c:/texlive/2013/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 13.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 11.
 ) (./Bachelorarbeit.aux
 (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux) (./Inhalt/abstract.aux)
 (./Inhalt/hauptteil.aux) (./Inhalt/appendixListing.aux
@@ -783,6 +783,18 @@ LaTeX Warning: Label `listing:rule3example2' multiply defined.
 
 
 LaTeX Warning: Label `listing:rule3example2' multiply defined.
+
+
+LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
+
+
+LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
+
+
+LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
+
+
+LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
 
 ) (./Inhalt/appendixImages.aux))
 \openout1 = `Bachelorarbeit.aux'.
@@ -1127,12 +1139,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
 
 ]
-Overfull \hbox (1.9971pt too wide) in paragraph at lines 24--25
-[]\T1/ptm/m/n/12 The book "The Thought-Works an-thol-ogy. Es-says on Soft-ware 
-Tech-nol-ogy and Innovation"[[],
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
@@ -1675,36 +1681,13 @@ e class-
  []
 
 
-Overfull \hbox (123.1102pt too wide) in paragraph at lines 392--394
-\T1/ptm/m/it/12 LaptopScreen.changeScreenResolution(ScreenResolution res-o-lu-t
-ion) \T1/ptm/m/n/12 and \T1/ptm/m/it/12 Lap-top-Screen.adjustBrightness(Brithne
-ssLevel
+Overfull \hbox (13.34642pt too wide) in paragraph at lines 392--394
+\T1/ptm/m/it/12 LaptopScreen.adjustBrightness(BrithnessLevel bright-nesslevel) 
+\T1/ptm/m/n/12 to \T1/ptm/m/it/12 Screen.adjust(Brightness level)
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 392--394
-
- []
-
-Package acronym Info: Label `acro:GWT' newly defined as it shall be overridden
-although it is yet undefined on input line 399.
-
-Package acronym Warning: Acronym `GWT' is not defined on input line 399.
-
-
-Package acronym Warning: Acronym `GWT' is not defined on input line 399.
-
-Package acronym Info: Label `acro:GWTCreate' newly defined as it shall be overr
-idden
-although it is yet undefined on input line 399.
-
-Package acronym Warning: Acronym `GWTCreate' is not defined on input line 399.
-
-
-Package acronym Warning: Acronym `GWTCreate' is not defined on input line 399.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 399--401
 
  []
 
@@ -1715,6 +1698,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
+Package acronym Info: Label `acro:GWT' newly defined as it shall be overridden
+although it is yet undefined on input line 399.
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--401
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 405--407
 
  []
@@ -1856,6 +1847,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 467--470
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 474--476
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--479
+
+ []
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -1863,23 +1864,67 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [25]
 
+LaTeX Warning: Reference `telldontaskoriginal' on page 26 undefined on input li
+ne 480.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--482
+
+ []
+
+
+LaTeX Warning: Reference `listing:rule9example1:speaker' on page 26 undefined o
+n input line 483.
+
+
+LaTeX Warning: Reference `listing:rule9example1:Main' on page 26 undefined on i
+nput line 483.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
+
+ []
+
+
+LaTeX Warning: Reference `listing:rule9example2:speaker' on page 26 undefined o
+n input line 486.
+
+
+LaTeX Warning: Reference `listing:rule9example2:main' on page 26 undefined on i
+nput line 486.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--488
+
+ []
+
+
+LaTeX Warning: Reference `listing:rule9example2:mock' on page 26 undefined on i
+nput line 489.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--491
+
+ []
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [26]
-Chapter 3.
-[27
-
-]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28]
+[27]
+Chapter 3.
+[28
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1887,12 +1932,19 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [29]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
 Chapter 4.
-[30
+[31
 
 ]
 Chapter 5.
-) [31
+) [32
 
 ]
 \openout2 = `Inhalt/appendixListing.aux'.
@@ -1919,7 +1971,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32
+[33
 
 
 ])
@@ -2053,7 +2105,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33]
+[34]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 33--33
 [][][][][][][] 
  []
@@ -2075,7 +2127,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34])
+[35])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 40--40
 [][][][][][][] 
  []
@@ -2092,7 +2144,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35])
+[36])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 46--46
 [][][][][][][] 
  []
@@ -2114,7 +2166,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36])
+[37])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 49--49
 [][][][][][][] 
  []
@@ -2131,66 +2183,71 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37])
+[38])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 53--53
+[][][][][][][] 
+ []
 
-! Package Listings Error: File `listings/rule8/example1/Exterior(.java)' not fo
-und.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: java)
-
-Enter file name: 
-
-! Package Listings Error: File `listings/rule8/example1/Door(.java)' not found.
-
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: java)
-
-Enter file name: 
-
-! Package Listings Error: File `listings/rule8/example2/Exterior(.java)' not fo
-und.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: java)
-
-Enter file name: 
-
-! Package Listings Error: File `listings/rule8/example2/Doors(.java)' not found
-.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: java)
-
-Enter file name: 
-
-! Package Listings Error: File `listings/rule8/example2/Door(.java)' not found.
-
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: java)
-
-Enter file name: 
-)
+(./listings/rule8/example1/Exterior.java
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]
+[39])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
+[][][][][][][] 
+ []
+
+(./listings/rule8/example1/Door.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 57--57
+[][][][][][][] 
+ []
+
+(./listings/rule8/example2/Exterior.java
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 58--58
+[][][][][][][] 
+ []
+
+(./listings/rule8/example2/Doors.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 59--59
+[][][][][][][] 
+ []
+
+(./listings/rule8/example2/Door.java
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41]))
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42]
 \openout2 = `Inhalt/appendixImages.aux'.
 
  (./Inhalt/appendixImages.tex
-<Bilder/Rule1Abstraction.png, id=185, 394.47375pt x 249.18094pt>
+<Bilder/Rule1Abstraction.png, id=199, 394.47375pt x 249.18094pt>
 File: Bilder/Rule1Abstraction.png Graphic file (type png)
 
 <use Bilder/Rule1Abstraction.png>
 Package pdftex.def Info: Bilder/Rule1Abstraction.png used on input line 4.
 (pdftex.def)             Requested size: 394.47278pt x 249.18031pt.
 
-<Bilder/StrategyPattern.png, id=187, 256.96pt x 160.6pt>
+<Bilder/StrategyPattern.png, id=201, 256.96pt x 160.6pt>
 File: Bilder/StrategyPattern.png Graphic file (type png)
 
 <use Bilder/StrategyPattern.png>
@@ -2214,12 +2271,38 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39 <./Bilder/Rule1Abstraction.png> <./Bilder/StrategyPattern.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 203--205
-\T1/ptm/m/n/12 URL http://www.ccs.neu.edu/research/demeter/demeter-
+[43 <./Bilder/Rule1Abstraction.png> <./Bilder/StrategyPattern.png (PNG copy)>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.204 ...L http://media.pragprog.com/articles/jan_
+                                                  03_enbug.pdf
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.205 
+      
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.205 
+      
+? 
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.205 
+      
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
+\T1/ptm/m/n/12 URL http://www.ccs.neu.edu/research/demeter/demeter-method/LawOf
+Demeter/paper-
  []
 
-[40
+[44
 
 
 
@@ -2231,7 +2314,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
+[45] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
 (./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux) (./Inhalt/appendixListing.aux)
 (./Inhalt/appendixImages.aux))
 
@@ -2245,13 +2328,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19725 strings out of 493308
- 367191 string characters out of 6141367
- 555978 words of memory out of 5000000
- 22606 multiletter control sequences out of 15000+600000
- 93336 words of font info for 119 fonts, out of 8000000 for 9000
+ 19758 strings out of 493308
+ 368394 string characters out of 6141367
+ 556012 words of memory out of 5000000
+ 22625 multiletter control sequences out of 15000+600000
+ 95296 words of font info for 123 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,12n,76p,1949b,1711s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,76p,1950b,1711s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2013/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2013/texmf-dist/fon
 ts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw
@@ -2263,10 +2346,10 @@ ist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1
 b8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texli
 ve/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2013/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (50 pages, 305109 bytes).
+Output written on Bachelorarbeit.pdf (54 pages, 311712 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
+ 254 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
