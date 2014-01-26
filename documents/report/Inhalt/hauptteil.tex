@@ -21,7 +21,7 @@ The last chapter \ref{Prototype} describes a prototypical implementation done du
 \label{i:exercising}
 Jeff Bay's "Object Calisthenics" \cite{bay2008} are an exercise to improve the quality of object oriented code. According to him, the exercise "will give new programmers an opportunity to learn best practices while writing their own code." \cite[p. 70]{bay2008}\\
 
-The book "The ThoughtWorks anthology. Essays on Software Technology and Innovation" \cite[p. 70-79]{oc2008} was released in 2008. It consists of thirteen essays discussing various topics and ideas on how to improve software development. The essays in the book discuss problems and ideas on languages, tool support, software principals and software quality. One of the paper's chapter is written by Jeff Bay and describes the rules of the Object Calisthenics. Furthermore it shortly describes their purpose and outcome and why the author Jeff Bay created these rules.\\
+The book "The ThoughtWorks Anthology. Essays on Software Technology and Innovation" \cite[p. 70-79]{oc2008} was released in 2008. It consists of thirteen essays discussing various topics and ideas on how to improve software development. The essays in the book discuss problems and ideas on languages, tool support, software principals and software quality. One of the paper's chapter is written by Jeff Bay and describes the rules of the Object Calisthenics. Furthermore it shortly describes their purpose and outcome and why the author Jeff Bay created these rules.\\
 
 All essays in the book \cite{oc2008} are written by developers working at the company "Thoughtworks inc.". The company is well known for creating, designing and supporting high quality software. The company is said to be one of the most future oriented company in terms of technology and software principals. They describe themselves as "[\dots] a software company and community of passionate individuals whose purpose is to revolutionize software design, creation and delivery, while advocating for positive social change." \cite{twWeb}\\
 
@@ -64,7 +64,7 @@ Therefore, the next chapter  \ref{Description} describes the rules Object Calist
 
 As already mentioned, the ensuing chapter \ref{Evaluation} discusses tool support for every rule.  The prototypical implementation is described in chapter \ref{Prototype}.
 
-\chapter{Object Calisthenics by Jeff Bay \_ Patterns and Principals}
+\chapter{Object Calisthenics by Jeff Bay -- Patterns and Principals}
 \label{Description}
 This chapter describes the patterns and principals behind the Object Calisthenics. 
 
@@ -95,7 +95,7 @@ Another problem, closely related to the problem of maintainbility, is the unders
 %cohesion shcon einfuerne, damit  in advantages of oo zur verfuegung steht
 In modern software development the separation in different modules is a core concept.\\
 
-According to Juergen Haas, modular programming "breaks down program functions into modules, each of which accomplishes one function and contains all the source code and variables needed to accomplish that function." \cite{about} He also states that the concept of modularity enables the programmer to debug and maintain difficult source code more easily. \\
+According to Juergen Haas, modular programming "[\dots{}] breaks down program functions into modules, each of which accomplishes one function and contains all the source code and variables needed to accomplish that function." \cite{about} He also states that the concept of modularity enables the programmer to debug and maintain difficult source code more easily. \\
 
 A module only contains all necessary information and operations to perform the steps necessary. All other information is not visible by the module, it is hidden in other modules that are responsible for other tasks. However, within one module the developer is not distracted by other operations or data structures that are not related to the module, because they are hidden. 
 
@@ -117,40 +117,43 @@ When using multiple files in procedural code, at some point the order of inclusi
 However in object oriented software the concept of encapsulation of data structures is integrated in the concept of object orientation.  In good object oriented software every module and object has a clear scope and is well encapsulated. This makes it easy to reuse the object or module. Firstly, it's dependencies are clearly visible. They are not order specific, because they do not determine the order of the inclusion of files, but they determine the types that are used by the class. Secondly, the inner state expressed by data structures is hidden from everything that is not part of the module. The developer does not have to apprehend other modules to change internal states of the module. Thirdly, the operations that can be executed on the object are well defined. The developer can document those interfaces to help developers using the interface to understand how the module or object works.
 
 \section{Advantages of Object Orientation}
-%TODO Ueberschrift zeigt Anfang princip oo saves us!
 The described problems and disadvantages that where described in the previous chapter \ref{d:problemsprocedural}, lead to the use of object orientation. 
-%TODO describe history of ooo shortly. 
-All in all, it is generally stated that object orientation and its related principals save us from the problems, described in \ref{d:problemsprocedural} and provides a proper solution. The advantages of object orientation are listed by Jeff Bay in \cite[p. 70]{oc2008}: "cohesion, coupling, duplication, encapsulation, testability, readabiliaty, and focus"\\
+
+All in all, it is generally stated that object orientation and its related principals save us from the problems, described in \ref{d:problemsprocedural} and provides a proper solution. The advantages of object orientation are listed by Jeff Bay in \cite[p. 70]{oc2008}: "cohesion, coupling, duplication, encapsulation, testability, readabiliaty, and focus".
+\\
 
 According to Jeff Bay the change from programming in a procedural way towards programming object oriented style is hard to learn. "Transitioning from procedural development to object-oriented design requires a major shift in thinking that is more difficult than it seems" \cite[p. 70]{bay2008}. 
-%TODO 2 te quelle die zeigt, dass das lernen von oo von procedural schwer ist
 According to Jeff Bay, however, the procedural way of thinking is still in the mind of many developers.
 
 "Many developers assume they’re doing a good job with OO design, when in reality they’re unconsciously
-stuck in procedural habits that are hard to break." \cite[p. 70]{bay2008} Not only the problem of the difficulty to learn a different way of thinking and coding when changing from procedural to object oriented code is a problem. But also the fact that it is easy for a developer to write procedural code. The disadvantages of procedural code do not occur immediately. Many of the problems when dealing with procedural source code occur late. That means that the developer does not get an immediate feedback about the quality of his code while writing it, but realizes the bad design of the procedural written code after he conducted a change. \\
-%todo dies noch belege. Ist es nur die motivation oder steckt da ncoh mehr dahinter? was sagen andere?
-%vielleicht in mf's refactoring
+stuck in procedural habits that are hard to break." \cite[p. 70]{bay2008} Not only the problem of the difficulty to learn a different way of thinking and coding when changing from procedural to object oriented code is a problem. But also the fact that it is easy for a developer to write procedural code. The disadvantages of procedural code do not occur immediately. Many of the problems when dealing with procedural source code occur late. That means that the developer does not get an immediate feedback about the quality of his code while writing it, but realizes the bad design of the procedural written code after he conducted a change. 
+\\
+
 And even worse, when he does not realize the disadvantages of procedural code, he will never change his coding style towards a real object oriented style -- simply because he does not see any advantages in it. Furthermore when creating code and not maintaining legacy code it is generally easier to write procedural code than to write object oriented code. Creating procedural code is significantly easier than creating object oriented code in the first place. The creation and the management of objects and a good implementation of encapsulation is difficult, but the quality of these two features, that are special for good object oriented software, are hard to realize. Whereas implementing the same functionality in procedural code is significantly easier.
 
-Therefore it is easier for the developer to write procedural code, than it is to write object oriented code. \\
+Therefore it is easier for the developer to write procedural code, than it is to write object oriented code. 
+\\
 
-Using the concept of object orientation helps to create software that has multiple advantages. These advantages are described later in this section. Before explaining the advantages or core concept stated by Jeff Bay, a summary of the characteristics and a comparision of procedural and object oriented code will be given shortly. \\
+Using the concept of object orientation helps to create software that has multiple advantages. These advantages are described later in this section. Before explaining the advantages or core concept stated by Jeff Bay, a summary of the characteristics and a comparison of procedural and object oriented code will be given shortly. 
+\\
 
-Procedural code is more like a step by step description of sequenced commands. 	Seldom information hiding is used in procedural code. Furthermore multiple operations manipulate data, but there is no bundling of data and behavior in one secluded unit. \\
+Procedural code is more like a step by step description of sequenced commands. 	Seldom information hiding is used in procedural code. Furthermore multiple operations manipulate data, but there is no bundling of data and behavior in one secluded unit. 
+\\
 
-In object oriented software however such a bundling in units exits. Data and behavior are put together in classes and packages. A unit using another unit uses the interface of the unit to determine possible operations, and uses it as required. The actual implementation and the actual data structures are hidden from the calling unit.\\
+In object oriented software however such a bundling in units exits. Data and behavior are put together in classes and packages. A unit using another unit uses the interface of the unit to determine possible operations, and uses it as required. The actual implementation and the actual data structures are hidden from the calling unit.
+\\
  
-In object oriented software tasks that do not have the same area of responsibility are separated. If a unit has to offer functionality of which it does not have the domain knowledge to implement it, it delegates the task to another unit, implementing the desired behavior. Otherwise the unit would not do exactly and only what it is supposed to do. To satisfy the definition of a module it needs to have a high cohesion and should only do the one thing that is dedicated to that unit. The definition cohesion was already explained. Therefore the object delegates its work to other units that are dedicated to that well defined and specific task. \\
-%TODO schlecht ausgedrucket
+In object oriented software tasks that do not have the same area of responsibility are separated. If a unit has to offer functionality of which it does not have the domain knowledge to implement it, it delegates the task to another unit, implementing the desired behavior. Otherwise the unit would not do exactly and only what it is supposed to do. To satisfy the definition of a module it needs to have a high cohesion and should only do the one thing that is dedicated to that unit. The definition cohesion was already explained. Therefore the object delegates its work to other units that are dedicated to that well defined and specific task. 
+\\
+
 There is a third point that is typical for object orientation. The things that are represented in software have to be implemented and expressed in software. The representation can be done by a list of commands, which is the procedural approach. The object oriented approach is to have concrete representations for the real world. These concrete representations are objects that model real world things directly and bundle the behavior and representation of a real world object directly. 
 This enables to separate in different models and make the models reusable. By doing so the particular modules are reusable and are simple and easy to use. 
 This led object orientation to the four pillars of object orientation: encapsulation, abstraction, inheritance, polymorphism. These pillars are the generally accepted basic advantages of object orientation. \\
 
 Jeff Bay however enhances the advantages by "core concepts" and "core qualities" that mark good object oriented code. The qualities are: cohesion, loose coupling, zero duplication, encapsulation, testability, readability and focus.
-%cohesion, loose coupling, zero duplication, encapsulation, testability, readability and focus
 Bay does not further explain these qualities. In the next paragraph I will go through all the qualities and explain them shortly. \\
 
-Because Jeff Bay's exercise was already described in \ref{i:exercising}, after the description of the code qualities, the detailed explanation of Jeff Bays nine rules will follow. 
+Because Jeff Bay's exercise was already described in \ref{i:exercising}, after the description of the code qualities, the detailed explanation of Jeff Bay's nine rules will follow. 
 
 \subsection*{Cohesion}
 \label{cohesion}
@@ -162,14 +165,12 @@ Low cohesion in contrast is bad, because the just described advantages of focus,
 
 \subsection*{Coupling}
 \label{coupling}
-%TODO use "class A, class B"
 Coupling is a metric that describes the knowledge of a class about its surrounding objects. Loose coupling can be described by two attributes. 
 \\
 Firstly, if a class knows less about the surrounding classes and only uses well defined, generic interfaces to those classes. It does not have knowledge about the concrete implementation of the class. 
 \\
 Secondly, if the state of a class does not depend on the state of another state, or at least only depends on the state provided by the class directly, and not by other classes provided by that class but only uses the provided methods. 
 When this is not given, the classes are strongly coupled. The "lack of coupling means that the elements of our system are better isolated from each other and from change." \cite[Loose Coupling]{wiki}
-% TODO quote is wrong!
 Because the changes of classes or an interface, for example when conducting a refactoring, do only spread to the directly related neighbor classes. Therefore loose coupling is considered a good object oriented style. It is easier to change loosely coupled classes than strongly coupled classes. When classes are coupled loosely they are more separate and independant from each other. 
 \\
 
@@ -209,7 +210,7 @@ The last quality Jeff Bay describes in \cite{oc2008} is focus. Focus is the desc
 \section{The Rules and their Background}
 \label{d:background}
  The instruction on how to conduct the excercise was already describe in the beginning, in chapter \ref{i:exercising}. This section describes the rules of the Objct Calisthenics itself. \\
- In the chapter I will go through every rule, step-by-step. Every section will describe the patterns an principals behind the rules, elucidate design patterns and best practices that correspond with the rules. Each rule will furthermore exemplify the rule by a good and a bad example. 
+ In the chapter I will go through every rule, step by step. Every section will describe the patterns an principals behind the rules, elucidate design patterns and best practices that correspond with the rules. Each rule will furthermore exemplify the rule by a good and a bad example. 
 
 \subsection*{Rule 1: "Use One Level of Indentation per Method"}
 \label{describe:rule1}
@@ -249,16 +250,16 @@ Jeff Bay's rule two "don’t use the else keyword", tackles the lack of understa
 In \cite{oc2008} he states that many developers learn if/else constructs from day one. Therefore they are used to the usage of the construct. Even worse they learn the proper usage of polymorphism later on in their career. As a result the "way of thinking" in if/else constructs is still firmly established in developers' brains.
 \\
 
-As commonly stated, the abundant use of conditionals leads to code that is hardly readable. \cite{gof} also states that. "Like long procedures, large conditional statements are undesirable." \cite{gof} Even worse, it leads to code duplication because the code with a lot of conditionals "is difficult to extend and to modify" \cite{gof}. This is because the deveoper does not see the usage of an if/else construct from the outside of the class. Therefore if he does not know the class where object is used, he simply rewrites the behavior that is already implemented in another method. Assumed there would be an object that had a clear description of the implemented behavior and could be reused, then this errors would not occur. Furthermore the conditional within the method could also be implemented by different implementation behind a common interface, which is the basic idea of polymorphism. The setting of the direction would then not happen when passing the if/else construct, but the method would simply call another method of an object and the concrete implementation of a common interface determines the code that is executed. 
+As commonly stated, the abundant use of conditionals leads to code that is hardly readable\cite{gof}. "Like long procedures, large conditional statements are undesirable." \cite{gof} Even worse, it leads to code duplication because the code with a lot of conditionals "is difficult to extend and to modify" \cite{gof}. This is because the deveoper does not see the usage of an if/else construct from the outside of the class. Therefore if he does not know the class where object is used, he simply rewrites the behavior that is already implemented in another method. Assumed there would be an object that had a clear description of the implemented behavior and could be reused, then this errors would not occur. Furthermore the conditional within the method could also be implemented by different implementation behind a common interface, which is the basic idea of polymorphism. The setting of the direction would then not happen when passing the if/else construct, but the method would simply call another method of an object and the concrete implementation of a common interface determines the code that is executed. By doing so the metric indicating cyclomatic complexity is reduced because the number of alternative of going throught a method is reduced -- there are less if/else conditionals. The number of variants is pushed away from the method by making use of polymorphism.
 \\
 
-In order to increase the reusability and conduct a better separation of concerns, Jeff bay restricts the usage of if/else constructs, concretely the usage of the else keyword.
+In order to increase the reusability and conduct a better separation of concerns, Jeff Bay restricts the usage of if/else constructs, concretely the usage of the else keyword.
 \\
 
 There are several ways to reduce the usage of if/else conditionals and increase the overview and readability of the coding. The three ways of doing so are: early return, the null object pattern and the strategy or state pattern. These three approaches are exemplified in the next paragraph. 
 
 \subsection*{Early Return}
-Early return is a very simple way of decreasing the amount of if/else conditionals. Its goal is mainly based on removing unused else keywords. Listing \ref{listing:rule2example1} shows method with conditionals. The code also contains "else" keywords, even if they would not be necessary. When the block of the first if clause would use the return statement to early-return from the method, the else keyword would not be needed.
+Early return is a very simple way of decreasing the amount of if/else conditionals. Its goal is mainly based on removing unused else keywords. Listing \ref{listing:rule2examplenull:main} shows method with conditionals. The code also contains "else" keywords, even if they would not be necessary. When the block of the first if clause would use the return statement to early-return from the method, the else keyword would not be needed. The version of the class using an early reuturn is shown in \ref{listing:rule2examplenull2:mainnull}.
 \\
 
 The second example, shown in \ref{listing:rule2example2}, depicts the solution that was just proposed. As clearly visible there is no else keyword used anymore, but the control is also done by early returns. The advantage of this approach occurs when reading through the method step by step. When seeing a return statement while reading through the method, the developer knows immediately what happens. The reader of the method knows that no other statement on the bottom of the method body will be executed. It is very clear that the method passes the control and that the execution is continued in the method of the initially caller of the method. There is no long decision making by conditionals which navigate through the different cases. In contrast, after the improvement of the source code there is a clear end of the method -- simliar to the semicolon or the dot in a sentence. Therefore Jeff Bay states that the the practice of using early returns increases the  readablility. 
@@ -267,8 +268,16 @@ The second example, shown in \ref{listing:rule2example2}, depicts the solution t
 However others state that the opposite is the case and that the variable that is returned should always be defined at the beginning of the method. This makes use of the advantage that the developer already knows at the beginning of the method which variable is returned -- a clear advantage in contrast to the early return approach. However, when reading through a method the developer always has to remember the variable that is returned and how it was changed. Furthermore, when returning a default value, the value is initialized in the beginning of the method -- but the return statement and the return variable are in the end of the method. Therefore the developer might have to look up the default value of the variable again. Whereas when using the the early return approach, this is prevented more likely.
 
 \subsection*{Null Object Pattern}
-The use of the null object pattern is the way of getting rid of if/else constructs. The pattern is mainly used in static typed language, like Java for example. When a method is returning the value null, a problem occurs for the callee. He has to check with a condition if the reference on the return value is null or is null. An example for such a null check is shown in listing \ref{listing:nullobject1}. This construct tries to achieve the execution of some lines of code only if a value is not null. However this has to be checked with an if condition. With the null object pattern, polymorphism instead of if contisions is used to achieve the shown behavior.
+The use of the null object pattern is the way of getting rid of if/else constructs. The pattern is mainly used in static typed language, like Java for example. When a method is returning the value null, a problem occurs for the callee. He has to check with a condition if the reference on the return value is null or is null. An example for such a null check is shown in listing \ref{listing:nullcheck}. This construct tries to achieve the execution of some lines of code only if a value is not null. However this has to be checked with an if condition. With the null object pattern, polymorphism instead of if contisions is used to achieve the shown behavior.
 \\
+
+\begin{lstlisting}
+Object result = something.operation();
+if(result != null) {
+	performAnotherOperation();
+}
+\end{lstlisting}
+\label{listing:nullcheck}
 
 The null object pattern commonly has two implementations behind one common interface. One implementation however contains the code in which of the if clause's body that is shown in listing \ref{listing:nullobject1}, and the other object simply contains no code. The two classes are shown in the following. The \ref{listing:nullobject2} shows the Null Object itself and the other listing \ref{listing:nullobject3} shows the implementation containig the code. Within the method \textit{method()}, a concrete implementation of the common interface \ref{listing:nullobjectoperationinterface} is returned. If the object shall be \textit{null}, an implementation of the Null Object \textit{NullObject} is returned, if not the \ref{listing:nullobject3} is returned. By doing so, the call check of the conditions in the caller's method disappears, as depicted in listing \ref{nullobject4}.
 
@@ -280,32 +289,39 @@ The third way of getting rid of else keywords is via polymorphism, concretely th
 The use of polymorphism means, in most cases, applying the strategy pattern. This will be explained firstly. 
 \\
 
-The strategie pattern is a software pattern allowing different polymorphic implementations, that are hidden behind a common interface. Which version of the method is executed is not determined within the object itself, but the concrete implementation of the object is determined by another object. The used implementation is plugged in by a deciding instance that determines the strategy that is used. The object itself, however does not care about the object that is used anymore, but simply calls the method of the common interface. The strategy pattern is used to create configurable algorithms with different behavior of the implementation \cite[p. 349]{gof}. The output on a given input however is defined by the common strategy interface. The \ac{UML} diagram of the strategy pattern is shown in picture \ref{picture:strategypattern}. An example of this is shown in listing ???. The first example shows a method not using polymoprhism, and the second, refactored example, shows the same method with polymorphism.
+The strategie pattern is a software pattern allowing different polymorphic implementations, that are hidden behind a common interface. Which version of the method is executed is not determined within the object itself, but the concrete implementation of the object is determined by another object. The used implementation is plugged in by a deciding instance that determines the strategy that is used. The object itself, however does not care about the object that is used anymore, but simply calls the method of the common interface. The strategy pattern is used to create configurable algorithms with different behavior of the implementation \cite[p. 349]{gof}. The output on a given input however is defined by the common strategy interface. The \ac{UML} diagram of the strategy pattern is shown in picture \ref{picture:strategypattern}. An example of this is shown in the following.
+\\
 
-%% TODO codebeispiele einfuegen und kurz erlauter.
-% TODO notzen kontrollieren - alles dabei?
-%% TODO darstellung grafisch strategy pattern
+The example shows a \textit{Printer} (\ref{listing:strategypatternexample1:printer}) that offer a method \textit{print(String string)} printing the given string. However the \textit{Printer} is configurable via its method \textit{Style} (\ref{listing:strategypatternexample1:style}). Dependant on which concrete implementation of \textit{Style} is used -- \textit{BoldFont} (\ref{listing:strategypatternexample1:boldfont}) or \textit{ItalicFont} \ref{listing:strategypatternexample1:italicfont} -- the tiven text is printed differently. In this example, the \textit{Main} (\ref{listing:strategypatternexample1:main}) represents the context, shown in the graphic \ref{picture:strategypattern}. The interface abstracting the two pluggable "style strategies" \textit{Style} is the common interface. The two possible strategies that determine how the string is printed are the classes \textit{BoldFont} and the classe \textit{ItalicFont}.
+\\
 
-%% TODO nur kurze erlaeuterung des state pattern
-Like the strategy pattern, the state pattern is a behavioral software pattern as well. The state pattern can be seen as specialization of it. The state pattern also makes use of polymorphism. In contrast to the strategy pattern, the implementation used next can be changed by an implementation itself. In the state pattern, the different implementations of the common interface are representing the object's state. The objects state is expressed by the concrete state implementation, that is hidden behind the common interface, which is valid for all states. Therefore a state can change the state to another state.\\
+Like the strategy pattern, the state pattern is a behavioral software pattern as well. The state pattern can be seen as specialization of it. The state pattern also makes use of polymorphism. In contrast to the strategy pattern, the implementation used next can be changed by an implementation itself. In the state pattern, the different implementations of the common interface are representing the object's state. The objects state is expressed by the concrete state implementation, that is hidden behind the common interface, which is valid for all states. Therefore a state can change the state to another state.
+\\
 
 The \ac{UML} diagram of pattern shown in the graphic \ref{picture:statepattern}. The graphic shows the \textit{Context}, in which the \textit{State} is used. The \textit{ConcreteStateA} and the \textit{ConcreteStateB} are the concrete implementations of the common interface \textit{State}. The state implementations  \textit{ConcreteStateA} and \textit{ConcreteStateB} can change the state to another state. They can change the state to every implementation of the \textit{State} interface, therefore \textit{ConcreteStateA} can change the state to \textit{ConcreteStateB}.
-All in all, the state pattern is a clean way to encapsulate the change of behviour during runtime. In this pattern not only the concrete implementation is encapsulated like in the strategy pattern, but also the transition from one state to another state is well encapsulated. \\
+All in all, the state pattern is a clean way to encapsulate the change of behviour during runtime. In this pattern not only the concrete implementation is encapsulated like in the strategy pattern, but also the transition from one state to another state is well encapsulated. 
+\\
 
-The just described strategy and state pattern make heavy use of polymorphism to better encapuslate code. They break procedural text lines into well encapsulated units \cite{gof}. The resulting code is easier to reuse and to modify and "makes them interchangeable" \cite{gof}. The interchangable polymorphic units should follow the \ac{LSP} rigorously.\\
+The just described strategy and state pattern make heavy use of polymorphism to better encapuslate code. They break procedural text lines into well encapsulated units \cite{gof}. The resulting code is easier to reuse and to modify and "makes them interchangeable" \cite{gof}. The interchangable polymorphic units should follow the \ac{LSP} rigorously.
+\\
 
-The \ac{LSP} states that "a computer program, if S is a subtype of T, then objects of type T may be replaced with objects of type S (i.e., objects of type S may be substituted for objects of type T) without altering any of the desirable properties of that program (correctness, task performed, etc.)." \cite[Liskov Substitution Principle]{wiki}. When a class overrides a method of a class or implements a method of an interface, the implementation should always behave as given by the abstract method definition. Therefore it is the principle that a subclass of a class (or an interface) should behave exactly as stated in the documentation of the abstract or overwritten method. In the result, the output of a given method with a given input, is always the same and independant on which of the polymorphic implementations were used. \\
+The \ac{LSP} states that "a computer program, if S is a subtype of T, then objects of type T may be replaced with objects of type S (i.e., objects of type S may be substituted for objects of type T) without altering any of the desirable properties of that program (correctness, task performed, etc.)." \cite[Liskov Substitution Principle]{wiki}. When a class overrides a method of a class or implements a method of an interface, the implementation should always behave as given by the abstract method definition. Therefore it is the principle that a subclass of a class (or an interface) should behave exactly as stated in the documentation of the abstract or overwritten method. In the result, the output of a given method with a given input, is always the same and independant on which of the polymorphic implementations were used. 
+\\
 
- To guarantee the correctness of the class that is using the interchangable classes, each of the concrete implementations of those classes have to behave exactly as their abstract specifications hence interfaces. These interfaces should be well documented and provide a clear description of what is expected to be the output on every possible given imput. The documentation can then describe the specialties of the concrete implementations. However, under no circumstances the subclasses should disagree the interface's documentation but should follow the \ac{LSP} very strictly. \\
+ To guarantee the correctness of the class that is using the interchangable classes, each of the concrete implementations of those classes have to behave exactly as their abstract specifications hence interfaces. These interfaces should be well documented and provide a clear description of what is expected to be the output on every possible given imput. The documentation can then describe the specialties of the concrete implementations. However, under no circumstances the subclasses should disagree the interface's documentation but should follow the \ac{LSP} very strictly. 
+ \\
 
  All in all, these patterns enable the developer to "move multiconditionals and branches to own strategy [or state] classes" \cite{gof} and by this dramatically reduce the use of conditionals. By pushing login into interchangable own components, the cohesion of the class increases. It has less if/else conditionals and is, in result more readable and focused. The focus increases because the class does not determine the code to apply with conditionals to then treat them differently. Instead it uses method calls with the hidden and interchangable logic. To engage developers to use the described patterns and to benefit from their advantage, Jeff Bay permits the use of the else keyword with this rule. 
 
 \subsection*{Rule 3: "Wrap All Primitives and Strings"}
-Jeff Bay's third rule "wrap all primitives and strings" tries to force the developer to push logic close the data. The basic problem, this rule tackles is that most primitive values only relate to their meaning by its variable names. \\
+Jeff Bay's third rule "wrap all primitives and strings" tries to force the developer to push logic close the data. The basic problem, this rule tackles is that most primitive values only relate to their meaning by its variable names. 
+\\
 
-Primitive values however are variously used in software. They occur as parameters, loop counters, return values and temporary variables. However, in all of these cases the meaning of the variable is only reflected by its name. They reflect meaning, but at the same time do not offer the associated behavior. In the following, a bad and a good example is shown. \\
+Primitive values however are variously used in software. They occur as parameters, loop counters, return values and temporary variables. However, in all of these cases the meaning of the variable is only reflected by its name. They reflect meaning, but at the same time do not offer the associated behavior. In the following, a bad and a good example is shown. 
+\\
 
-To explain this issue vivid, the following, bad example is given. The example used here is very simple. Imagine rolling a dice. The number, generated by the dice indicates the number of jumps you have to do. In the application the random method represents a complex process. The application however, consists of two classes. The \textit{Dice} represents the real world dice and is accountable for generating a random number. The other class, \textit{Game}, triggers the action of rolling the dice. Furthermore it is responsible for printing the results of the dice. The game represents how to process with the result of the data.   \\
+To explain this issue vivid, the following, bad example is given. The example used here is very simple. Imagine rolling a dice. The number, generated by the dice indicates the number of jumps you have to do. In the application the random method represents a complex process. The application however, consists of two classes. The \textit{Dice} represents the real world dice and is accountable for generating a random number. The other class, \textit{Game}, triggers the action of rolling the dice. Furthermore it is responsible for printing the results of the dice. The game represents how to process with the result of the data.   
+\\
 
 The first example is depicted below in listing \ref{listing:rule3example1}. As you can see, the behavior that indicates the number generated by the dice is indicated by the \textit{Dice}. However resulting number is returned by the dice. With this number, the \textit{Game} determines how the  display shall be displayed. The \textit{Game} uses a for loop iteration to process the data. The processing of data is represented by this loop. The fact that the resulting integer of the \textit{Dice.roll()} method is used to iterate is only represented by the variable name of the variable. Therefore if there are many different or more complex data processings, then it gets confusing very fast. How well code is understood is only represented by the variable names. From where the data is manipulated can only be determined by knowing the program or reading the documentation. This is because the behavior is not located where the data is. This bad example shows this very clearly. The behavior that is determined by the \textit{Game} is only the way of printing: \textit{System.out.println()}. The other code, the for loop in this case that represents the complex processing of data, is not determined by the \textit{Game}. It is rather determined by the \textit{Dice}. 
 \\
@@ -328,7 +344,7 @@ A service offers operations that belong to multiple domain objects. Service obje
 \\
 Repository objects provide methods to manage the persistency of domain objects like value objects, entity or aggregates. The repository encapsulates database or framework specific logic and libraries, and provides all necessary operations that are needed to manage the database persistency.
 \\
-Factory objects are following the commonly known factory pattern. The factory method or factory pattern respectively, is explained in \cite[p. 121]{gof}. A factory allows the easy exchange of different comain object alternative implementations and makes these interchangable.
+Factory objects are following the commonly known factory pattern. The factory method or factory pattern respectively, is explained in \cite[p. 121]{gof}. A factory allows the easy exchange of different domain object alternative implementations and makes these interchangable.
 \\
 The model in \ac{DDD} as the "heart of the model", the "backbonde language used by the team" and the "distilled knowledge" \cite[p. 25]{dddbook} is the summary of the idea. Especially the idea of an entity and aggregate really coincides with the idea of rule 3. A model that is strong in encapsulation, provides clear defined behavior that is located in the domain model itself reflects rule three. The readability is increased because it is very clear where to find which operation. Lastly, the resulting domain objects provide type safety, because there is no (domain) object that as a general type like integer, string or list. All these primitive types are pushed to their own well defined domain objects that offer a precise behavior reflecting real world operations. 
 
@@ -337,7 +353,7 @@ The model in \ac{DDD} as the "heart of the model", the "backbonde language used 
 \subsection*{Rule 4: "Use Only One Dot per Line"}
 The fourth rule of Jeff Bay, "use only one dot per line", increases the cohesion of classes and claims a clear separation of concerns. The rule tackles "misplaces responsibilities" \cite{oc2008} and focuses on a clear structure of tasks.\\
 
-According to Jeff Bay, lines of code with multiple dots, indicate such "misplaces responsiblities" \cite{oc2008}. If a line with multiple dots occurs, it is indicated that the developer "violate[s] encapsulation" \cite{oc2008}. Such lines indicate that there is an object acting "as a middleman" \cite{oc2008}. "It knows too much about too many people." \cite{oc2008} By this, Jeff Bay means that an object A is using another object B to access object instances in object C to manipulate C's instance variable or call a method on instance C. As a result, the actual operation is located in object A but the data is located is in object C. This violates the \ac{LoD}. The essence of \ac{LoD} is exactly what is just explained. According to \ac{LoD} a object is only allowed to talk to "itself, its parameters, any objects it creates [\dots] [and] its direct component objects" \cite{ba.com}. These communication partners are sometimes called "friends" of the objects. They are known by the object because they where deliberately passed to the object or were created by the object itself.  
+According to Jeff Bay, lines of code with multiple dots, indicate such "misplaces responsiblities" \cite{oc2008}. If a line with multiple dots occurs, it is indicated that the developer "violate[s] encapsulation" \cite{oc2008}. Such lines indicate that there is an object acting "as a middleman" \cite{oc2008}. "It knows too much about too many people." \cite{oc2008} By this, Jeff Bay means that an object A is using another object B to access object instances in object C to manipulate C's instance variable or call a method on instance C. As a result, the actual operation is located in object A but the data is located is in object C. This violates the \ac{LoD}. The essence of \ac{LoD} is exactly what is just explained. According to \ac{LoD} a object is only allowed to talk to "itself, its parameters, any objects it creates [\dots] [and] its direct component objects" \cite{ba.com}. These communication partners are sometimes called "friends" of the objects. They are known by the object because they were deliberately passed to the object or were created by the object itself.  
 \\
 
 The usage of another object or method that is executed on the return value of another object is not allowed in one single line. Then \ac{LoD} is not violated. Of course it is still possible to conduct those bad chained method calls in two lines with only one dot in each line -- however, this is bad practice. In \cite{paperboy}, David Bock calls this "lots of temporary object", because the object reference will only be used over two or three lines. Then it is never necessary again. In addition, according to rule six, the developer is only allowed to use a very limited amount of lines in one class. These two rules force the developer to stick with the \ac{LoD}.
@@ -372,7 +388,7 @@ In \cite{oc2008}, he states that abbreviations are confusing and badly readable.
 
 To prevent the developer from using abbreviations the restricts proposes his own naming convention for method name. However these rule is also useful for the naming of variables and classes because for those artifacts the same just described problems of readiability occurs.\\
 
-Firstly an artifact should only consist of two words maximum. Rober C. Martin also proposes that in \cite[p. 19]{cc} by introducing the "[avidance of] disinformation" and the "[usage of] intention-revealing names". 
+Firstly an artifact should only consist of two words maximum. Rober C. Martin also proposes that in \cite[p. 19]{cc} by introducing the "[avoidance of] disinformation" and the "[usage of] intention-revealing names". 
 \\
 
 Secondly, Jeff Bay proposes another hint for methods names. They should always make use of the context in which they are declared. 
@@ -383,7 +399,7 @@ In the following block, there examples for bad method and class names are given.
 
 A class \textit{Car} with the method \textit{startEngine} can be simplified by changing the method name to \textit{start}. Imagine a car in a real world and imagine a situation where you speak to a friend directly. The easy and more colloquial language would be \textit{"let's go, start the car"} rather than \textit{"let's go start the car's engine"}. This is simply because the description "start" describes the conducted action as well as "start the engine" -- from the perspective of someone using a car.\\
 
-A class \textit{LaptopScreen} describes the screen of a laptop and is created and managed by a class \textit{Laptop}. Given this class only has the operations \textit{adjustBrightness(BrithnessLevel brightnesslevel)} and \textit{changeScreenResolution(ScreenResolution resolution)}. In this example the classnames are used as placeholders for the instance variable names of these types, simply assuming that the name might be similar. Often such a variable is named with the lower case version of the classname: laptopScreen. However the best solution is when the variable name describes the context in which the type is used and does not duplicate the information that was already given via the type.  
+A class \textit{LaptopScreen} describes the screen of a laptop and is created and managed by a class \textit{Laptop}. Given this class only has the operations \textit{adjustBrightness(BrithnessLevel brightnesslevel)} and \textit{changeScreenResolution(ScreenResolution resolution)}. In this example the classnames are used as placeholders for the instance variable names of these types, simply assuming that the name might be similar. Often such a variable is named with the lower case version of the classname: \texti{laptopScreen}. However the best solution is when the variable name describes the context in which the type is used and does not duplicate the information that was already given via the type.  
 
 In this example there are several improvements that can be done to improve the naming. The first improvement is regarding the class name. Because the \textit{LaptopScreen} is only used in the context of a \textit{Laptop}, the duplication of the word "laptop" is unnecessary.
 
@@ -394,7 +410,7 @@ After the renaming of the methods, they changed from \\ \textit{LaptopScreen.cha
 
 The third example will address the problem addresse originally by the rule, which is also anchored in its name. The prohibition to use any abbreviations. An example for this is given in the next, third and last example. 
 
-Image in a class \textit{NSString} which is widely used in apple iOS framework and comes from the programming language Objective-C. Every string in this language is an \textit{NSString}. In fact most of the base classes of the language start with "NS". The abbreviation NS stands for NeXT -- the name of the company which created the programming language Objective-C. NS therefore is just an abbreviation which is -- even worse -- only use to specify the context in which it is used. This is an example, where the abbreviation is integrated in one of the core entities of the language. Even if the creation of the language was long ago, there could have been a change of the class name to remove such a bad readable and confusing name.
+Image in a class \textit{NSString} which is widely used in apple iOS framework and comes from the programming language Objective-C. Every string in this language is an \textit{NSString}. In fact most of the base classes of the language start with "NS". The abbreviation NS stands for NextStep -- the name of the company which created the programming language Objective-C. NS therefore is just an abbreviation which is -- even worse -- only use to specify the context in which it is used. This is an example, where the abbreviation is integrated in one of the core entities of the language. Even if the creation of the language was long ago, there could have been a change of the class name to remove such a bad readable and confusing name.
 
 Many other frameworks also use abbreviations, for example the \ac{GWT} with its class \textit{GWTCreate}. The class is widely used in the framework. In his paper, Jeff Bay does not give further examples for abbreviations. He simply encourages developers not to use any of them to avert confusion from the start.
 \\
@@ -402,7 +418,7 @@ Many other frameworks also use abbreviations, for example the \ac{GWT} with its 
 As shown in the examples and the restrictions of the rule, given by Jeff Bay, there are various ways to improve names of classes, methods and variable names. 
 
 \subsection*{Rule 6: "Keep All Entities Small"}
-Jeff Bays rule six, "keep all entities small", prohibits to write classes "with more than fifty lines and no package that's more than ten files.". Long classes are commonly known as hardly readable and understandable because simply the variance and the number of statements makes it difficult to understand. 
+Jeff Bay's rule six, "keep all entities small", prohibits to write classes "with more than fifty lines and no package that's more than ten files.". Long classes are commonly known as hardly readable and understandable because simply the variance and the number of statements makes it difficult to understand. 
 \\
 
 Classes that consist of very many lines of code are hard to overview and to understand. They are likely to multiple behaviors and do not follow the pattern of "doing one thing" as stated in \cite{cc}. Long classes with many lines of code do more than one thing and mostly have more than one purpose. Therefore they shall be splitted up in diffent units with a high cohesion, focus and a clear separation of concerns and a differentiation of the levels of abstraction. 
@@ -415,130 +431,122 @@ Giving an example for long classes would go beyond the scope of the discussion a
 
 
 \subsection*{Rule 7: "Don’t Use Any Classes with More Than Two Instance Variables"}
-Jeff Bays rule seven, "don't use any classes with more than two instance variables" strongly focuses on the decrease of cohesion.
+Jeff Bay's rule seven, "don't use any classes with more than two instance variables" strongly focuses on the decrease of cohesion.
 \\
 
 Jeff Bay underlines that "most classes should simply be responsible for handling a single state varible, but a few will require two." \cite{oc2008} This is because sometimes there has to be something like a coordination between two object instances that has to be managed. Then this managing object is allowed to constist of two instance variables. All other classes that do not fulfill that purpose should only have one instance variable in order to fulfill rule seven.
 \\
 
-The rule is similar to rule three, which is also about bundling behavior in classes. However this rule tackle the problem of the bundling of many non related behavior in one class. If only one or two instance variables are available, it is nearly impossible to put behavior of multiple concerns in one class. By restricing the number of instance variable Jeff Bay forces the developer to write highly cohesive classes that focus on doing one thing. The challenge for the developer might furthermore be the problem of finding those small differences, which are rich in detail. 
+The rule is similar to rule three, which is also about bundling behavior in classes. However this rule tackle the problem of the bundling of many non related behavior in one class. If only one or two instance variables are available, it is nearly impossible to put behavior of multiple concerns in one class. By restricing the number of instance variables Jeff Bay forces the developer to write highly cohesive classes that focus on doing one thing only. The challenge for the developer might furthermore be the problem of finding those small differences, which are rich in detail. 
 \\
 
-The following shows an example of a class with more than two instance variables. The class can be split up further to enable a more detailed description of the real world. It matches the idea of unravelling the model that comes from \ac{DDD}, beeing described in \ac{dddbook}.
+The following shows an example of a class with more than two instance variables. The class can be split up further to enable a more detailed description of the real world. It matches the idea of unravelling the model that comes from \ac{DDD}, beeing described in \cite{dddbook}.
 \\
 
-Listing \ref{listing:rule7example1:car} show a model presentation of a \textit{Car}. The car bundles other representations, like \textit{SteeringWheel}, a \textit{Radio}, all the given \textit{edals} and the \textit{Doors} it is consisting of. In addition the class has a method: \textit{Car.start()}. It is a very simple example of a model representation. However the method \textit{start()} lacks in cohesion and focus. Indeed all operations in the method have to do with starting perparing the car to start, they behave differently and are located somewhere else. The doors are in the exterior of the car, the steering wheel and the pedals of the car are part of the driver's cockpit and the radio is located in the center of the console.
+Listing \ref{listing:rule7example1:car} shows a model presentation of a \textit{Car}. The car bundles other representations, like \textit{SteeringWheel}, a \textit{Radio}, all the given \textit{Pedals} and the \textit{Doors} it is consisting of. In addition the class has a method: \textit{Car.start()}. It is a very simple example of a model representation. However the method \textit{start()} lacks in cohesion and focus. Indeed all operations in the method have to do with starting preparing the car to start, they behave differently and are located somewhere else. The doors are in the exterior of the car, the steering wheel and the pedals of the car are part of the driver's cockpit and the radio is located in the center of the console.
 
-In this example, not only the low cohesion of the \textit{Car} is problematic, but also the lack of modularity. Imagine a you want to map a \textit{RallyCar}. Usually rally cars do not have a radio. Therefore the developer whould have to implement the a RallyCar without a radio. But actually all the other structure is the same: The \textit{RallyCar} also has pedals, it also has doors and it has a steering wheel, too. Before expounding the solution of this modelling problem, the better variant of modelling a \texti{Car} is shown. 
+In this example, not only the low cohesion of the \textit{Car} is problematic, but also the lack of modularity. Imagine a you want to map a \textit{RallyCar}. Usually rally cars do not have a radio. Therefore the developer whould have to implement a \textit{RallyCar} without a radio. But actually all the other structure is the same: The \textit{RallyCar} also has pedals, it also has doors and it has a steering wheel, too. Before expounding the solution of this modelling problem, the better variant of modelling a \texti{Car} is shown. 
 \\
 
-Listing \ref{listing:rule7example2:car} shows the second version of the car. As the \textit{Car} in the first example, it also has the same method. However it is only consisting of the \textit{Interior} and the \textit{Exterior}, shown in listing \ref{listing:rule7example2:interior} and \ref{listing:rule7example2:exterior}. These classes hold the references to the \texit{CenterConsole} and the \textit{Cockpit} shown in \ref{listing:rule7example2:centerconsole} and \ref{listing:rule7example2:cockpit}. The splitting of these two classes into more sophisticated structures which then hold the classes that the developer originally wanted to represent: \textit{SteeringWheel}, \textit{Radio}, \textit{Doors} and \text{Pedals}. Maybe this sophisticated structure looks like an overhead,  it becomes clear that the opposite is true. The method \textit{Car.start()} got significanly simpler and increased in cohesion. Furthermore it now delegates the work to the model classes \textit{Interior} and \textit{Exterior}. These no delegate execute the work for the classes they are responsible for. The same principle applies for the \textit{Interior} class. 
+Listing \ref{listing:rule7example2:car} shows the second version of the car. As the \textit{Car} in the first example, it also has the same method. However it is only consisting of the \textit{Interior} and the \textit{Exterior}, shown in listing \ref{listing:rule7example2:interior} and \ref{listing:rule7example2:exterior}. These classes hold the references to the \textit{CenterConsole} and the \textit{Cockpit} shown in \ref{listing:rule7example2:centerconsole} and \ref{listing:rule7example2:cockpit}. The splitting of these two classes into more sophisticated structures which then hold the classes that the developer originally wanted to represent: \textit{SteeringWheel}, \textit{Radio}, \textit{Doors} and \text{Pedals}. Maybe this sophisticated structure looks like an overhead,  it becomes clear that the opposite is true. The method \textit{Car.start()} got significanly simpler and increased in cohesion. Furthermore it now delegates the work to the model classes \textit{Interior} and \textit{Exterior}. These now delegate execute the work for the classes they are responsible for. The same principle applies for the \textit{Interior} class. 
 \\
 
-Before comparing the examples in detail it has to be said that the interface of the \texti{Car} is the same for both examples. \textit{Car} represents a top level entry point for a component making use of this entity. In example two, which consists of more classes, but also in example one the top level entity or entry point \textit{Car} could be the main starting point for using the package. Therfore a user would not be affected by the refactory that was conducted. 
+Before comparing the examples in detail it has to be said that the interface of the \textit{Car} is the same for both examples. \textit{Car} represents a top level entry point for a component making use of this entity. In example two, which consists of more classes, but also in example one the top level entity or entry point \textit{Car} could be the main starting point for using the package. Therfore a user would not be affected by the refactory that was conducted. 
 \\
 
-In comparison the new model is split up in more classes. By doing so, these classes have have a higher cohesion: They delegate more work and do one thing better. However when splitting up the method \textit{Car.start()} from the first example shown in listing \ref{listing:rule7example1:car}, it is necessary to clearly name and implement the delegation methods to enable the subsequent developer to understand the model. The risk in this approach of splitting up things in detailed model lies in the introduction of new aggregate types. 
+In comparison the new model is split up into more classes. By doing so, these classes have a higher cohesion: They delegate more work and do one thing better. However when splitting up the method \textit{Car.start()} from the first example shown in listing \ref{listing:rule7example1:car}, it is necessary to clearly name and implement the delegation methods to enable the subsequent developer to understand the model. The risk in this approach of splitting up things in detailed models lies in the introduction of new aggregate types. 
 \\
 
-In example one, \textit{Car} was the only aggregate of all the classes. In example two, there are more aggregate classes, \textit{Interior}, \textit{Exterior}, \textit{CenterConsole} and \textit{Cockpit}. Even if all the aggregates handle multiple instance variable (like \text{Exterior}), they are responsible for their contained sub instances. The problem that might occur during development is the introduction of new aggregate types, that do no necessarily exist in the real world. For example the \textit{Interior} and the \textit{Exterior} are barely imagineable, they are less concrete than for example \textit{Pedals}. If the break down in detailed entities results in many "unreal" classes, the developer should rething the model's design. 
+In example one, \textit{Car} was the only aggregate of all the classes. In example two, there are more aggregate classes, \textit{Interior}, \textit{Exterior}, \textit{CenterConsole} and \textit{Cockpit}. Even if all the aggregates handle multiple instance variable (like \text{Exterior}), they are responsible for their contained sub instances. The problem that might occur during development is the introduction of new aggregate types, that do not necessarily exist in the real world. For example the \textit{Interior} and the \textit{Exterior} are barely imagineable, they are less concrete than for example \textit{Pedals}. If the break down in detailed entities results in many "unreal" classes, the developer should rething the model's design. 
 \\
 
-Despite the just described problem, following this rule highly increases the cohesion of classes. Bugs and errors, especially bugs that occur when working with model aggregate, can be clearly located and spottet. he separation of the classes' concerns and the squeezing down of the model results to a better abstracted, easily interchangable model. They are clearly placed in their corresponding part in the domain model and form a detailed representation of the holisitc model. The attention to detail of the developer, resulting in perfectly describing models and high cohesive classes is the goal of this rule. Guaranteeing the awareness for the described problems and its beneficial solutions is the goal of this rule. 
+Despite the just described problem, following this rule highly increases the cohesion of classes. Bugs and errors, especially bugs that occur when working with model aggregate, can be clearly located and spottet. The separation of the classes' concerns and the squeezing down of the model result to a better abstracted, easily interchangable model. They are clearly placed in their corresponding part in the domain model and form a detailed representation of the holisitc model. The developer's attention to detail, resulting in perfectly describing models and high cohesive classes is the goal of this rule. Guaranteeing the awareness for the described problems and its beneficial solutions is the purpose of this rule. 
 
 \subsection*{Rule 8: "Use First-Class Collections"}
 Jeff Bay's rule eight, "use first-class collections" focuses on the proper encapsulation within the application. In \cite{oc2008} Jeff Bay states that when "each collection gets wrapped in its own class [\dots{}] behaviors, related to the collection now have a home". 
 \\
 
-It follows the same principals as already described in rule three and rule seven lie behind this rule. The rule forces the developer to define clearly which operations can be executed on the collection. Often the manipulation of a collection is done from the referencing class. However then it is hard to ensure that another object doesn't also manipulate the content of the collection. When applying this rule, it is clearly defined which mehtods are allowed to execute on a collection. Furthermore, when pushing the responsibility of consistency into a class wrapping the collection, the developer can always trust the structure of the collection. There is one unit taking care of what is allowed to add, delete or mainpulate. 
+It follows the same principals as already described in rule three and rule seven lies behind. The rule forces the developer to define clearly which operations can be executed on the collection. Often the manipulation of a collection is done from the referencing class. However then it is hard to ensure that another object doesn't also manipulate the content of the collection. When applying this rule, it is clearly defined which methods are allowed to execute on a collection. Furthermore, when pushing the responsibility of consistency into a class wrapping the collection, the developer can always trust the structure of the collection. There is one unit taking care of what is allowed to add, delete or manpulate. 
 
-Furthermore the standard methods of a languages collection brought by the language it self are hidden. No one can just use a method like Java's \textit{List.get()} and manipulate via the returned reference. 
+Furthermore the standard methods of a languages collection brought by the language itself are hidden. No one can just use a method like Java's \textit{List.get()} and manipulate via the returned reference. 
 \\
 
-In the next section an example is shown, where the rule was not applies. In the next step, the example is refactored and the encapsulation is improved significantly. 
+In the next section an example is shown, where the rule was not applied. In the next step, the example is refactored and the encapsulation is improved significantly. 
 \\
 
-The bad example makes use of the example of the previously presented class \textit{Exterior}. The \textit{Exterior} has a refernce on many \textit{Doors} via a \textit{List}. The behavior that is mapped in the two methods \textit{prepareStart()} and \textit{print()} makes use of the \textit{Engine}, as well as the \textit{List<Door>}s. In both methods it conducts an operation on the engine and on the doors. The start method starts the engine and locks all doors. The other method, printing information iterates over all \textit{Door}s and prints their name. In this case the "name" is a representation for any arbitraty information. However in both methods the \textit{exterios} manipulates the \textit{Doors}, even if the doors should be responsible for their behavior. With the current classes, the developer has no chance to add methods to all doors, simply because the type comes from the Java framework and cannot be changed. The idea of \textit{LoD} was already presented in rule four. However, when The \textit{Exterior} class operates on are "his friends", in this case directly related instance variable it is questionable if the exterior should have such a strong relation to all \textit{Door}s via the \textit{List} reference. Of course the exterior has to trigger the correct behavior of the doors. 
+The bad example makes use of the example of the previously presented class \textit{Exterior}. The \textit{Exterior} has a reference on many \textit{Doors} via a \textit{List}. The behavior that is mapped in the two methods \textit{prepareStart()} and \textit{print()} makes use of the \textit{Engine}, as well as the \textit{List<Door>}s. In both methods it conducts an operation on the engine and on the doors. The start method starts the engine and locks all doors. The other method, printing information iterates over all \textit{Door}s and prints their name. In this case the "name" is a representation for any arbitraty information. However in both methods the \textit{Exterior} manipulates the \textit{Doors}, even if the doors should be responsible for their behavior. With the current classes, the developer has no chance to add methods to all doors, simply because the type comes from the Java framework and cannot be changed. The idea of \ac{LoD} was already presented in rule four. However, when The \textit{Exterior} class operates on directly neighbored variables (in this case instance variables), it is questionable if the exterior should have such a strong relation to all \textit{Door}s via the \textit{List} reference. Of course the exterior has to trigger the correct behavior of the doors. 
 \\
 
-As the attentive observer may already realize: The operation \textit{prepareDoors} is conducted on all for or them. It is not the \textit{Exteriors} responsibility to care if there are one or two doors, or if the door is a collection or an array. Therefore the second example show a better refactored example, fulfilling the requirements of rule eight. The result is a better placed behavior and a higher cohesion of all classes involved.
+As the attentive observer may already realize: The operation \textit{prepareDoors} is conducted on all. It is not the \textit{Exterior}'s responsibility to care if there are one or two doors, or if the door is a collection or an array. Therefore the second example shows a better refactored example, fulfilling the requirements of rule eight. The result is a better placed behavior and a higher cohesion of all classes involved.
 \\
 
 The good example wraps the collection \textit{List<Door>} in an own class, which is called \textit{Doors}. In result the behavior relating to door can be pushed to that new introduced class. The readability and overview of the \textit{Exterior} class is increased tremendously by doing so. The class has less intentiations, therefore the advantages, presented in rule one, also apply for this rule. Not only the resulting method bodies of the \textit{Exterior} are more clearly and follow a command-style, but also the behavior that can be applied on a set of doors is located expressly.
 In the new introduced \textit{Doors} class all methods that can be exectued on multiple doors are bundled. Data and behavior are in one place. 
 \\
 
-As already stated, this rule tackles a very similar problem as rule three. Adding behavior wrapping collections or primitives into own classes. This enables the compiler to apply a type check and furthermore is the only chance to add behavior to those types without scattering operations it in surrounding classes. 
+As already stated, this rule tackles a very similar problem as rule three: Adding behavior wrapping collections or primitives into own classes. This enables the compiler to apply a type check and furthermore is the only chance to add behavior to those types without scattering operations in surrounding classes. 
 
 \subsection*{Rule 9: "Don’t Use Any Getters/Setters/Properties"}
-Jeff Bay's last rule, "don't use any getters/setters/prpoperties" that he presents in \cite{oc2008}, tries to encourage the "tell, don't ask" principle. He claims that not to mean to use any getter/setters/properties in order to encapsulate objects properly.
+Jeff Bay's last rule, "don't use any getters/setters/properties" that he presents in \cite{oc2008}, tries to encourage the "tell, don't ask" principle. He claims that not to use any getter/setters/properties in order to encapsulate objects properly.
 \\
 
-In \cite[p. 79]{oc2008} Jeff Bay describes that this rule tackles direct violations of encapsulation. By using getters the developer can simply ask for any instance variable of an object. Therefore the caller can abitraty manipulate the reference the called object is having a reference on. Even worse, when conduction operations on such references, the bundling between behavior and data is not given anymore. The data is in one class, whereas the operations are in another class. 
+In \cite[p. 79]{oc2008} Jeff Bay describes that this rule tackles direct violations of encapsulation. By using getters the developer can simply ask for any instance variable of an object. Therefore the caller can abitrary manipulate the reference the called object is having a reference on. Even worse, when conduction operations on such references, the bundling between behavior and data is not given anymore. The data is in one class, whereas the operations are in another class. 
 \\
 
-Jeff Bay encourages the developer to "look for and place behavior into a single place in the object model". By doing to the encapsulation is not violated anymore and no object can change anothers objects, passing its control. The principle of well encpsulation and a more command-like programming style is also described by the principle "Tell, don't ask!" \cite{telldontask}. The original authors of the "Tell, don't ask!" principle describe their original idea in \ref{telldontaskoriginal}.
+Jeff Bay encourages the developer to "look for and place behavior into a single place in the object model". By doing so, the encapsulation is not violated anymore and no object can change anothers objects, passing its control. The principle of well encapsulation and a more command-like programming style is also described by the principle "Tell, don't ask!" \cite{telldontask}. The original authors of the "Tell, don't ask!" principle describe their original idea in \cite{telldontaskoriginal}.
 \\
 
-The following show a bad example, not fulfilling rule nine. In listing \ref{listing:rule9example1:speaker} a \textit{Speaker} is shown. It has a value that can be manipulated via getter and setter methods. This is done in \ref{listing:rule9example1:Main}. The \textit{Main} class uses the speaker and manipulates its value via the getters and setters. Because the \textit{Speaker} class does not offer any capabilities for checking the validity of the range it has to be done in the main class. Considering multiple classes manipulating the class with the shown getter and setter methods, the behavior is not located in one place. It is scattered on all surrounding classes. 
+The following shows a bad example, not fulfilling rule nine. In listing \ref{listing:rule9example1:speaker} a \textit{Speaker} is shown. It has a value that can be manipulated via getter and setter methods. This is done in \ref{listing:rule9example1:Main}. The \textit{Main} class uses the speaker and manipulates its value via the getters and setters. Because the \textit{Speaker} class does not offer any capabilities for checking the validity of the range it has to be done in the main class. Considering multiple classes manipulating the class with the shown getter and setter methods, the behavior is not located in one place. It is scattered on all surrounding classes. 
 \\
 
-The second example shows the refactored version. As shown in the listing \ref{listing:rule9example2:speaker} the speaker now offer clear defined methods that include an integrity check on the volume: \textit{adjustVolume(int volume)} and \textit{turnup()}. As a result, the usage of the \textit{Speaker} class is tremendously easier to read and to overlook. Its usage is shown in \textit{Main} (\ref{listing:rule9example2:main}) is very easy. 
+The second example shows the refactored version. As shown in the listing \ref{listing:rule9example2:speaker} the speaker now offers clear defined methods that include an integrity check on the volume: \textit{adjustVolume(int volume)} and \textit{turnup()}. As a result, the usage of the \textit{Speaker} class is tremendously easier to read and to overlook. Its usage is shown in \textit{Main} (\ref{listing:rule9example2:main}) is very easy. 
 \\
 
-Instead of asking for the value, as shown in the first example, it not tells the \textit{Speaker} what to do. The code has now become easier to read and to maintain. It is easier to read because the code reads more like a text. The semantic is clearly in the method names and from a perspective of an object using a \textit{Speaker}, the method names sound like clear commands. In example one, there was no command-style language -- instead it was the manipulation of the inner state of the object. Furthermore the object is easier to test, too. A mock can simply be written for the \textit{Speaker} class. An example for a mock is shown in \ref{listing:rule9example2:mock}. As clearly depicted, the resulting code is easier to mock and a class using it, in this case the \textit{Main} class. Satisfying the "Tell, don't ask!" principle also increases the focus \textit{Main} class: It just give commands and does not have to conducte any further calculation. The implementation is delegated to the \textit{Speaker} class. 
+Instead of asking for the value, as shown in the first example, it not tells the \textit{Speaker} what to do. The code has now become easier to read and to maintain. It is easier to read because the code reads more like a text. The semantic is clearly in the method names and from a perspective of an object using a \textit{Speaker}, the method names sound like clear commands. In example one, there was no command-style language -- instead it was the manipulation of the inner state of the object. Furthermore the object is easier to test, too. A mock can simply be written for the \textit{Speaker} class. An example for a mock is shown in \ref{listing:rule9example2:mock}. As clearly depicted, the resulting code is easier to mock and a class using it, in this case the \textit{Main} class. Satisfying the "Tell, don't ask!" principle also increases the focus \textit{Main} class: It just gives commands and does not have to conduct any further calculation. The implementation is delegated to the \textit{Speaker} class. 
 \\
 
-Rule nine, which is essentially encouraging to well defined encapsulated unit, is similar to many other rule. However, it insistently underlines the importance of the bundling of data and behavior and well defined encapsulation. 
+Rule nine, which is essentially encouraging to well defined encapsulated units, is similar to many other rules. The rule forces the developer to well place behavior. Furthermore it insistently underlines the importance of the bundling of data and behavior and well defined encapsulation. 
 
-
-asdf
 \section{Discussion}
 \label{d:discussion}
-\ref{d:discussion}
-=== This chapter is discussing the rules shortly. 
+This chapter will discuss the just explained rules shortly. According to Jeff Bay, rule two is forcing the developer to use polymorphism appropriately. 
+\\
 
-=== Use quotes from Jeff's text: He also gives a short summary of his text in the end
+Rule five focuses on a clear and transparent naming strategy. Rule one and rule two reduce the cyclomatic complexity and especially rule two forces the developer to use polymorphism properly. All other rules tackle the problem of bad encapsulation of objects and by defining the rules force the developer to shift his mind and rethink about his accustomed way of coding. 
+\\
+
+This chapter will shortly discuss the rule in three steps. Firstly, similarities of the rules are described, secondly the precedence and a prioritization of the importance is given.
 
 \subsection*{Similarities}
-=== Are there similarities in the rules? Is it possible to categorize the rules in terms of: 
- - Do they have the same intention?
- - Are they related to the same "big picture" idea (example: encapsulation or abstraction) 
+As shown previously the rules have various backgrounds. Despite that, some rules come from a similar or even the same software development principal.
+\\
 
-Categorize rules: Are there similarities from perspective of principle? ??? Together with next chapter?
+Rule one and two both reduce cyclomatic complexity by tackling conditionals and proposing the usage of polymorphism and separation in different methods.
+The wrap of primitives and string in rule three, the instance variable limitation of rule seven and the usage of first-class collections in rule eight expose the advantages when adding domain specific behavior to classes. 
+
+Encouraging encapsulation and clearly place behavior of objects is also emphasized by rule nine, permitting the usage of any public instance variables, getters or setters exposing the inner state of an object. Considering getters, rule nine is very closely related to rule four, because this rule four is very often violated when rule nine is violated either. 
+
+Because rule nine indicates the violation of proper encapsulation and the missing bundling of behavior and data very early it should be much-noticed by the developer. 
+
+Rule six is very clearly one of the first and easiest rule when conducting the excercise in the beginning. Splitting up classes is easy in the beginning -- however in the end of the excercise when all rules are fulfilled and then there is one class with more than 50 lines it gets really hard. Eradicating this violations can be very hard because it is forcing the developer to reconsider not only one, but multiple classes and their interaction. 
+Lastly rule five encourages to name classes and variables expressive. 
 
 \subsection*{Precedence}
-=== Make clear that this is my own estimation and not related to Jeff's text. Prioritize the rules. 
-
-=== To be determined: How long is this chapter?
-
-\begin{itshape}
-// Yada yada yada: 
-Own estimation: what's the most important rule? 
-What do I think?
-What does the author think? 
-Reason with descriptions and examples given
-\end{itshape}
+Setting the rule into a scalar order would definitely be the wrong approach. Instead the precedence of the rule is dependent from the developer doing the excercise. If a developer is used to code that uses very long names the naming problem which is addressed in rule five will be hard. Another developer might have problems with the "Tell, don't ask" principle and for him it will be hard to apply rule three, four, eight and nine. The precedence of the rules is highly depandant on the language background and experience of the individual developer conducting the exercise. 
 
 \subsection*{Conclusion and Outcome}
-=== Give a short and precise conclusion of the Object Calisthenic: Purpose, exercise, stuff to learn, skill improvement. 
+All in all the rules provide a bundle of guidelines for better coding. However, it is not enough to just follow the rule. Furthermore the developer should understand the patterns and principles behind that were explained already. 
+\\
 
-=== Also Summarize what most of the rules are about: 
+To summarize the rules, they are all about creating "simple and elegant abstractions" \cite[p. 80]{oc2008}. They force the developer to rethink about proper encapsulation, clearly define the borders of the program and prevent from duplication code or ideas. As already described in the beginning, the developer should stick to the rules without any doubts to get embraced of this approach of extreme domain-driven object orientation. The rules provide an easy to validate guideline regarding many of the most important patterns and principles. These include the orientation on behavior -- "Tell don't ask"; the awareness of \ac{LoD} -- to ensure encapsulation; the focus on readability -- rule five limits the possibilities of different namings dramatically and therefore forces the developer to think about a concise and clear name. 
+\\
 
-RESERACH page 21: 
+As just said, the rules provide an easy to validate guideline -- in comparison to all the abstract patterns and principles behind the rule that were explained. As already mentioned in the beginning of this paper, this leads to idea of validating the rules with tool support to help the developer to get rid of old habits quickly and conduct the excercise more efficiently. 
 
-- behaviour and operation oriented
 
-- LoD and loose coupling
 
-- talk to friends
 
-- talk the protocol specified by the object's operation
 
-- Next page: conclusion, no else ,naming, 
-
-all in all: Duplication of code and idea
-==> "Simple and elegant Abstractions"
 
 
 \chapter{Tool Support to Validate the Object Calisthenics - Evaluation}

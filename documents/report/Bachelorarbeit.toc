@@ -7,22 +7,22 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Exercising Better object oriented Programming Skills: a Concept by Jeff Bay}{1}
 \contentsline {section}{\numberline {1.2}Tool Support to Validate the Object Calisthenics}{3}
-\contentsline {chapter}{\numberline {2}Object Calisthenics by Jeff Bay \_ Patterns and Principals}{4}
+\contentsline {chapter}{\numberline {2}Object Calisthenics by Jeff Bay -- Patterns and Principals}{4}
 \contentsline {section}{\numberline {2.1}Problems of Procedural Code}{4}
 \contentsline {section}{\numberline {2.2}Advantages of Object Orientation}{7}
 \contentsline {section}{\numberline {2.3}The Rules and their Background}{11}
-\contentsline {section}{\numberline {2.4}Discussion}{26}
-\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{28}
-\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{28}
-\contentsline {section}{\numberline {3.2}Working Environment}{28}
-\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{28}
-\contentsline {section}{\numberline {3.4}Result of the Evaluation}{30}
-\contentsline {section}{\numberline {3.5}Future Work}{30}
-\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{31}
-\contentsline {section}{\numberline {4.1}Requirements}{31}
-\contentsline {section}{\numberline {4.2}Architecture}{31}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{31}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{31}
-\contentsline {section}{\numberline {4.5}Outlook and Future Work}{31}
-\contentsline {chapter}{\numberline {5}Conclusion}{32}
-\contentsline {chapter}{Bibliography}{44}
+\contentsline {section}{\numberline {2.4}Discussion}{27}
+\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{29}
+\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{29}
+\contentsline {section}{\numberline {3.2}Working Environment}{29}
+\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{29}
+\contentsline {section}{\numberline {3.4}Result of the Evaluation}{31}
+\contentsline {section}{\numberline {3.5}Future Work}{31}
+\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{32}
+\contentsline {section}{\numberline {4.1}Requirements}{32}
+\contentsline {section}{\numberline {4.2}Architecture}{32}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{32}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{32}
+\contentsline {section}{\numberline {4.5}Outlook and Future Work}{32}
+\contentsline {chapter}{\numberline {5}Conclusion}{33}
+\contentsline {chapter}{Bibliography}{47}
