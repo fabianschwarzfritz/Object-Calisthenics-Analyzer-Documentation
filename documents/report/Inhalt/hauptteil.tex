@@ -399,7 +399,7 @@ In the following block, there examples for bad method and class names are given.
 
 A class \textit{Car} with the method \textit{startEngine} can be simplified by changing the method name to \textit{start}. Imagine a car in a real world and imagine a situation where you speak to a friend directly. The easy and more colloquial language would be \textit{"let's go, start the car"} rather than \textit{"let's go start the car's engine"}. This is simply because the description "start" describes the conducted action as well as "start the engine" -- from the perspective of someone using a car.\\
 
-A class \textit{LaptopScreen} describes the screen of a laptop and is created and managed by a class \textit{Laptop}. Given this class only has the operations \textit{adjustBrightness(BrithnessLevel brightnesslevel)} and \textit{changeScreenResolution(ScreenResolution resolution)}. In this example the classnames are used as placeholders for the instance variable names of these types, simply assuming that the name might be similar. Often such a variable is named with the lower case version of the classname: \texti{laptopScreen}. However the best solution is when the variable name describes the context in which the type is used and does not duplicate the information that was already given via the type.  
+A class \textit{LaptopScreen} describes the screen of a laptop and is created and managed by a class \textit{Laptop}. Given this class only has the operations \textit{adjustBrightness(BrithnessLevel brightnesslevel)} and \textit{changeScreenResolution(ScreenResolution resolution)}. In this example the classnames are used as placeholders for the instance variable names of these types, simply assuming that the name might be similar. Often such a variable is named with the lower case version of the classname: \textit{laptopScreen}. However the best solution is when the variable name describes the context in which the type is used and does not duplicate the information that was already given via the type.  
 
 In this example there are several improvements that can be done to improve the naming. The first improvement is regarding the class name. Because the \textit{LaptopScreen} is only used in the context of a \textit{Laptop}, the duplication of the word "laptop" is unnecessary.
 
@@ -445,10 +445,10 @@ The following shows an example of a class with more than two instance variables.
 
 Listing \ref{listing:rule7example1:car} shows a model presentation of a \textit{Car}. The car bundles other representations, like \textit{SteeringWheel}, a \textit{Radio}, all the given \textit{Pedals} and the \textit{Doors} it is consisting of. In addition the class has a method: \textit{Car.start()}. It is a very simple example of a model representation. However the method \textit{start()} lacks in cohesion and focus. Indeed all operations in the method have to do with starting preparing the car to start, they behave differently and are located somewhere else. The doors are in the exterior of the car, the steering wheel and the pedals of the car are part of the driver's cockpit and the radio is located in the center of the console.
 
-In this example, not only the low cohesion of the \textit{Car} is problematic, but also the lack of modularity. Imagine a you want to map a \textit{RallyCar}. Usually rally cars do not have a radio. Therefore the developer whould have to implement a \textit{RallyCar} without a radio. But actually all the other structure is the same: The \textit{RallyCar} also has pedals, it also has doors and it has a steering wheel, too. Before expounding the solution of this modelling problem, the better variant of modelling a \texti{Car} is shown. 
+In this example, not only the low cohesion of the \textit{Car} is problematic, but also the lack of modularity. Imagine a you want to map a \textit{RallyCar}. Usually rally cars do not have a radio. Therefore the developer whould have to implement a \textit{RallyCar} without a radio. But actually all the other structure is the same: The \textit{RallyCar} also has pedals, it also has doors and it has a steering wheel, too. Before expounding the solution of this modelling problem, the better variant of modelling a \textit{Car} is shown. 
 \\
 
-Listing \ref{listing:rule7example2:car} shows the second version of the car. As the \textit{Car} in the first example, it also has the same method. However it is only consisting of the \textit{Interior} and the \textit{Exterior}, shown in listing \ref{listing:rule7example2:interior} and \ref{listing:rule7example2:exterior}. These classes hold the references to the \textit{CenterConsole} and the \textit{Cockpit} shown in \ref{listing:rule7example2:centerconsole} and \ref{listing:rule7example2:cockpit}. The splitting of these two classes into more sophisticated structures which then hold the classes that the developer originally wanted to represent: \textit{SteeringWheel}, \textit{Radio}, \textit{Doors} and \text{Pedals}. Maybe this sophisticated structure looks like an overhead,  it becomes clear that the opposite is true. The method \textit{Car.start()} got significanly simpler and increased in cohesion. Furthermore it now delegates the work to the model classes \textit{Interior} and \textit{Exterior}. These now delegate execute the work for the classes they are responsible for. The same principle applies for the \textit{Interior} class. 
+Listing \ref{listing:rule7example2:car} shows the second version of the car. As the \textit{Car} in the first example, it also has the same method. However it is only consisting of the \textit{Interior} and the \textit{Exterior}, shown in listing \ref{listing:rule7example2:interior} and \ref{listing:rule7example2:exterior}. These classes hold the references to the \textit{CenterConsole} and the \textit{Cockpit} shown in \ref{listing:rule7example2:centerconsole} and \ref{listing:rule7example2:cockpit}. The splitting of these two classes into more sophisticated structures which then hold the classes that the developer originally wanted to represent: \textit{SteeringWheel}, \textit{Radio}, \textit{Doors} and \textit{Pedals}. Maybe this sophisticated structure looks like an overhead,  it becomes clear that the opposite is true. The method \textit{Car.start()} got significanly simpler and increased in cohesion. Furthermore it now delegates the work to the model classes \textit{Interior} and \textit{Exterior}. These now delegate execute the work for the classes they are responsible for. The same principle applies for the \textit{Interior} class. 
 \\
 
 Before comparing the examples in detail it has to be said that the interface of the \textit{Car} is the same for both examples. \textit{Car} represents a top level entry point for a component making use of this entity. In example two, which consists of more classes, but also in example one the top level entity or entry point \textit{Car} could be the main starting point for using the package. Therfore a user would not be affected by the refactory that was conducted. 
@@ -457,7 +457,7 @@ Before comparing the examples in detail it has to be said that the interface of 
 In comparison the new model is split up into more classes. By doing so, these classes have a higher cohesion: They delegate more work and do one thing better. However when splitting up the method \textit{Car.start()} from the first example shown in listing \ref{listing:rule7example1:car}, it is necessary to clearly name and implement the delegation methods to enable the subsequent developer to understand the model. The risk in this approach of splitting up things in detailed models lies in the introduction of new aggregate types. 
 \\
 
-In example one, \textit{Car} was the only aggregate of all the classes. In example two, there are more aggregate classes, \textit{Interior}, \textit{Exterior}, \textit{CenterConsole} and \textit{Cockpit}. Even if all the aggregates handle multiple instance variable (like \text{Exterior}), they are responsible for their contained sub instances. The problem that might occur during development is the introduction of new aggregate types, that do not necessarily exist in the real world. For example the \textit{Interior} and the \textit{Exterior} are barely imagineable, they are less concrete than for example \textit{Pedals}. If the break down in detailed entities results in many "unreal" classes, the developer should rething the model's design. 
+In example one, \textit{Car} was the only aggregate of all the classes. In example two, there are more aggregate classes, \textit{Interior}, \textit{Exterior}, \textit{CenterConsole} and \textit{Cockpit}. Even if all the aggregates handle multiple instance variable (like \textit{Exterior}), they are responsible for their contained sub instances. The problem that might occur during development is the introduction of new aggregate types, that do not necessarily exist in the real world. For example the \textit{Interior} and the \textit{Exterior} are barely imagineable, they are less concrete than for example \textit{Pedals}. If the break down in detailed entities results in many "unreal" classes, the developer should rething the model's design. 
 \\
 
 Despite the just described problem, following this rule highly increases the cohesion of classes. Bugs and errors, especially bugs that occur when working with model aggregate, can be clearly located and spottet. The separation of the classes' concerns and the squeezing down of the model result to a better abstracted, easily interchangable model. They are clearly placed in their corresponding part in the domain model and form a detailed representation of the holisitc model. The developer's attention to detail, resulting in perfectly describing models and high cohesive classes is the goal of this rule. Guaranteeing the awareness for the described problems and its beneficial solutions is the purpose of this rule. 
@@ -551,48 +551,90 @@ As just said, the rules provide an easy to validate guideline -- in comparison t
 
 \chapter{Tool Support to Validate the Object Calisthenics - Evaluation}
 \label{Evaluation}
+This chapter will evaluate tool support to validate the object calisthenics. The first section \ref{e:advantages} will explain the general advantages of tool support. The next chapter \ref{e:evaluation} will dive deeper into the validation of the rule of the Object Calisthenics.
+
 \section{Advantages of Tool Support}
 \label{e:advantages}
-=== What is a tool? Why do tools help? What makes tools strong? Why do tools matter for developers?
-Possible outcome of tool support for the OC's? Already described in the Introduction (chapter 1). Describe this more in detail here if necessary. 
+%=== What is a tool? Why do tools help? What makes tools strong? Why do tools matter for developers?
+A tool supports when conducting software development. The use of tools is given in various phases of software development. It can reach from project planning, architecture design, software debugging to software testing. Some of the tools are closely related to the actual coding, like a debugging tool or an \acf{IDE}, and some are not directly related to coding but to a adjacent discipline, a project management tool. 
+
+The outcome of tools varies from the use-case. In general they make conducting tasks easier. A good project management tool makes the accomplishment of changes of the project plan easy, or it enables various team members to work on the plan at the same time. A debugging tool for example helps the developer to go through a piece of code step by step. Without the tool, the developer had to print variables on the console or to get information about the state of an algorithm at a specific time point. By using the tool, he might be able to set line breakpoints, exception breakpoints and can inspect the state of a system point of time. 
+
+%Possible outcome of tool support for the OC's? Already described in the Introduction (chapter 1). Describe this more in detail here if necessary. 
+The outcome of providing tool support is quite straight-forward: The devloper does not have to check his coding for the rules anymore. A tool simply indicated the rule violations. Some rules of the Object Calisthenics are easier to validate and other rules are harder to validate. Independent from the difficulty of the rule: If a proper rule validation can be implemented, it is assumed that an indication on line level is enough. As seen later in this report, most of the rule violations could be conducted on a more granular level. For the developer, however, it is easier to get an information about the rule violation on a line level: This makes the presentation of the violations easier. The next chapter will explain in general, how a line indication can be created. Hence, a simple indication about the violation can be used on line level. 
+
 \section{Working Environment}
-=== Describe AST generally. Say that Eclipse provides types representing the parts of code syntax. This is seen as given. 
+%=== Describe AST generally. Say that Eclipse provides types representing the parts of code syntax. This is seen as given. 
+The evaluation of a tool validating the rules will be done on an abstract level. However, the prototype, which is explained in the third part of the report \ref{prototype}, will be implemented in Java using the Eclipse platform and its related mechanism to get information about source code structure. 
+\\
+For the abstract evaluation in this chapter, the code structure of the protoype will be presumed. Hence, the working environment is explained here. 
+\\
+%=== Refer to other references explaining AST.
+To create a tool validating the rules, the \acf{AST} of the code will be analysed. An \acf{AST} "is a tree representation of the abstract syntactic structure of source code written in a programming language" \cite[Abstract Syntax Tree]{wiki}. Because the protoype built during this research is written in Java, the \acf{AST} structure of the \acf{JLS} will be assumed \footnote{The \acf{JLS} is available online: http://docs.oracle.com/javase/specs/jls/se7/jls7.pdf}. 
+\\
+%=== Describe shortly how it is possible to do an AST validation with eclpise. 
 
-=== Refer to other references explaining AST.
+%=== Say that: "Eclipse" terms for AST nodes are quite similar to general terms for java's nodes in ASTs. In this report the standard terms are used. These are not further described in this paper.
 
-=== Describe shortly how it is possible to do an AST validation with eclpise. 
+%--> Example: Describe that "MethodDeclaration" consists of different other nodes representing the declaration of a method. Describe the structure of the child nodes of the node as far necessary. Do not embark on a discussion about what exactly is allowed as method declaration. 
 
-=== Say that: "Eclipse" terms for AST nodes are quite similar to general terms for java's nodes in ASTs. In this report the standard terms are used. These are not further described in this paper.
+%=== Therefore: Give reference for questions about "parameter", "type", "class", "expression" or "statement".
+%Say that the validation in the next section is exactly implemented as described. One validation implementation example is explained exemplary in the Prototype chapter.
+The eclipse platform, however proviedes a framework that already creates an \acf{AST} for given classfiles. The framework is part of the Eclipse \acf{JDT} can be used to access, change and read the elements of a Java source code. In this scenario the read access on code structures in necessary to find possible rule violation. The prototype itself will be written as an Eclipse plugin, and will use the framework. The \acf{JDT} framework is automatically integrated into the Eclipse plugin. 
+\\
 
---> Example: Describe that "MethodDeclaration" consists of different other nodes representing the declaration of a method. Describe the structure of the child nodes of the node as far necessary. Do not embark on a discussion about what exactly is allowed as method declaration. 
+In the next paragraph, the rough structure of a rule validation will be explained to give an overview about which steps have to be done in the prototype and which structures and mechanism are given by the framework.
+\\
+To use the structure of an \acf{AST} of a class file, the visitor pattern \ref{gof}[p.???] is used. Each element of the \acf{JLS} is represented as a concrete java object. The visitor traverses the general \acf{AST} and calls all a corresponding method when an element is found. For example, the traversing algorithm the \acf{AST} comes upon a while statement, the \textit{visit} methods with the given element as parameter is called: \textit{void visit(WhileStatement)}. The general visitor is provided by the framework and implements such a \textit{visit} method for every possible element. The general visitor is represented by the framework class \textit{ASTVisitor}. If the concrete validator want to get informed about the traversion of a specific element, it simply overrides the method of the element in a class that subclasses \textit{ASTVisitor}. 
+\\
 
-=== Therefore: Give reference for questions about "parameter", "type", "class", "expression" or "statement".
-Say that the validation in the next section is exactly implemented as described. One validation implementation example is explained exemplary in the Prototype chapter.
+When an algorithm found a node in the \acf{AST}s object representation that validate the rule, it pushed the node to the eclipse framework. By doing so, the eclipse framework automatically displays an indication. 
+\\
+
+To indicate the violation, the eclipse framework does not have to know the exact postion within the code. On the basis of the object representation, the framework can create a maker at the proper position of the code. Therefore when indicating the violation, the rule algorithm has to find the node within the \acf{AST}.
+\\
+
+To make the explanation of the of the concrete validation easier and to focus on the actual challenge, the validation of each rule, the general known terms like "method declaration", "statement" or "parameter" will be presumed. These terms can be looked up in detail in the \acf{JLS}\cite{jls}. 
 
 \section{Evaluation of Rule Validation}
 \label{e:evaluation}
-=== Say that the prioritization of the rules (in terms of the rule validation) and the "ranking" is given in the end. The sections of this chapter are "rule specific", even if the next subsections refer to each other.
+%=== Say that the prioritization of the rules (in terms of the rule validation) and the "ranking" is given in the end. The sections of this chapter are "rule specific", even if the next subsections refer to each other.
+This section will dive deeper into the validation of each rule. If an algorithm for a rule violation was found, it will be explained. Furthermore it will validate the quality of the algorithm and depict cases in which the algorithm indicates a wrong violation. Such a wrong violation indication can be either a violation indicaton where there is actually no rule violation, or a missing violation indication. Therefore each chapter will give information about the quality of the rule violation. If similarities of the different rules, in terms of validation, could be found it will elucidate those.
+If no adequate rule validation algorithm was found, occurred problems will be explained.
 
-=== FOREACH Rule/Subsection IN Rules/Subsections:
+%=== FOREACH Rule/Subsection IN Rules/Subsections:
 
- - Similarities found out in description may be similar in this validation? Categorize the rules in groups to form a validation perspective. (E.g.: Validation of rule y is very similar to the validation of rule x that was already explained.)
+% - Similarities found out in description may be similar in this validation? Categorize the rules in groups to form a validation perspective. (E.g.: Validation of rule y is very similar to the validation of rule x that was already explained.)
   
- - Use examples given in description chapter to describe the typical structure of the rule. 
+% - Use examples given in description chapter to describe the typical structure of the rule. 
  
- - Explain "the positive case": What is the positive structure, satisfying the rule. Where does a rule violation occur when the structure is not fulfilled. (Example: Positive case: maximum of two instance variables. If not fulfilled: Discussion Rule violation information occurs on the level of the class or on the level of the third instance variable?
+% - Explain "the positive case": What is the positive structure, satisfying the rule. Where does a rule violation occur when the structure is not fulfilled. (Example: Positive case: maximum of two instance variables. If not fulfilled: Discussion Rule violation information occurs on the level of the class or on the level of the third instance variable?
  
- - What checks have to be done for the validation?
+% - What checks have to be done for the validation?
  
- - Discussion of 'rule dependencies' within one rule (example: wrapper has to determine possible wrapper classes first before beeing able to indicate the use of a primitive/string in a non-wrapper class...)
+% - Discussion of 'rule dependencies' within one rule (example: wrapper has to determine possible wrapper classes first before beeing able to indicate the use of a primitive/string in a non-wrapper class...)
  
-  - --> solution found/no solution found
+%  - --> solution found/no solution found
  
-  - Therefore: Be self-critical: Now, were a "solution" is found (or not), describe the problems that occur with the described implementation
+%  - Therefore: Be self-critical: Now, were a "solution" is found (or not), describe the problems that occur with the described implementation
   
- - If there are cases where the rule cannot be validated: Why is it hard to validate. Where does the validation fail? How is it possible to "trick" a good implementation (Example: wrap of primitives can be "tricked" with 'return new Wrapper(instancevariable)'...) 
+% - If there are cases where the rule cannot be validated: Why is it hard to validate. Where does the validation fail? How is it possible to "trick" a good implementation (Example: wrap of primitives can be "tricked" with 'return new Wrapper(instancevariable)'...) 
 
 \subsection*{Validation of Rule 1}
-Cool, I can draw trees: 
+
+% - what is the concrete violation?
+The first rule "Use One Level of Indentation per Method" confines the number of indentations. However, the indentation can be set arbitrary in each line - therefore this rule in imprecise. Most modern \acf{IDE}s apply a standard formatter to determine the indentations. Therefore the standard indentations of the eclipse rule will be assumed.
+\\
+As seen in example \ref{listing:rule1example1}, the violation is in the \textit{count} method in line 13. In this example, the for-statement is violating the rule, because all statements within will validate the rule. The better solution, shown in \ref{listing:rule1example2} does not violate the rule. 
+\\
+The rule states that the indentation is on a method level. Therefore this rule has to examine the levels of indentation on method level. Hence, when anlyzing the \acf{AST}, only the subtree of the node \textit{MethodDeclaration} has to be analyzed, all other parts of the \acf{AST} can be ignored. 
+\\
+Each node that has sub nodes which are indented, have to be analysed. This analyzation has to be conducted on a method level. The number of indentation is restricted to one indentation per method maximum. The simplified illustration of an \acf{AST} in \ref{ast:rule1} shows a structure that is not allowed. All nodes named "Indenting" indicate node which do not have a child node that causes an indention. All node named "Non indenting" indicate a node which has child node and therefore causes an indention.
+
+In the graphic, all node causing it's children to be indent are marked black. All nodes that are not causing it's children to indent marked in blue. 
+
+As depicted, the node on the right is a node which indents it's children. The node is a direct or indirect child of an indenting statement. Therefore all substatements of this node will be determined. Because most indenting statements do not make sense without child statements, to indenting statements whithin one methods cause a rule violation. The path of indenting statements is shown in the \ref{ast:rule1} in red.
+\\
 
 \begin{tikzpicture}
 [font=\small, edge from parent, 
@@ -600,92 +642,277 @@ Cool, I can draw trees:
     rectangle,rounded corners, minimum size=6mm, draw=black!75,
     very thick, drop shadow, align=center},
     edge from parent/.style={draw=black!50,thick},
-    level 1/.style={sibling distance=3cm},
-    level 2/.style={sibling distance=1.2cm}, 
-    level 3/.style={sibling distance=1cm}, 
-    level distance=2cm,
+    level 1/.style={sibling distance=5cm},
+    level 2/.style={sibling distance=4cm}, 
+    level 3/.style={sibling distance=3cm}, 
+    level distance=2cm 
     ]
-    \node (A) {A} 
-        child { node (B) {B}
-            child { node {B1} 
-            edge from parent node[left=.5em,draw=none] {$\chi^2$} }
-            child { node {B2}}
-            }
-        child {node (C) {C}
-            child { node {C1}
-                child { node {C1a}}
-            }
-        child { node {C2}}
-        child { node {C3}
-            child { node {C3a}}
-            child { node {C3b} edge from parent node[right=.5em,draw=none] {$\frac{a}{b}$}}
-            }
+    
+    \node { ... } 
+    child { node { Method Declaration }
+        child { node { Non indenting } }
+        child { node { Non indenting } }
+        child { node [ draw=blue!60 ] { Indenting }
+            child { node { dNon indenting } }
+            child { node { eNon indenting } }
         }
-    child { node {D} 
-        child { node {D1}}
-        child { node {D2}}
-};
-
+        child { node [ draw=blue!60 ] { Indenting }
+        	%edge from parent node[ left=.5em,draw=red!60] { }
+            child { node { Indenting} [ draw=blue!60 ] 
+            %	edge from parent node[ left=.5em,draw=red!60] { }
+            }
+            child { node { Non indenting } }
+     	}
+    };
 \end{tikzpicture}
+\label{ast:rule1}
+
+As a result, the path length of the path from the method node to each leaf node is important. Because only indenting statements have sub nodes, the maximum amount of edged in the subtree is two. It is not allowed that on the path upwards (going up to the parent statement) the \acf{AST}, more than one indenting statement occurs. 
+\\
+
+Because only statements that are indenting have child statement, the maximum height of the method's subtree is two: Each children of the method are allowed be an indenting statement. None of these indenting statements is allowed to have indenting statements as childnodes. 
+\\
+
+Instead of checking the length of each path from downward starting with the method node ending at the leaf node, the algorithm goes upward. 
+Each statement that indents, therefore that has possibly subnodes, uses it's parent node to determine the path upward. If no method desclaration node occurred within two levels, the analyzsed statement violated the rule. 
+\\
+
+All statements that are indenting can be simply read up in the \ref{JLS}. In the following, these nodes are listed. In this report, the classname of the object representation in the eclipse \acf{JDT} framework is used. The names are similar to the names used in the \ref{JLS}: DoStatement, EnhancedForStatement, ForStatement, IfStatement, SwitchStatement, WhileStatement, and TryStatement. 
+\\
+
+The with this simple \acf{AST} structure analysis, the first rule can be validated successfully. During this research, no case in which this validation did fail, was found. The implementation of the rule validator is validating the rule successfully using the described algorithm.
 
 \subsection*{Validation of Rule 2}
-asdf
+The valdation of the second rule "Don’t Use the else Keyword" is the simplest rule to validate.
+\\
+
+The rule assumes that the use of the else keyword is prohibited. According to the \ref{JLS}, the else statement is the body part of the if statement. In the \acf{AST} representation, the if statement has several child nodes. The mandatory child nodes of the if statement are the condition and the body. The else body is optional. 
+\\
+
+The rule prohibits the use of the else keyword. Within the \ref{AST} structure, the else keyword represented by an object representation, which is the child node of the if statement.
+\\
+
+For the purpose of analyzing this structure with an proper algorithm, the if statement has to evaluated. In the case that the if statement does have a child node representing the else part of the if statement, a rule violation occurred.
+\\
+
+The simple structure of a subtree is shown in \ref{ast:rule2}. The else body, which is not allowed, is marked in red. 
+Be aware that the if, as well as the else body, might contain further statements which might be if statements, containing another else keyword. The condition is not a body but a condition, and therefore can not contain further if statements.
+\\
+
+Because the visitor patter, given by the framework, visits each node of the \acf{AST}, the algorithm can be applied on every existing if statement and also works if nested if statements are present.
+\\
+
+\begin{tikzpicture}
+[font=\small, edge from parent, 
+    every node/.style={top color=white, bottom color=black!10, 
+    rectangle,rounded corners, minimum size=6mm, draw=black!75,
+    very thick, drop shadow, align=center},
+    edge from parent/.style={draw=black!50,thick},
+    level 1/.style={sibling distance=5cm},
+    level 2/.style={sibling distance=4cm}, 
+    level 3/.style={sibling distance=3cm}, 
+    level distance=2cm 
+    ]
+    
+    \node { ... } 
+    child { node { If Statement }
+        child { node { Condition } }
+        child { node { If body } 
+        	child { node { ... } }
+        }
+        child { node { Else body } [ draw=red!60 ] 
+        	child { node { ... } }
+        }
+    };
+\end{tikzpicture}
+\label{ast:rule2}
+
+The just described algorithm that validated the rule is has a very easy structured. As the first rule, this second rule is ery simple and validated the structure successfully. No example in which this validation failed was found. The implementation of the rule validator is validating the rule successfully using the described algorithm.
+
 \subsection*{Validation of Rule 3}
-asdf
+% - what is the concrete violation?
+% IF ALGORITHM FOUND
+% - what is the algorithm to determine it? 
+% - assume typical structure
+% - description: on which "level" (method, variable) is the violation?
+
+% - show problems of the current algorithm
+% - show assumptions (exaple: instance var in wrapper)
+% - evaluate satisfaction of the rule.
+
+% IF NO ALGORITHM FOUND
+% - explain difficulties
+% - why does it fail
+
+
 \subsection*{Validation of Rule 4}
-asdf
+
+// according to JLS spec
+ - one line has more than one dot.
+ - what is "one line": one line is an statement. 
+ - The easist ist the expresion statement, wrapping an expression into a statement. exampel. But it also is a for, a while, a switch, and so on. 
+ - This includes while, dowhile, try, block, assert and many more multi line statements. This is each statement that contains an expression. "Call these statements line statements"
+ - list all statements
+ - list all statements that contain an expression as child.
+ - there are a variety of expression and some of them contain a dot. 
+ - These are herausgefunden manually according to the spec: ...list...
+ - the others are ... list...
+ - > The given statements are noly allowed to have a pecific amount of expressions that contain a dot (two)
+  - > make clear again: These statement are the "line statement". They represent the statemts that appear in "one line"
+  - > In implenentation: Thhe line statement are visited
+
+ - The algorithm has a top down approach: A "line statements" and extracts all expressions. Expressions do not contain further statements! , and searches for all expressions containing a dot iterating greedy strategy throught the AST
+ - LIsten on all statement that consist of an expression.
+ - eeach expression can contain further expressions.
+ - however has to handle each type of expression differently, because the methods to access sub expressions s different. --> Different methods. (give 2 examples). Other words: Many special expressions contain further expressions as child nodes. The access on these expressions is type dependant.
+ - Greedy iteration through the tree of expressions of the given "linste statement" counting the number of expression consisting of a dot.
+  - number of dots is the result.
+
+ indicate error if necessary.
+
+ Algortithm does not satisfy the rule 100 percent: Definition of aline can vary. (example system out println). Even better: the algorithm checks on a more sophisticated level: statement level. In essay: probably meant is exactly this. 
+
+--> Very good solution, precise 
+% - what is the concrete violation?
+% IF ALGORITHM FOUND
+% - what is the algorithm to determine it? 
+% - assume typical structure
+% - description: on which "level" (method, variable) is the violation?
+
+% - show problems of the current algorithm
+% - show assumptions (exaple: instance var in wrapper)
+% - evaluate satisfaction of the rule.
+
+% IF NO ALGORITHM FOUND
+% - explain difficulties
+% - why does it fail
+
+
 \subsection*{Validation of Rule 5}
-asdf
+ - no generel rule
+  - restriction in length: maximum 15 chars
+   - camel case in classnames: one camel (dromedar ;))
+   - camel cas in types, because first letter capital
+   - show regex
+   applied on each Type (TypeDeclaration)
+   and variable (Variable declaration)
+% - what is the concrete violation?
+% IF ALGORITHM FOUND
+% - what is the algorithm to determine it? 
+% - assume typical structure
+% - description: on which "level" (method, variable) is the violation?
+
+% - show problems of the current algorithm
+% - show assumptions (exaple: instance var in wrapper)
+% - evaluate satisfaction of the rule.
+
+% IF NO ALGORITHM FOUND
+% - explain difficulties
+% - why does it fail
+
+
 \subsection*{Validation of Rule 6}
-asdf
+ - counting is hard vecause only type access. 
+ - countins doesn't make sense in ast
+- same "line expressions" (reference to 4)
+ - count nubmer of them
+  - determine number of expressions, for example 40. ELss than propose 50 by bay, because no method desclarations and class declarations
+ - quality: very good, advantage: empy spaces and imports don't count. The structure of the type itself (which was adressed by bay) is checked
+% - what is the concrete violation?
+% IF ALGORITHM FOUND
+% - what is the algorithm to determine it? 
+% - assume typical structure
+% - description: on which "level" (method, variable) is the violation?
+
+% - show problems of the current algorithm
+% - show assumptions (exaple: instance var in wrapper)
+% - evaluate satisfaction of the rule.
+
+% IF NO ALGORITHM FOUND
+% - explain difficulties
+% - why does it fail
+
+
 \subsection*{Validation of Rule 7}
-asdf
+ - easy: checkn umber of field in type declaration (this equals class declaration) via FieldDeclaration
+ - count all non static attributes of the type declaration --> which ar actually fields
+  - show simplified ast only with type declaration and field declaration
+  - ClassBodyDeclaration as child of TypeDeclaration. FieldDeclaration directly accessible via getFields() . Count number of those non static fields
+% - what is the concrete violation?
+% IF ALGORITHM FOUND
+% - what is the algorithm to determine it? 
+% - assume typical structure
+% - description: on which "level" (method, variable) is the violation?
+
+% - show problems of the current algorithm
+% - show assumptions (exaple: instance var in wrapper)
+% - evaluate satisfaction of the rule.
+
+% IF NO ALGORITHM FOUND
+% - explain difficulties
+% - why does it fail
+
+
 \subsection*{Validation of Rule 8}
-asdf
+% - what is the concrete violation?
+% IF ALGORITHM FOUND
+% - what is the algorithm to determine it? 
+% - assume typical structure
+% - description: on which "level" (method, variable) is the violation?
+
+% - show problems of the current algorithm
+% - show assumptions (exaple: instance var in wrapper)
+% - evaluate satisfaction of the rule.
+
+% IF NO ALGORITHM FOUND
+% - explain difficulties
+% - why does it fail
+
+
 \subsection*{Validation of Rule 9}
-asdf
+%asdf
 \section{Result of the Evaluation}
 \label{e:result}
-=== Give a summary on how hard it was to implement the rules. Where does the rule validator fail. Summarize results of the evaluation. 
-Be positive: Do not forget to emphasize the good and working parts of the evaluation tool and accent the positive outcome of them.
+%=== Give a summary on how hard it was to implement the rules. Where does the rule validator fail. Summarize results of the evaluation. 
+%Be positive: Do not forget to emphasize the good and working parts of the evaluation tool and accent the positive outcome of them.
 \section{Future Work}
 \label{e:future}
-=== Be philosophical: What is still to be done in terms of rule validation. 
+%=== Be philosophical: What is still to be done in terms of rule validation. 
 
-=== If many rules cannot be validated: Future work might be a software where the user can "mark" structures as given. (Example: If it is not possible to determine if a class is a wrapper class, the user could "mark" it as a wrapper class and the validation algorithm might work...)
+%=== If many rules cannot be validated: Future work might be a software where the user can "mark" structures as given. (Example: If it is not possible to determine if a class is a wrapper class, the user could "mark" it as a wrapper class and the validation algorithm might work...)
 
-=== If many rules can be validated: Future work might be the configuration of the rule validator. "pluggable" rules that the user can implement himself? Or "configurable" rule: Use of 2/3/4 instance variables per class. 
+%=== If many rules can be validated: Future work might be the configuration of the rule validator. "pluggable" rules that the user can implement himself? Or "configurable" rule: Use of 2/3/4 instance variables per class. 
 
 \chapter{Prototypical Implementation of Tool Support}
 \label{Prototype}
-=== This chapter describes the implementation of the prototype. 
+%=== This chapter describes the implementation of the prototype. 
 \section{Requirements}
-=== Describe requirements for the prototype. Depends on how "good" the prototype is....
+%=== Describe requirements for the prototype. Depends on how "good" the prototype is....
 \section{Architecture}
-=== Describe overall architecture. 
+%=== Describe overall architecture. 
 
-=== How about a package overview and a short description: What do the classes of the package do and how do they interact in the software? 
+%=== How about a package overview and a short description: What do the classes of the package do and how do they interact in the software? 
 \section{Exemplary Rule Validation}
-=== One example implementation of one rule validation. Idea: Implementation of an ASTVisitor class...
+%=== One example implementation of one rule validation. Idea: Implementation of an ASTVisitor class...
 
 \section{Resulting Prototype}
-=== If the protype is really good: swagger and present it as a good software, that might be used in trianings?
+%=== If the protype is really good: swagger and present it as a good software, that might be used in trianings?
 
-=== If not: Be proud of what is there :). This is only a prototype. What could be improved in a better implementation? Is it even possible to do a better implementation in terms of the rule validation (depends on the outcome of chapter 3).
+%=== If not: Be proud of what is there :). This is only a prototype. What could be improved in a better implementation? Is it even possible to do a better implementation in terms of the rule validation (depends on the outcome of chapter 3).
 
-=== Show screenshot and describe UI. What is possible to do with the client
+%=== Show screenshot and describe UI. What is possible to do with the client
 
-=== Independent form the quality of the prototype: What are ideas that are still out there for the protoype? 
-How could the product improve?
+%=== Independent form the quality of the prototype: What are ideas that are still out there for the protoype? 
+%How could the product improve?
 \section{Outlook and Future Work}
-=== Possible future work, dependent on what is said in the previous section.
+%=== Possible future work, dependent on what is said in the previous section.
 
 
 \chapter{Conclusion}
-=== Conclusion of the result of this work. Do not explain in detail, but refer to the Introduction: What was good, what was bad?
+%=== Conclusion of the result of this work. Do not explain in detail, but refer to the Introduction: What was good, what was bad?
 
 
-TODO: Have fun writing and stay happy :)
+%TODO: Have fun writing and stay happy :)
 
 %\textbf{}
 %\begin{figure}[htb]

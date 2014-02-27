@@ -15,14 +15,14 @@
 \contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics - Evaluation}{29}
 \contentsline {section}{\numberline {3.1}Advantages of Tool Support}{29}
 \contentsline {section}{\numberline {3.2}Working Environment}{29}
-\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{29}
-\contentsline {section}{\numberline {3.4}Result of the Evaluation}{31}
-\contentsline {section}{\numberline {3.5}Future Work}{31}
-\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{32}
-\contentsline {section}{\numberline {4.1}Requirements}{32}
-\contentsline {section}{\numberline {4.2}Architecture}{32}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{32}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{32}
-\contentsline {section}{\numberline {4.5}Outlook and Future Work}{32}
-\contentsline {chapter}{\numberline {5}Conclusion}{33}
-\contentsline {chapter}{Bibliography}{47}
+\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{31}
+\contentsline {section}{\numberline {3.4}Result of the Evaluation}{34}
+\contentsline {section}{\numberline {3.5}Future Work}{34}
+\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{35}
+\contentsline {section}{\numberline {4.1}Requirements}{35}
+\contentsline {section}{\numberline {4.2}Architecture}{35}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{35}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{35}
+\contentsline {section}{\numberline {4.5}Outlook and Future Work}{35}
+\contentsline {chapter}{\numberline {5}Conclusion}{36}
+\contentsline {chapter}{Bibliography}{50}

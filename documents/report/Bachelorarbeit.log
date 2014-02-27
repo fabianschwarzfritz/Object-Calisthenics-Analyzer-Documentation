@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  26 JAN 2014 20:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  27 FEB 2014 21:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -769,57 +769,36 @@ Type  H <return>  for immediate help.
 l.4 	\acro
           {DIP}{Dependency Inversion Principle}
 ? 
-LaTeX Font Info:    Try loading font information for T1+phv on input line 11.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 14.
 (c:/texlive/2013/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 11.
-) (./Bachelorarbeit.aux
-(./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux) (./Inhalt/abstract.aux)
-(./Inhalt/hauptteil.aux) (./Inhalt/appendixListing.aux
-
-LaTeX Warning: Label `listing:rule3example2' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule3example2' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
-
-) (./Inhalt/appendixImages.aux))
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 14.
+) (./Bachelorarbeit.aux)
 \openout1 = `Bachelorarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 138.
 
 
 (c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 135.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 138.
 
 (c:/texlive/2013/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -890,85 +869,85 @@ e
 ))
 \big@size=\dimen167
 \c@lstlisting=\count131
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 135.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 138.
 
 (c:/texlive/2013/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <12> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 135.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 138.
 LaTeX Font Info:    Font shape `T1/pcr/b/it' in size <12> not available
-(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 135.
+(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 138.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 135.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 138.
 LaTeX Font Info:    Font shape `T1/pcr/bx/it' in size <12> not available
-(Font)              Font shape `T1/pcr/b/it' tried instead on input line 135.
+(Font)              Font shape `T1/pcr/b/it' tried instead on input line 138.
 LaTeX Font Info:    Font shape `T1/pcr/b/it' in size <12> not available
-(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 135.
+(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 138.
 LaTeX Font Info:    Font shape `T1/pcr/bx/sl' in size <12> not available
-(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 135.
+(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 138.
 LaTeX Font Info:    Font shape `T1/pcr/bx/sc' in size <12> not available
-(Font)              Font shape `T1/pcr/b/sc' tried instead on input line 135.
+(Font)              Font shape `T1/pcr/b/sc' tried instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/sb/n' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 135.
+(Font)              using `T1/pcr/m/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/sb/it' undefined
-(Font)              using `T1/pcr/sb/n' instead on input line 135.
+(Font)              using `T1/pcr/sb/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/sb/sl' undefined
-(Font)              using `T1/pcr/sb/n' instead on input line 135.
+(Font)              using `T1/pcr/sb/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/sb/sc' undefined
-(Font)              using `T1/pcr/sb/n' instead on input line 135.
+(Font)              using `T1/pcr/sb/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/c/n' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 135.
+(Font)              using `T1/pcr/m/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/c/it' undefined
-(Font)              using `T1/pcr/c/n' instead on input line 135.
+(Font)              using `T1/pcr/c/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/c/sl' undefined
-(Font)              using `T1/pcr/c/n' instead on input line 135.
+(Font)              using `T1/pcr/c/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/c/sc' undefined
-(Font)              using `T1/pcr/c/n' instead on input line 135.
+(Font)              using `T1/pcr/c/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/l/n' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 135.
+(Font)              using `T1/pcr/m/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/l/it' undefined
-(Font)              using `T1/pcr/l/n' instead on input line 135.
+(Font)              using `T1/pcr/l/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/l/sl' undefined
-(Font)              using `T1/pcr/l/n' instead on input line 135.
+(Font)              using `T1/pcr/l/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/l/sc' undefined
-(Font)              using `T1/pcr/l/n' instead on input line 135.
+(Font)              using `T1/pcr/l/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/m/ui' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 135.
+(Font)              using `T1/pcr/m/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/bx/ui' undefined
-(Font)              using `T1/pcr/bx/n' instead on input line 135.
+(Font)              using `T1/pcr/bx/n' instead on input line 138.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/m/In' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 135.
+(Font)              using `T1/pcr/m/n' instead on input line 138.
 
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
@@ -1082,10 +1061,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 ]) [4
 
-] (./Bachelorarbeit.lof
-Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
-although it is yet undefined on input line 9.
-)
+] (./Bachelorarbeit.lof)
 \tf@lof=\write7
 \openout7 = `Bachelorarbeit.lof'.
 
@@ -1110,10 +1086,21 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              Support for \float@addtolists may be removed from
 (scrreprt)              `scrreprt' soon .
 
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
+
+LaTeX Warning: Citation `bay2008' on page 1 undefined on input line 6.
+
+
+LaTeX Warning: Reference `i:exercising' on page 1 undefined on input line 9.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--10
 
  []
+
+
+LaTeX Warning: Reference `Description' on page 1 undefined on input line 12.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -1121,14 +1108,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
  []
 
 
+LaTeX Warning: Reference `d:background' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Reference `d:discussion' on page 1 undefined on input line 14.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
 
+LaTeX Warning: Reference `Evaluation' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Reference `e:advantages' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Reference `e:evaluation' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Reference `e:result' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Reference `e:future' on page 1 undefined on input line 16.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
+
+
+LaTeX Warning: Reference `Prototype' on page 1 undefined on input line 18.
+
+
+LaTeX Warning: Citation `bay2008' on page 1 undefined on input line 22.
+
+
+LaTeX Warning: Citation `bay2008' on page 1 undefined on input line 22.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
@@ -1139,9 +1156,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
 
 ]
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 24.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
+
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 26.
+
+
+LaTeX Warning: Citation `twWeb' on page 2 undefined on input line 26.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
@@ -1164,6 +1191,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
+
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 35.
+
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 35.
+
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 35.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
@@ -1207,6 +1243,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
  []
 
 
+LaTeX Warning: Reference `Description' on page 3 undefined on input line 63.
+
+
+LaTeX Warning: Reference `Evaluation' on page 3 undefined on input line 65.
+
+
+LaTeX Warning: Reference `Prototype' on page 3 undefined on input line 65.
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -1214,6 +1259,16 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [3]
 Chapter 2.
+
+LaTeX Warning: Reference `d:problemsprocedural' on page 4 undefined on input li
+ne 71.
+
+
+LaTeX Warning: Reference `d:background' on page 4 undefined on input line 73.
+
+
+LaTeX Warning: Citation `oc2008' on page 4 undefined on input line 77.
+
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 79.
 
@@ -1232,6 +1287,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
+
+
+LaTeX Warning: Citation `about' on page 5 undefined on input line 98.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 98--99
@@ -1260,15 +1318,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--116
  []
 
 
+LaTeX Warning: Reference `d:problemsprocedural' on page 6 undefined on input li
+ne 120.
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [6]
+
+LaTeX Warning: Reference `d:problemsprocedural' on page 7 undefined on input li
+ne 122.
+
+
+LaTeX Warning: Citation `oc2008' on page 7 undefined on input line 122.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
+
+
+LaTeX Warning: Citation `bay2008' on page 7 undefined on input line 125.
+
+
+LaTeX Warning: Citation `bay2008' on page 7 undefined on input line 129.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 128--131
@@ -1317,6 +1393,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--155
  []
 
 
+LaTeX Warning: Reference `i:exercising' on page 8 undefined on input line 156.
+
+
+LaTeX Warning: Citation `cohesionBook' on page 8 undefined on input line 160.
+
+
+LaTeX Warning: Citation `wiki' on page 8 undefined on input line 160.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
@@ -1333,6 +1418,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 173.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 168--176
 
  []
@@ -1340,12 +1429,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--176
 Package acronym Info: Label `acro:DIP' newly defined as it shall be overridden
 although it is yet undefined on input line 177.
 
+Package acronym Warning: Acronym `DIP' is not defined on input line 177.
+
+
+Package acronym Warning: Acronym `DIP' is not defined on input line 177.
+
+
+Package acronym Warning: Acronym `DIP' is not defined on input line 178.
+
+
+LaTeX Warning: Citation `cc' on page 9 undefined on input line 178.
+
+
+LaTeX Warning: Citation `cc' on page 9 undefined on input line 178.
+
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 189.
+
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 189.
+
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 189.
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [9]
+
+LaTeX Warning: Citation `cc' on page 10 undefined on input line 200.
+
+
+LaTeX Warning: Citation `cc' on page 10 undefined on input line 200.
+
+
+LaTeX Warning: Citation `cc' on page 10 undefined on input line 200.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 199--201
 
  []
@@ -1362,6 +1485,27 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
+
+LaTeX Warning: Citation `cc' on page 11 undefined on input line 204.
+
+
+LaTeX Warning: Citation `oc2008' on page 11 undefined on input line 208.
+
+
+LaTeX Warning: Reference `i:exercising' on page 11 undefined on input line 208.
+
+
+
+LaTeX Warning: Reference `i:exercising' on page 11 undefined on input line 212.
+
+
+
+LaTeX Warning: Citation `cc' on page 11 undefined on input line 219.
+
+
+LaTeX Warning: Reference `focus' on page 11 undefined on input line 219.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
@@ -1378,9 +1522,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--225
  []
 
 
+LaTeX Warning: Citation `cc' on page 12 undefined on input line 226.
+
+
+LaTeX Warning: Reference `readability' on page 12 undefined on input line 226.
+
+
+LaTeX Warning: Citation `cc' on page 12 undefined on input line 226.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 226--228
 
  []
+
+
+LaTeX Warning: Citation `wiki' on page 12 undefined on input line 229.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 229--231
@@ -1404,14 +1560,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--239
  []
 
 
+LaTeX Warning: Reference `listing:rule1example1' on page 13 undefined on input 
+line 240.
+
+
+LaTeX Warning: Reference `listing:rule1example2' on page 13 undefined on input 
+line 240.
+
+
+LaTeX Warning: Reference `listing:rule1example2' on page 13 undefined on input 
+line 242.
+
+
+LaTeX Warning: Reference `listing:rule1example3:school' on page 13 undefined on
+ input line 242.
+
+
+LaTeX Warning: Reference `listing:rule1example3:schoolclass' on page 13 undefin
+ed on input line 242.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 242--244
 
  []
 
 
+LaTeX Warning: Reference `picture:rule1abstraction' on page 13 undefined on inp
+ut line 245.
+
+
+LaTeX Warning: Citation `oc2008' on page 13 undefined on input line 250.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 249--252
 
  []
+
+
+LaTeX Warning: Citation `gof' on page 13 undefined on input line 253.
+
+
+LaTeX Warning: Citation `gof' on page 13 undefined on input line 253.
+
+
+LaTeX Warning: Citation `gof' on page 13 undefined on input line 253.
 
 
 Overfull \hbox (0.53102pt too wide) in paragraph at lines 253--255
@@ -1435,8 +1627,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--258
 
  []
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 262.
 
 LaTeX Warning: Reference `listing:rule2examplenull:main' on page 14 undefined o
 n input line 262.
@@ -1466,6 +1656,11 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [14]
+
+LaTeX Warning: Reference `listing:nullcheck' on page 15 undefined on input line
+ 271.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
@@ -1508,6 +1703,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 288--291
  []
 
 
+LaTeX Warning: Citation `gof' on page 15 undefined on input line 292.
+
+Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
+although it is yet undefined on input line 292.
+
+Package acronym Warning: Acronym `UML' is not defined on input line 292.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 292.
+
+
+LaTeX Warning: Reference `picture:strategypattern' on page 15 undefined on inpu
+t line 292.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 292--294
 
  []
@@ -1540,6 +1750,10 @@ LaTeX Warning: Reference `listing:strategypatternexample1:main' on page 16 unde
 fined on input line 295.
 
 
+LaTeX Warning: Reference `picture:strategypattern' on page 16 undefined on inpu
+t line 295.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 295--297
 
  []
@@ -1550,16 +1764,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--300
  []
 
 
+Package acronym Warning: Acronym `UML' is not defined on input line 301.
+
+
+LaTeX Warning: Reference `picture:statepattern' on page 16 undefined on input l
+ine 301.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 301--304
 
  []
 
+
+LaTeX Warning: Citation `gof' on page 16 undefined on input line 305.
+
+
+LaTeX Warning: Citation `gof' on page 16 undefined on input line 305.
+
 Package acronym Info: Label `acro:LSP' newly defined as it shall be overridden
 although it is yet undefined on input line 305.
+
+Package acronym Warning: Acronym `LSP' is not defined on input line 305.
+
+
+Package acronym Warning: Acronym `LSP' is not defined on input line 305.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 305--307
 
  []
+
+
+Package acronym Warning: Acronym `LSP' is not defined on input line 308.
+
+
+LaTeX Warning: Citation `wiki' on page 16 undefined on input line 308.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 308--310
@@ -1573,9 +1812,16 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
+
+Package acronym Warning: Acronym `LSP' is not defined on input line 311.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 311--313
 
  []
+
+
+LaTeX Warning: Citation `gof' on page 17 undefined on input line 314.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 317--319
@@ -1593,6 +1839,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 323--325
  []
 
 
+LaTeX Warning: Reference `listing:rule3example1' on page 17 undefined on input 
+line 326.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 326--328
 
  []
@@ -1604,6 +1854,11 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [17]
+
+LaTeX Warning: Reference `listing:rule3example2' on page 18 undefined on input 
+line 329.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 329--332
 
  []
@@ -1611,9 +1866,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--332
 Package acronym Info: Label `acro:DDD' newly defined as it shall be overridden
 although it is yet undefined on input line 333.
 
+Package acronym Warning: Acronym `DDD' is not defined on input line 333.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 333.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 333.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 333.
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 333.
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 334.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 333--336
 
  []
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 343.
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 343.
+
+
+LaTeX Warning: Citation `gof' on page 18 undefined on input line 347.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 349.
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 349.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1622,19 +1910,56 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18]
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 354.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 356.
+
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 356.
+
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 356.
+
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 356.
+
 Package acronym Info: Label `acro:LoD' newly defined as it shall be overridden
 although it is yet undefined on input line 356.
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 356.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 356.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 356.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 356.
+
+
+LaTeX Warning: Citation `ba.com' on page 19 undefined on input line 356.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 356--358
 
  []
 
 
+Package acronym Warning: Acronym `LoD' is not defined on input line 359.
+
+
 LaTeX Warning: Citation `paperboy' on page 19 undefined on input line 359.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 359.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 359--361
@@ -1648,6 +1973,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 362.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 362--364
 
  []
@@ -1658,9 +1987,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 365--367
  []
 
 
+Package acronym Warning: Acronym `LoD' is not defined on input line 368.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 368--370
 
  []
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 371.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 371--373
@@ -1689,6 +2024,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
+
+LaTeX Warning: Citation `oc2008' on page 21 undefined on input line 386.
+
+
+LaTeX Warning: Citation `oc2008' on page 21 undefined on input line 386.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 386--388
 
  []
@@ -1697,6 +2039,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 386--388
 Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
+
+
+LaTeX Warning: Citation `cc' on page 21 undefined on input line 391.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 391--393
@@ -1718,11 +2063,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
-! Undefined control sequence.
-l.402 ...wer case version of the classname: \texti
-                                                  {laptopScreen}. However th...
-
-? 
 
 Overfull \hbox (1.39528pt too wide) in paragraph at lines 402--403
 \T1/ptm/m/it/12 nesslevel) \T1/ptm/m/n/12 and \T1/ptm/m/it/12 change-Screen-Res
@@ -1750,6 +2090,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 408--410
 Package acronym Info: Label `acro:GWT' newly defined as it shall be overridden
 although it is yet undefined on input line 415.
 
+Package acronym Warning: Acronym `GWT' is not defined on input line 415.
+
+
+Package acronym Warning: Acronym `GWT' is not defined on input line 415.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 415--417
 
  []
@@ -1760,9 +2106,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 421--423
  []
 
 
+LaTeX Warning: Citation `cc' on page 22 undefined on input line 424.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 424--426
 
  []
+
+
+LaTeX Warning: Citation `oc2008' on page 22 undefined on input line 427.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 427--429
@@ -1781,6 +2133,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 434--436
  []
 
 
+LaTeX Warning: Citation `oc2008' on page 23 undefined on input line 437.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 437--439
 
  []
@@ -1791,14 +2146,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 440--442
  []
 
 
+Package acronym Warning: Acronym `DDD' is not defined on input line 443.
+
+
+LaTeX Warning: Citation `dddbook' on page 23 undefined on input line 443.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 443--445
 
  []
 
-! Undefined control sequence.
-l.448 ... the better variant of modelling a \texti
-                                                  {Car} is shown.
-? 
+
+LaTeX Warning: Reference `listing:rule7example1:car' on page 23 undefined on in
+put line 446.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 448--450
 
@@ -1811,11 +2172,26 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23]
-! Undefined control sequence.
-l.451 ... \textit{Radio}, \textit{Doors} and \text
-                                                  {Pedals}. Maybe this sophi...
 
-? 
+LaTeX Warning: Reference `listing:rule7example2:car' on page 24 undefined on in
+put line 451.
+
+
+LaTeX Warning: Reference `listing:rule7example2:interior' on page 24 undefined 
+on input line 451.
+
+
+LaTeX Warning: Reference `listing:rule7example2:exterior' on page 24 undefined 
+on input line 451.
+
+
+LaTeX Warning: Reference `listing:rule7example2:centerconsole' on page 24 undef
+ined on input line 451.
+
+
+LaTeX Warning: Reference `listing:rule7example2:cockpit' on page 24 undefined o
+n input line 451.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 451--453
 
@@ -1827,19 +2203,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 454--456
  []
 
 
+LaTeX Warning: Reference `listing:rule7example1:car' on page 24 undefined on in
+put line 457.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 457--459
 
  []
 
-! Undefined control sequence.
-l.460 ...le multiple instance variable (like \text
-                                                  {Exterior}), they are resp...
-
-? 
 
 Underfull \hbox (badness 10000) in paragraph at lines 460--462
 
  []
+
+
+LaTeX Warning: Citation `oc2008' on page 24 undefined on input line 466.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 466--468
@@ -1863,6 +2241,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--476
  []
 
 
+Package acronym Warning: Acronym `LoD' is not defined on input line 477.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 477--479
 
  []
@@ -1884,9 +2265,16 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [25]
+
+LaTeX Warning: Citation `oc2008' on page 26 undefined on input line 490.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 490--492
 
  []
+
+
+LaTeX Warning: Citation `oc2008' on page 26 undefined on input line 493.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 493--495
@@ -1894,9 +2282,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 493--495
  []
 
 
+LaTeX Warning: Citation `telldontask' on page 26 undefined on input line 496.
+
+
+LaTeX Warning: Citation `telldontaskoriginal' on page 26 undefined on input lin
+e 496.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 496--498
 
  []
+
+
+LaTeX Warning: Reference `listing:rule9example1:speaker' on page 26 undefined o
+n input line 499.
 
 
 LaTeX Warning: Reference `listing:rule9example1:Main' on page 26 undefined on i
@@ -1908,9 +2307,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 499--501
  []
 
 
+LaTeX Warning: Reference `listing:rule9example2:speaker' on page 26 undefined o
+n input line 502.
+
+
+LaTeX Warning: Reference `listing:rule9example2:main' on page 26 undefined on i
+nput line 502.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 502--504
 
  []
+
+
+LaTeX Warning: Reference `listing:rule9example2:mock' on page 26 undefined on i
+nput line 505.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 505--507
@@ -1950,6 +2361,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 538--540
  []
 
 
+LaTeX Warning: Citation `oc2008' on page 28 undefined on input line 541.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 541.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 541--543
 
  []
@@ -1962,9 +2379,160 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [28]
 Chapter 3.
+
+LaTeX Warning: Reference `e:advantages' on page 29 undefined on input line 554.
+
+
+
+LaTeX Warning: Reference `e:evaluation' on page 29 undefined on input line 554.
+
+
+Package acronym Info: Label `acro:IDE' newly defined as it shall be overridden
+although it is yet undefined on input line 559.
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 559.
+
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 559.
+
+
+LaTeX Warning: Reference `prototype' on page 29 undefined on input line 568.
+
+Package acronym Info: Label `acro:AST' newly defined as it shall be overridden
+although it is yet undefined on input line 573.
+
+Package acronym Warning: Acronym `AST' is not defined on input line 573.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 573.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 573.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 573.
+
+
+LaTeX Warning: Citation `wiki' on page 29 undefined on input line 573.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 573.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 573.
+
+Package acronym Info: Label `acro:JLS' newly defined as it shall be overridden
+although it is yet undefined on input line 573.
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 573.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 573.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 573.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 573.
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 573.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--576
+
+ []
+
 [29
 
 ]
+
+Package acronym Warning: Acronym `AST' is not defined on input line 583.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 583.
+
+Package acronym Info: Label `acro:JDT' newly defined as it shall be overridden
+although it is yet undefined on input line 583.
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 583.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 583.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 583.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 583.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 583--585
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 588.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 588.
+
+
+LaTeX Warning: Reference `gof' on page 30 undefined on input line 588.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 588.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 588.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 588.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 588.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 588.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 588.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--590
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 591.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 591.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--593
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 594.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 594.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--596
+
+ []
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 597.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 597.
+
+
+LaTeX Warning: Citation `jls' on page 30 undefined on input line 597.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1973,25 +2541,182 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [30]
 
+Package acronym Warning: Acronym `IDE' is not defined on input line 626.
+
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 626.
+
+
+LaTeX Warning: Reference `listing:rule1example1' on page 31 undefined on input 
+line 628.
+
+
+LaTeX Warning: Reference `listing:rule1example2' on page 31 undefined on input 
+line 628.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 630.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 630.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 630.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 630.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 632.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 632.
+
+
+LaTeX Warning: Reference `ast:rule1' on page 31 undefined on input line 632.
+
+
+LaTeX Warning: Reference `ast:rule1' on page 31 undefined on input line 636.
+
+
+Overfull \hbox (17.78998pt too wide) in paragraph at lines 666--668
+[][]
+ []
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [31]
+
+Package acronym Warning: Acronym `AST' is not defined on input line 670.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 670.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 670--672
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--675
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--679
+
+ []
+
+
+LaTeX Warning: Reference `JLS' on page 32 undefined on input line 680.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 680.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 680.
+
+
+LaTeX Warning: Reference `JLS' on page 32 undefined on input line 680.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 680--682
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 683.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 683.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 686--688
+
+ []
+
+
+LaTeX Warning: Reference `JLS' on page 32 undefined on input line 689.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 689.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 689.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 689--691
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
+
+LaTeX Warning: Reference `AST' on page 33 undefined on input line 692.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 692--694
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--697
+
+ []
+
+
+LaTeX Warning: Reference `ast:rule2' on page 33 undefined on input line 698.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--700
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--703
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 704.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 704.
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
 Chapter 4.
-[32
+[35
 
 ]
 Chapter 5.
-) [33
+) [36
 
 ]
 \openout2 = `Inhalt/appendixListing.aux'.
 
  (./Inhalt/appendixListing.tex
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 1.
 
@@ -2011,7 +2736,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34
+[37
 
 
 ])
@@ -2159,7 +2884,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35]
+[38]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 33--33
 [][][][][][][] 
  []
@@ -2181,7 +2906,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36])
+[39])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 40--40
 [][][][][][][] 
  []
@@ -2198,7 +2923,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37])
+[40])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 46--46
 [][][][][][][] 
  []
@@ -2220,7 +2945,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38])
+[41])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 49--49
 [][][][][][][] 
  []
@@ -2237,7 +2962,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39])
+[42])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 53--53
 [][][][][][][] 
  []
@@ -2249,7 +2974,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40])
+[43])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
 [][][][][][][] 
  []
@@ -2266,7 +2991,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41])
+[44])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 58--58
 [][][][][][][] 
  []
@@ -2283,7 +3008,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42])
+[45])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 62--62
 [][][][][][][] 
  []
@@ -2300,7 +3025,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43])
+[46])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 64--64
 [][][][][][][] 
  []
@@ -2317,7 +3042,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44])
+[47])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 66--66
 [][][][][][][] 
  []
@@ -2329,23 +3054,35 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
+[48]
 \openout2 = `Inhalt/appendixImages.aux'.
 
  (./Inhalt/appendixImages.tex
-<Bilder/Rule1Abstraction.png, id=208, 394.47375pt x 249.18094pt>
+<Bilder/Rule1Abstraction.png, id=217, 394.47375pt x 249.18094pt>
 File: Bilder/Rule1Abstraction.png Graphic file (type png)
 
 <use Bilder/Rule1Abstraction.png>
 Package pdftex.def Info: Bilder/Rule1Abstraction.png used on input line 4.
 (pdftex.def)             Requested size: 394.47278pt x 249.18031pt.
 
-<Bilder/StrategyPattern.png, id=210, 256.96pt x 160.6pt>
+<Bilder/StrategyPattern.png, id=219, 256.96pt x 160.6pt>
 File: Bilder/StrategyPattern.png Graphic file (type png)
 
 <use Bilder/StrategyPattern.png>
 Package pdftex.def Info: Bilder/StrategyPattern.png used on input line 12.
 (pdftex.def)             Requested size: 256.95937pt x 160.5996pt.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 13.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 13.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 13.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 13.
 
 
 ! LaTeX Error: Unknown graphics extension: .svg.png.
@@ -2357,6 +3094,18 @@ Type  H <return>  for immediate help.
 l.19 \includegraphics{Bilder/StatePattern.svg.png}
                                                   
 ? 
+
+Package acronym Warning: Acronym `UML' is not defined on input line 20.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 20.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 20.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 20.
+
 )
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2364,38 +3113,38 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46 <./Bilder/Rule1Abstraction.png> <./Bilder/StrategyPattern.png (PNG copy)>]
+[49 <./Bilder/Rule1Abstraction.png> <./Bilder/StrategyPattern.png (PNG copy)>]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.204 ...L http://media.pragprog.com/articles/jan_
+l.207 ...L http://media.pragprog.com/articles/jan_
                                                   03_enbug.pdf
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.205 
+l.208 
       
 ? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.205 
+l.208 
       
 ? 
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.205 
+l.208 
       
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
 \T1/ptm/m/n/12 URL http://www.ccs.neu.edu/research/demeter/demeter-method/LawOf
 Demeter/paper-
  []
 
-[47
+[50
 
 
 
@@ -2407,7 +3156,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
+[51] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
 (./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux) (./Inhalt/appendixListing.aux)
 (./Inhalt/appendixImages.aux))
 
@@ -2417,7 +3166,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
 (\end occurred inside a group at level 1)
@@ -2425,28 +3174,27 @@ LaTeX Warning: There were multiply-defined labels.
 ### semi simple group (level 1) entered at line 12 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19794 strings out of 493308
- 369822 string characters out of 6141367
- 555954 words of memory out of 5000000
- 22646 multiletter control sequences out of 15000+600000
- 95296 words of font info for 123 fonts, out of 8000000 for 9000
+ 19810 strings out of 493308
+ 370641 string characters out of 6141367
+ 548141 words of memory out of 5000000
+ 22680 multiletter control sequences out of 15000+600000
+ 93021 words of font info for 109 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  65i,12n,76p,1950b,1736s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2013/
-texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2013/texmf-dist/f
-onts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/h
-elvetic/uhvb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.
-pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texliv
-e/2013/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2013/texmf-di
-st/fonts/type1/urw/palatino/uplri8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1
-/urw/times/utmb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a
-.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2
-013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (57 pages, 317890 bytes).
+texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2013/texmf-dist/fonts
+/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helv
+etic/uhvr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pf
+b><c:/texlive/2013/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2
+013/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb><c:/texlive/2013/texmf-dist
+/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/t
+imes/utmbi8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Bachelorarbeit.pdf (60 pages, 325996 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
+ 269 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
