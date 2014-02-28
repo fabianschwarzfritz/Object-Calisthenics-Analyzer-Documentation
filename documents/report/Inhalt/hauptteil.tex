@@ -770,19 +770,19 @@ The list contians a short explanation why the listed statements are "top level s
 \begin{description}
   \item[ExpressionStatement] The statement has the following structure: \textit{ StatementExpression ;}. A StatementExpression simply is an Expression and wraps every expression that is a direct child of a statement. Such a StatementExpressio is usually in one line and the number of dots in the expression, wrapped directly by statement expression, shall not be exceeded.
   \item[WhileStatement] The WhileStatement  has the following structure: \textit{while ( Expression ) Statement}. In the condition part of the statement, which is usually one line, an expression occurs.
-  \item{DoStatement} The DoStatement has the following structure: \textit{do Statement while ( Expression ) ;}. As clearly visible there is an expression part in the while statement. The same valdation rule that was used for the WhileStatement applies here: The number of dots within the expression shall not be exceeded.
-  \item{ForStatement} The ForStatement has the following structure: \textit{for ( [ ForInit ]; [ Expression ] ; [ ForUpdate ] ) Statement  
+  \item[DoStatement] The DoStatement has the following structure: \textit{do Statement while ( Expression ) ;}. As clearly visible there is an expression part in the while statement. The same valdation rule that was used for the WhileStatement applies here: The number of dots within the expression shall not be exceeded.
+  \item[ForStatement] The ForStatement has the following structure: \textit{for ( [ ForInit ]; [ Expression ] ; [ ForUpdate ] ) Statement  
   }. The ForInit part is described by the structure \textit{Expression { , Expression }} and the ForUpdate  part is described by the structure \textit{ Expression { , Expression }}. Because the three expression parts in the parentheses are usually written in one line, the total number of those statements shall not be exceeded.
-  \item{EnhancedForStatement} The EnhancedForStatement has the following structure: \textit{for ( FormalParameter : Expression ) Statement }. As commonly known the expression in paranthesis is in one line. Therefore the Expression part has to be analyzed.
+  \item[EnhancedForStatement] The EnhancedForStatement has the following structure: \textit{for ( FormalParameter : Expression ) Statement }. As commonly known the expression in paranthesis is in one line. Therefore the Expression part has to be analyzed.
   \item[IfStatement] The IfStatement has the follwing structure: \textit{if ( Expression ) Statement [ else Statement]}. Like in the while and do statement, the expression in paranthesis shall be analyzed. 
   \item[AssertStatement] The AssertStatement  has the following structure: \textit{assert Expression [ : Expression ] ;}. There are two expressions which both have to be analyzed. The number of dots in both expressions shall not be higher than one. The first part is called the first expression of the assert statement, and the second part is called message. Because both aprts are usually written in one line, the total number of dots in both expressions shall not exceed one.
-  \item{ConstructorInvocation} The ConstructorInvocation has the following structure: \textit{this ( [ Expression { , Expression } ] ) ;}. Because this statement is usually in one line, the number of dot in all expressions within the statement shall not be exceeded.
-  \item{SuperConstructorInvocation} The SuperConstructorInvocation has the follwoing structure: \textit{[ Expression . ][ < Type { , Type } > ] super ( [ Expression { , Expression } ] ) ;}. Because the statement is usually written in one line, all expressions have to be analyzed to have a maximum of one dot in all statements.
-  \item{ReturnStatement} The ReturnStatement has the following structure: \textit{return [ Expression ] ;}. The statement is usually written in one line and consitst of one expression that has to be analyzed.
-  \item{SwitchCase} The structure of a SwitchCase is the follwing: \textit{ case Expression  :}. The expression is usually consistend of ExpressionStatements. The expression of this statement, which is usually in one line, has to be analyzed further.
-  \item{SwitchStatement} The structure of a SwitchStatement is the following: \textit{ switch ( Expression ) { { SwitchCase | Statement } } } }. The expression in parantheses is usually written in one line, and shall be analyzed further. 
-  \item{SynchronizedStatement} The structure of a SynchronizedStatement is the following: \textit{  synchronized ( Expression ) Block }. The expression part in parantheses is usually written in one line and shall be analyzed.
-  \item{ThrowStatement} The structure of a count(node.getExpression(), node); is the following: \textit{throw Expression ;}. This throw expression is usually in one line and shall be analyzed further.
+  \item[ConstructorInvocation] The ConstructorInvocation has the following structure: \textit{this ( [ Expression { , Expression } ] ) ;}. Because this statement is usually in one line, the number of dot in all expressions within the statement shall not be exceeded.
+  \item[SuperConstructorInvocation] The SuperConstructorInvocation has the follwoing structure: \textit{[ Expression . ][ < Type { , Type } > ] super ( [ Expression { , Expression } ] ) ;}. Because the statement is usually written in one line, all expressions have to be analyzed to have a maximum of one dot in all statements.
+  \item[ReturnStatement] The ReturnStatement has the following structure: \textit{return [ Expression ] ;}. The statement is usually written in one line and consitst of one expression that has to be analyzed.
+  \item[SwitchCase] The structure of a SwitchCase is the follwing: \textit{ case Expression  : }. The expression is usually consistend of ExpressionStatements. The expression of this statement, which is usually in one line, has to be analyzed further.
+  \item[SwitchStatement] The structure of a SwitchStatement is the following: \textit{ switch ( Expression ) { { SwitchCase | Statement } } }. The expression in parantheses is usually written in one line, and shall be analyzed further. 
+  \item[SynchronizedStatement] The structure of a SynchronizedStatement is the following: \textit{  synchronized ( Expression ) Block }. The expression part in parantheses is usually written in one line and shall be analyzed.
+  \item[ThrowStatement] The structure of a count(node.getExpression(), node); is the following: \textit{throw Expression ;}. This throw expression is usually in one line and shall be analyzed further.
 \end{description}
 \\
 
@@ -797,84 +797,47 @@ What follows is the description of the second step: the count of expressions in 
 
 The main question of the second step is which expressions contain a dot. Many expression do contain a dot, however, not all of them are valid. As described in chapter \ref{Description}, only method calls and field accesses are important for the rule. Dots in other expressions, for example a dot in a double value like \textit{26.3} are not important for the rule. The following shows all expression type that contain a dot that is relevant for a proper rule validation. 
 \begin{description}
-  \item{MethodInvocation} The expression type MethodInvocation contains a dot that is relevant for the proper implementation of tool support. It has the follwing structure: \textit{[ Expression . ] [ < Type { , Type } > ] Identifier ( [ Expression { , Expression } ] ) }. In this case, the dot is the dereferencing operator. It is referencing method and therefore relevant for the rule.
-  \item{SuperMethodInvocation} The SuperMethodInvocation has a very similar structure like MethodInvocation, and is not expaned further.
-  \item{FieldAccess} The expression type FieldAccess contains a dot that is also relevant for tool support. A FieldAccess expression has the follwing structure: \textit{Expression . Identifier}. The field access is a dot that is relevant for the rule because it is an accessnig a differen object space.
-  \item{SuperFieldAccess} The SuperFieldAccess has a very similar structure like FieldAccess, and is not expaned further.
-  \item{TypeLiteral} A TypeLiteral has the following structure: \textit{( Type | void ) . class}. Even if it does not reference a field or a method, it accesses the class of a reference. This is also a kind of reference that counts as an access to another area of the application. Therefore the dot of this expression shall count. The expression is relevant for the tool
-  \item{QualifiedName} Similar to the type literal, the QualifiedName is also accessing a different area of the application. Therefore the dot in the structure, which is \textit{Name . SimpleName}, is also counted. This encourages the developer to use SimpleName directly. SimpleName does not contain any dots, but is described by an identifier.
+  \item[MethodInvocation] The expression type MethodInvocation contains a dot that is relevant for the proper implementation of tool support. It has the follwing structure: \textit{[ Expression . ] [ < Type { , Type } > ] Identifier ( [ Expression { , Expression } ] ) }. In this case, the dot is the dereferencing operator. It is referencing method and therefore relevant for the rule.
+  \item[SuperMethodInvocation] The SuperMethodInvocation has a very similar structure like MethodInvocation, and is not expaned further.
+  \item[FieldAccess] The expression type FieldAccess contains a dot that is also relevant for tool support. A FieldAccess expression has the follwing structure: \textit{Expression . Identifier}. The field access is a dot that is relevant for the rule because it is an accessnig a differen object space.
+  \item[SuperFieldAccess] The SuperFieldAccess has a very similar structure like FieldAccess, and is not expaned further.
+  \item[TypeLiteral] A TypeLiteral has the following structure: \textit{( Type | void ) . class}. Even if it does not reference a field or a method, it accesses the class of a reference. This is also a kind of reference that counts as an access to another area of the application. Therefore the dot of this expression shall count. The expression is relevant for the tool
+  \item[QualifiedName] Similar to the type literal, the QualifiedName is also accessing a different area of the application. Therefore the dot in the structure, which is \textit{Name . SimpleName}, is also counted. This encourages the developer to use SimpleName directly. SimpleName does not contain any dots, but is described by an identifier.
 \end{description}
 
-All other type of expression are not relevant for the tool, because they do not represent the access on a foreign field. the call on a foreign method or the separation of different namespaces.
+All other type of expression are not relevant for the tool, because they do not represent the access on a foreign field, the call on a foreign method or the separation of different namespaces.
 \\
 
 The two steps showed how it is possible to find the number of dots in statements that are usually in one line. The advantages of the resulting algorithm solution is the fixted structure of the \acf{AST}: The actual formatting of the code does not matter. Independently of the code formatting, the \acf{AST} structure analysis always works. It will find the same violations when having two pieces of source code with a different formatting but describing the same \acf{AST}. This makes the \acf{AST} analysis robust and the developer cannot remove violations by separating two dots with a new line.
 \\
 
 The disadvantage of the rule is that the rule is not precicely defined from the view of a tool by Jeff Bay in \ref{oc2008}. Even if the developer can imagin very clearly what the purpose of the rule and the resulting code structure is, there are many possibilities to elude the rule. Take for example the QualifiedName, which was not addressed by Jeff Bay. However, this expressionalso seperates two different name spaces and can also be included within the rule. This and other assumptions presumed to conduct a proper tool validation, where expalained in this chapter. All in all, the described approach works fine in the prototype. When accepting the assumptions that describe the expressions containing a dot more precicely, the rule violation is very precice and works fine.
-
-// according to JLS spec
- - one line has more than one dot.
- - what is "one line": one line is an statement. 
- - The easist ist the expresion statement, wrapping an expression into a statement. exampel. But it also is a for, a while, a switch, and so on. 
- - This includes while, dowhile, try, block, assert and many more multi line statements. This is each statement that contains an expression. "Call these statements line statements"
- - list all statements
- - list all statements that contain an expression as child.
- - there are a variety of expression and some of them contain a dot. 
- - These are herausgefunden manually according to the spec: ...list...
- - the others are ... list...
- - > The given statements are noly allowed to have a pecific amount of expressions that contain a dot (two)
-  - > make clear again: These statement are the "line statement". They represent the statemts that appear in "one line"
-  - > In implenentation: Thhe line statement are visited
-
- - The algorithm has a top down approach: A "line statements" and extracts all expressions. Expressions do not contain further statements! , and searches for all expressions containing a dot iterating greedy strategy throught the AST
- - LIsten on all statement that consist of an expression.
- - eeach expression can contain further expressions.
- - however has to handle each type of expression differently, because the methods to access sub expressions s different. --> Different methods. (give 2 examples). Other words: Many special expressions contain further expressions as child nodes. The access on these expressions is type dependant.
- - Greedy iteration through the tree of expressions of the given "line statement" counting the number of expression consisting of a dot.
-  - number of dots is the result.
-
- indicate error if necessary.
-
- Algortithm does not satisfy the rule 100 percent: Definition of aline can vary. (example system out println). Even better: the algorithm checks on a more sophisticated level: statement level. In essay: probably meant is exactly this. 
-
---> Very good solution, precise 
-% - what is the concrete violation?
-% IF ALGORITHM FOUND
-% - what is the algorithm to determine it? 
-% - assume typical structure
-% - description: on which "level" (method, variable) is the violation?
-
-% - show problems of the current algorithm
-% - show assumptions (exaple: instance var in wrapper)
-% - evaluate satisfaction of the rule.
-
-% IF NO ALGORITHM FOUND
-% - explain difficulties
-% - why does it fail
-
+\\
 
 \subsection*{Validation of Rule 5}
- - no generel rule
-  - restriction in length: maximum 15 chars
-   - camel case in classnames: one camel (dromedar ;))
-   - camel cas in types, because first letter capital
-   - show regex
-   applied on each Type (TypeDeclaration)
-   and variable (Variable declaration)
-% - what is the concrete violation?
-% IF ALGORITHM FOUND
-% - what is the algorithm to determine it? 
-% - assume typical structure
-% - description: on which "level" (method, variable) is the violation?
+Rule 5, "Don't Abbreviate" is a very simple rule. It's basic statement is about the use of abbreviation.
+Jeff Bay permits all abbreviations and states that names should only consist of two names. He states that this structure is useful for methods and types. However, this structure is also useful for variable names.
+\\
+Therefore the tool check type, variable and method names. In Java, type names usually start with a capital letter. Variable names and method names should by convention start with a small letter. Futhermore both should only consist of two words. 
+Hence, in the type name two capital letter are allowed. Furthermore the name only consists of two word, thereore it only conistis of other capital letter. The resulting regex matching the use of capital and small initial letters looks like the following: \textit{([A-Z][a-z]+)\{1,2\}}. This structure is called "CamelCase". Regexes are commonly known. More information on the structure of regexes can be found in \cite[Regex]{wiki}.
+\\
 
-% - show problems of the current algorithm
-% - show assumptions (exaple: instance var in wrapper)
-% - evaluate satisfaction of the rule.
+In contrast to the type definition, variable and method declarations start with a lower case letter. They only contain one more upper case letter. Because in this structure there is only one upper case letter, one could call this "dromedar case". In comparision to "CamelCase" this is not a commonly used expression. The regex matching the "dromedar" case is the following: \textit{([a-z]+[A-Z]\{0,1\}[a-z]+)}.
+\\
 
-% IF NO ALGORITHM FOUND
-% - explain difficulties
-% - why does it fail
+Both, the regex for types and the regex for variable and method names, abbreviations shall not occur. This is also guaranteed by the regexes. Both force that a capital letter is always followed by a capital letter.
+\\
+
+If a name does not match the given regexes, a violation has to occur.
+\\
+
+Even with this regex restriction, the developer can still use very long variable, method and type names. To prevent the developer from doing this, the tool introduces a limitation for the lenght of such names. If the name exceeds the length of 15 characters, a violation of the rule will occur.
+\\
+
+All in all the concrete restrictions of the tool that represent the rule, model the rule quite good. They continuously remind the developer to use short names and no abbreviations. However, because there is no semantic check, the tool can't validate if the developer user proper namings. Even worse, there is no check possible examining if the developer used arbitraty letter, like \textit{AbcdefGhi} for example.
+\\
+
+All in all, the provided regex match the purpose of the rule very good. Also the implementation of the regex and the check on the lenght of a maximum of 15 characters is fully working in the prototypical implementation.
 
 
 \subsection*{Validation of Rule 6}
