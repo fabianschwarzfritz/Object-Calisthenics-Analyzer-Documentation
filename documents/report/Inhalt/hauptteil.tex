@@ -746,6 +746,72 @@ The just described algorithm that validated the rule is has a very easy structur
 
 
 \subsection*{Validation of Rule 4}
+Rule 4, "Use Only One Dot per Line", is a more sophisticated rule to validate. The rule is violated, when a line contains more than one dot. 
+\\
+
+To validate the rule, two question occur. The first one is: What is  "a line" when looking at simple statements like an statement expression concluded with a semicolon and when looking at more complex statements like loops or conditions. The second question is: What is the exact meaning of "one dot"?
+\\
+
+The algorithm consists of two steps. Firstly the it has to find out which statements contain a expression that is containing possibly more than one dot. Therefore the first step is about searching expression from the "top level" statements. In the second step the "extracted" expressions will be examined and the number of dot will be counted. The second step is counting the number of expressions in the subtree of the "top level" expression, that contain a dot.
+\\
+
+As already announced in the introduction of this evaluation chapter, the terms of the \acf{JLS} (which have very similar names like the object representations in the eclipse ast representation) will be used. 
+\\
+
+Usually, one line is an expression statement with a ;. For example: \textit{System.out.println("Object Calisthenics");}. The representation in the \acf{JLS} is ExpressionStatement. As already said, there are also more sophisticated structures like loops and conditions, which at least partly, also represent a line but are not covered by the expression statement. These are for example the WhileStatement or the TryStatement. The examination of those "top level statements" is the first step and is described in the following.
+\\
+
+All these statements are described by a Statement. What follows is a classification in two groups: The first group consists of the number of statements that have further expressions to be analyzse ("top leve statements") and the second group consists of the number of statements that do not have to examined for more expressions.
+\\
+
+The list contians a short explanation why the listed statements are "top level statements".
+\\
+
+\begin{description}
+  \item[ExpressionStatement] The statement has the following structure: \textit{ StatementExpression ;}. A StatementExpression simply is an Expression and wraps every expression that is a direct child of a statement. Such a StatementExpressio is usually in one line and the number of dots in the expression, wrapped directly by statement expression, shall not be exceeded.
+  \item[WhileStatement] The WhileStatement  has the following structure: \textit{while ( Expression ) Statement}. In the condition part of the statement, which is usually one line, an expression occurs.
+  \item{DoStatement} The DoStatement has the following structure: \textit{do Statement while ( Expression ) ;}. As clearly visible there is an expression part in the while statement. The same valdation rule that was used for the WhileStatement applies here: The number of dots within the expression shall not be exceeded.
+  \item{ForStatement} The ForStatement has the following structure: \textit{for ( [ ForInit ]; [ Expression ] ; [ ForUpdate ] ) Statement  
+  }. The ForInit part is described by the structure \textit{Expression { , Expression }} and the ForUpdate  part is described by the structure \textit{ Expression { , Expression }}. Because the three expression parts in the parentheses are usually written in one line, the total number of those statements shall not be exceeded.
+  \item{EnhancedForStatement} The EnhancedForStatement has the following structure: \textit{for ( FormalParameter : Expression ) Statement }. As commonly known the expression in paranthesis is in one line. Therefore the Expression part has to be analyzed.
+  \item[IfStatement] The IfStatement has the follwing structure: \textit{if ( Expression ) Statement [ else Statement]}. Like in the while and do statement, the expression in paranthesis shall be analyzed. 
+  \item[AssertStatement] The AssertStatement  has the following structure: \textit{assert Expression [ : Expression ] ;}. There are two expressions which both have to be analyzed. The number of dots in both expressions shall not be higher than one. The first part is called the first expression of the assert statement, and the second part is called message. Because both aprts are usually written in one line, the total number of dots in both expressions shall not exceed one.
+  \item{ConstructorInvocation} The ConstructorInvocation has the following structure: \textit{this ( [ Expression { , Expression } ] ) ;}. Because this statement is usually in one line, the number of dot in all expressions within the statement shall not be exceeded.
+  \item{SuperConstructorInvocation} The SuperConstructorInvocation has the follwoing structure: \textit{[ Expression . ][ < Type { , Type } > ] super ( [ Expression { , Expression } ] ) ;}. Because the statement is usually written in one line, all expressions have to be analyzed to have a maximum of one dot in all statements.
+  \item{ReturnStatement} The ReturnStatement has the following structure: \textit{return [ Expression ] ;}. The statement is usually written in one line and consitst of one expression that has to be analyzed.
+  \item{SwitchCase} The structure of a SwitchCase is the follwing: \textit{ case Expression  :}. The expression is usually consistend of ExpressionStatements. The expression of this statement, which is usually in one line, has to be analyzed further.
+  \item{SwitchStatement} The structure of a SwitchStatement is the following: \textit{ switch ( Expression ) { { SwitchCase | Statement } } } }. The expression in parantheses is usually written in one line, and shall be analyzed further. 
+  \item{SynchronizedStatement} The structure of a SynchronizedStatement is the following: \textit{  synchronized ( Expression ) Block }. The expression part in parantheses is usually written in one line and shall be analyzed.
+  \item{ThrowStatement} The structure of a count(node.getExpression(), node); is the following: \textit{throw Expression ;}. This throw expression is usually in one line and shall be analyzed further.
+\end{description}
+\\
+
+All other statement do not contain directly expressions to be analyzed. Some of them do not contain any expressions and other contain statement that themselves have child statements to be analyzed. However, because of the \acf{AST} traversal, these substatement will be visited anyways. However, the statement with no directly related subexpressions are: Block, BreakStatement, ContinueStatement, EmptyStatement, LabeledStatement, TryStatement, TypeDeclarationStatement, VariableDeclarationStatement and WhileStatement.
+\\
+
+As just shown, the top level statements contain expressions. Within the subtree of these top level statements, only a one expression containing a dot is allowed.
+\\
+
+What follows is the description of the second step: the count of expressions in the subtree of the "line statement". In the algorithm of the prototype us the eclipse framework, each type expression has to extract its subexpressions by using different methods. In the abstract representation of the \acf{AST}, however, the algorithm is simpler: The number of expressions containing a dot has to be counted. If it exceeds one, a violation in the "line statement" shall occur. 
+\\
+
+The main question of the second step is which expressions contain a dot. Many expression do contain a dot, however, not all of them are valid. As described in chapter \ref{Description}, only method calls and field accesses are important for the rule. Dots in other expressions, for example a dot in a double value like \textit{26.3} are not important for the rule. The following shows all expression type that contain a dot that is relevant for a proper rule validation. 
+\begin{description}
+  \item{MethodInvocation} The expression type MethodInvocation contains a dot that is relevant for the proper implementation of tool support. It has the follwing structure: \textit{[ Expression . ] [ < Type { , Type } > ] Identifier ( [ Expression { , Expression } ] ) }. In this case, the dot is the dereferencing operator. It is referencing method and therefore relevant for the rule.
+  \item{SuperMethodInvocation} The SuperMethodInvocation has a very similar structure like MethodInvocation, and is not expaned further.
+  \item{FieldAccess} The expression type FieldAccess contains a dot that is also relevant for tool support. A FieldAccess expression has the follwing structure: \textit{Expression . Identifier}. The field access is a dot that is relevant for the rule because it is an accessnig a differen object space.
+  \item{SuperFieldAccess} The SuperFieldAccess has a very similar structure like FieldAccess, and is not expaned further.
+  \item{TypeLiteral} A TypeLiteral has the following structure: \textit{( Type | void ) . class}. Even if it does not reference a field or a method, it accesses the class of a reference. This is also a kind of reference that counts as an access to another area of the application. Therefore the dot of this expression shall count. The expression is relevant for the tool
+  \item{QualifiedName} Similar to the type literal, the QualifiedName is also accessing a different area of the application. Therefore the dot in the structure, which is \textit{Name . SimpleName}, is also counted. This encourages the developer to use SimpleName directly. SimpleName does not contain any dots, but is described by an identifier.
+\end{description}
+
+All other type of expression are not relevant for the tool, because they do not represent the access on a foreign field. the call on a foreign method or the separation of different namespaces.
+\\
+
+The two steps showed how it is possible to find the number of dots in statements that are usually in one line. The advantages of the resulting algorithm solution is the fixted structure of the \acf{AST}: The actual formatting of the code does not matter. Independently of the code formatting, the \acf{AST} structure analysis always works. It will find the same violations when having two pieces of source code with a different formatting but describing the same \acf{AST}. This makes the \acf{AST} analysis robust and the developer cannot remove violations by separating two dots with a new line.
+\\
+
+The disadvantage of the rule is that the rule is not precicely defined from the view of a tool by Jeff Bay in \ref{oc2008}. Even if the developer can imagin very clearly what the purpose of the rule and the resulting code structure is, there are many possibilities to elude the rule. Take for example the QualifiedName, which was not addressed by Jeff Bay. However, this expressionalso seperates two different name spaces and can also be included within the rule. This and other assumptions presumed to conduct a proper tool validation, where expalained in this chapter. All in all, the described approach works fine in the prototype. When accepting the assumptions that describe the expressions containing a dot more precicely, the rule violation is very precice and works fine.
 
 // according to JLS spec
  - one line has more than one dot.
@@ -765,7 +831,7 @@ The just described algorithm that validated the rule is has a very easy structur
  - LIsten on all statement that consist of an expression.
  - eeach expression can contain further expressions.
  - however has to handle each type of expression differently, because the methods to access sub expressions s different. --> Different methods. (give 2 examples). Other words: Many special expressions contain further expressions as child nodes. The access on these expressions is type dependant.
- - Greedy iteration through the tree of expressions of the given "linste statement" counting the number of expression consisting of a dot.
+ - Greedy iteration through the tree of expressions of the given "line statement" counting the number of expression consisting of a dot.
   - number of dots is the result.
 
  indicate error if necessary.
