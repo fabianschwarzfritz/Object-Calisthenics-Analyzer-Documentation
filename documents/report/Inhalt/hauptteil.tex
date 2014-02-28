@@ -451,7 +451,7 @@ In this example, not only the low cohesion of the \textit{Car} is problematic, b
 Listing \ref{listing:rule7example2:car} shows the second version of the car. As the \textit{Car} in the first example, it also has the same method. However it is only consisting of the \textit{Interior} and the \textit{Exterior}, shown in listing \ref{listing:rule7example2:interior} and \ref{listing:rule7example2:exterior}. These classes hold the references to the \textit{CenterConsole} and the \textit{Cockpit} shown in \ref{listing:rule7example2:centerconsole} and \ref{listing:rule7example2:cockpit}. The splitting of these two classes into more sophisticated structures which then hold the classes that the developer originally wanted to represent: \textit{SteeringWheel}, \textit{Radio}, \textit{Doors} and \textit{Pedals}. Maybe this sophisticated structure looks like an overhead,  it becomes clear that the opposite is true. The method \textit{Car.start()} got significanly simpler and increased in cohesion. Furthermore it now delegates the work to the model classes \textit{Interior} and \textit{Exterior}. These now delegate execute the work for the classes they are responsible for. The same principle applies for the \textit{Interior} class. 
 \\
 
-Before comparing the examples in detail it has to be said that the interface of the \textit{Car} is the same for both examples. \textit{Car} represents a top level entry point for a component making use of this entity. In example two, which consists of more classes, but also in example one the top level entity or entry point \textit{Car} could be the main starting point for using the package. Therfore a user would not be affected by the refactory that was conducted. 
+Before comparing the examples in detail it has to be said that the interface of the \textit{Car} is the same for both examples. \textit{Car} represents a top level entry point for a component making use of this entity. In example two, which consists of more classes, but also in example one the top level entity or entry point \textit{Car} could be the main starting point for using the package. Therefore a user would not be affected by the refactory that was conducted. 
 \\
 
 In comparison the new model is split up into more classes. By doing so, these classes have a higher cohesion: They delegate more work and do one thing better. However when splitting up the method \textit{Car.start()} from the first example shown in listing \ref{listing:rule7example1:car}, it is necessary to clearly name and implement the delegation methods to enable the subsequent developer to understand the model. The risk in this approach of splitting up things in detailed models lies in the introduction of new aggregate types. 
@@ -623,7 +623,7 @@ If no adequate rule validation algorithm was found, occurred problems will be ex
 \subsection*{Validation of Rule 1}
 
 % - what is the concrete violation?
-The first rule "Use One Level of Indentation per Method" confines the number of indentations. However, the indentation can be set arbitrary in each line - therefore this rule in imprecise. Most modern \acf{IDE}s apply a standard formatter to determine the indentations. Therefore the standard indentations of the eclipse rule will be assumed.
+The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line - therefore this rule in imprecise. Most modern \acf{IDE}s apply a standard formatter to determine the indentations. Therefore the standard indentations of the eclipse rule will be assumed.
 \\
 As seen in example \ref{listing:rule1example1}, the violation is in the \textit{count} method in line 13. In this example, the for-statement is violating the rule, because all statements within will validate the rule. The better solution, shown in \ref{listing:rule1example2} does not violate the rule. 
 \\
@@ -683,7 +683,7 @@ All statements that are indenting can be simply read up in the \ref{JLS}. In the
 The with this simple \acf{AST} structure analysis, the first rule can be validated successfully. During this research, no case in which this validation did fail, was found. The implementation of the rule validator is validating the rule successfully using the described algorithm.
 
 \subsection*{Validation of Rule 2}
-The valdation of the second rule "Don’t Use the else Keyword" is the simplest rule to validate.
+The valdation of the second rule "don’t use the else keyword" is the simplest rule to validate.
 \\
 
 The rule assumes that the use of the else keyword is prohibited. According to the \ref{JLS}, the else statement is the body part of the if statement. In the \acf{AST} representation, the if statement has several child nodes. The mandatory child nodes of the if statement are the condition and the body. The else body is optional. 
@@ -746,7 +746,7 @@ The just described algorithm that validated the rule is has a very easy structur
 
 
 \subsection*{Validation of Rule 4}
-Rule 4, "Use Only One Dot per Line", is a more sophisticated rule to validate. The rule is violated, when a line contains more than one dot. 
+Rule 4, "use only one dot per line", is a more sophisticated rule to validate. The rule is violated, when a line contains more than one dot. 
 \\
 
 To validate the rule, two question occur. The first one is: What is  "a line" when looking at simple statements like an statement expression concluded with a semicolon and when looking at more complex statements like loops or conditions. The second question is: What is the exact meaning of "one dot"?
@@ -815,7 +815,7 @@ The disadvantage of the rule is that the rule is not precicely defined from the 
 \\
 
 \subsection*{Validation of Rule 5}
-Rule 5, "Don't Abbreviate" is a very simple rule. It's basic statement is about the use of abbreviation.
+Rule 5, "don't abbreviate" is a very simple rule. It's basic statement is about the use of abbreviation.
 Jeff Bay permits all abbreviations and states that names should only consist of two names. He states that this structure is useful for methods and types. However, this structure is also useful for variable names.
 \\
 Therefore the tool check type, variable and method names. In Java, type names usually start with a capital letter. Variable names and method names should by convention start with a small letter. Futhermore both should only consist of two words. 
@@ -863,24 +863,49 @@ All in all, the provided regex match the purpose of the rule very good. Also the
 
 
 \subsection*{Validation of Rule 7}
- - easy: checkn umber of field in type declaration (this equals class declaration) via FieldDeclaration
- - count all non static attributes of the type declaration --> which ar actually fields
-  - show simplified ast only with type declaration and field declaration
-  - ClassBodyDeclaration as child of TypeDeclaration. FieldDeclaration directly accessible via getFields() . Count number of those non static fields
-% - what is the concrete violation?
-% IF ALGORITHM FOUND
-% - what is the algorithm to determine it? 
-% - assume typical structure
-% - description: on which "level" (method, variable) is the violation?
+Rule 7, "don’t use any classes with more than two instance variables", is very easy to validate. In the rule Jeff Bay limits the number of instance variables of a class. 
+\\
 
-% - show problems of the current algorithm
-% - show assumptions (exaple: instance var in wrapper)
-% - evaluate satisfaction of the rule.
+According to the \acf{JLS}, a TypeDeclaration nod in the \acf{AST} has, among others, a child FieldDeclaration. The field declaration represents the declaration of a field within a class. With his rule, Jeff Bay limits this number of instance variables to two per type. When analyzing the rule closer, he doesn't limit the number of field declarations, but limits the number of instance variables. Static field declarations, which are defined using the \textit{static} keyword, are no instance variables. The algorithm to determine the number of field of a class simply counts the number of non-static fields of a type declaration. 
+\\
 
-% IF NO ALGORITHM FOUND
-% - explain difficulties
-% - why does it fail
+The described algorithm and \acf{AST} structure assume that the user did not use Java's reflection \acf{API} to change the number of instance variable during runtime. With this assumption the given \acf{AST} structure given when starting the analyzation tool and getting the java source files can be presumed.
+\\
 
+An \acf{AST} structure that described the definition of a type, could look like the in figure \ref{ast:rule7}. As depicted in the figure, the TypeDeclaration consists of four field declarations. One of them is static and therefore not relevant for the validation. In the type declaration however, there are three instance variables. According to the rule two are allowed, the third one is not allowed anymore. This third field declaration that is too much, is marked in red.
+\\
+
+\begin{tikzpicture}
+[font=\small, edge from parent, 
+    every node/.style={top color=white, bottom color=black!10, 
+    rectangle,rounded corners, minimum size=6mm, draw=black!75,
+    very thick, drop shadow, align=center},
+    edge from parent/.style={draw=black!50,thick},
+    level 1/.style={sibling distance=5cm},
+    level 2/.style={sibling distance=4cm}, 
+    level 3/.style={sibling distance=3cm}, 
+    level distance=2cm 
+    ]
+    
+    \node { ... } 
+    child { node { TypeDeclaration }
+        child { node { StaticField1Declaration } [ draw=blue!60 ] }
+        child { node { Field1Declaration } [ draw=green!60 ] }
+        child { node { Field2Declaration } [ draw=green!60 ] }
+        child { node { Field3Declaration } [ draw=red!60 ] }
+        child { node { Method1Declaration } }
+        child { node { Method2Declaration } }
+        child { node { Method3Declaration } }
+        child { node { Method4Declaration } }
+        child { node { Method5Declaration } }
+    };
+\end{tikzpicture}
+\label{ast:rule7}
+
+The shown strategy to analyze the \acf{AST} structure, is quite simple and effective. 
+\\
+
+The resulting analyzation algorithm for the rule is very effective. The implementation as part of the prototype was successful. During the research, no example was found that this algorithm did not validate successfully. Also the implementation as part of the prototype was successfull. 
 
 \subsection*{Validation of Rule 8}
 % - what is the concrete violation?
