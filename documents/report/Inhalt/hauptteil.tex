@@ -487,6 +487,7 @@ In the new introduced \textit{Doors} class all methods that can be exectued on m
 As already stated, this rule tackles a very similar problem as rule three: Adding behavior wrapping collections or primitives into own classes. This enables the compiler to apply a type check and furthermore is the only chance to add behavior to those types without scattering operations in surrounding classes. 
 
 \subsection*{Rule 9: "Don’t Use Any Getters/Setters/Properties"}
+\label{describe:rule9}
 Jeff Bay's last rule, "don't use any getters/setters/properties" that he presents in \cite{oc2008}, tries to encourage the "tell, don't ask" principle. He claims that not to use any getter/setters/properties in order to encapsulate objects properly.
 \\
 
@@ -881,23 +882,20 @@ An \acf{AST} structure that described the definition of a type, could look like 
     rectangle,rounded corners, minimum size=6mm, draw=black!75,
     very thick, drop shadow, align=center},
     edge from parent/.style={draw=black!50,thick},
-    level 1/.style={sibling distance=5cm},
-    level 2/.style={sibling distance=4cm}, 
-    level 3/.style={sibling distance=3cm}, 
+    level 1/.style={sibling distance=4cm},
+    level 2/.style={sibling distance=3cm}, 
+    level 3/.style={sibling distance=2cm}, 
     level distance=2cm 
     ]
     
     \node { ... } 
     child { node { TypeDeclaration }
-        child { node { StaticField1Declaration } [ draw=blue!60 ] }
-        child { node { Field1Declaration } [ draw=green!60 ] }
-        child { node { Field2Declaration } [ draw=green!60 ] }
-        child { node { Field3Declaration } [ draw=red!60 ] }
-        child { node { Method1Declaration } }
-        child { node { Method2Declaration } }
-        child { node { Method3Declaration } }
-        child { node { Method4Declaration } }
-        child { node { Method5Declaration } }
+        child { node { StaticField1 } [ draw=blue!60 ] }
+        child { node { Field1 } [ draw=green!60 ] }
+        child { node { Field2 } [ draw=green!60 ] }
+        child { node { Field3 } [ draw=red!60 ] }
+        child { node { Method1 } }
+        child { node { ... } }
     };
 \end{tikzpicture}
 \label{ast:rule7}
@@ -924,6 +922,42 @@ The resulting analyzation algorithm for the rule is very effective. The implemen
 
 
 \subsection*{Validation of Rule 9}
+Jeff Bays rule 9, "don't use any getters/setters/properties", the use of public fields and the use of getters and setter is restricted. This section will be devided into multiple part. The first part will explain the AST structure of public fields and the second part will explain the typical structure of getters and setters in detail.
+\\
+
+Properties are field declarations of classes that are available from the outside. Therefore they are public fields, indicated by the public modifier. Therefore the algorithm simply has to find all public fields. In the \acf{AST} the modifiers are stored as part of the field declaration. The definition of a field has the following structure: \textit{\{ ExtendedModifier \} Type VariableDeclarationFragment \{ , VariableDeclarationFragment \} ;}. The modifiers are part of the ExtendedModifier. With the eclipse framework, the modifier can be retrieved and the algorithm simply reports a violation if a field declaration with a public modifier was found. 
+\\
+
+As just described, the second part is about the identification of getter and setters. Therefore it is necessary to analyze and to define the typical structure of getter and setter methods. Getters and setter are commonly known as mutator method \ref{wiki}[Mutator method]. The consist of a setter, the mutator, and the getter, also called accessor. Both methods are used to retrieve or modify the field declaration. Often this is called encapsulation, but as Jeff Bay argued, this is commonly not a good practice. However the discussion of good and bad encapsulation was already evaluated in chapter \ref{Discussion}.
+\\
+
+Such a typical getter and setter method might look as shown in \ref{listing:rule9example1:speaker}. The speaker example was already illustrated in the previous chapter \ref{describe:rule9}. However, the structure of the getter and setter methods is depicted in the listing. 
+\\
+
+A getter method typically has the following signature: \textit{<modifiers> <fieldtype> <methodname>()}. In most cases, the modifiers are public, not static, and the method name is \textit{get<Fieldname>}. One way to determine if a method is a getter method is to analyze the method's signature. Unfortunately there several disadvantages when doing so. Firstly, there is no guarantee that the developer actually names the getter method as usually: \textit{get<Fieldname>}. He might use a shorter name to represent the field name. Or, if class represents a calculation, he might just name it \textit{retrive} or {result}. 
+\\
+
+Another way to analyze a getter method is to analyzse the complete structure of the method. Then not only the signature but also the whole structure of the method body would be analyzed. Within the body only one statement would be allowed: \textit{return <field>;}.However, there is no guarantee that the getter method doesn't conduct checks on the field value before returning it. For example a integrity check. Such a modified getter method is shown in listing \ref{listing:rule9example3}. In this example the if conditional is only a representation for any other integrity check. Also there are better ways to conduct such an integrity check, but as already said the if conditional represents any other statement, which is usually an integrity check. When looking at such such a getter method with an integrity check the method would still be a getter method but the body's structure would have changed significantly. It would not be recognized as a getter method when performing a structural check including signature and body.
+\\
+
+The getter method could be distinguished by the signature or by body and signature. As just illustrated, this way is not reliable. During this research, a better way was found to determine if a method is a getter method. 
+\\
+
+Typically a getter method returns a field value. Because with the eclipse framework it is also possible to get semantic information, it can be determined if a method returns a field value directly. Hence, there might also be other statements within the getter method. 
+\\
+
+As just described the getter method might contain arbitratry integrity checks and the name of the method might not match the typical name for a getter method. By contrast, a getter method is distinguished by the fact that it directly returns an object's field. The return statement has to be part of a non-static and non-private variable. Furthermore it has to return a field of the object directly. This is the definition of the semantical structure of a getter method.
+\\
+
+When looking at setter methods the similar problem occur. As the getter method, a setter method has a typical structure: \textit{<modifiers> void <methodname>(<fieldtype> <variablename>)}. The methodname is typically \textit{setFieldname}. When conducting a syntactical check on the method's structure, the same problems as the syntactical check of the getter method occur. There is no guarantee for the method name to match the convention, the signature only does not give enough information if the method is actually behaving like a setter method, and lastly doing a full check of signature and body does not regard integrity checks.
+\\
+
+During this report rules for the semantical structure of setter methods where found. These rules are similar to the just described rule of the semantical structure of getter methods and are described in the following.
+\\
+
+
+
+
 %asdf
 \section{Result of the Evaluation}
 \label{e:result}

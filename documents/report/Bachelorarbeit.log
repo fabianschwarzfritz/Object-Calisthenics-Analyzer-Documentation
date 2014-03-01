@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  28 FEB 2014 11:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  28 FEB 2014 18:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2251,12 +2251,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 837--839
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 866--868
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 869--871
+
+ []
+
+Package acronym Info: Label `acro:API' newly defined as it shall be overridden
+although it is yet undefined on input line 872.
+
+Package acronym Warning: Acronym `API' is not defined on input line 872.
+
+
+Package acronym Warning: Acronym `API' is not defined on input line 872.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--874
+
+ []
+
+
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [38]
+Underfull \hbox (badness 10000) in paragraph at lines 875--877
+
+ []
+
+
+Overfull \hbox (299.8176pt too wide) in paragraph at lines 902--904
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 905--907
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2710,10 +2747,10 @@ LaTeX Warning: There were multiply-defined labels.
 ### semi simple group (level 1) entered at line 12 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19830 strings out of 493308
- 371057 string characters out of 6141367
- 551240 words of memory out of 5000000
- 22687 multiletter control sequences out of 15000+600000
+ 19904 strings out of 493308
+ 372564 string characters out of 6141367
+ 551845 words of memory out of 5000000
+ 22761 multiletter control sequences out of 15000+600000
  94118 words of font info for 110 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  65i,12n,76p,1950b,1736s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2727,7 +2764,7 @@ b><c:/texlive/2013/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2
 /fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/t
 imes/utmbi8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (65 pages, 339036 bytes).
+Output written on Bachelorarbeit.pdf (65 pages, 342854 bytes).
 PDF statistics:
  285 PDF objects out of 1000 (max. 8388607)
  184 compressed objects within 2 object streams
