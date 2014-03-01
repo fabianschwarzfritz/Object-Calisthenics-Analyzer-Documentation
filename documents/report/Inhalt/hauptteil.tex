@@ -581,18 +581,23 @@ To create a tool validating the rules, the \acf{AST} of the code will be analyse
 
 %=== Therefore: Give reference for questions about "parameter", "type", "class", "expression" or "statement".
 %Say that the validation in the next section is exactly implemented as described. One validation implementation example is explained exemplary in the Prototype chapter.
-The eclipse platform, however proviedes a framework that already creates an \acf{AST} for given classfiles. The framework is part of the Eclipse \acf{JDT} can be used to access, change and read the elements of a Java source code. In this scenario the read access on code structures in necessary to find possible rule violation. The prototype itself will be written as an Eclipse plugin, and will use the framework. The \acf{JDT} framework is automatically integrated into the Eclipse plugin. 
+The Eclipse platform, however proviedes a framework that already creates an \acf{AST} for given classfiles. The framework is part of the Eclipse \acf{JDT} can be used to access, change and read the elements of a Java source code. In this scenario the read access on code structures in necessary to find possible rule violation. The prototype itself will be written as an Eclipse plugin, and will use the framework. The \acf{JDT} framework is automatically integrated into the Eclipse plugin. 
 \\
+
 
 In the next paragraph, the rough structure of a rule validation will be explained to give an overview about which steps have to be done in the prototype and which structures and mechanism are given by the framework.
 \\
+
 To use the structure of an \acf{AST} of a class file, the visitor pattern \ref{gof}[p.???] is used. Each element of the \acf{JLS} is represented as a concrete java object. The visitor traverses the general \acf{AST} and calls all a corresponding method when an element is found. For example, the traversing algorithm the \acf{AST} comes upon a while statement, the \textit{visit} methods with the given element as parameter is called: \textit{void visit(WhileStatement)}. The general visitor is provided by the framework and implements such a \textit{visit} method for every possible element. The general visitor is represented by the framework class \textit{ASTVisitor}. If the concrete validator want to get informed about the traversion of a specific element, it simply overrides the method of the element in a class that subclasses \textit{ASTVisitor}. 
 \\
 
-When an algorithm found a node in the \acf{AST}s object representation that validate the rule, it pushed the node to the eclipse framework. By doing so, the eclipse framework automatically displays an indication. 
+The algorithms and \acf{AST} structure analysis that will be described in this chapter, assume that the user did not use Java's Reflection \acf{API} to change the number of instance variable during runtime. The Eclipse famework retrieves its information about the code structure directly from the \textit{.java} file and there is no possibility to retrieve updated information during runtime. The use of Java's Reflection \acf{API} to bypass the rule misses the training purpose of Jeff Bay Object Calisthenics.  Therefore it is presumed that such a mainpulation on runtime is not conducted. With this assumption the given \acf{AST} structure given when starting the analysis tool and getting the java source files can be presumed.
 \\
 
-To indicate the violation, the eclipse framework does not have to know the exact postion within the code. On the basis of the object representation, the framework can create a maker at the proper position of the code. Therefore when indicating the violation, the rule algorithm has to find the node within the \acf{AST}.
+When an algorithm found a node in the \acf{AST}s object representation that validate the rule, it pushed the node to the Eclipse framework. By doing so, the Eclipse framework automatically displays an indication. 
+\\
+
+To indicate the violation, the Eclipse framework does not have to know the exact postion within the code. On the basis of the object representation, the framework can create a maker at the proper position of the code. Therefore when indicating the violation, the rule algorithm has to find the node within the \acf{AST}.
 \\
 
 To make the explanation of the of the concrete validation easier and to focus on the actual challenge, the validation of each rule, the general known terms like "method declaration", "statement" or "parameter" will be presumed. These terms can be looked up in detail in the \acf{JLS}\cite{jls}. 
@@ -605,7 +610,7 @@ This section will dive deeper into the validation of each rule. If a working alg
 In this chapter the word "algorithm" will be used - even if no source code of flow diagram will be shown. The procedure or the violationg \acf{AST}  structure will be described. This detailed description replaces the need to depict a step by step algorithm. Another advantage of explaining the violations and rule validations with example and \acf{AST} structures is that the result of this evaluation will not depend on a concrete language or framework. 
 \\
 
-Furthermore each secito nof this chapter will validate the quality of the algorithm and discuss cases in which the algorithm indicates a wrong violation. Such a wrong violation indication can be either a violation indication where there is actually no rule violation, or a missing violation indication. Therefore each chapter will give information about the quality of the rule violation. If similarities of the different rules in terms of the validation algorithm were be found it will elucidate those. If no adequate rule validation algorithm was found, occurred problems will be explained.
+Furthermore each seciton of this chapter will validate the quality of the algorithm and discuss cases in which the algorithm indicates a wrong violation. Such a wrong violation indication can be either a violation indication where there is actually no rule violation, or a missing violation indication. Therefore each chapter will give information about the quality of the rule violation. If similarities of the different rules in terms of the validation algorithm were be found it will elucidate those. If no adequate rule validation algorithm was found, occurred problems will be explained.
 \\
 
 In the end, the quality and the accuracy of each rule validation algorithm will be summarized. 
@@ -631,7 +636,7 @@ In the end, the quality and the accuracy of each rule validation algorithm will 
 % - If there are cases where the rule cannot be validated: Why is it hard to validate. Where does the validation fail? How is it possible to "trick" a good implementation (Example: wrap of primitives can be "tricked" with 'return new Wrapper(instancevariable)'...) 
 
 \subsection*{Validation of Rule 1}
-The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line, because in most languages the indentation does not affect the semantic of the source code. Jeff Bay's rule is very easy to imageine for the developer, however, from a tooling aspect, the rule is imprecise: Formatting can be changed by the devleoper. In his paper Jeff Bay presumes that an according formatter was used to format the source coe. Most modern \acf{IDE}s apply a standard formatter to determine the indentations. This tool will analyzse the \acf{AST} structure and therefore be independant from formatting. However to validate the \acf{AST}, the tool needs to know which statements usually cause their childnodes to be indented. Therefore the standard indentations of the eclipse rule will be assumed.
+The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line, because in most languages the indentation does not affect the semantic of the source code. Jeff Bay's rule is very easy to imageine for the developer, however, from a tooling aspect, the rule is imprecise: Formatting can be changed by the devleoper. In his paper Jeff Bay presumes that an according formatter was used to format the source coe. Most modern \acf{IDE}s apply a standard formatter to determine the indentations. This tool will analyzse the \acf{AST} structure and therefore be independant from formatting. However to validate the \acf{AST}, the tool needs to know which statements usually cause their childnodes to be indented. Therefore the standard indentations of the Eclipse rule will be assumed.
 \\
 
 As seen in example \ref{listing:rule1example1}, the violation occurs in the \textit{count} method at line 13. Because the for-statement will cause it's child statement to be indented, it is causing the violation of the rule. Obiously all statements within the loop, therefore all chilnodes in the \acf{AST} will also violate the rule. The refactored solution, shown in \ref{listing:rule1example2} does not violate the rule. 
@@ -773,111 +778,115 @@ Firstly the algorithm has to find out which statements contain an expression tha
 
 The second step is to analyze the extracted expressions and determine how many dots are contained in each expression. Therefore all sub expressions of each expression have to be extracted. When doing so, the number of expressions containing a dot have to be examined. This number of those expression coming with a dot will be counted. 
 \\
+
 The result is the numbe of dots for each expression. When each expression coming with a dot of the top level statement was extracted and the overall number of dots within these expression was counted, the sum of dots within the top level statement results. 
 \\
 
-As already announced in the introduction of this evaluation chapter, the terms of the \acf{JLS} (which have very similar names like the object representations in the eclipse ast representation) will be used during this evaluation. 
+As already announced in the introduction of this evaluation chapter, the terms of the \acf{JLS} (which have very similar names like the object representations in the Eclipse \acf{AST} representation) will be used during this evaluation. 
 \\
 
-Usually, one line is an expression statement with a ;. For example: \textit{System.out.println("Object Calisthenics");}. The representation in the \acf{JLS} is ExpressionStatement. As already said, there are also more sophisticated structures like loops and conditions, which at least partly, also represent a line but are not covered by the expression statement. These are for example the WhileStatement or the TryStatement. The examination of those top level statements is the first step and is described in the following.
+Usually, one line is an expression statement with a semicolon ";". For example: \textit{System.out.println("Object Calisthenics");}. The representation in the \acf{JLS} is ExpressionStatement. As already said, there are also more sophisticated structures like loops and conditions, which at least partly, also represent a line but are not covered by the ExpressionStatement. These are for example the WhileStatement or the TryStatement. The examination of those top level statements is the first step and is described in the following.
 \\
 
 All these different kinds of statements are described by a general Statement. What follows is a classification of statements in two groups: The first group consists of the number of statements that have further expressions to be analyzse ("top leve statements") and the second group consists of the number of statements that do not have to examined for more expressions because they do not contain any expressions. 
 \\
 
-The list contains a short explanation why the listed statements are "top level statements".
+The list contains a short explanation why the listed statements are part of the group of top level statement.
 \\
 
 \begin{description}
-  \item[ExpressionStatement] The statement has the following structure: \textit{ StatementExpression ;}. A StatementExpression simply is an Expression and wraps every expression that is a direct child of a statement. Such a StatementExpressio is usually in one line and the number of dots in the expression, wrapped directly by statement expression, shall not be exceeded.
-  \item[WhileStatement] The WhileStatement  has the following structure: \textit{while ( Expression ) Statement}. In the condition part of the statement, which is usually one line, an expression occurs.
-  \item[DoStatement] The DoStatement has the following structure: \textit{do Statement while ( Expression ) ;}. As clearly visible there is an expression part in the while statement. The same valdation rule that was used for the WhileStatement applies here: The number of dots within the expression shall not be exceeded.
+  \item[ExpressionStatement] The statement has the following structure: \textit{ StatementExpression ;}. A StatementExpression simply is an Expression and wraps every expression that is a direct child of a statement. Such a StatementExpression is usually in one line and the number of dots in the expression, wrapped directly by statement expression, shall not be exceeded.
+  \item[WhileStatement] The WhileStatement  has the following structure: \textit{while ( Expression ) Statement}. The conditional part of the while statement is usually part of a single line. If this conditional part contains more than one dot a violation shall occurs.
+  \item[DoStatement] The DoStatement has the following structure: \textit{do Statement while ( Expression ) ;}. Like the WhileStatement the DoWhileStatement also has a conditional part. The while part of the statement is usually also written in a single line. The same valdation rule that was used for the WhileStatement applies here: The number of dots within the expression shall not exceed one.
   \item[ForStatement] The ForStatement has the following structure: \textit{for ( [ ForInit ]; [ Expression ] ; [ ForUpdate ] ) Statement  
-  }. The ForInit part is described by the structure \textit{Expression \{ , Expression \}} and the ForUpdate  part is described by the structure \textit{ Expression \{ , Expression \}}. Because the three expression parts in the parentheses are usually written in one line, the total number of those statements shall not be exceeded.
-  \item[EnhancedForStatement] The EnhancedForStatement has the following structure: \textit{for ( FormalParameter : Expression ) Statement }. As commonly known the expression in paranthesis is in one line. Therefore the Expression part has to be analyzed.
-  \item[IfStatement] The IfStatement has the follwing structure: \textit{if ( Expression ) Statement [ else Statement]}. Like in the while and do statement, the expression in paranthesis shall be analyzed. 
-  \item[AssertStatement] The AssertStatement  has the following structure: \textit{assert Expression [ : Expression ] ;}. There are two expressions which both have to be analyzed. The number of dots in both expressions shall not be higher than one. The first part is called the first expression of the assert statement, and the second part is called message. Because both aprts are usually written in one line, the total number of dots in both expressions shall not exceed one.
-  \item[ConstructorInvocation] The ConstructorInvocation has the following structure: \textit{this ( [ Expression \{ , Expression \} ] ) ;}. Because this statement is usually in one line, the number of dot in all expressions within the statement shall not be exceeded.
+  }. The ForInit part is described by the structure \textit{Expression \{ , Expression \}} and the ForUpdate  part is described by the structure \textit{ Expression \{ , Expression \}}. Because the three expression parts in the parentheses are usually written in one line, the total number of those statements shall not exceed one. 
+  \item[EnhancedForStatement] The EnhancedForStatement has the following structure: \textit{for ( FormalParameter : Expression ) Statement }. As commonly known the expression in paranthesis is in one line. Therefore the Expression part has to be analyzed and it has to checked if it contains more than one dot.
+  \item[IfStatement] The IfStatement has the follwing structure: \textit{if ( Expression ) Statement [ else Statement]}. Like in the while and do statement, the expression in paranthesis shall be analyzed because it is normally written in its own line. 
+  \item[AssertStatement] The AssertStatement  has the following structure: \textit{assert Expression [ : Expression ] ;}. There are two expressions which both have to be analyzed together. The number of dots in both expressions shall not be greater than one. The first part is called the "first expression of the assert statement"\ref{JLS} and the second part is "called message"\ref{JLS}. Because both aprts are usually written in one line, the total number of dots in both expressions shall not exceed one.
+  \item[ConstructorInvocation] The ConstructorInvocation has the following structure: \textit{this ( [ Expression \{ , Expression \} ] ) ;}. Because this statement normally writtein in a single line, the number of dot in all expressions within the statement shall not exceed one.
   \item[SuperConstructorInvocation] The SuperConstructorInvocation has the follwoing structure: \textit{[ Expression . ][ < Type \{ , Type \} > ] super ( [ Expression \{ , Expression \} ] ) ;}. Because the statement is usually written in one line, all expressions have to be analyzed to have a maximum of one dot in all statements.
   \item[ReturnStatement] The ReturnStatement has the following structure: \textit{return [ Expression ] ;}. The statement is usually written in one line and consitst of one expression that has to be analyzed.
   \item[SwitchCase] The structure of a SwitchCase is the follwing: \textit{ case Expression  : }. The expression is usually consistend of ExpressionStatements. The expression of this statement, which is usually in one line, has to be analyzed further.
-  \item[SwitchStatement] The structure of a SwitchStatement is the following: \textit{ switch ( Expression ) \{ \{ SwitchCase | Statement \} \} }. The expression in parantheses is usually written in one line, and shall be analyzed further. 
-  \item[SynchronizedStatement] The structure of a SynchronizedStatement is the following: \textit{  synchronized ( Expression ) Block }. The expression part in parantheses is usually written in one line and shall be analyzed.
-  \item[ThrowStatement] The structure of a count(node.getExpression(), node); is the following: \textit{throw Expression ;}. This throw expression is usually in one line and shall be analyzed further.
+  \item[SwitchStatement] The structure of a SwitchStatement is the following: \textit{ switch ( Expression ) \{ \{ SwitchCase | Statement \} \} }. The expression in parantheses is usually written in one line. This expression shall not contain more than one dot.
+  \item[SynchronizedStatement] The structure of a SynchronizedStatement is the following: \textit{  synchronized ( Expression ) Block }. The expression part in parantheses is usually written in one line and the number of dots of this expression shall be analyzed.
+  \item[ThrowStatement] The structure of a ThrowStatement is the following: \textit{throw Expression ;}. This throw expression is usually in one line and shall be analyzed further.
 \end{description}
 
-All other statement do not contain directly expressions to be analyzed. Some of them do not contain any expressions and other contain statement that themselves have child statements to be analyzed. However, because of the \acf{AST} traversal, these substatement will be visited anyways. However, the statement with no directly related subexpressions are: Block, BreakStatement, ContinueStatement, EmptyStatement, LabeledStatement, TryStatement, TypeDeclarationStatement, VariableDeclarationStatement and WhileStatement.
+All other statement do not contain directly expressions. Therefore they do not have to be analyzsed further. Some of them do not contain any expressions and other contain statement that themselves have child statements that are already analyzed. However, because of the \acf{AST} traversal of the Eclipse framework, these substatements will be visited. The statements with no directly related subexpressions are: Block, BreakStatement, ContinueStatement, EmptyStatement, LabeledStatement, TryStatement, TypeDeclarationStatement, and VariableDeclarationStatement.
 \\
 
-As just shown, the top level statements contain expressions. Within the subtree of these top level statements, only a one expression containing a dot is allowed.
+As already explained in the introduction of the evaluation of this rule, the top level statements contain expressions. Within the subtree of these top level statements, only a one expression containing a dot is allowed.
 \\
 
-What follows is the description of the second step: the count of expressions in the subtree of the "line statement". In the algorithm of the prototype us the eclipse framework, each type expression has to extract its subexpressions by using different methods. In the abstract representation of the \acf{AST}, however, the algorithm is simpler: The number of expressions containing a dot has to be counted. If it exceeds one, a violation in the "line statement" shall occur. 
+What follows is the description of the second step: the count of expressions in the subtree of the top level statement. In the algorithm of the prototype of the Eclipse framework, each type expression has to extract its subexpressions by using different methods. This is because each expression has a different type and some of those type have additional methods to retrieve the expressions of the statement. However, In the abstract representation of the \acf{AST}, the algorithm is much simpler: The number of expressions containing a dot has to be counted. If it exceeds one, a violation will occur. If the rule is violated a dot has to be removed somewhere in the statement. Therefore the statement is used to report a violation.
 \\
 
-The main question of the second step is which expressions contain a dot. Many expression do contain a dot, however, not all of them are valid. As described in chapter \ref{Description}, only method calls and field accesses are important for the rule. Dots in other expressions, for example a dot in a double value like \textit{26.3} are not important for the rule. The following shows all expression type that contain a dot that is relevant for a proper rule validation. 
+
+The main question of the second step is: which expressions contains a dot? Many expression contain a dot, however, not all of them are valid. As described in chapter \ref{Description} only method calls and field accesses are adressed by Jeff Bay. Dots in other expressions, for example a dot in a double value like \textit{26.3} are not important for the rule. The following list shows all expression types that contain a dot which is relevant for a proper rule validation. 
 \begin{description}
   \item[MethodInvocation] The expression type MethodInvocation contains a dot that is relevant for the proper implementation of tool support. It has the follwing structure: \textit{[ Expression . ] [ < Type { , Type } > ] Identifier ( [ Expression { , Expression } ] ) }. In this case, the dot is the dereferencing operator. It is referencing method and therefore relevant for the rule.
-  \item[SuperMethodInvocation] The SuperMethodInvocation has a very similar structure like MethodInvocation, and is not expaned further.
-  \item[FieldAccess] The expression type FieldAccess contains a dot that is also relevant for tool support. A FieldAccess expression has the follwing structure: \textit{Expression . Identifier}. The field access is a dot that is relevant for the rule because it is an accessnig a differen object space.
-  \item[SuperFieldAccess] The SuperFieldAccess has a very similar structure like FieldAccess, and is not expaned further.
-  \item[TypeLiteral] A TypeLiteral has the following structure: \textit{( Type | void ) . class}. Even if it does not reference a field or a method, it accesses the class of a reference. This is also a kind of reference that counts as an access to another area of the application. Therefore the dot of this expression shall count. The expression is relevant for the tool
-  \item[QualifiedName] Similar to the type literal, the QualifiedName is also accessing a different area of the application. Therefore the dot in the structure, which is \textit{Name . SimpleName}, is also counted. This encourages the developer to use SimpleName directly. SimpleName does not contain any dots, but is described by an identifier.
+  \item[SuperMethodInvocation] The SuperMethodInvocation has a very similar structure like MethodInvocation, and is not illustrated further.
+  \item[FieldAccess] The expression type FieldAccess contains a dot that is also relevant for implementing tool support. A FieldAccess expression has the follwing structure: \textit{Expression . Identifier}. The FieldAccess's dot is relevevant because it is a dereferencing operator and conduction a direct access to a field of another object.
+  \item[SuperFieldAccess] The SuperFieldAccess has a very similar structure like FieldAccess therefore no further explanation is given.
+  \item[TypeLiteral] A TypeLiteral has the following structure: \textit{( Type | void ) . class}. Even if it does not reference a field or a method, it accesses the class of the referenced object. This is also a kind of reference that counts as an access to another area of the application. Therefore the dot of this expression shall count. The dot of this expression is relevant for the tool because it is representing access on an object.
+  \item[QualifiedName] Similar to the type literal, the QualifiedName is also accessing a different area of the application. The structure of the QualifiedName is \textit{Name . SimpleName}. The dot is also describing an access to another namespace, therefore the dot of this expression will also be counted. This encourages the developer to use a simple name directly and to resolve the QualifiedName, for example by using \texit{import}s in Java.
 \end{description}
 
 All other type of expression are not relevant for the tool, because they do not represent the access on a foreign field, the call on a foreign method or the separation of different namespaces.
 \\
 
-The two steps showed how it is possible to find the number of dots in statements that are usually in one line. The advantages of the resulting algorithm solution is the fixted structure of the \acf{AST}: The actual formatting of the code does not matter. Independently of the code formatting, the \acf{AST} structure analysis always works. It will find the same violations when having two pieces of source code with a different formatting but describing the same \acf{AST}. This makes the \acf{AST} analysis robust and the developer cannot remove violations by separating two dots with a new line.
+The two described steps showed how it is possible to find the number of dots in statements that are usually in one line.
+The advantages of the resulting algorithm lies in the fixted structure of the \acf{AST}: The actual formatting of the code does not matter for the tool. Independently of the code formatting, the \acf{AST} structure analysis always works. It will furtherore find the same violations when having two pieces of source code with a different formatting but describing the same \acf{AST}. This makes the \acf{AST} analysis robust and the developer cannot remove violations by separating two dots with a new line.
 \\
 
-The disadvantage of the rule is that the rule is not precicely defined from the view of a tool by Jeff Bay in \ref{oc2008}. Even if the developer can imagin very clearly what the purpose of the rule and the resulting code structure is, there are many possibilities to elude the rule. Take for example the QualifiedName, which was not addressed by Jeff Bay. However, this expressionalso seperates two different name spaces and can also be included within the rule. This and other assumptions presumed to conduct a proper tool validation, where expalained in this chapter. All in all, the described approach works fine in the prototype. When accepting the assumptions that describe the expressions containing a dot more precicely, the rule violation is very precice and works fine.
+The disadvantage of the rule is that the rule is not precicely defined from the view of a tool by Jeff Bay in \ref{oc2008}. Even if the developer can imagine very clearly what the purpose of the rule and the resulting code structure is, there are many possibilities to elude the rule. Take for example the QualifiedName, which was not addressed by Jeff Bay. However, this expression also seperates two different name spaces and can also be included within the rule. This and other assumptions presumed to conduct a proper tool validation were expalined in this chapter. 
+\\
+
+All in all the described approach works fine in the prototype. When accepting the assumptions that describe the expressions containing a dot more precicely, the rule violation is very precice and works fine.
 \\
 
 \subsection*{Validation of Rule 5}
-Rule 5, "don't abbreviate" is a very simple rule. It's basic statement is about the use of abbreviation.
-Jeff Bay permits all abbreviations and states that names should only consist of two names. He states that this structure is useful for methods and types. However, this structure is also useful for variable names.
-\\
-Therefore the tool check type, variable and method names. In Java, type names usually start with a capital letter. Variable names and method names should by convention start with a small letter. Futhermore both should only consist of two words. 
-Hence, in the type name two capital letter are allowed. Furthermore the name only consists of two word, thereore it only conistis of other capital letter. The resulting regex matching the use of capital and small initial letters looks like the following: \textit{([A-Z][a-z]+)\{1,2\}}. This structure is called "CamelCase". Regexes are commonly known. More information on the structure of regexes can be found in \cite[Regex]{wiki}.
+Rule 5, "don't abbreviate" is a very simple rule. It's basic statement is about the use of abbreviations.
+Jeff Bay permits all abbreviations and states that names should only consist of two words. He furthermore explains why this structure is useful for methods and types. However, this structure is also useful for variable names. Therefore this tool will conduct a analysis on type, method and variable names
 \\
 
-In contrast to the type definition, variable and method declarations start with a lower case letter. They only contain one more upper case letter. Because in this structure there is only one upper case letter, one could call this "dromedar case". In comparision to "CamelCase" this is not a commonly used expression. The regex matching the "dromedar" case is the following: \textit{([a-z]+[A-Z]\{0,1\}[a-z]+)}.
+In Java, type names usually start with a capital letter. Variable names and method names should by convention start with a small letter. Futhermore both should only consist of two words. 
+Hence, in the type name two capital letter are allowed. Furthermore the name only consists of two words, therefore it only conistis of other capital letter. In addition every capital letter has to be followed by a small letter, otherwise it could be an abbreviation. The resulting regular expression matching the use of capital and small initial letters looks like the following: \textit{([A-Z][a-z]+)\{1,2\}}. This structure is called "CamelCase". regular expressions are commonly known. More information on the structure of regular expressions can be found in \cite[regular expression]{wiki}.
 \\
 
-Both, the regex for types and the regex for variable and method names, abbreviations shall not occur. This is also guaranteed by the regexes. Both force that a capital letter is always followed by a capital letter.
+In contrast to the type definition, variable and method declarations start with a lower case letter. They only contain one more upper case letter. As the type name, the capital letter of a variable or method name also has to be followed by a small letter otherwise the capital letter could represent an abbreviation. Because in this structure there is only one upper case letter, one could call this "dromedar case". In comparision to "CamelCase" this is not a commonly used expression. Anyway the usage of the word dromedar case and camel case describe the structure very well. The regular expression matching the structure for method and variable names is the following: \textit{([a-z]+[A-Z]\{0,1\}[a-z]+)}.
 \\
 
-If a name does not match the given regexes, a violation has to occur.
+Both, the regular expression for types and the regular expression for variable and method names, mustn't allow abbreviations. This is also guaranteed by the regular expression: After every capital letter, a small letter has to follow. This regulation is part of both regular expressions.
 \\
 
-Even with this regex restriction, the developer can still use very long variable, method and type names. To prevent the developer from doing this, the tool introduces a limitation for the lenght of such names. If the name exceeds the length of 15 characters, a violation of the rule will occur.
+
+Even with this regular expression restriction, the developer can still use very long variable, method and type names. To prevent the developer from doing this, a limitation in length is proposed by this tool. If a name exceeds the length of 15 characters a violation of the rule will occur even if the name matches the two presented regular expressions.
 \\
 
-All in all the concrete restrictions of the tool that represent the rule, model the rule quite good. They continuously remind the developer to use short names and no abbreviations. However, because there is no semantic check, the tool can't validate if the developer user proper namings. Even worse, there is no check possible examining if the developer used arbitraty letter, like \textit{AbcdefGhi} for example.
+If a name does not match the given regular expressions, a violation has to occur. The position of the violation is very clear when applying this rule: It simply occurs at the position where the type, method, or variable name appeared. 
 \\
 
-All in all, the provided regex match the purpose of the rule very good. Also the implementation of the regex and the check on the lenght of a maximum of 15 characters is fully working in the prototypical implementation.
+The presented types of violation do not save the developer from using unreasonable naming. Because there is no semantic check, the tool can't validate if the developer uses proper namings. Even worse, there is no check examining if the developer used arbitraty letter, like \textit{AbcdefGhi} for example. Using this name as a type name can't be validate by the tool with the algorithm currently proposed. A dictionary or a similar structure could be used to cover this functionality. But even then, the developer can use existing words that describe the entity or method inapplicably.
+\\
+
+All in all the concrete restrictions of the tool that represent the rule, model the rule successfully. They continuously remind the developer to use short names and prevent him from using abbreviations. 
+\\
+
+Even though, the regular expression and the restriction of length, match the rule very closely, and therefore represent the purpose of the rule very good. Also the implementation of the regular expression and the check on the length of a maximum of 15 characters is fully working in the prototypical implementation.
 
 
 \subsection*{Validation of Rule 6}
- - counting is hard vecause only type access. 
- - countins doesn't make sense in ast
-- same "line expressions" (reference to 4)
- - count nubmer of them
-  - determine number of expressions, for example 40. ELss than propose 50 by bay, because no method desclarations and class declarations
- - quality: very good, advantage: empy spaces and imports don't count. The structure of the type itself (which was adressed by bay) is checked
-
-Rule 8, "keep all entities small", restricts the number of lines in a class.
+Rule 6, "keep all entities small", restricts the number of lines in a class.
 \\
 
-By simply putting mutliple statements in the same line the rule can be eluded. Therefore it is more applicable to count the number of statements. The concrete formatting will not be considered. Counting the number of statement of a type is quite easy: The subtree of a type declaration mustn't contain more than a specific number of statements. Every statements that is more than 50 should be reported as a violation. 
+One way to create tool support for this rule is to create the lines of code within every given \textit{.java} file. but then the developer could elude the purpose of the rule by putting multiple statements in the same line. Therefore it is more applicable to count the number of statements within each declared class. Hence, the concrete formatting will not be considered. Counting the number of statement of a type is quite easy: The subtree of a type declaration mustn't contain more than a specific number of statements. Every statements that is more than 50 should be reported as a violation. 
 \\
 
-Because the eclipse framework traverses the \acf{AST} with a greedy algorithm, statements that are later within the document are visited later in the framework. Hence the prototypical implementation counts the number of statements and reports every statement as soon as the count exceeded 50. 
+Because the Eclipse framework traverses the \acf{AST} with a greedy algorithm, statements that are later within the document are visited later in the framework. Therefore the prototypical implementation counts the number of statements and reports every statement used after the 50est statement.
 \\
 
-As described, algorithm counts all statements within a subtree. When doing so the algorithm has to know what kind of statements increase the number of "lines". Definetely there are some kind of statements that should not count because they are not related to the actual size of the entity. Those statements are, for example, documentation blocks or comments. 
+As described, the algorithm counts all statements within a subtree. When doing so the algorithm has to know what kind of statements are reprenting a line. These statement increase the number of "lines". Definetely there are some kind of statements that should not count as a line, because they are not related to the actual size of the entity. Those statements are for example documentation blocks or comments. 
 \\
 
 For the stated reasons, the following types of statements are counted by the algorithm: ExpressionStatement, WhileStatement, AssertStatement, ConstructuorInvocation, DoStatement, ForStatement, IfStatement, ReturnStatement, SuperConstructorInvocation, SwitchCase, SwitchStatement, SynchronizedStatement, ThrowStatement, FieldDeclaration, MethodDeclaration, and ImportDeclaration.
@@ -886,25 +895,25 @@ For the stated reasons, the following types of statements are counted by the alg
 These are all statements found during this report that have a semantic meaning and are actually part of the coding. Furthermore these statements are part of a single line using most standard formatting tools.
 \\
 
-As a result, all important statements are counted. However the algorithm does not reflect the rule precicely. As described in the introduction of this section, the formatting is considered by the rule - the proposed \acf{AST} analysis not considered. The advantages of using the \acf{AST} were already described. However, the original rule is not devaluated in any way: The explanation on number of lines per class is much more conceivable than a number of statements. For tool support counting statements is better because it is more precise and the developer can't trick the tool by changing the formatting.
+As a result, all important statements are counted. However the algorithm does not reflect the rule precisely. As described in the introduction of this section, the formatting is considered by the rule - the proposed \acf{AST} analysis not considered. The advantages of using the \acf{AST} were already described. However, the original rule is not devaluated in any way: The explanation on number of lines per class is much more conceivable than a number of statements. For tool support counting statements is better because it is more precise and the developer can't trick the tool by changing the formatting.
 \\
 
-As shown this approach is not precisely representing the number of lines of class. The number of allowed statement was set to 50 statements, as the rule proposes. Some statements, like loops or conditionals, use a conclusive brackets to indicate the end of a statement: \textit{\}}. These closing curly brackets are usually written in a separate line. But because they are part of the loop or conditional statement, they are not counted. To mitigate this problem, a future prototype could enable the user to change the maximum number of statements per class from 50 to a user defined value.
+As shown this approach is not precisely representing the number of lines of class. The number of allowed statement was set to 50 statements, as the rule proposes. Some statements, like loops or conditionals, use a conclusive brackets to indicate the end of a statement: \textit{\}}. These closing curly brackets are usually written in a separate line. But because they are part of the loop or conditional statement, they are not counted as a separate line. To mitigate this problem, a future prototype could enable the user to change the maximum number of statements per class from 50 to a user defined value. Because the count 50 is only a guideline making this parameter adjustable is reasonable. This also provides a solution to the formatting problem, stated in the beginnig: If the developer actually want to count comments or empty lines,  his intention is to toughten the rule. Then, he can simply reduce the number of allowed statements to toughen the rule compliance of the rule. 
 \\
 
-All in all the outlined approach reflects the rule very well. The advantages of not having imprecise number of lines per class but a clear \acf{AST} structure was used, which results in the proposed high quality solution.
+All in all the outlined approach reflects the rule very well. The advantages of not having imprecise number of lines per class but a clear \acf{AST} structure was used, which results in the proposed solution.
 
 \subsection*{Validation of Rule 7}
 Rule 7, "don’t use any classes with more than two instance variables", is very easy to validate. In the rule Jeff Bay limits the number of instance variables of a class. 
 \\
 
-According to the \acf{JLS}, a TypeDeclaration nod in the \acf{AST} has, among others, a child FieldDeclaration. The field declaration represents the declaration of a field within a class. With his rule, Jeff Bay limits this number of instance variables to two per type. When analyzing the rule closer, he doesn't limit the number of field declarations, but limits the number of instance variables. Static field declarations, which are defined using the \textit{static} keyword, are no instance variables. The algorithm to determine the number of field of a class simply counts the number of non-static fields of a type declaration. 
+According to the \acf{JLS}, a TypeDeclaration node in the \acf{AST} has  a child FieldDeclaration among other nodes. The field declaration represents the declaration of a field within a class. 
 \\
 
-The described algorithm and \acf{AST} structure assume that the user did not use Java's reflection \acf{API} to change the number of instance variable during runtime. With this assumption the given \acf{AST} structure given when starting the analyzation tool and getting the java source files can be presumed.
+With his rule, Jeff Bay limits this number of instance variables to two per type. When analyzing the rule closer, he doesn't limit the number of field declarations, but limits the number of instance variables. Static field declarations, which are defined using the \textit{static} keyword, are no instance variables. The algorithm to determine the number of field of a class simply counts the number of non-static fields of a type declaration. 
 \\
 
-An \acf{AST} structure that described the definition of a type, could look like the in figure \ref{ast:rule7}. As depicted in the figure, the TypeDeclaration consists of four field declarations. One of them is static and therefore not relevant for the validation. In the type declaration however, there are three instance variables. According to the rule two are allowed, the third one is not allowed anymore. This third field declaration that is too much, is marked in red.
+An \acf{AST} structure that described the definition of a type, could look like the in figure \ref{ast:rule7}. As depicted in the figure, the TypeDeclaration consists of four field declarations. One of them is static, and therefore not relevant for the validation. In the type declaration there are three instance variables. According to the rule two are allowed, the third one is not allowed anymore. This third field declaration, which is too much to satisfy the rule, is marked in red.
 \\
 
 \begin{tikzpicture}
@@ -934,7 +943,8 @@ An \acf{AST} structure that described the definition of a type, could look like 
 The shown strategy to analyze the \acf{AST} structure, is quite simple and effective. 
 \\
 
-The resulting analyzation algorithm for the rule is very effective. The implementation as part of the prototype was successful. During the research, no example was found that this algorithm did not validate successfully. Also the implementation as part of the prototype was successfull. 
+The resulting analysis algorithm for the rule is very effective. The implementation as part of the prototype provided successful validation. During the research, no example was found that this algorithm did not validate successfully. Also the implementation as part of the prototype was successfull. 
+
 
 \subsection*{Validation of Rule 8}
 
@@ -943,35 +953,60 @@ The resulting analyzation algorithm for the rule is very effective. The implemen
 Jeff Bays rule 9, "don't use any getters/setters/properties", the use of public fields and the use of getters and setter is restricted. This section will be devided into multiple part. The first part will explain the AST structure of public fields and the second part will explain the typical structure of getters and setters in detail.
 \\
 
-Properties are field declarations of classes that are available from the outside. Therefore they are public fields, indicated by the public modifier. Therefore the algorithm simply has to find all public fields. In the \acf{AST} the modifiers are stored as part of the field declaration. The definition of a field has the following structure: \textit{\{ ExtendedModifier \} Type VariableDeclarationFragment \{ , VariableDeclarationFragment \} ;}. The modifiers are part of the ExtendedModifier. With the eclipse framework, the modifier can be retrieved and the algorithm simply reports a violation if a field declaration with a public modifier was found. 
+Properties are field declarations of classes that are accessable from the outside - they are not encapsulated and can be changed by every object referencing the object holding the fields. Properties are public fields, indicated by the public modifier. Therefore the algorithm simply has to find all public fields. In the \acf{AST} the modifiers are stored as part of the field declaration. The definition of a field has the following structure: \textit{\{ ExtendedModifier \} Type VariableDeclarationFragment \{ , VariableDeclarationFragment \} ;}. The modifiers are part of the ExtendedModifier. With the Eclipse framework, the modifier can be retrieved and the algorithm simply reports a violation if a field declaration with a public modifier was found. 
 \\
 
-As just described, the second part is about the identification of getter and setters. Therefore it is necessary to analyze and to define the typical structure of getter and setter methods. Getters and setter are commonly known as mutator method \cite{wiki}[Mutator method]. The consist of a setter, the mutator, and the getter, also called accessor. Both methods are used to retrieve or modify the field declaration. Often this is called encapsulation, but as Jeff Bay argued, this is commonly not a good practice. However the discussion of good and bad encapsulation was already evaluated in chapter \ref{Discussion}.
+As just described, the second part is about the identification of getter and setters. Therefore it is necessary to analyze and to define the typical structure of getter and setter methods. Getters and setter are commonly known as mutator method \cite{wiki}[Mutator method]. the setter is called mutator and the getter is called accessor. Both methods are used to retrieve or modify the field declaration. Often this is called encapsulation, but as Jeff Bay argued, the use of getters and setters is commonly not a good practice. However the discussion of good and bad encapsulation and the disadvanteges of getters and setters in a domain specific object model were already described and evaluated in chapter \ref{Discussion}.
 \\
 
 Such a typical getter and setter method might look as shown in \ref{listing:rule9example1:speaker}. The speaker example was already illustrated in the previous chapter \ref{describe:rule9}. However, the structure of the getter and setter methods is depicted in the listing. 
 \\
 
-A getter method typically has the following signature: \textit{<modifiers> <fieldtype> <methodname>()}. In most cases, the modifiers are public, not static, and the method name is \textit{get<Fieldname>}. One way to determine if a method is a getter method is to analyze the method's signature. Unfortunately there several disadvantages when doing so. Firstly, there is no guarantee that the developer actually names the getter method as usually: \textit{get<Fieldname>}. He might use a shorter name to represent the field name. Or, if class represents a calculation, he might just name it \textit{retrive} or {result}. 
+A getter method typically has the following signature: \textit{<modifiers> <fieldtype> <methodname>()}. In most cases, the modifiers are public, not static, and the method name is \textit{get<Fieldname>}. One way to determine if a method is a getter method is to analyze the method's signature. Unfortunately there several disadvantages when doing so. Firstly there is no guarantee that the developer actually names the getter method as usually: \textit{get<Fieldname>}. He might use a shorter name to represent the field name. Or, if class represents a calculation, he might just name it \textit{retrive} or {result}. 
 \\
 
-Another way to analyze a getter method is to analyzse the complete structure of the method. Then not only the signature but also the whole structure of the method body would be analyzed. Within the body only one statement would be allowed: \textit{return <field>;}.However, there is no guarantee that the getter method doesn't conduct checks on the field value before returning it. For example a integrity check. Such a modified getter method is shown in listing \ref{listing:rule9example3}. In this example the if conditional is only a representation for any other integrity check. Also there are better ways to conduct such an integrity check, but as already said the if conditional represents any other statement, which is usually an integrity check. When looking at such such a getter method with an integrity check the method would still be a getter method but the body's structure would have changed significantly. It would not be recognized as a getter method when performing a structural check including signature and body.
+Another way to analyze a getter method is to analyze the whole \acf{AST} structure of the method. Then not only the signature but also the whole structure of the method body would be analyzed. Within the body only one statement would be allowed: \textit{return <field>;}. 
 \\
 
-The getter method could be distinguished by the signature or by body and signature. As just illustrated, this way is not reliable. During this research, a better way was found to determine if a method is a getter method. 
+When just checking on the type of the field, there is no guarantee that the getter method actually returns the field instance. It could also return an arbitraty object with the same type. Therfore a syntactical check using type infomation seems to be not enough to cover the proper validation of the rule. 
 \\
 
-Typically a getter method returns a field value. Because with the eclipse framework it is also possible to get semantic information, it can be determined if a method returns a field value directly. Hence, there might also be other statements within the getter method. 
+Furthermore there is no guarantee that the getter method doesn't conduct checks on the field value before returning it. For example an integrity check. Such a modified getter method is shown in listing \ref{listing:rule9example3}. In this example the if conditional is only a representation for any more sophisticated integrity check. Obviously there are better ways to conduct such an integrity check, but as part of this dogmatic example it represents a more sophisticated check sufficiently. When looking at such such a getter method with an integrity check the method would still be a getter method but the body's structure would have changed significantly. It would not be recognized as a getter method when performing a structural check including signature and body.
 \\
 
-As just described the getter method might contain arbitratry integrity checks and the name of the method might not match the typical name for a getter method. By contrast, a getter method is distinguished by the fact that it directly returns an object's field. The return statement has to be part of a non-static and non-private variable. Furthermore it has to return a field of the object directly. This is the definition of the semantical structure of a getter method.
+The getter method could be distinguished by the signature or by body and signature. Because of the just stated reasons, this way of analyzing an \acf{AST} is not reliable. During this research, a better way was found to determine if a method is a getter method. 
+\\
+
+Typically a getter method returns a field value. Because with the Eclipse framework it is also possible to get semantic information. With the help of this semantic information it is possible to determined if a method returns a field value directly. Hence, there might also be other statements within the getter method. 
+\\
+
+As just described the getter method might contain arbitratry integrity checks and the name of the method might not match the typical name for a getter method. But a getter method is distinguished by the fact that it directly returns an object's field. The return statement has to be part of a non-static and non-private variable. Furthermore it has to return a field of the object directly. This is the definition of the semantical structure of a getter method, when regarding integrity checks. This approach also ensures that the getter not only return an object of the same type but actually returns the field. 
+\\
+
+Using a semantical check to analyze getter methods has proven to be a reliable way to discover getter and setter methods.
 \\
 
 When looking at setter methods the similar problem occur. As the getter method, a setter method has a typical structure: \textit{<modifiers> void <methodname>(<fieldtype> <variablename>)}. The methodname is typically \textit{setFieldname}. When conducting a syntactical check on the method's structure, the same problems as the syntactical check of the getter method occur. There is no guarantee for the method name to match the convention, the signature only does not give enough information if the method is actually behaving like a setter method, and lastly doing a full check of signature and body does not regard integrity checks.
 \\
 
 During this report rules for the semantical structure of setter methods where found. These rules are similar to the just described rule of the semantical structure of getter methods and are described in the following.
+\\
 
+A setter method manipulates field directly. According to \cite{wiki}[Mutator method], a setter method asserts the value of the parameter given to a field of the object. Furthermore a setter method has only one parameter and usually returns the \textit{void} type. The typical structure of a setter method has only one parameter: the value to use for updating the field reference. Like the typical structure of a getter method, integrity checks might be performed on the given parameter before asserting the value. Therefore a typical structure is shown in \ref{listing:rule9example1}. A setter method having an integrity check is shown in \ref{listing:rule9example3}. Similar to the \acf{AST} analysis of the getter method, the setter method also uses semantic analysis to reveal direct assertions of fields to parameter.
+\\
+
+The algorithm to detect setter methods currently can be bypassed easily by simple adding a second parameter: Then the method would not be recognized as a setter method. When thinking about Jeff Bay's idea behind the rule, it would also be sensible to generally permit changing a field reference with parameter - except for the constructor, which some also view as a method. 
+\\
+This second approach is viable very easily. When removing the check of the number of parameters, the analysis of assertions remains. With this simplified rule, even more violations of the encapsulation principle can be found. 
+\\
+
+During this research, one way of bypassing getter methods was found. The next section will comment the solution for getter methods by explaining the bypassing by solution.
+
+All in all the \acf{AST} structure analysis algorithm found during this research detects getters, setters and properties very efficiently. The use of the prototypical implementation of the rule given in this section showed that the concrete validation rules evaluated in for this ninth rule detect properties, getters and setter effectively. 
+
+
+
+%--------------------------------------
 
 %asdf
 \section{Result of the Evaluation}
