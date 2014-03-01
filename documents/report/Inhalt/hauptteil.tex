@@ -259,7 +259,7 @@ In order to increase the reusability and conduct a better separation of concerns
 There are several ways to reduce the usage of if/else conditionals and increase the overview and readability of the coding. The three ways of doing so are: early return, the null object pattern and the strategy or state pattern. These three approaches are exemplified in the next paragraph. 
 
 \subsection*{Early Return}
-Early return is a very simple way of decreasing the amount of if/else conditionals. Its goal is mainly based on removing unused else keywords. Listing \ref{listing:rule2examplenull:main} shows method with conditionals. The code also contains "else" keywords, even if they would not be necessary. When the block of the first if clause would use the return statement to early-return from the method, the else keyword would not be needed. The version of the class using an early reuturn is shown in \ref{listing:rule2examplenull2:mainnull}.
+Early return is a very simple way of decreasing the amount of if/else conditionals. Its goal is mainly based on removing unused else keywords. Listing \ref{listing:rule2examplenull:main} shows method with conditionals. The code also contains "else" keywords, even if they would not be necessary. When the block of the first if clause would use the return statement to early-return from the method, the else keyword would not be needed. The version of the class using an early reuturn is shown in \ref{listing:rule2examplenull:mainnull}.
 \\
 
 The second example, shown in \ref{listing:rule2example2}, depicts the solution that was just proposed. As clearly visible there is no else keyword used anymore, but the control is also done by early returns. The advantage of this approach occurs when reading through the method step by step. When seeing a return statement while reading through the method, the developer knows immediately what happens. The reader of the method knows that no other statement on the bottom of the method body will be executed. It is very clear that the method passes the control and that the execution is continued in the method of the initially caller of the method. There is no long decision making by conditionals which navigate through the different cases. In contrast, after the improvement of the source code there is a clear end of the method -- simliar to the semicolon or the dot in a sentence. Therefore Jeff Bay states that the the practice of using early returns increases the  readablility. 
@@ -599,9 +599,18 @@ To make the explanation of the of the concrete validation easier and to focus on
 
 \section{Evaluation of Rule Validation}
 \label{e:evaluation}
+This section will dive deeper into the validation of each rule. If a working algorithm for finding a rule violation was found, it will be explained.
+\\
+
+In this chapter the word "algorithm" will be used - even if no source code of flow diagram will be shown. The procedure or the violationg \acf{AST}  structure will be described. This detailed description replaces the need to depict a step by step algorithm. Another advantage of explaining the violations and rule validations with example and \acf{AST} structures is that the result of this evaluation will not depend on a concrete language or framework. 
+\\
+
+Furthermore each secito nof this chapter will validate the quality of the algorithm and discuss cases in which the algorithm indicates a wrong violation. Such a wrong violation indication can be either a violation indication where there is actually no rule violation, or a missing violation indication. Therefore each chapter will give information about the quality of the rule violation. If similarities of the different rules in terms of the validation algorithm were be found it will elucidate those. If no adequate rule validation algorithm was found, occurred problems will be explained.
+\\
+
+In the end, the quality and the accuracy of each rule validation algorithm will be summarized. 
 %=== Say that the prioritization of the rules (in terms of the rule validation) and the "ranking" is given in the end. The sections of this chapter are "rule specific", even if the next subsections refer to each other.
-This section will dive deeper into the validation of each rule. If an algorithm for a rule violation was found, it will be explained. Furthermore it will validate the quality of the algorithm and depict cases in which the algorithm indicates a wrong violation. Such a wrong violation indication can be either a violation indicaton where there is actually no rule violation, or a missing violation indication. Therefore each chapter will give information about the quality of the rule violation. If similarities of the different rules, in terms of validation, could be found it will elucidate those.
-If no adequate rule validation algorithm was found, occurred problems will be explained.
+
 
 %=== FOREACH Rule/Subsection IN Rules/Subsections:
 
@@ -622,19 +631,23 @@ If no adequate rule validation algorithm was found, occurred problems will be ex
 % - If there are cases where the rule cannot be validated: Why is it hard to validate. Where does the validation fail? How is it possible to "trick" a good implementation (Example: wrap of primitives can be "tricked" with 'return new Wrapper(instancevariable)'...) 
 
 \subsection*{Validation of Rule 1}
-
-% - what is the concrete violation?
-The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line - therefore this rule in imprecise. Most modern \acf{IDE}s apply a standard formatter to determine the indentations. Therefore the standard indentations of the eclipse rule will be assumed.
+The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line, because in most languages the indentation does not affect the semantic of the source code. Jeff Bay's rule is very easy to imageine for the developer, however, from a tooling aspect, the rule is imprecise: Formatting can be changed by the devleoper. In his paper Jeff Bay presumes that an according formatter was used to format the source coe. Most modern \acf{IDE}s apply a standard formatter to determine the indentations. This tool will analyzse the \acf{AST} structure and therefore be independant from formatting. However to validate the \acf{AST}, the tool needs to know which statements usually cause their childnodes to be indented. Therefore the standard indentations of the eclipse rule will be assumed.
 \\
-As seen in example \ref{listing:rule1example1}, the violation is in the \textit{count} method in line 13. In this example, the for-statement is violating the rule, because all statements within will validate the rule. The better solution, shown in \ref{listing:rule1example2} does not violate the rule. 
-\\
-The rule states that the indentation is on a method level. Therefore this rule has to examine the levels of indentation on method level. Hence, when anlyzing the \acf{AST}, only the subtree of the node \textit{MethodDeclaration} has to be analyzed, all other parts of the \acf{AST} can be ignored. 
-\\
-Each node that has sub nodes which are indented, have to be analysed. This analyzation has to be conducted on a method level. The number of indentation is restricted to one indentation per method maximum. The simplified illustration of an \acf{AST} in \ref{ast:rule1} shows a structure that is not allowed. All nodes named "Indenting" indicate node which do not have a child node that causes an indention. All node named "Non indenting" indicate a node which has child node and therefore causes an indention.
 
-In the graphic, all node causing it's children to be indent are marked black. All nodes that are not causing it's children to indent marked in blue. 
+As seen in example \ref{listing:rule1example1}, the violation occurs in the \textit{count} method at line 13. Because the for-statement will cause it's child statement to be indented, it is causing the violation of the rule. Obiously all statements within the loop, therefore all chilnodes in the \acf{AST} will also violate the rule. The refactored solution, shown in \ref{listing:rule1example2} does not violate the rule. 
+\\
 
-As depicted, the node on the right is a node which indents it's children. The node is a direct or indirect child of an indenting statement. Therefore all substatements of this node will be determined. Because most indenting statements do not make sense without child statements, to indenting statements whithin one methods cause a rule violation. The path of indenting statements is shown in the \ref{ast:rule1} in red.
+The rule states that the indentation is on a method level. Therefore this rule has to examine the levels of indentation on method level. Hence, when anlyzing the \acf{AST}, only the subtree of the node \textit{MethodDeclaration} has to be analyzed, all other parts of the \acf{AST} are not relevant for the validation of this rule.
+\\
+
+As defined by the rule, the number of indentation is restricted to one indentation per method maximum. The simplified illustration of an \acf{AST} in \ref{ast:rule1} shows a structure that is not allowed. All nodes named "Non indenting" indicate node which do not have a child node that causes an indention. All node named "Indenting" indicate a node which has child node and therefore causes an indention.
+\\
+
+In the graphic, all node causing it's children to be indent are marked blue. All nodes that are not causing it's children to be indent are marked in black. 
+All nodes that cause it's children to indent but are indented already violate the rule and are marked in red. 
+\\
+
+As the graphic illustrates, the red node is a rule violation. The red node is causing it's children to indent but is already indented itself. 
 \\
 
 \begin{tikzpicture}
@@ -654,12 +667,12 @@ As depicted, the node on the right is a node which indents it's children. The no
         child { node { Non indenting } }
         child { node { Non indenting } }
         child { node [ draw=blue!60 ] { Indenting }
-            child { node { dNon indenting } }
-            child { node { eNon indenting } }
+            child { node { Non indenting } }
+            child { node { Non indenting } }
         }
         child { node [ draw=blue!60 ] { Indenting }
         	%edge from parent node[ left=.5em,draw=red!60] { }
-            child { node { Indenting} [ draw=blue!60 ] 
+            child { node { Indenting} [ draw=red!60 ] 
             %	edge from parent node[ left=.5em,draw=red!60] { }
             }
             child { node { Non indenting } }
@@ -668,39 +681,38 @@ As depicted, the node on the right is a node which indents it's children. The no
 \end{tikzpicture}
 \label{ast:rule1}
 
-As a result, the path length of the path from the method node to each leaf node is important. Because only indenting statements have sub nodes, the maximum amount of edged in the subtree is two. It is not allowed that on the path upwards (going up to the parent statement) the \acf{AST}, more than one indenting statement occurs. 
+In other words: the path length of the path from the method node to each leaf node is important. Because only indenting statements have sub nodes, it is possible to calculate the amount of edges from the method declaration to each leaf. The result is the level of indentation relative to the method of the subtree's root node. In this case the subtree's root node is the method declaration. Because the maximum amount of indentation is two, the maximum length number of edges allowed is also two.
 \\
 
-Because only statements that are indenting have child statement, the maximum height of the method's subtree is two: Each children of the method are allowed be an indenting statement. None of these indenting statements is allowed to have indenting statements as childnodes. 
+The maximum height of the method's subtree is two: Each child of the method is allowed be an indenting statement. None of these indenting statements is allowed to have indenting statements as childnodes because then the number of indentation would be greater than two. 
 \\
 
-Instead of checking the length of each path from downward starting with the method node ending at the leaf node, the algorithm goes upward. 
-Each statement that indents, therefore that has possibly subnodes, uses it's parent node to determine the path upward. If no method desclaration node occurred within two levels, the analyzsed statement violated the rule. 
+Each indenting statement, e.g. each statement node that possibly has subnodes, determines if the pathlength to the next method declaration node is greater than two. If so, this statement is violating the rule. Because only statements which possibly have children change the indentation, it is the rule is satisfied violation is correct if only the statements causing an indentation are analyzed.
 \\
 
-All statements that are indenting can be simply read up in the \ref{JLS}. In the following, these nodes are listed. In this report, the classname of the object representation in the eclipse \acf{JDT} framework is used. The names are similar to the names used in the \ref{JLS}: DoStatement, EnhancedForStatement, ForStatement, IfStatement, SwitchStatement, WhileStatement, and TryStatement. 
+All statements that have indented subnodes can be simply read up in the \ref{JLS}. In the following, these nodes are listed. In this report, the classname of the object representation of the Eclipse \acf{JDT} framework is used. The names are similar to the names used in the \ref{JLS}: DoStatement, EnhancedForStatement, ForStatement, IfStatement, SwitchStatement, WhileStatement, and TryStatement. 
 \\
 
-The with this simple \acf{AST} structure analysis, the first rule can be validated successfully. During this research, no case in which this validation did fail, was found. The implementation of the rule validator is validating the rule successfully using the described algorithm.
+The with this simple \acf{AST} structure analysis, the first rule is validated successfully. During this research, no case in which this validation failed was found. The implementation of the rule validator is validating the rule successfully using the described algorithm.
 
 \subsection*{Validation of Rule 2}
 The valdation of the second rule "don’t use the else keyword" is the simplest rule to validate.
 \\
 
-The rule assumes that the use of the else keyword is prohibited. According to the \ref{JLS}, the else statement is the body part of the if statement. In the \acf{AST} representation, the if statement has several child nodes. The mandatory child nodes of the if statement are the condition and the body. The else body is optional. 
+The rule prohibits the use of the else keyword. According to the \ref{JLS}, the else statement is the body part of the if statement. In the \acf{AST} representation, the if statement has several child nodes. The two mandatory child nodes of the if statement are the condition and the body. The else body is optional. 
 \\
 
-The rule prohibits the use of the else keyword. Within the \ref{AST} structure, the else keyword represented by an object representation, which is the child node of the if statement.
+The rule prohibits the use of the else keyword. Within the \ref{AST} structure the else keyword is represented by an object, which is a child node of the if statement.
 \\
 
-For the purpose of analyzing this structure with an proper algorithm, the if statement has to evaluated. In the case that the if statement does have a child node representing the else part of the if statement, a rule violation occurred.
+To analyze the structure with an proper algorithm, the if statement's structure has to be examined. If the if statement does have a child node representing the else part of the if statement, a rule violation shall occur.
 \\
 
-The simple structure of a subtree is shown in \ref{ast:rule2}. The else body, which is not allowed, is marked in red. 
-Be aware that the if, as well as the else body, might contain further statements which might be if statements, containing another else keyword. The condition is not a body but a condition, and therefore can not contain further if statements.
+The simple structure of an ifstatement's subtree is shown in \ref{ast:rule2}. The else body, which is permitted by the rule and is causing a violation, is marked in red. 
+Be aware that the if as well as the else body, might contain further statements which might might be if statements again. These if statements can contain further else keywords. The condition is not a block but a condition and can't contain further if statement.
 \\
 
-Because the visitor patter, given by the framework, visits each node of the \acf{AST}, the algorithm can be applied on every existing if statement and also works if nested if statements are present.
+Because the visitor pattern, given by the framework, visits each node of the \acf{AST}, the algorithm can be applied on every existing if statement extisting in the soucr code. This works also if nested if statements are given in the source code.
 \\
 
 \begin{tikzpicture}
@@ -728,7 +740,7 @@ Because the visitor patter, given by the framework, visits each node of the \acf
 \end{tikzpicture}
 \label{ast:rule2}
 
-The just described algorithm that validated the rule is has a very easy structured. As the first rule, this second rule is ery simple and validated the structure successfully. No example in which this validation failed was found. The implementation of the rule validator is validating the rule successfully using the described algorithm.
+The just described algorithm that validated the rule has a very structure. Like the first rule, this second rule is simple and the proposed validation algorithm is validating the code structure successfully. No example in which this validation failed was found during this research. The implementation of the rule validator is validating the rule successfully using the described algorithm.
 
 \subsection*{Validation of Rule 3}
 % - what is the concrete violation?
@@ -750,22 +762,30 @@ The just described algorithm that validated the rule is has a very easy structur
 Rule 4, "use only one dot per line", is a more sophisticated rule to validate. The rule is violated, when a line contains more than one dot. 
 \\
 
-To validate the rule, two question occur. The first one is: What is  "a line" when looking at simple statements like an statement expression concluded with a semicolon and when looking at more complex statements like loops or conditions. The second question is: What is the exact meaning of "one dot"?
+To validate the rule, two question occur. The first one is: What is the meaning  "a line" when looking at simple statements like an statement expression concluded with a semicolon and when looking at more complex statements like loops or conditions? This question is similar to the interrogation of code formatting, stated when evaluating rule one. The second question is: What is the exact meaning of "one dot" from the perspective of a tool analyzing an \acf{AST}?
 \\
 
-The algorithm consists of two steps. Firstly the it has to find out which statements contain a expression that is containing possibly more than one dot. Therefore the first step is about searching expression from the "top level" statements. In the second step the "extracted" expressions will be examined and the number of dot will be counted. The second step is counting the number of expressions in the subtree of the "top level" expression, that contain a dot.
+The algorithm that was found during this research consists of two steps. 
 \\
 
-As already announced in the introduction of this evaluation chapter, the terms of the \acf{JLS} (which have very similar names like the object representations in the eclipse ast representation) will be used. 
+Firstly the algorithm has to find out which statements contain an expression that are possibly containing more than one dot. Therefore the first step is about searching and extracting all existing expressions from all "top level" statements. Top level statements is the term used during this report to describe statements that are usually in one line. 
 \\
 
-Usually, one line is an expression statement with a ;. For example: \textit{System.out.println("Object Calisthenics");}. The representation in the \acf{JLS} is ExpressionStatement. As already said, there are also more sophisticated structures like loops and conditions, which at least partly, also represent a line but are not covered by the expression statement. These are for example the WhileStatement or the TryStatement. The examination of those "top level statements" is the first step and is described in the following.
+The second step is to analyze the extracted expressions and determine how many dots are contained in each expression. Therefore all sub expressions of each expression have to be extracted. When doing so, the number of expressions containing a dot have to be examined. This number of those expression coming with a dot will be counted. 
+\\
+The result is the numbe of dots for each expression. When each expression coming with a dot of the top level statement was extracted and the overall number of dots within these expression was counted, the sum of dots within the top level statement results. 
 \\
 
-All these statements are described by a Statement. What follows is a classification in two groups: The first group consists of the number of statements that have further expressions to be analyzse ("top leve statements") and the second group consists of the number of statements that do not have to examined for more expressions.
+As already announced in the introduction of this evaluation chapter, the terms of the \acf{JLS} (which have very similar names like the object representations in the eclipse ast representation) will be used during this evaluation. 
 \\
 
-The list contians a short explanation why the listed statements are "top level statements".
+Usually, one line is an expression statement with a ;. For example: \textit{System.out.println("Object Calisthenics");}. The representation in the \acf{JLS} is ExpressionStatement. As already said, there are also more sophisticated structures like loops and conditions, which at least partly, also represent a line but are not covered by the expression statement. These are for example the WhileStatement or the TryStatement. The examination of those top level statements is the first step and is described in the following.
+\\
+
+All these different kinds of statements are described by a general Statement. What follows is a classification of statements in two groups: The first group consists of the number of statements that have further expressions to be analyzse ("top leve statements") and the second group consists of the number of statements that do not have to examined for more expressions because they do not contain any expressions. 
+\\
+
+The list contains a short explanation why the listed statements are "top level statements".
 \\
 
 \begin{description}
@@ -773,19 +793,18 @@ The list contians a short explanation why the listed statements are "top level s
   \item[WhileStatement] The WhileStatement  has the following structure: \textit{while ( Expression ) Statement}. In the condition part of the statement, which is usually one line, an expression occurs.
   \item[DoStatement] The DoStatement has the following structure: \textit{do Statement while ( Expression ) ;}. As clearly visible there is an expression part in the while statement. The same valdation rule that was used for the WhileStatement applies here: The number of dots within the expression shall not be exceeded.
   \item[ForStatement] The ForStatement has the following structure: \textit{for ( [ ForInit ]; [ Expression ] ; [ ForUpdate ] ) Statement  
-  }. The ForInit part is described by the structure \textit{Expression { , Expression }} and the ForUpdate  part is described by the structure \textit{ Expression { , Expression }}. Because the three expression parts in the parentheses are usually written in one line, the total number of those statements shall not be exceeded.
+  }. The ForInit part is described by the structure \textit{Expression \{ , Expression \}} and the ForUpdate  part is described by the structure \textit{ Expression \{ , Expression \}}. Because the three expression parts in the parentheses are usually written in one line, the total number of those statements shall not be exceeded.
   \item[EnhancedForStatement] The EnhancedForStatement has the following structure: \textit{for ( FormalParameter : Expression ) Statement }. As commonly known the expression in paranthesis is in one line. Therefore the Expression part has to be analyzed.
   \item[IfStatement] The IfStatement has the follwing structure: \textit{if ( Expression ) Statement [ else Statement]}. Like in the while and do statement, the expression in paranthesis shall be analyzed. 
   \item[AssertStatement] The AssertStatement  has the following structure: \textit{assert Expression [ : Expression ] ;}. There are two expressions which both have to be analyzed. The number of dots in both expressions shall not be higher than one. The first part is called the first expression of the assert statement, and the second part is called message. Because both aprts are usually written in one line, the total number of dots in both expressions shall not exceed one.
-  \item[ConstructorInvocation] The ConstructorInvocation has the following structure: \textit{this ( [ Expression { , Expression } ] ) ;}. Because this statement is usually in one line, the number of dot in all expressions within the statement shall not be exceeded.
-  \item[SuperConstructorInvocation] The SuperConstructorInvocation has the follwoing structure: \textit{[ Expression . ][ < Type { , Type } > ] super ( [ Expression { , Expression } ] ) ;}. Because the statement is usually written in one line, all expressions have to be analyzed to have a maximum of one dot in all statements.
+  \item[ConstructorInvocation] The ConstructorInvocation has the following structure: \textit{this ( [ Expression \{ , Expression \} ] ) ;}. Because this statement is usually in one line, the number of dot in all expressions within the statement shall not be exceeded.
+  \item[SuperConstructorInvocation] The SuperConstructorInvocation has the follwoing structure: \textit{[ Expression . ][ < Type \{ , Type \} > ] super ( [ Expression \{ , Expression \} ] ) ;}. Because the statement is usually written in one line, all expressions have to be analyzed to have a maximum of one dot in all statements.
   \item[ReturnStatement] The ReturnStatement has the following structure: \textit{return [ Expression ] ;}. The statement is usually written in one line and consitst of one expression that has to be analyzed.
   \item[SwitchCase] The structure of a SwitchCase is the follwing: \textit{ case Expression  : }. The expression is usually consistend of ExpressionStatements. The expression of this statement, which is usually in one line, has to be analyzed further.
-  \item[SwitchStatement] The structure of a SwitchStatement is the following: \textit{ switch ( Expression ) { { SwitchCase | Statement } } }. The expression in parantheses is usually written in one line, and shall be analyzed further. 
+  \item[SwitchStatement] The structure of a SwitchStatement is the following: \textit{ switch ( Expression ) \{ \{ SwitchCase | Statement \} \} }. The expression in parantheses is usually written in one line, and shall be analyzed further. 
   \item[SynchronizedStatement] The structure of a SynchronizedStatement is the following: \textit{  synchronized ( Expression ) Block }. The expression part in parantheses is usually written in one line and shall be analyzed.
   \item[ThrowStatement] The structure of a count(node.getExpression(), node); is the following: \textit{throw Expression ;}. This throw expression is usually in one line and shall be analyzed further.
 \end{description}
-\\
 
 All other statement do not contain directly expressions to be analyzed. Some of them do not contain any expressions and other contain statement that themselves have child statements to be analyzed. However, because of the \acf{AST} traversal, these substatement will be visited anyways. However, the statement with no directly related subexpressions are: Block, BreakStatement, ContinueStatement, EmptyStatement, LabeledStatement, TryStatement, TypeDeclarationStatement, VariableDeclarationStatement and WhileStatement.
 \\
@@ -848,20 +867,32 @@ All in all, the provided regex match the purpose of the rule very good. Also the
  - count nubmer of them
   - determine number of expressions, for example 40. ELss than propose 50 by bay, because no method desclarations and class declarations
  - quality: very good, advantage: empy spaces and imports don't count. The structure of the type itself (which was adressed by bay) is checked
-% - what is the concrete violation?
-% IF ALGORITHM FOUND
-% - what is the algorithm to determine it? 
-% - assume typical structure
-% - description: on which "level" (method, variable) is the violation?
 
-% - show problems of the current algorithm
-% - show assumptions (exaple: instance var in wrapper)
-% - evaluate satisfaction of the rule.
+Rule 8, "keep all entities small", restricts the number of lines in a class.
+\\
 
-% IF NO ALGORITHM FOUND
-% - explain difficulties
-% - why does it fail
+By simply putting mutliple statements in the same line the rule can be eluded. Therefore it is more applicable to count the number of statements. The concrete formatting will not be considered. Counting the number of statement of a type is quite easy: The subtree of a type declaration mustn't contain more than a specific number of statements. Every statements that is more than 50 should be reported as a violation. 
+\\
 
+Because the eclipse framework traverses the \acf{AST} with a greedy algorithm, statements that are later within the document are visited later in the framework. Hence the prototypical implementation counts the number of statements and reports every statement as soon as the count exceeded 50. 
+\\
+
+As described, algorithm counts all statements within a subtree. When doing so the algorithm has to know what kind of statements increase the number of "lines". Definetely there are some kind of statements that should not count because they are not related to the actual size of the entity. Those statements are, for example, documentation blocks or comments. 
+\\
+
+For the stated reasons, the following types of statements are counted by the algorithm: ExpressionStatement, WhileStatement, AssertStatement, ConstructuorInvocation, DoStatement, ForStatement, IfStatement, ReturnStatement, SuperConstructorInvocation, SwitchCase, SwitchStatement, SynchronizedStatement, ThrowStatement, FieldDeclaration, MethodDeclaration, and ImportDeclaration.
+\\
+
+These are all statements found during this report that have a semantic meaning and are actually part of the coding. Furthermore these statements are part of a single line using most standard formatting tools.
+\\
+
+As a result, all important statements are counted. However the algorithm does not reflect the rule precicely. As described in the introduction of this section, the formatting is considered by the rule - the proposed \acf{AST} analysis not considered. The advantages of using the \acf{AST} were already described. However, the original rule is not devaluated in any way: The explanation on number of lines per class is much more conceivable than a number of statements. For tool support counting statements is better because it is more precise and the developer can't trick the tool by changing the formatting.
+\\
+
+As shown this approach is not precisely representing the number of lines of class. The number of allowed statement was set to 50 statements, as the rule proposes. Some statements, like loops or conditionals, use a conclusive brackets to indicate the end of a statement: \textit{\}}. These closing curly brackets are usually written in a separate line. But because they are part of the loop or conditional statement, they are not counted. To mitigate this problem, a future prototype could enable the user to change the maximum number of statements per class from 50 to a user defined value.
+\\
+
+All in all the outlined approach reflects the rule very well. The advantages of not having imprecise number of lines per class but a clear \acf{AST} structure was used, which results in the proposed high quality solution.
 
 \subsection*{Validation of Rule 7}
 Rule 7, "don’t use any classes with more than two instance variables", is very easy to validate. In the rule Jeff Bay limits the number of instance variables of a class. 
@@ -882,9 +913,9 @@ An \acf{AST} structure that described the definition of a type, could look like 
     rectangle,rounded corners, minimum size=6mm, draw=black!75,
     very thick, drop shadow, align=center},
     edge from parent/.style={draw=black!50,thick},
-    level 1/.style={sibling distance=4cm},
-    level 2/.style={sibling distance=3cm}, 
-    level 3/.style={sibling distance=2cm}, 
+    level 1/.style={sibling distance=3cm},
+    level 2/.style={sibling distance=2cm}, 
+    level 3/.style={sibling distance=1cm}, 
     level distance=2cm 
     ]
     
@@ -906,19 +937,6 @@ The shown strategy to analyze the \acf{AST} structure, is quite simple and effec
 The resulting analyzation algorithm for the rule is very effective. The implementation as part of the prototype was successful. During the research, no example was found that this algorithm did not validate successfully. Also the implementation as part of the prototype was successfull. 
 
 \subsection*{Validation of Rule 8}
-% - what is the concrete violation?
-% IF ALGORITHM FOUND
-% - what is the algorithm to determine it? 
-% - assume typical structure
-% - description: on which "level" (method, variable) is the violation?
-
-% - show problems of the current algorithm
-% - show assumptions (exaple: instance var in wrapper)
-% - evaluate satisfaction of the rule.
-
-% IF NO ALGORITHM FOUND
-% - explain difficulties
-% - why does it fail
 
 
 \subsection*{Validation of Rule 9}
@@ -928,7 +946,7 @@ Jeff Bays rule 9, "don't use any getters/setters/properties", the use of public 
 Properties are field declarations of classes that are available from the outside. Therefore they are public fields, indicated by the public modifier. Therefore the algorithm simply has to find all public fields. In the \acf{AST} the modifiers are stored as part of the field declaration. The definition of a field has the following structure: \textit{\{ ExtendedModifier \} Type VariableDeclarationFragment \{ , VariableDeclarationFragment \} ;}. The modifiers are part of the ExtendedModifier. With the eclipse framework, the modifier can be retrieved and the algorithm simply reports a violation if a field declaration with a public modifier was found. 
 \\
 
-As just described, the second part is about the identification of getter and setters. Therefore it is necessary to analyze and to define the typical structure of getter and setter methods. Getters and setter are commonly known as mutator method \ref{wiki}[Mutator method]. The consist of a setter, the mutator, and the getter, also called accessor. Both methods are used to retrieve or modify the field declaration. Often this is called encapsulation, but as Jeff Bay argued, this is commonly not a good practice. However the discussion of good and bad encapsulation was already evaluated in chapter \ref{Discussion}.
+As just described, the second part is about the identification of getter and setters. Therefore it is necessary to analyze and to define the typical structure of getter and setter methods. Getters and setter are commonly known as mutator method \cite{wiki}[Mutator method]. The consist of a setter, the mutator, and the getter, also called accessor. Both methods are used to retrieve or modify the field declaration. Often this is called encapsulation, but as Jeff Bay argued, this is commonly not a good practice. However the discussion of good and bad encapsulation was already evaluated in chapter \ref{Discussion}.
 \\
 
 Such a typical getter and setter method might look as shown in \ref{listing:rule9example1:speaker}. The speaker example was already illustrated in the previous chapter \ref{describe:rule9}. However, the structure of the getter and setter methods is depicted in the listing. 
@@ -953,9 +971,6 @@ When looking at setter methods the similar problem occur. As the getter method, 
 \\
 
 During this report rules for the semantical structure of setter methods where found. These rules are similar to the just described rule of the semantical structure of getter methods and are described in the following.
-\\
-
-
 
 
 %asdf

@@ -9,12 +9,12 @@
 \lstinputlisting[label=listing:rule1example3:schoolclass,caption=Example 3: class \textit{SchoolClass}]{listings/rule1/example3/SchoolClass.java}
 %\label{listing:rule1example3:schoolclass}
 
-\lstinputlisting[label=listing:rule2examplenull:main,caption=Example 1 of class \textit{Main}listings/rule2/examplenull/Main.java}
+\lstinputlisting[label=listing:rule2examplenull:main,caption=Example 1 of class \textit{Main}]{listings/rule2/examplenull/Main.java}
 %\label{listing:rule2example1}
-\lstinputlisting[label=listing:rule2examplenull:mainnull,caption=Example 2 of class \textit{MainNull}]{listing/rule2/examplenull/MainNull.java}
+\lstinputlisting[label=listing:rule2examplenull:mainnull,caption=Example 2 of class \textit{MainNull}]{listings/rule2/examplenull/MainNull.java}
 %\label{listing:rule2example2}
 
-\begin[label=listing:nullobject1,caption=Null check, implemented by using a conditional]{lstlisting}
+\begin{lstlisting}[label=listing:nullobject1,caption=Null check, implemented by using a conditional]
 Object value = a.method();
 if(value == null) {
 	...
@@ -22,11 +22,9 @@ if(value == null) {
 \end{lstlisting}
 %\label{listing:nullobject1}
 
-\begin[label=listing:nullobject4,caption=Null check, implemented by using a conditional]{lstlisting}
+\begin{lstlisting}[label=listing:nullobject4,caption=Null check, implemented by using a conditional]
 Object value = a.method();
-if(value == null) {
-	...
-}
+value.method();
 \end{lstlisting}
 %\label{listing:nullobject4}
 
