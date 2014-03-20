@@ -488,7 +488,7 @@ As already stated, this rule tackles a very similar problem as rule three: Addin
 
 \subsection*{Rule 9: "Don’t Use Any Getters/Setters/Properties"}
 \label{describe:rule9}
-Jeff Bay's last rule, "don't use any getters/setters/properties" that he presents in \cite{oc2008}, tries to encourage the "tell, don't ask" principle. He claims that not to use any getter/setters/properties in order to encapsulate objects properly.
+Jeff Bay's last rule, "don't use any getters/setters/properties" that he presents in \cite{oc2008}, tries to encourage the "tell, don't ask"\cite{telldontaskoriginal} principle. He claims that not to use any getter/setters/properties in order to encapsulate objects properly.
 \\
 
 In \cite[p. 79]{oc2008} Jeff Bay describes that this rule tackles direct violations of encapsulation. By using getters the developer can simply ask for any instance variable of an object. Therefore the caller can abitrary manipulate the reference the called object is having a reference on. Even worse, when conduction operations on such references, the bundling between behavior and data is not given anymore. The data is in one class, whereas the operations are in another class. 
@@ -503,7 +503,7 @@ The following shows a bad example, not fulfilling rule nine. In listing \ref{lis
 The second example shows the refactored version. As shown in the listing \ref{listing:rule9example2:speaker} the speaker now offers clear defined methods that include an integrity check on the volume: \textit{adjustVolume(int volume)} and \textit{turnup()}. As a result, the usage of the \textit{Speaker} class is tremendously easier to read and to overlook. Its usage is shown in \textit{Main} (\ref{listing:rule9example2:main}) is very easy. 
 \\
 
-Instead of asking for the value, as shown in the first example, it not tells the \textit{Speaker} what to do. The code has now become easier to read and to maintain. It is easier to read because the code reads more like a text. The semantic is clearly in the method names and from a perspective of an object using a \textit{Speaker}, the method names sound like clear commands. In example one, there was no command-style language -- instead it was the manipulation of the inner state of the object. Furthermore the object is easier to test, too. A mock can simply be written for the \textit{Speaker} class. An example for a mock is shown in \ref{listing:rule9example2:mock}. As clearly depicted, the resulting code is easier to mock and a class using it, in this case the \textit{Main} class. Satisfying the "Tell, don't ask!" principle also increases the focus \textit{Main} class: It just gives commands and does not have to conduct any further calculation. The implementation is delegated to the \textit{Speaker} class. 
+Instead of asking for the value, as shown in the first example, it not tells the \textit{Speaker} what to do. The code has now become easier to read and to maintain. It is easier to read because the code reads more like a text. The semantic is clearly in the method names and from a perspective of an object using a \textit{Speaker}, the method names sound like clear commands. In example one, there was no command-style language -- instead it was the manipulation of the inner state of the object. Furthermore the object is easier to test, too. A mock can simply be written for the \textit{Speaker} class. An example for a mock is shown in \ref{listing:rule9example2:mock}. As clearly depicted, the resulting code is easier to mock and a class using it, in this case the \textit{Main} class. Satisfying the "Tell, don't ask!"\cite{telldontaskoriginal} principle also increases the focus \textit{Main} class: It just gives commands and does not have to conduct any further calculation. The implementation is delegated to the \textit{Speaker} class. 
 \\
 
 Rule nine, which is essentially encouraging to well defined encapsulated units, is similar to many other rules. The rule forces the developer to well place behavior. Furthermore it insistently underlines the importance of the bundling of data and behavior and well defined encapsulation. 
@@ -533,7 +533,7 @@ Rule six is very clearly one of the first and easiest rule when conducting the e
 Lastly rule five encourages to name classes and variables expressive. 
 
 \subsection*{Precedence}
-Setting the rule into a scalar order would definitely be the wrong approach. Instead the precedence of the rule is dependent from the developer doing the excercise. If a developer is used to code that uses very long names the naming problem which is addressed in rule five will be hard. Another developer might have problems with the "Tell, don't ask" principle and for him it will be hard to apply rule three, four, eight and nine. The precedence of the rules is highly depandant on the language background and experience of the individual developer conducting the exercise. 
+Setting the rule into a scalar order would definitely be the wrong approach. Instead the precedence of the rule is dependent from the developer doing the excercise. If a developer is used to code that uses very long names the naming problem which is addressed in rule five will be hard. Another developer might have problems with the "Tell, don't ask" \cite{telldontaskoriginal} principle and for him it will be hard to apply rule three, four, eight and nine. The precedence of the rules is highly depandant on the language background and experience of the individual developer conducting the exercise. 
 
 \subsection*{Conclusion and Outcome}
 All in all the rules provide a bundle of guidelines for better coding. However, it is not enough to just follow the rule. Furthermore the developer should understand the patterns and principles behind that were explained already. 
@@ -550,7 +550,7 @@ As just said, the rules provide an easy to validate guideline -- in comparison t
 
 
 
-\chapter{Tool Support to Validate the Object Calisthenics - Evaluation}
+\chapter{Tool Support to Validate the Object Calisthenics -- Evaluation}
 \label{Evaluation}
 This chapter will evaluate tool support to validate the object calisthenics. The first section \ref{e:advantages} will explain the general advantages of tool support. The next chapter \ref{e:evaluation} will dive deeper into the validation of the rule of the Object Calisthenics.
 
@@ -747,24 +747,68 @@ Because the visitor pattern, given by the framework, visits each node of the \ac
 
 The just described algorithm that validated the rule has a very structure. Like the first rule, this second rule is simple and the proposed validation algorithm is validating the code structure successfully. No example in which this validation failed was found during this research. The implementation of the rule validator is validating the rule successfully using the described algorithm.
 
-\subsection*{Validation of Rule 3}
-% - what is the concrete violation?
-% IF ALGORITHM FOUND
-% - what is the algorithm to determine it? 
-% - assume typical structure
-% - description: on which "level" (method, variable) is the violation?
+\subsection*{Validation of Rule 3 and Rule 8}
+Jeff Bay's third rule "wrap all primitives and strings", is about proper encapsulation. According to the rule every primitive and string data type shall wrapped in it's own class. Rule eight also forces the developer to wrap a type properly: collections. How useful this principle is and how it support the principle of encasulation were already discussed in chapter \ref{Discussion}.
+\\
 
-% - show problems of the current algorithm
-% - show assumptions (exaple: instance var in wrapper)
-% - evaluate satisfaction of the rule.
+During this research, concrete rule that describe how to wrap a type were established. These rules apply for collections, primitives and string in the same way. The strategy to determine violations of rule three and eight is elucidate in this section. The research showed that these two rules are the most difficult rules to validate.
+\\
 
-% IF NO ALGORITHM FOUND
-% - explain difficulties
-% - why does it fail
+Firstly, an insight on the typical structure of wrapping a class is given by example. On the basis of this example the typical structure is extracted. The strategy to analyse this structure is then explained. In a second step, examples are given in which the proposed rule violation fails. 
+\\
 
+To prevent confusion, the next section will explain the violation and use primitive as an example. In the end the algorithm and structure analysis used to detect violations with primitives will be demised on the wrapping of strings and collections.
+\\
+
+When analyzing the typical structure of structures that wrap primitive wrongly, two typical types of violations were found. 
+
+The first type of violation indicates the use of a primitives in a class that is not wrapping the same type of primitive value. 
+
+The second type is a violation that reports an error in a type that is wrapping a primitive. For example a wrapping type could expose a primitive by returning it or it could have a method having a primitive parameter. These two kinds of signatures would violate the definition of a primitive wrapper. In conclusion, a primitive wrapper class shall not have any primitive parameter and shall not return any primitives. As already said, this supports the Jeff Bay's ideas presented in \cite{oc2008} and Martin Fowler's principle of "Tell, don't ask"\cite{telldontaskoriginal}. Data that is put into an object can never be retrieved again. As already described in the previous chapter \ref{Description} a fundamentaly new control flow of data is the result.
+\\
+
+Of course a primitive wrapper is allowed to use other classes. However because it is already wrapping a type, the class shall not use any other type of primitive, collection or string. Therefore be aware that type that is wrapping a specific type still can violate rule one by using another type which itself has to be wrapped. For example: A wrapper class wrapping an integer shall only use other domain objects and wrapping types but shall not use no primitive of another type, strings or collections. 
+\\
+
+To determine those two types of violations, the algorithm has to find out which types are wrapping primitives, strings or collections. During this report, these type will be called "wrapper types" or "wrapper classes". 
+\\
+
+As just explained the report of violations for rule three and rule eight are easy as long as it can be determined which classes are wrapper classes and which are not. And exactly this makes validating these two rules very difficult. 
+\\
+
+The determination of wrapper classes is presented in the following. Typically a wrapper class wraps it's value by using fields (maximum two, as determined by rule seven). This fact is used by the analysis algorithm to recognize wrapper classes. If a class has a field with a primitive value, it is declared to be a wrapper classes, wrapping the field's type. This typical wrapper class is shown in listing \ref{listing:rule3example3:Day}. 
+\\
+
+As soon as the class wraps a primitive but does not store the represented value within a field it can't be recognized as a wrapper class. Example \ref{listing:rule3example3:Week} shows this example. The class represents a week. In it's only method \textit{void everyDay(DayAction action)} it provides a method to conduct code for every existing day. Within the two private methods it is separated between workdays and days of the weekend. Because every week has seven days the value is always the same and does not change between different instances of the class. Therefore no field has to be used to store the value, as depicted in the example. As a result this class will not be recognized as a wrapper class by the algorithm and the use of primitives would cause a violation. 
+\\
+
+If a wrapper class has multiple fields with different values to be wrapped, the type of the value declared firstly is determining the type the class is wrapping. All other types used within the class, including all other field declarations, are considered to be violations. 
+\\
+
+During research it was also considered to mark this class as a wrapper class. Then the algorithm would determine every context in which a primitive is used as a wrapper for primitives and would not report the use of primitives without wrapper properly. Because the exemplified example for wrapper classes which is causing a wrong violation is rare this wrong violation is acceptable. Another option is to let the use decide which classes wrap which type. Unfortunately this is not a desired behvior because a tool should support the user with automation and not hinder him from his natural workflow. 
+\\
+
+To clarify the all steps to performed to determine rule violation, they are summarized in the following. The reasons for those results were already illustrated and will not be explained again. Instead an overview of the steps is given.
+\begin{enumerate}
+  \item Determine all wrapper types within the application. Classes that have fields with primitives are considered to be a wrapper classes.
+  \item Analyse all wrapper types. Every type that is not the wrapped types but is part of a warpper type is not allowed, neither within the signature (parameter or return value) value nor as a variable declaration.
+  \item Analyse all other types. Every variable declaration, including field declarations, variable declarations, return values and parameters, shall not contain any other primitives. 
+\end{enumerate}
+
+As already explained these concrete rule can be easily validated using an \acf{AST}. However the structures are already elucidated in detail - on an abstract level as well as by using an example. The validaiton of the \acf{AST} is equal to the three steps and the detailed illustration given.
+\\
+
+As already stated in the beginning the presented structural analysis the determination if a given type is wrapped applies for primitives, strings, and collections. 
+\\
+
+It is not only necessary to check if primitives, string, and collections are used directly. As a result of this research it is also meaningful to treat classes that inherited from one of those type in the same way as the actual types. This is because those types also provide functionality that is not domain specific. This can be conducted easily with the \acf{AST} generated by the Eclipse framework. 
+\\
+
+Beside the shown example, the rule validation algorithm is working. During the test of the algorithm no other example than the depicated one was found which results in a wrong validation. This rule was already implemented in the prototype and is working fine so far. However, this is the most difficult rule and the usage of prototype in the future will show if the implemented algorithm is working as successfully as it did within this research. To conclude the rule validation of the rule three and eight it has to be said that a solid solution was found to validate the rule.
+\\
 
 \subsection*{Validation of Rule 4}
-Rule 4, "use only one dot per line", is a more sophisticated rule to validate. The rule is violated, when a line contains more than one dot. 
+Rule four, "use only one dot per line", is a more sophisticated rule to validate. The rule is violated, when a line contains more than one dot. 
 \\
 
 To validate the rule, two question occur. The first one is: What is the meaning  "a line" when looking at simple statements like an statement expression concluded with a semicolon and when looking at more complex statements like loops or conditions? This question is similar to the interrogation of code formatting, stated when evaluating rule one. The second question is: What is the exact meaning of "one dot" from the perspective of a tool analyzing an \acf{AST}?
@@ -829,7 +873,7 @@ The main question of the second step is: which expressions contains a dot? Many 
   \item[FieldAccess] The expression type FieldAccess contains a dot that is also relevant for implementing tool support. A FieldAccess expression has the follwing structure: \textit{Expression . Identifier}. The FieldAccess's dot is relevevant because it is a dereferencing operator and conduction a direct access to a field of another object.
   \item[SuperFieldAccess] The SuperFieldAccess has a very similar structure like FieldAccess therefore no further explanation is given.
   \item[TypeLiteral] A TypeLiteral has the following structure: \textit{( Type | void ) . class}. Even if it does not reference a field or a method, it accesses the class of the referenced object. This is also a kind of reference that counts as an access to another area of the application. Therefore the dot of this expression shall count. The dot of this expression is relevant for the tool because it is representing access on an object.
-  \item[QualifiedName] Similar to the type literal, the QualifiedName is also accessing a different area of the application. The structure of the QualifiedName is \textit{Name . SimpleName}. The dot is also describing an access to another namespace, therefore the dot of this expression will also be counted. This encourages the developer to use a simple name directly and to resolve the QualifiedName, for example by using \texit{import}s in Java.
+  \item[QualifiedName] Similar to the type literal, the QualifiedName is also accessing a different area of the application. The structure of the QualifiedName is \textit{Name . SimpleName}. The dot is also describing an access to another namespace, therefore the dot of this expression will also be counted. This encourages the developer to use a simple name directly and to resolve the QualifiedName, for example by using \textit{import}s in Java.
 \end{description}
 
 All other type of expression are not relevant for the tool, because they do not represent the access on a foreign field, the call on a foreign method or the separation of different namespaces.
@@ -846,7 +890,7 @@ All in all the described approach works fine in the prototype. When accepting th
 \\
 
 \subsection*{Validation of Rule 5}
-Rule 5, "don't abbreviate" is a very simple rule. It's basic statement is about the use of abbreviations.
+Rule five, "don't abbreviate" is a very simple rule. It's basic statement is about the use of abbreviations.
 Jeff Bay permits all abbreviations and states that names should only consist of two words. He furthermore explains why this structure is useful for methods and types. However, this structure is also useful for variable names. Therefore this tool will conduct a analysis on type, method and variable names
 \\
 
@@ -867,7 +911,7 @@ Even with this regular expression restriction, the developer can still use very 
 If a name does not match the given regular expressions, a violation has to occur. The position of the violation is very clear when applying this rule: It simply occurs at the position where the type, method, or variable name appeared. 
 \\
 
-The presented types of violation do not save the developer from using unreasonable naming. Because there is no semantic check, the tool can't validate if the developer uses proper namings. Even worse, there is no check examining if the developer used arbitraty letter, like \textit{AbcdefGhi} for example. Using this name as a type name can't be validate by the tool with the algorithm currently proposed. A dictionary or a similar structure could be used to cover this functionality. But even then, the developer can use existing words that describe the entity or method inapplicably.
+The presented types of violation do not save the developer from using unreasonable naming. Because there is no semantic check, the tool can't validate if the developer uses proper namings. Even worse, there is no check examining if the developer used arbitraty letter, like \textit{AbcdefGhi} for example. Using this name as a type name can't be validate by the tool with the algorithm currently proposed. A dictionary or a similar structure could be used to cover this functionality. But even then, the developer can use existing words that describe the entity or method inapplicably. It is impossible to check if the semantic of natural languages matches the behavior of the corresponding source code.
 \\
 
 All in all the concrete restrictions of the tool that represent the rule, model the rule successfully. They continuously remind the developer to use short names and prevent him from using abbreviations. 
@@ -877,7 +921,7 @@ Even though, the regular expression and the restriction of length, match the rul
 
 
 \subsection*{Validation of Rule 6}
-Rule 6, "keep all entities small", restricts the number of lines in a class.
+Rule six, "keep all entities small", restricts the number of lines in a class.
 \\
 
 One way to create tool support for this rule is to create the lines of code within every given \textit{.java} file. but then the developer could elude the purpose of the rule by putting multiple statements in the same line. Therefore it is more applicable to count the number of statements within each declared class. Hence, the concrete formatting will not be considered. Counting the number of statement of a type is quite easy: The subtree of a type declaration mustn't contain more than a specific number of statements. Every statements that is more than 50 should be reported as a violation. 
@@ -904,7 +948,7 @@ As shown this approach is not precisely representing the number of lines of clas
 All in all the outlined approach reflects the rule very well. The advantages of not having imprecise number of lines per class but a clear \acf{AST} structure was used, which results in the proposed solution.
 
 \subsection*{Validation of Rule 7}
-Rule 7, "don’t use any classes with more than two instance variables", is very easy to validate. In the rule Jeff Bay limits the number of instance variables of a class. 
+Rule seven, "don’t use any classes with more than two instance variables", is very easy to validate. In the rule Jeff Bay limits the number of instance variables of a class. 
 \\
 
 According to the \acf{JLS}, a TypeDeclaration node in the \acf{AST} has  a child FieldDeclaration among other nodes. The field declaration represents the declaration of a field within a class. 
@@ -945,12 +989,8 @@ The shown strategy to analyze the \acf{AST} structure, is quite simple and effec
 
 The resulting analysis algorithm for the rule is very effective. The implementation as part of the prototype provided successful validation. During the research, no example was found that this algorithm did not validate successfully. Also the implementation as part of the prototype was successfull. 
 
-
-\subsection*{Validation of Rule 8}
-
-
 \subsection*{Validation of Rule 9}
-Jeff Bays rule 9, "don't use any getters/setters/properties", the use of public fields and the use of getters and setter is restricted. This section will be devided into multiple part. The first part will explain the AST structure of public fields and the second part will explain the typical structure of getters and setters in detail.
+Jeff Bays rule nine, "don't use any getters/setters/properties", the use of public fields and the use of getters and setter is restricted. This section will be devided into multiple part. The first part will explain the AST structure of public fields and the second part will explain the typical structure of getters and setters in detail.
 \\
 
 Properties are field declarations of classes that are accessable from the outside - they are not encapsulated and can be changed by every object referencing the object holding the fields. Properties are public fields, indicated by the public modifier. Therefore the algorithm simply has to find all public fields. In the \acf{AST} the modifiers are stored as part of the field declaration. The definition of a field has the following structure: \textit{\{ ExtendedModifier \} Type VariableDeclarationFragment \{ , VariableDeclarationFragment \} ;}. The modifiers are part of the ExtendedModifier. With the Eclipse framework, the modifier can be retrieved and the algorithm simply reports a violation if a field declaration with a public modifier was found. 
@@ -997,29 +1037,39 @@ A setter method manipulates field directly. According to \cite{wiki}[Mutator met
 
 The algorithm to detect setter methods currently can be bypassed easily by simple adding a second parameter: Then the method would not be recognized as a setter method. When thinking about Jeff Bay's idea behind the rule, it would also be sensible to generally permit changing a field reference with parameter - except for the constructor, which some also view as a method. 
 \\
+
 This second approach is viable very easily. When removing the check of the number of parameters, the analysis of assertions remains. With this simplified rule, even more violations of the encapsulation principle can be found. 
 \\
 
-During this research, one way of bypassing getter methods was found. The next section will comment the solution for getter methods by explaining the bypassing by solution.
-
 All in all the \acf{AST} structure analysis algorithm found during this research detects getters, setters and properties very efficiently. The use of the prototypical implementation of the rule given in this section showed that the concrete validation rules evaluated in for this ninth rule detect properties, getters and setter effectively. 
 
-
-
-%--------------------------------------
-
-%asdf
 \section{Result of the Evaluation}
 \label{e:result}
+This short section will summarize the results of the evaluation. Rule one, two, four, six, seven, and nine can be validated properly by tool support. 
+\\
+
+Rule three and rule eight were a bit more difficult: The challenge here was to determine weather a class is a wrapper type or not. The provided solution, to use the type of the first instance variable, if existent, was implemented and provides a working validation. The problematic code structures were shown in the respective chapter.
+\\
+
+For rule five, it was possible to validate the naming successfully. This was done by determining a regex that matches all names that are allowed within the program. However there is still a risk of unappropriate naming: as shown in the evaluation of the rule, it is impossible to check the semantic of natural languages to match the behavior of the code.
+
 %=== Give a summary on how hard it was to implement the rules. Where does the rule validator fail. Summarize results of the evaluation. 
 %Be positive: Do not forget to emphasize the good and working parts of the evaluation tool and accent the positive outcome of them.
 \section{Future Work}
 \label{e:future}
-%=== Be philosophical: What is still to be done in terms of rule validation. 
+=== Be philosophical: What is still to be done in terms of rule validation. 
 
-%=== If many rules cannot be validated: Future work might be a software where the user can "mark" structures as given. (Example: If it is not possible to determine if a class is a wrapper class, the user could "mark" it as a wrapper class and the validation algorithm might work...)
+=== If many rules cannot be validated: Future work might be a software where the user can "mark" structures as given. (Example: If it is not possible to determine if a class is a wrapper class, the user could "mark" it as a wrapper class and the validation algorithm might work...)
 
-%=== If many rules can be validated: Future work might be the configuration of the rule validator. "pluggable" rules that the user can implement himself? Or "configurable" rule: Use of 2/3/4 instance variables per class. 
+=== If many rules can be validated: Future work might be the configuration of the rule validator. "pluggable" rules that the user can implement himself? Or "configurable" rule: Use of 2/3/4 instance variables per class.
+
+=== idea: introduce degree of violation
+
+
+
+
+
+
 
 \chapter{Prototypical Implementation of Tool Support}
 \label{Prototype}

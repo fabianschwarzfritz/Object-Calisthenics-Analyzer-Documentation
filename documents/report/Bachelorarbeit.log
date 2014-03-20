@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  1 MAR 2014 11:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  3 MAR 2014 16:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1060,32 +1060,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 \tf@toc=\write5
 \openout5 = `Bachelorarbeit.toc'.
 
- (./Bachelorarbeit.nls
-[3
+ [3
 
 
-]) [4
-
-] (./Bachelorarbeit.lof
-Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
-although it is yet undefined on input line 9.
-)
+]
+(./Bachelorarbeit.lof)
 \tf@lof=\write6
 \openout6 = `Bachelorarbeit.lof'.
 
- [5
+ [4
 
 ] (./Bachelorarbeit.lot)
 \tf@lot=\write7
 \openout7 = `Bachelorarbeit.lot'.
 
- [6
+ [5
 
 ]
 \openout2 = `Inhalt/hauptteil.aux'.
 
-
-(./Inhalt/hauptteil.tex
+ (./Inhalt/hauptteil.tex
 Chapter 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -1126,6 +1120,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 26.
+
+LaTeX Warning: Citation `twWeb' on page 2 undefined on input line 26.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
@@ -1218,6 +1217,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
  []
 
 
+LaTeX Warning: Citation `about' on page 5 undefined on input line 98.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
@@ -1301,6 +1303,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--155
  []
 
 
+LaTeX Warning: Citation `wiki' on page 8 undefined on input line 160.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
@@ -1317,12 +1322,25 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 173.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 168--176
 
  []
 
 Package acronym Info: Label `acro:DIP' newly defined as it shall be overridden
 although it is yet undefined on input line 177.
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 189.
+
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 189.
+
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 189.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1365,6 +1383,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--225
 Underfull \hbox (badness 10000) in paragraph at lines 226--228
 
  []
+
+
+LaTeX Warning: Citation `wiki' on page 12 undefined on input line 229.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 229--231
@@ -1424,8 +1445,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
  []
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 265.
 
 LaTeX Warning: Reference `listing:rule2example2' on page 14 undefined on input 
 line 265.
@@ -1475,6 +1494,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 288--291
 
  []
 
+Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
+although it is yet undefined on input line 292.
 
 Underfull \hbox (badness 10000) in paragraph at lines 292--294
 
@@ -1528,6 +1549,9 @@ although it is yet undefined on input line 305.
 Underfull \hbox (badness 10000) in paragraph at lines 305--307
 
  []
+
+
+LaTeX Warning: Citation `wiki' on page 16 undefined on input line 308.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 308--310
@@ -1596,6 +1620,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
 Package acronym Info: Label `acro:LoD' newly defined as it shall be overridden
 although it is yet undefined on input line 356.
+
+LaTeX Warning: Citation `ba.com' on page 19 undefined on input line 356.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 356--358
 
@@ -1842,6 +1869,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 494--496
  []
 
 
+LaTeX Warning: Citation `telldontask' on page 26 undefined on input line 497.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 497--499
 
  []
@@ -1917,6 +1947,9 @@ LaTeX Warning: Reference `prototype' on page 29 undefined on input line 569.
 
 Package acronym Info: Label `acro:AST' newly defined as it shall be overridden
 although it is yet undefined on input line 574.
+
+LaTeX Warning: Citation `wiki' on page 29 undefined on input line 574.
+
 Package acronym Info: Label `acro:JLS' newly defined as it shall be overridden
 although it is yet undefined on input line 574.
 
@@ -1948,20 +1981,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 584--586
  []
 
 
-LaTeX Warning: Reference `gof' on page 30 undefined on input line 589.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 587--591
+Underfull \hbox (badness 10000) in paragraph at lines 588--590
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--594
+LaTeX Warning: Reference `gof' on page 30 undefined on input line 591.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--593
+
+ []
+
+Package acronym Info: Label `acro:API' newly defined as it shall be overridden
+although it is yet undefined on input line 594.
+
+Package acronym Warning: Acronym `API' is not defined on input line 594.
+
+
+Package acronym Warning: Acronym `API' is not defined on input line 594.
+
+
+Package acronym Warning: Acronym `API' is not defined on input line 594.
+
+
+Package acronym Warning: Acronym `API' is not defined on input line 594.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--597
+Underfull \hbox (badness 10000) in paragraph at lines 597--599
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 600--602
 
  []
 
@@ -1972,13 +2029,27 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 637--639
+
+LaTeX Warning: Citation `jls' on page 31 undefined on input line 603.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 607--609
 
  []
 
 
-Overfull \hbox (17.78998pt too wide) in paragraph at lines 668--670
-[][]
+Underfull \hbox (badness 10000) in paragraph at lines 610--612
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--615
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--641
+
  []
 
 
@@ -1988,47 +2059,37 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 671--673
+Underfull \hbox (badness 10000) in paragraph at lines 642--644
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--676
+Underfull \hbox (badness 10000) in paragraph at lines 645--647
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 677--680
+Underfull \hbox (badness 10000) in paragraph at lines 648--650
 
  []
 
 
-LaTeX Warning: Reference `JLS' on page 32 undefined on input line 681.
-
-
-Package acronym Warning: Acronym `JDT' is not defined on input line 681.
-
-
-Package acronym Warning: Acronym `JDT' is not defined on input line 681.
-
-
-LaTeX Warning: Reference `JLS' on page 32 undefined on input line 681.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 681--683
+Underfull \hbox (badness 10000) in paragraph at lines 651--654
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--689
+Underfull \hbox (badness 10000) in paragraph at lines 655--657
 
  []
 
 
-LaTeX Warning: Reference `JLS' on page 32 undefined on input line 690.
+Overfull \hbox (17.78998pt too wide) in paragraph at lines 686--688
+[][]
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 690--692
+Underfull \hbox (badness 10000) in paragraph at lines 689--691
 
  []
 
@@ -2039,36 +2100,65 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32]
-
-LaTeX Warning: Reference `AST' on page 33 undefined on input line 693.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--695
+Underfull \hbox (badness 10000) in paragraph at lines 692--694
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--698
+Underfull \hbox (badness 10000) in paragraph at lines 695--697
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 699--702
+LaTeX Warning: Reference `JLS' on page 33 undefined on input line 698.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 698.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 698.
+
+
+LaTeX Warning: Reference `JLS' on page 33 undefined on input line 698.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--700
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 703--705
+Underfull \hbox (badness 10000) in paragraph at lines 704--706
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 750--752
+LaTeX Warning: Reference `JLS' on page 33 undefined on input line 707.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 707--709
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 753--755
+LaTeX Warning: Reference `AST' on page 33 undefined on input line 710.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 710--712
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--715
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 716--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--722
 
  []
 
@@ -2079,33 +2169,26 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 756--758
+
+LaTeX Warning: Reference `Discussion' on page 34 undefined on input line 751.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--753
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--761
+Underfull \hbox (badness 10000) in paragraph at lines 754--756
 
  []
 
 
-Overfull \hbox (1.57448pt too wide) in paragraph at lines 762--764
-[]\T1/ptm/m/n/12 Usually, one line is an ex-pres-sion state-ment with a ;. For 
-ex-am-ple: \T1/ptm/m/it/12 Sys-tem.out.println("Object
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 762--764
+Underfull \hbox (badness 10000) in paragraph at lines 757--759
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 765--767
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--770
+Underfull \hbox (badness 10000) in paragraph at lines 760--762
 
  []
 
@@ -2116,13 +2199,41 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
-Overfull \hbox (2.4831pt too wide) in paragraph at lines 781--782
-[]\T1/ptm/m/n/12 The Su-per-Con-struc-tor-In-vo-ca-tion has the foll-wo-ing str
-uc-ture:
+Underfull \hbox (badness 10000) in paragraph at lines 767--769
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 789--791
+Underfull \hbox (badness 10000) in paragraph at lines 770--772
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 773--775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 776--778
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 779--781
+
+ []
+
+
+LaTeX Warning: Reference `listing:rule3example3:Week' on page 35 undefined on i
+nput line 782.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 782--784
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 785--787
 
  []
 
@@ -2133,29 +2244,27 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 792--794
+Underfull \hbox (badness 10000) in paragraph at lines 788--790
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 795--797
+Underfull \hbox (badness 10000) in paragraph at lines 798--800
 
  []
 
 
-Overfull \hbox (18.57513pt too wide) in paragraph at lines 801--802
-[]\T1/ptm/m/n/12 The Su-per-Me-thod-In-vo-ca-tion has a very sim-i-lar struc-tu
-re like Method-
+Underfull \hbox (badness 10000) in paragraph at lines 801--803
+
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Underfull \hbox (badness 10000) in paragraph at lines 804--806
 
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 808--810
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 807--809
 
  []
 
@@ -2165,20 +2274,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 811--813
  []
 
 
-LaTeX Warning: Reference `oc2008' on page 37 undefined on input line 814.
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 814--816
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 818--824
+Underfull \hbox (badness 10000) in paragraph at lines 817--819
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 825--827
+Underfull \hbox (badness 10000) in paragraph at lines 820--822
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--825
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 826--828
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--831
+
+ []
+
+
+Overfull \hbox (62.97777pt too wide) in paragraph at lines 832--834
+[]\T1/ptm/m/n/12 Usually, one line is an ex-pres-sion state-ment with a semi-co
+lon ";". For ex-am-ple: \T1/ptm/m/it/12 Sys-tem.out.println("Object
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 832--834
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 835--837
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 838--840
 
  []
 
@@ -2189,43 +2337,16 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 828--830
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 831--833
-
- []
+LaTeX Warning: Reference `JLS' on page 38 undefined on input line 849.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 834--836
-
- []
+LaTeX Warning: Reference `JLS' on page 38 undefined on input line 849.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--839
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 851--853
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 854--856
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 857--859
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 860--862
-
+Overfull \hbox (2.4831pt too wide) in paragraph at lines 851--852
+[]\T1/ptm/m/n/12 The Su-per-Con-struc-tor-In-vo-ca-tion has the foll-wo-ing str
+uc-ture:
  []
 
 
@@ -2235,38 +2356,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [38]
-Overfull \hbox (4.55098pt too wide) in paragraph at lines 863--865
-\T1/ptm/m/n/12 ForState-ment, If-S-tate-ment, Re-turn-State-ment, Su-per-Con-st
-ruc-tor-In-vo-ca-tion, Switch-Case, Switch-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 863--865
+Underfull \hbox (badness 10000) in paragraph at lines 859--861
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 866--868
+Underfull \hbox (badness 10000) in paragraph at lines 862--864
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 869--871
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 872--874
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 878--880
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 881--883
+Underfull \hbox (badness 10000) in paragraph at lines 865--867
 
  []
 
@@ -2277,37 +2377,32 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [39]
-Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 884.
+Overfull \hbox (18.57513pt too wide) in paragraph at lines 872--873
+[]\T1/ptm/m/n/12 The Su-per-Me-thod-In-vo-ca-tion has a very sim-i-lar struc-tu
+re like Method-
+ []
 
 
-Package acronym Warning: Acronym `API' is not defined on input line 884.
+Overfull \hbox (5.08575pt too wide) in paragraph at lines 874--875
+[]\T1/ptm/m/n/12 The Su-per-Fiel-d-Ac-cess has a very sim-i-lar struc-ture like
+ Fiel-d-Ac-cess there-
+ []
 
 
-Package acronym Warning: Acronym `API' is not defined on input line 884.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 884--886
+Underfull \hbox (badness 10000) in paragraph at lines 879--881
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--889
+Underfull \hbox (badness 10000) in paragraph at lines 882--885
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 914--916
-
- []
+LaTeX Warning: Reference `oc2008' on page 40 undefined on input line 886.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 923--925
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 926--928
+Underfull \hbox (badness 10000) in paragraph at lines 886--888
 
  []
 
@@ -2318,48 +2413,35 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [40]
-
-LaTeX Warning: Reference `Discussion' on page 41 undefined on input line 929.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 929--931
+Underfull \hbox (badness 10000) in paragraph at lines 889--891
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--934
+Underfull \hbox (badness 10000) in paragraph at lines 893--896
 
  []
 
 
-Overfull \hbox (27.4356pt too wide) in paragraph at lines 935--937
-\T1/ptm/m/it/12 name>()\T1/ptm/m/n/12 . In most cases, the mod-i-fiers are pub-
-lic, not static, and the method name is \T1/ptm/m/it/12 get<Fieldname>\T1/ptm/m
-/n/12 .
- []
+LaTeX Warning: Citation `wiki' on page 41 undefined on input line 898.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 935--937
+Underfull \hbox (badness 10000) in paragraph at lines 897--900
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--940
+Underfull \hbox (badness 10000) in paragraph at lines 901--903
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 941--943
+Underfull \hbox (badness 10000) in paragraph at lines 904--906
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 944--946
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 947--949
+Underfull \hbox (badness 10000) in paragraph at lines 908--910
 
  []
 
@@ -2370,7 +2452,37 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 950--952
+Underfull \hbox (badness 10000) in paragraph at lines 911--913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 917--919
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 924--926
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 927--929
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 930--932
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 933--935
 
  []
 
@@ -2381,12 +2493,209 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
+Overfull \hbox (4.55098pt too wide) in paragraph at lines 936--938
+\T1/ptm/m/n/12 ForState-ment, If-S-tate-ment, Re-turn-State-ment, Su-per-Con-st
+ruc-tor-In-vo-ca-tion, Switch-Case, Switch-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 936--938
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 939--941
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 942--944
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 945--947
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 951--953
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 954--956
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--959
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 960--962
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--989
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 993--995
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 996--998
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44]
+
+LaTeX Warning: Citation `wiki' on page 45 undefined on input line 999.
+
+
+LaTeX Warning: Reference `Discussion' on page 45 undefined on input line 999.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 999--1001
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1004
+
+ []
+
+
+Overfull \hbox (27.4356pt too wide) in paragraph at lines 1005--1007
+\T1/ptm/m/it/12 name>()\T1/ptm/m/n/12 . In most cases, the mod-i-fiers are pub-
+lic, not static, and the method name is \T1/ptm/m/it/12 get<Fieldname>\T1/ptm/m
+/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1007
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1008--1010
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1013
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1014--1016
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1019
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 1020--1022
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1025
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1028
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1031
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1032--1034
+
+ []
+
+
+LaTeX Warning: Citation `wiki' on page 46 undefined on input line 1035.
+
+
+LaTeX Warning: Reference `listing:rule9example1' on page 46 undefined on input 
+line 1035.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1037
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1040
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 1041--1043
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1048--1050
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1053
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47]
 Chapter 4.
-[43
+[48
 
 ]
 Chapter 5.
-) [44
+) [49
 
 ]
 \openout2 = `Inhalt/abkuerzungen.aux'.
@@ -2398,7 +2707,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45
+[50
 
 
 ]
@@ -2426,7 +2735,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46
+[51
 
 
 ])
@@ -2451,7 +2760,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47])
+[52])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 14--14
 [][][][][][][] 
  []
@@ -2463,32 +2772,11 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48])
-
-! Package keyval Error: implemented by using a conditional undefined.
-
-See the keyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...check, implemented by using a conditional]
-                                                  
-? 
-
+[53])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 17--17
 [][][][][][][] 
  []
 
-
-! Package keyval Error: implemented by using a conditional undefined.
-
-See the keyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...check, implemented by using a conditional]
-                                                  
-? 
 
 Overfull \hbox (6.0pt too wide) in paragraph at lines 25--25
 [][][][][][][] 
@@ -2511,7 +2799,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49])
+[54])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 37--37
 [][][][][][][] 
  []
@@ -2522,107 +2810,28 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 38--38
  []
 
 (./listings/rule3/example2/Action.java)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 42--42
+Overfull \hbox (6.0pt too wide) in paragraph at lines 39--39
 [][][][][][][] 
  []
 
-(./listings/rule7/example1/Car.java
+(./listings/rule3/example3/Day.java
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 44--44
+[55])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 43--43
 [][][][][][][] 
  []
 
-(./listings/rule7/example2/Car.java)
+(./listings/rule7/example1/Car.java)
 Overfull \hbox (6.0pt too wide) in paragraph at lines 45--45
 [][][][][][][] 
  []
 
-(./listings/rule7/example2/Interior.java
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[51])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 46--46
-[][][][][][][] 
- []
-
-(./listings/rule7/example2/Exterior.java)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 47--47
-[][][][][][][] 
- []
-
-(./listings/rule7/example2/CenterConsole.java
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[52])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 48--48
-[][][][][][][] 
- []
-
-(./listings/rule7/example2/Cockpit.java)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 51--51
-[][][][][][][] 
- []
-
-(./listings/rule8/example1/Exterior.java
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[53])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 52--52
-[][][][][][][] 
- []
-
-(./listings/rule8/example1/Door.java)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 55--55
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[54] (./listings/rule8/example2/Exterior.java)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 56--56
-[][][][][][][] 
- []
-
-(./listings/rule8/example2/Doors.java)
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[55]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 57--57
-[][][][][][][] 
- []
-
-(./listings/rule8/example2/Door.java)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 60--60
-[][][][][][][] 
- []
-
-(./listings/rule9/example1/Main.java
+(./listings/rule7/example2/Car.java
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2630,17 +2839,108 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [56])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 46--46
+[][][][][][][] 
+ []
+
+(./listings/rule7/example2/Interior.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 47--47
+[][][][][][][] 
+ []
+
+(./listings/rule7/example2/Exterior.java
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 48--48
+[][][][][][][] 
+ []
+
+(./listings/rule7/example2/CenterConsole.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 49--49
+[][][][][][][] 
+ []
+
+(./listings/rule7/example2/Cockpit.java)
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 52--52
+[][][][][][][] 
+ []
+
+(./listings/rule8/example1/Exterior.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 53--53
+[][][][][][][] 
+ []
+
+(./listings/rule8/example1/Door.java
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[59])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 56--56
+[][][][][][][] 
+ []
+
+(./listings/rule8/example2/Exterior.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 57--57
+[][][][][][][] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60] (./listings/rule8/example2/Doors.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 58--58
+[][][][][][][] 
+ []
+
+(./listings/rule8/example2/Door.java
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[61])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 61--61
 [][][][][][][] 
  []
 
-(./listings/rule9/example1/Speaker.java)
+(./listings/rule9/example1/Main.java)
 Overfull \hbox (6.0pt too wide) in paragraph at lines 62--62
 [][][][][][][] 
  []
 
-(./listings/rule9/example2/Main.java)
+(./listings/rule9/example1/Speaker.java)
 Overfull \hbox (6.0pt too wide) in paragraph at lines 63--63
+[][][][][][][] 
+ []
+
+(./listings/rule9/example2/Main.java
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[62])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 64--64
 [][][][][][][] 
  []
 
@@ -2651,14 +2951,116 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 64--64
+[63])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 65--65
 [][][][][][][] 
  []
 
-(./listings/rule9/example2/SpeakerMock.java
+(./listings/rule9/example2/SpeakerMock.java)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 66--66
+[][][][][][][] 
+ []
+
+(./listings/rule9/example3/Speaker.java))
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
+
+[64]
+\openout2 = `Inhalt/appendixImages.aux'.
+
+ (./Inhalt/appendixImages.tex
+<Bilder/Rule1Abstraction.png, id=258, 394.47375pt x 249.18094pt>
+File: Bilder/Rule1Abstraction.png Graphic file (type png)
+
+<use Bilder/Rule1Abstraction.png>
+Package pdftex.def Info: Bilder/Rule1Abstraction.png used on input line 4.
+(pdftex.def)             Requested size: 394.47278pt x 249.18031pt.
+
+<Bilder/StrategyPattern.png, id=260, 256.96pt x 160.6pt>
+File: Bilder/StrategyPattern.png Graphic file (type png)
+
+<use Bilder/StrategyPattern.png>
+Package pdftex.def Info: Bilder/StrategyPattern.png used on input line 12.
+(pdftex.def)             Requested size: 256.95937pt x 160.5996pt.
+
+<Bilder/StatePattern.png, id=261, 471.7625pt x 170.6375pt>
+File: Bilder/StatePattern.png Graphic file (type png)
+
+<use Bilder/StatePattern.png>
+Package pdftex.def Info: Bilder/StatePattern.png used on input line 20.
+(pdftex.def)             Requested size: 471.76134pt x 170.63707pt.
+
+Overfull \hbox (18.79338pt too wide) in paragraph at lines 20--21
+ [][] 
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[65 <./Bilder/Rule1Abstraction.png> <./Bilder/StrategyPattern.png (PNG copy)>]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[66 <./Bilder/StatePattern.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
+\T1/ptm/m/n/12 URL http://www.ccs.neu.edu/research/demeter/demeter-
+ []
+
+[67
+
+
+
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[68] (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
+(./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux) (./Inhalt/abkuerzungen.aux)
+(./Inhalt/appendixListing.aux) (./Inhalt/appendixImages.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 19913 strings out of 493308
+ 373380 string characters out of 6141367
+ 548498 words of memory out of 5000000
+ 22769 multiletter control sequences out of 15000+600000
+ 89657 words of font info for 100 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 65i,12n,76p,1950b,1711s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2013/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2013/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic
+/uhvr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c
+:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2013/tex
+mf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2013/texmf-dist/fonts/typ
+e1/urw/times/utmr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on Bachelorarbeit.pdf (75 pages, 345830 bytes).
+PDF statistics:
+ 308 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+

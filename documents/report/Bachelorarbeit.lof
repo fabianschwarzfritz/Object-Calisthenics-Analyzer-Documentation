@@ -1,0 +1,10 @@
+\select@language {ngerman}
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagramm showing the result when applying rule 1}}{65}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \acf {UML} diagram of the strategy pattern}}{65}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \acf {UML} diagram of the state pattern}}{66}
