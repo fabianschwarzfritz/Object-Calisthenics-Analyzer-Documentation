@@ -701,6 +701,7 @@ All statements that have indented subnodes can be simply read up in the \ref{JLS
 With this simple \acf{AST} structure analysis, the first rule is validated successfully. During this research, no case in which this validation failed was found. The implementation of the rule validator is validating the rule successfully using the described algorithm.
 
 \subsection*{Validation of Rule 2}
+\label{evaluation:validationruletwo}
 The valdation of the second rule "don’t use the else keyword" is the simplest rule to validate.
 \\
 
@@ -1157,6 +1158,7 @@ These three steps will be described in detail in the following.
 This part will explain the first step of the prototype. In this first step, all open projects within the workspace will be used to model the \acf{AST} model. This step is called the "extraction". All Java files of open projects are used as the base for the model generation. Then the Eclipse Framework is used to generate the  \acf{AST} model. The result is a semantic \acf{AST} that represents the source code of the projects. This semantic \acf{AST}  is the foundation for the rule validators that will be applied in the next step. Whereas a normal b \acf{AST} only gives information about the syntaxt structure, a semantic \acf{AST} allows to gather information about the usage of objects, method calls or the inheritance structure of classes. This is crucial for example for the validation of the wrapper rules, because the validator has to recognize specific classes in order to implement the rule validation as described in chapter \ref{e:evaluation}. As already said, the result of this step is the semantic \acf{AST} model of the projects to be analysed. 
 
 \subsection{The Application of the rule validators}
+\label{astvisitorexample}
 The application of the actual rule validators is the second basic step. The validators use the \acf{AST} model and apply the rule validator to the model. The prototype uses it's own validator for every rule. 
 \\
 
@@ -1237,20 +1239,32 @@ public class ViolationImpl implements Violation {
 \end{lstlisting}
 \label{listing:violationdomain}
 
-As depicted in \ref{listing:violationdomain}, the main domain object \textit{ViolationImpl} consists of multiple field. These fields are not explained in detail. The domain objects that are field of \textit{ViolationImpl} give further information about the location of the violation in the source code, the degree of the violation and further information about of violation. Furthermore the \textit{ViolationImpl} gives is part of a \textit{RunImpl} object which represents one validation iteration. This \textit{RunImpl} is then part of th \textit{TrainingImpl}, which represents one object calisthenics training session. These two domain objects that are holding the \testit{ViolationImpl} are not shown in this report, to keep the prototype simple and to focus on the implementation of the actual rule validation. 
+As depicted in \ref{listing:violationdomain}, the main domain object \textit{ViolationImpl} consists of multiple fields. These fields are not explained in detail. The domain objects that are referenced \textit{ViolationImpl} give further information about the location of the violation in the source code, the degree of the violation and further information about of violation. Furthermore the \textit{ViolationImpl} gives is part of a \textit{RunImpl} object which represents one validation iteration. This \textit{RunImpl} is part of the \textit{TrainingImpl}, which represents one object calisthenics training session. These two domain objects that are holding the \textit{ViolationImpl} are not shown in this report, to keep the prototype simple and to focus on the implementation of the actual rule validation. 
 \\
 
 \subsection{The User Interface}
 In the third an last step, \acf{DTO}s are generated from the domain model that was described in the previous section. 
 \\
 
-The \acf{DTO}s follow the idea of Data Transfer Objects\cite{wiki}[Data Transfer Object]. 
+The \acf{DTO}s follow the idea of Data Transfer Objects \cite{wiki}[Data Transfer Object]. This allows the User Interface to create it's own data models that fit the representation of the User Interface elements. All necessary information for the User Interface is then accessible in the \acf{DTO}s without making the field of the main domain model accessible from outside other classes. The \acf{DTO}s provide full read and write access to all attributes: Every \acf{DTO} has full access of every field by getter- and setter methods. 
+\\
+
+The information is the displayed in the User Interface as part of the Eclipse \acf{IDE}. This is shown in picture \ref{picture:violationtable}.
 
 
 %=== How about a package overview and a short description: What do the classes of the package do and how do they interact in the software? 
 \section{Exemplary Rule Validation}
 \label{p:example}
-%=== One example implementation of one rule validation. Idea: Implementation of an ASTVisitor class...
+In this chapter an example for a rule violation is given. For every rule of the Object Calisthenics, there is an own rule violation visitor. The idea of the visitor pattern and the \acf{ASTVisitor} class was already described in \ref{astvisitorexample}. 
+\\
+
+In this chapter the rule validator of rule two "Don't Use the Else keyword" is used to exemplify a rule validation. The class is depicted in listing \ref{listing:elsevisitor}.
+\\
+
+As shown in line 30, the rule validator get notified about occurring If-Statements. For every exising If-Statement the rule validator checks if there is an Else-Statement as part of the If-Statement to satisfy the claimed rule validation described in \ref{evaluation:validationruletwo}. 
+\\
+
+To separate the different from each other clearly, each rule is part of it's own package. 
 
 \section{Resulting Prototype}
 \label{p:result}

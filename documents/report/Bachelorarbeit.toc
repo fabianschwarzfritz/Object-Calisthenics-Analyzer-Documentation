@@ -19,9 +19,12 @@
 \contentsline {section}{\numberline {3.5}Future Work}{47}
 \contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{48}
 \contentsline {section}{\numberline {4.1}Requirements}{48}
-\contentsline {section}{\numberline {4.2}Architecture}{48}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{48}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{48}
-\contentsline {section}{\numberline {4.5}Outlook and Future Work}{48}
-\contentsline {chapter}{\numberline {5}Conclusion}{49}
-\contentsline {chapter}{Bibliography}{67}
+\contentsline {section}{\numberline {4.2}Architecture}{50}
+\contentsline {subsection}{\numberline {4.2.1}The generation of the AST model}{50}
+\contentsline {subsection}{\numberline {4.2.2}The Application of the rule validators}{51}
+\contentsline {subsection}{\numberline {4.2.3}The User Interface}{53}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{53}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{53}
+\contentsline {section}{\numberline {4.5}Outlook and Future Work}{53}
+\contentsline {chapter}{\numberline {5}Conclusion}{54}
+\contentsline {chapter}{Bibliography}{73}
