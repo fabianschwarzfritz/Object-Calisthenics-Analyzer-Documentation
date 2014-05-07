@@ -14,16 +14,48 @@
 \lstinputlisting[label=listing:rule2examplenull:mainnull,caption=Example 2 of class \textit{MainNull}]{listings/rule2/examplenull/MainNull.java}
 %\label{listing:rule2example2}
 
+%---------------------------
+
+\lstinputlisting[label=listing:strategypatternexample1:printer,caption=Class \textit{Printer}]{listings/rule2/example1/Printer.java}
+\lstinputlisting[label=listing:strategypatternexample1:style,caption=Class \textit{Printer}]{listings/rule2/example1/Style.java}
+\lstinputlisting[label=listing:strategypatternexample1:main,caption=Class \textit{Printer}]{listings/rule2/example1/Main.java}
+\lstinputlisting[label=listing:strategypatternexample1:BoldFont,caption=Class \textit{Printer}]{listings/rule2/example1/BoldFont.java}
+\lstinputlisting[label=listing:strategypatternexample1:ItalicFont,caption=Class \textit{Printer}]{listings/rule2/example1/ItalicFont.java}
+%---------------------------
+
 \begin{lstlisting}[label=listing:nullobject1,caption={Null check, implemented by using a conditional}]
 Object value = a.method();
 if(value == null) {
 	...
 }
 \end{lstlisting}
-%\label{listing:nullobject1}
+
+\begin{lstlisting}[label=listing:nullobject2,caption={Object implementing the behavior}]
+public class AnObject implements CommonMethod {
+	public void method(Object value) {
+		if(value == null) {
+			...
+		}
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}[label=listing:nullobject3,caption={Null object implementing no behavior}]
+public class NullObject implements CommonMethod {
+	public void method(Object value) {
+		// no behavior
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}label=listing:nullobjectoperationinterface, caption={Common interface of the Null object and the object implementing the behavior}]
+public interface CommonMethod {
+	public abstract void method();
+}
+\end{lstlisting}
 
 \begin{lstlisting}[label=listing:nullobject4,caption={Null check, implemented by using a conditional}]
-Object value = a.method();
+CommonMethod value = a.method();
 value.method()
 \end{lstlisting}
 %\label{listing:nullobject4}
@@ -37,6 +69,7 @@ value.method()
 \lstinputlisting[label=listing:rule3example2,caption=Example 2 of class \textit{Dice}]{listings/rule3/example2/Dice.java}
 \lstinputlisting[label=listing:rule3example2,caption=New class \textit{Action} of example 2]{listings/rule3/example2/Action.java}
 \lstinputlisting[label=listing:rule3example3:Day,caption={A typical wrapper class, representing a \textit{Day}}]{listings/rule3/example3/Day.java}
+\lstinputlisting[label=listing:rule3example3:Week,caption={A typical wrapper class, representing a \textit{Week}}]{listings/rule3/example3/Week.java}
 %\label{listing:rule3example2}
 
 
@@ -63,7 +96,7 @@ value.method()
 \lstinputlisting[label=listing:rule9example2:main,caption=Example 2 of class \textit{Main}]{listings/rule9/example2/Main.java}
 \lstinputlisting[label=listing:rule9example2:speaker,caption=Example 2 of class \textit{Speaker}]{listings/rule9/example2/Speaker.java}
 \lstinputlisting[label=listing:rule9example2:mock,caption=Example 2 of class \textit{SpeakerMock}]{listings/rule9/example2/SpeakerMock.java}
-\lstinputlisting[label=listing:rule9example3,caption=Example 3 of class \textit{Speaker}]{listings/rule9/example3/Speaker.java}
+\lstinputlisting[label=listing:rule9example3:speaker,caption=Example 3 of class \textit{Speaker}]{listings/rule9/example3/Speaker.java}
 
 \lstinputlisting[label=listing:elsevisitor,caption=\textit{ASTVisitor} to validate rule two Don't Use the else Keyword]{listings/ElseVisitor.java}
 
