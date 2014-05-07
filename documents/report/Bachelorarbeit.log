@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  6 MAY 2014 19:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  7 MAY 2014 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -753,28 +753,7 @@ Package caption Info: KOMA-Script document class.
 \c@ContinuedFloat=\count124
 Package caption Info: listings package is loaded.
 )
-(./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
-(./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux) (./Inhalt/abkuerzungen.aux)
-(./Inhalt/appendixListing.aux
-
-LaTeX Warning: Label `listing:rule3example2' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule3example2' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
-
-
-LaTeX Warning: Label `listing:rule8example1:door' multiply defined.
-
-) (./Inhalt/appendixImages.aux))
+(./Bachelorarbeit.aux)
 \openout1 = `Bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
@@ -792,8 +771,7 @@ LaTeX Font Info:    ... okay on input line 138.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 138.
 
-
-(c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 138.
@@ -1064,12 +1042,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 
 ]
-(./Bachelorarbeit.lof
-Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
-although it is yet undefined on input line 8.
-Package acronym Info: Label `acro:AST' newly defined as it shall be overridden
-although it is yet undefined on input line 10.
-)
+(./Bachelorarbeit.lof)
 \tf@lof=\write6
 \openout6 = `Bachelorarbeit.lof'.
 
@@ -1093,23 +1066,92 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              Support for \float@addtolists may be removed from
 (scrreprt)              `scrreprt' soon .
 
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--10
+LaTeX Warning: Citation `bay2008' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Reference `i:exercising' on page 1 undefined on input line 4.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
+
+ []
+
+
+LaTeX Warning: Reference `Description' on page 1 undefined on input line 6.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+LaTeX Warning: Reference `d:background' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Reference `d:discussion' on page 1 undefined on input line 8.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+LaTeX Warning: Reference `Evaluation' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Reference `e:advantages' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Reference `e:evaluation' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Reference `e:result' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Reference `e:future' on page 1 undefined on input line 10.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
+
+
+LaTeX Warning: Reference `Prototype' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `bay2008' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `bay2008' on page 1 undefined on input line 16.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+[1
+
+
+]
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 18.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 20.
+
+
+LaTeX Warning: Citation `twWeb' on page 2 undefined on input line 20.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
@@ -1118,10 +1160,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-[1
 
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
@@ -1131,30 +1170,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-(c:/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 28.
+
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 28.
+
+
+LaTeX Warning: Citation `oc2008' on page 2 undefined on input line 28.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
  []
 
@@ -1165,29 +1196,38 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
-
- []
+LaTeX Warning: Reference `Description' on page 3 undefined on input line 44.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
+LaTeX Warning: Reference `Evaluation' on page 3 undefined on input line 46.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
+LaTeX Warning: Reference `Prototype' on page 3 undefined on input line 46.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1197,27 +1237,40 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [3]
 Chapter 2.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 79.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+LaTeX Warning: Reference `d:problemsprocedural' on page 4 undefined on input li
+ne 52.
+
+
+LaTeX Warning: Reference `d:background' on page 4 undefined on input line 54.
+
+
+LaTeX Warning: Citation `oc2008' on page 4 undefined on input line 58.
+
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 60.
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
 [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+LaTeX Warning: Citation `about' on page 5 undefined on input line 78.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
@@ -1228,19 +1281,23 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
+
+
+LaTeX Warning: Reference `d:problemsprocedural' on page 6 undefined on input li
+ne 100.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1249,32 +1306,49 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
+
+LaTeX Warning: Reference `d:problemsprocedural' on page 7 undefined on input li
+ne 102.
+
+
+LaTeX Warning: Citation `oc2008' on page 7 undefined on input line 102.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--131
+LaTeX Warning: Citation `bay2008' on page 7 undefined on input line 105.
+
+(c:/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+
+LaTeX Warning: Citation `bay2008' on page 7 undefined on input line 109.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+Underfull \hbox (badness 10000) in paragraph at lines 117--119
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--142
+Underfull \hbox (badness 10000) in paragraph at lines 120--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
  []
 
@@ -1285,27 +1359,36 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 146--148
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
+Underfull \hbox (badness 10000) in paragraph at lines 129--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--155
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+LaTeX Warning: Reference `i:exercising' on page 8 undefined on input line 136.
+
+
+LaTeX Warning: Citation `cohesionBook' on page 8 undefined on input line 140.
+
+
+LaTeX Warning: Citation `wiki' on page 8 undefined on input line 140.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
@@ -1316,12 +1399,40 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 168--176
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 153.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--156
 
  []
 
 Package acronym Info: Label `acro:DIP' newly defined as it shall be overridden
-although it is yet undefined on input line 177.
+although it is yet undefined on input line 157.
+
+Package acronym Warning: Acronym `DIP' is not defined on input line 157.
+
+
+Package acronym Warning: Acronym `DIP' is not defined on input line 157.
+
+
+Package acronym Warning: Acronym `DIP' is not defined on input line 158.
+
+
+LaTeX Warning: Citation `cc' on page 9 undefined on input line 158.
+
+
+LaTeX Warning: Citation `cc' on page 9 undefined on input line 158.
+
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 169.
+
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 169.
+
+
+LaTeX Warning: Citation `wiki' on page 9 undefined on input line 169.
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1329,12 +1440,22 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 199--201
+
+LaTeX Warning: Citation `cc' on page 10 undefined on input line 180.
+
+
+LaTeX Warning: Citation `cc' on page 10 undefined on input line 180.
+
+
+LaTeX Warning: Citation `cc' on page 10 undefined on input line 180.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
@@ -1345,7 +1466,28 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+LaTeX Warning: Citation `cc' on page 11 undefined on input line 184.
+
+
+LaTeX Warning: Citation `oc2008' on page 11 undefined on input line 188.
+
+
+LaTeX Warning: Reference `i:exercising' on page 11 undefined on input line 188.
+
+
+
+LaTeX Warning: Reference `i:exercising' on page 11 undefined on input line 192.
+
+
+
+LaTeX Warning: Citation `cc' on page 11 undefined on input line 199.
+
+
+LaTeX Warning: Reference `focus' on page 11 undefined on input line 199.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
@@ -1356,17 +1498,29 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--228
+LaTeX Warning: Citation `cc' on page 12 undefined on input line 206.
+
+
+LaTeX Warning: Reference `readability' on page 12 undefined on input line 206.
+
+
+LaTeX Warning: Citation `cc' on page 12 undefined on input line 206.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--231
+LaTeX Warning: Citation `wiki' on page 12 undefined on input line 209.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
 
  []
 
@@ -1377,27 +1531,63 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--239
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--244
+LaTeX Warning: Reference `listing:rule1example1' on page 13 undefined on input 
+line 220.
+
+
+LaTeX Warning: Reference `listing:rule1example2' on page 13 undefined on input 
+line 220.
+
+
+LaTeX Warning: Reference `listing:rule1example2' on page 13 undefined on input 
+line 222.
+
+
+LaTeX Warning: Reference `listing:rule1example3:school' on page 13 undefined on
+ input line 222.
+
+
+LaTeX Warning: Reference `listing:rule1example3:schoolclass' on page 13 undefin
+ed on input line 222.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--252
+LaTeX Warning: Reference `picture:rule1abstraction' on page 13 undefined on inp
+ut line 225.
+
+
+LaTeX Warning: Citation `oc2008' on page 13 undefined on input line 230.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--255
+LaTeX Warning: Citation `gof' on page 13 undefined on input line 233.
+
+
+LaTeX Warning: Citation `gof' on page 13 undefined on input line 233.
+
+
+LaTeX Warning: Citation `gof' on page 13 undefined on input line 233.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--235
 
  []
 
@@ -1408,23 +1598,29 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
+LaTeX Warning: Reference `listing:rule2examplenull:main' on page 14 undefined o
+n input line 242.
+
+
+LaTeX Warning: Reference `listing:rule2examplenull:mainnull' on page 14 undefin
+ed on input line 242.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
 
  []
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 265.
 
 LaTeX Warning: Reference `listing:rule2example2' on page 14 undefined on input 
-line 265.
+line 245.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--267
+Underfull \hbox (badness 10000) in paragraph at lines 245--247
 
  []
 
@@ -1435,41 +1631,69 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
+
+LaTeX Warning: Reference `listing:nullcheck' on page 15 undefined on input line
+ 251.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
+
+
+LaTeX Warning: Reference `listing:nullobject1' on page 15 undefined on input li
+ne 262.
 
 
 LaTeX Warning: Reference `listing:nullobject2' on page 15 undefined on input li
-ne 282.
+ne 262.
 
 
 LaTeX Warning: Reference `listing:nullobject3' on page 15 undefined on input li
-ne 282.
+ne 262.
 
 
 LaTeX Warning: Reference `listing:nullobjectoperationinterface' on page 15 unde
-fined on input line 282.
+fined on input line 262.
 
 
 LaTeX Warning: Reference `listing:nullobject3' on page 15 undefined on input li
-ne 282.
+ne 262.
 
 
-LaTeX Warning: Reference `nullobject4' on page 15 undefined on input line 282.
+LaTeX Warning: Reference `nullobject4' on page 15 undefined on input line 262.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--286
+LaTeX Warning: Reference `listing:nullobject4' on page 15 undefined on input li
+ne 264.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--291
+Underfull \hbox (badness 10000) in paragraph at lines 268--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--294
+LaTeX Warning: Citation `gof' on page 15 undefined on input line 272.
+
+Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
+although it is yet undefined on input line 272.
+
+Package acronym Warning: Acronym `UML' is not defined on input line 272.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 272.
+
+
+LaTeX Warning: Reference `picture:strategypattern' on page 15 undefined on inpu
+t line 272.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--274
 
  []
 
@@ -1482,48 +1706,77 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [15]
 
 LaTeX Warning: Reference `listing:strategypatternexample1:printer' on page 16 u
-ndefined on input line 295.
+ndefined on input line 275.
 
 
 LaTeX Warning: Reference `listing:strategypatternexample1:style' on page 16 und
-efined on input line 295.
+efined on input line 275.
 
 
 LaTeX Warning: Reference `listing:strategypatternexample1:boldfont' on page 16 
-undefined on input line 295.
+undefined on input line 275.
 
 
 LaTeX Warning: Reference `listing:strategypatternexample1:italicfont' on page 1
-6 undefined on input line 295.
+6 undefined on input line 275.
 
 
 LaTeX Warning: Reference `listing:strategypatternexample1:main' on page 16 unde
-fined on input line 295.
+fined on input line 275.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--297
+LaTeX Warning: Reference `picture:strategypattern' on page 16 undefined on inpu
+t line 275.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--280
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--300
+Package acronym Warning: Acronym `UML' is not defined on input line 281.
+
+
+LaTeX Warning: Reference `picture:statepattern' on page 16 undefined on input l
+ine 281.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--304
+LaTeX Warning: Citation `gof' on page 16 undefined on input line 285.
 
- []
+
+LaTeX Warning: Citation `gof' on page 16 undefined on input line 285.
 
 Package acronym Info: Label `acro:LSP' newly defined as it shall be overridden
-although it is yet undefined on input line 305.
+although it is yet undefined on input line 285.
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--307
+Package acronym Warning: Acronym `LSP' is not defined on input line 285.
+
+
+Package acronym Warning: Acronym `LSP' is not defined on input line 285.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--310
+Package acronym Warning: Acronym `LSP' is not defined on input line 288.
+
+
+LaTeX Warning: Citation `wiki' on page 16 undefined on input line 288.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--290
 
  []
 
@@ -1534,27 +1787,38 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 311--313
+
+Package acronym Warning: Acronym `LSP' is not defined on input line 291.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--319
+LaTeX Warning: Citation `gof' on page 17 undefined on input line 294.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--322
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--325
+Underfull \hbox (badness 10000) in paragraph at lines 303--305
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--328
+LaTeX Warning: Reference `listing:rule3example1' on page 17 undefined on input 
+line 306.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
 
  []
 
@@ -1565,16 +1829,54 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 329--332
+
+LaTeX Warning: Reference `listing:rule3example2' on page 18 undefined on input 
+line 309.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--312
 
  []
 
 Package acronym Info: Label `acro:DDD' newly defined as it shall be overridden
-although it is yet undefined on input line 333.
+although it is yet undefined on input line 313.
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--336
+Package acronym Warning: Acronym `DDD' is not defined on input line 313.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 313.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 313.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 313.
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 313.
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 314.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--316
 
  []
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 323.
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 323.
+
+
+LaTeX Warning: Citation `gof' on page 18 undefined on input line 327.
+
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 329.
+
+
+LaTeX Warning: Citation `dddbook' on page 18 undefined on input line 329.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1583,22 +1885,59 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 332.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
+
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 334.
+
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 334.
+
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 334.
+
+
+LaTeX Warning: Citation `oc2008' on page 19 undefined on input line 334.
 
 Package acronym Info: Label `acro:LoD' newly defined as it shall be overridden
-although it is yet undefined on input line 356.
+although it is yet undefined on input line 334.
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--358
+Package acronym Warning: Acronym `LoD' is not defined on input line 334.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 334.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 334.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 334.
+
+
+LaTeX Warning: Citation `ba.com' on page 19 undefined on input line 334.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
  []
 
 
-LaTeX Warning: Citation `paperboy' on page 19 undefined on input line 359.
+Package acronym Warning: Acronym `LoD' is not defined on input line 337.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--361
+LaTeX Warning: Citation `paperboy' on page 19 undefined on input line 337.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 337.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 
  []
 
@@ -1609,37 +1948,44 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 362--364
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 340.
+
+
+LaTeX Warning: Reference `listing:lodbadexample' on page 20 undefined on input 
+line 340.
+
+
+LaTeX Warning: Reference `listing:lodgoodexample' on page 20 undefined on input
+ line 340.
+
+
+LaTeX Warning: Reference `listing:lodgoodexample' on page 20 undefined on input
+ line 340.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
+Package acronym Warning: Acronym `LoD' is not defined on input line 367.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--370
+Package acronym Warning: Acronym `LoD' is not defined on input line 370.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--373
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--376
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--379
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--385
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
 
  []
 
@@ -1650,37 +1996,56 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 386--388
+Underfull \hbox (badness 10000) in paragraph at lines 376--378
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 382--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--393
+LaTeX Warning: Citation `oc2008' on page 21 undefined on input line 385.
+
+
+LaTeX Warning: Citation `oc2008' on page 21 undefined on input line 385.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--396
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--399
+LaTeX Warning: Citation `cc' on page 21 undefined on input line 390.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 393--395
 
  []
 
 
-Overfull \hbox (1.39528pt too wide) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 396--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+
+Overfull \hbox (1.39528pt too wide) in paragraph at lines 401--402
 \T1/ptm/m/it/12 nesslevel) \T1/ptm/m/n/12 and \T1/ptm/m/it/12 change-Screen-Res
 -o-lu-tion(ScreenResolution res-o-lu-tion)\T1/ptm/m/n/12 . In this ex-am-ple th
 e class-
@@ -1693,35 +2058,31 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
-Overfull \hbox (13.34642pt too wide) in paragraph at lines 408--410
+Overfull \hbox (13.34642pt too wide) in paragraph at lines 407--409
 \T1/ptm/m/it/12 LaptopScreen.adjustBrightness(BrithnessLevel bright-nesslevel) 
 \T1/ptm/m/n/12 to \T1/ptm/m/it/12 Screen.adjust(Brightness level)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--410
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
 
  []
 
 Package acronym Info: Label `acro:GWT' newly defined as it shall be overridden
-although it is yet undefined on input line 415.
+although it is yet undefined on input line 414.
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--417
-
- []
+Package acronym Warning: Acronym `GWT' is not defined on input line 414.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--423
-
- []
+Package acronym Warning: Acronym `GWT' is not defined on input line 414.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--426
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--429
+Underfull \hbox (badness 10000) in paragraph at lines 420--422
 
  []
 
@@ -1732,27 +2093,37 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 434--436
+
+LaTeX Warning: Citation `cc' on page 23 undefined on input line 423.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--439
+LaTeX Warning: Citation `oc2008' on page 23 undefined on input line 426.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--442
+Underfull \hbox (badness 10000) in paragraph at lines 432--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 443--445
+LaTeX Warning: Citation `oc2008' on page 23 undefined on input line 435.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--450
+Underfull \hbox (badness 10000) in paragraph at lines 438--440
 
  []
 
@@ -1763,22 +2134,67 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 451--453
+
+Package acronym Warning: Acronym `DDD' is not defined on input line 441.
+
+
+LaTeX Warning: Citation `dddbook' on page 24 undefined on input line 441.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--443
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--456
+LaTeX Warning: Reference `listing:rule7example1:car' on page 24 undefined on in
+put line 444.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--448
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--459
+LaTeX Warning: Reference `listing:rule7example2:car' on page 24 undefined on in
+put line 449.
+
+
+LaTeX Warning: Reference `listing:rule7example2:interior' on page 24 undefined 
+on input line 449.
+
+
+LaTeX Warning: Reference `listing:rule7example2:exterior' on page 24 undefined 
+on input line 449.
+
+
+LaTeX Warning: Reference `listing:rule7example2:centerconsole' on page 24 undef
+ined on input line 449.
+
+
+LaTeX Warning: Reference `listing:rule7example2:cockpit' on page 24 undefined o
+n input line 449.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--451
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--462
+Underfull \hbox (badness 10000) in paragraph at lines 452--454
+
+ []
+
+
+LaTeX Warning: Reference `listing:rule7example1:car' on page 24 undefined on in
+put line 455.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--457
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--460
 
  []
 
@@ -1789,27 +2205,29 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 466--468
+
+LaTeX Warning: Citation `oc2008' on page 25 undefined on input line 464.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--466
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 471--473
+Underfull \hbox (badness 10000) in paragraph at lines 469--471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--476
+Underfull \hbox (badness 10000) in paragraph at lines 472--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--479
-
- []
+Package acronym Warning: Acronym `LoD' is not defined on input line 475.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--482
+Underfull \hbox (badness 10000) in paragraph at lines 475--477
 
  []
 
@@ -1820,36 +2238,44 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 483--486
+Underfull \hbox (badness 10000) in paragraph at lines 478--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--493
+Underfull \hbox (badness 10000) in paragraph at lines 481--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--496
+LaTeX Warning: Citation `oc2008' on page 26 undefined on input line 489.
+
+
+LaTeX Warning: Citation `telldontaskoriginal' on page 26 undefined on input lin
+e 489.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--491
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--499
+LaTeX Warning: Citation `oc2008' on page 26 undefined on input line 492.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
 
  []
 
 
-LaTeX Warning: Reference `listing:rule9example1:Main' on page 26 undefined on i
-nput line 500.
+LaTeX Warning: Citation `telldontask' on page 26 undefined on input line 495.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--502
+LaTeX Warning: Citation `telldontaskoriginal' on page 26 undefined on input lin
+e 495.
 
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 503--505
+Underfull \hbox (badness 10000) in paragraph at lines 495--497
 
  []
 
@@ -1860,22 +2286,57 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 506--508
+
+LaTeX Warning: Reference `listing:rule9example1:speaker' on page 27 undefined o
+n input line 498.
+
+
+LaTeX Warning: Reference `listing:rule9example1:Main' on page 27 undefined on i
+nput line 498.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 513--515
+LaTeX Warning: Reference `listing:rule9example2:speaker' on page 27 undefined o
+n input line 501.
+
+
+LaTeX Warning: Reference `listing:rule9example2:main' on page 27 undefined on i
+nput line 501.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 516--518
+LaTeX Warning: Reference `listing:rule9example2:mock' on page 27 undefined on i
+nput line 504.
+
+
+LaTeX Warning: Citation `telldontaskoriginal' on page 27 undefined on input lin
+e 504.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--506
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--524
+Underfull \hbox (badness 10000) in paragraph at lines 511--513
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 514--516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 520--522
 
  []
 
@@ -1886,12 +2347,23 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 539--541
+
+LaTeX Warning: Citation `telldontaskoriginal' on page 28 undefined on input lin
+e 534.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--539
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--544
+LaTeX Warning: Citation `oc2008' on page 28 undefined on input line 540.
+
+
+Package acronym Warning: Acronym `LoD' is not defined on input line 540.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--542
 
  []
 
@@ -1902,104 +2374,199 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28]
-Chapter 3.
-Package acronym Info: Label `acro:IDE' newly defined as it shall be overridden
-although it is yet undefined on input line 560.
-
-LaTeX Warning: Reference `prototype' on page 29 undefined on input line 569.
-
-Package acronym Info: Label `acro:JLS' newly defined as it shall be overridden
-although it is yet undefined on input line 574.
-
-Underfull \hbox (badness 10000) in paragraph at lines 569--577
-
- []
-
-[29
-
-]
-Package acronym Info: Label `acro:JDT' newly defined as it shall be overridden
-although it is yet undefined on input line 584.
-
-
-Package acronym Warning: Acronym `JDT' is not defined on input line 584.
-
-
-Package acronym Warning: Acronym `JDT' is not defined on input line 584.
-
-
-Package acronym Warning: Acronym `JDT' is not defined on input line 584.
-
-
-Package acronym Warning: Acronym `JDT' is not defined on input line 584.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 584--586
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 588--590
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 591--593
-
- []
-
-Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 594.
-
-Package acronym Warning: Acronym `API' is not defined on input line 594.
-
-
-Package acronym Warning: Acronym `API' is not defined on input line 594.
-
-
-Package acronym Warning: Acronym `API' is not defined on input line 594.
-
-
-Package acronym Warning: Acronym `API' is not defined on input line 594.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 594--596
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 597--599
+[29]
+Chapter 3.
+
+LaTeX Warning: Reference `e:advantages' on page 30 undefined on input line 575.
+
+
+
+LaTeX Warning: Reference `e:evaluation' on page 30 undefined on input line 575.
+
+
+Package acronym Info: Label `acro:IDE' newly defined as it shall be overridden
+although it is yet undefined on input line 580.
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 580.
+
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 580.
+
+
+LaTeX Warning: Reference `prototype' on page 30 undefined on input line 587.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--591
+
+ []
+
+[30
+
+]
+Package acronym Info: Label `acro:AST' newly defined as it shall be overridden
+although it is yet undefined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+
+LaTeX Warning: Citation `wiki' on page 31 undefined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+Package acronym Info: Label `acro:JLS' newly defined as it shall be overridden
+although it is yet undefined on input line 592.
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 592.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 592.
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 592.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 592--594
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--602
+Package acronym Warning: Acronym `AST' is not defined on input line 595.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 595.
+
+Package acronym Info: Label `acro:JDT' newly defined as it shall be overridden
+although it is yet undefined on input line 595.
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 595.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 595.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 595.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 595.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 595--597
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--609
+Underfull \hbox (badness 10000) in paragraph at lines 599--601
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 610--612
+Package acronym Warning: Acronym `AST' is not defined on input line 602.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 602.
+
+
+LaTeX Warning: Citation `gof' on page 31 undefined on input line 602.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 602.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 602.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 602.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 602.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 602.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 602.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--604
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--615
+Package acronym Warning: Acronym `AST' is not defined on input line 605.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 605.
+
+Package acronym Info: Label `acro:API' newly defined as it shall be overridden
+although it is yet undefined on input line 605.
+
+Package acronym Warning: Acronym `API' is not defined on input line 605.
+
+
+Package acronym Warning: Acronym `API' is not defined on input line 605.
+
+
+Package acronym Warning: Acronym `API' is not defined on input line 605.
+
+
+Package acronym Warning: Acronym `API' is not defined on input line 605.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 605.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 605.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--641
+Package acronym Warning: Acronym `AST' is not defined on input line 608.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 608.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 608--610
 
  []
 
@@ -2010,37 +2577,73 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 642--644
+
+Package acronym Warning: Acronym `AST' is not defined on input line 611.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 611.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 611--613
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 645--647
+Package acronym Warning: Acronym `JLS' is not defined on input line 614.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 614.
+
+
+LaTeX Warning: Citation `jls' on page 32 undefined on input line 614.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 618--620
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--650
+Package acronym Warning: Acronym `AST' is not defined on input line 621.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 621.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 621.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 621.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--623
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--654
+Underfull \hbox (badness 10000) in paragraph at lines 624--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--657
-
- []
+Package acronym Warning: Acronym `IDE' is not defined on input line 631.
 
 
-Overfull \hbox (17.78998pt too wide) in paragraph at lines 686--688
-[][]
- []
+Package acronym Warning: Acronym `IDE' is not defined on input line 631.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 689--691
+Package acronym Warning: Acronym `AST' is not defined on input line 631.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 631.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 631.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 631.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--633
 
  []
 
@@ -2051,60 +2654,73 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 692--694
+
+LaTeX Warning: Reference `listing:rule1example1' on page 33 undefined on input 
+line 634.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 634.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 634.
+
+
+LaTeX Warning: Reference `listing:rule1example2' on page 33 undefined on input 
+line 634.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--636
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--697
+Package acronym Warning: Acronym `AST' is not defined on input line 637.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 637.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 637.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 637.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--639
 
  []
 
 
-LaTeX Warning: Reference `JLS' on page 33 undefined on input line 698.
+Package acronym Warning: Acronym `AST' is not defined on input line 640.
 
 
-Package acronym Warning: Acronym `JDT' is not defined on input line 698.
+Package acronym Warning: Acronym `AST' is not defined on input line 640.
 
 
-Package acronym Warning: Acronym `JDT' is not defined on input line 698.
+LaTeX Warning: Reference `ast:rule1' on page 33 undefined on input line 640.
 
 
-LaTeX Warning: Reference `JLS' on page 33 undefined on input line 698.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 698--700
+Underfull \hbox (badness 10000) in paragraph at lines 640--642
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--707
+Underfull \hbox (badness 10000) in paragraph at lines 643--646
 
  []
 
 
-LaTeX Warning: Reference `JLS' on page 33 undefined on input line 708.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 708--710
+Underfull \hbox (badness 10000) in paragraph at lines 647--649
 
  []
 
 
-LaTeX Warning: Reference `AST' on page 33 undefined on input line 711.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 711--713
-
+Overfull \hbox (17.78998pt too wide) in paragraph at lines 678--680
+[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 714--716
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 717--720
+Underfull \hbox (badness 10000) in paragraph at lines 681--683
 
  []
 
@@ -2115,25 +2731,86 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 721--723
+Underfull \hbox (badness 10000) in paragraph at lines 684--686
 
  []
 
 
-LaTeX Warning: Reference `Discussion' on page 34 undefined on input line 752.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 752--754
+Underfull \hbox (badness 10000) in paragraph at lines 687--689
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--757
+LaTeX Warning: Reference `JLS' on page 34 undefined on input line 690.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 690.
+
+
+Package acronym Warning: Acronym `JDT' is not defined on input line 690.
+
+
+LaTeX Warning: Reference `JLS' on page 34 undefined on input line 690.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 690--692
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 758--760
+Package acronym Warning: Acronym `AST' is not defined on input line 693.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 693.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--699
+
+ []
+
+
+LaTeX Warning: Reference `JLS' on page 34 undefined on input line 700.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 700.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 700.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 700--702
+
+ []
+
+
+LaTeX Warning: Reference `AST' on page 34 undefined on input line 703.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--705
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 706--708
+
+ []
+
+
+LaTeX Warning: Reference `ast:rule2' on page 34 undefined on input line 709.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--712
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 713.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 713.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--715
 
  []
 
@@ -2144,41 +2821,26 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 761--763
+
+LaTeX Warning: Reference `Discussion' on page 35 undefined on input line 744.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 744--746
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 768--770
+Underfull \hbox (badness 10000) in paragraph at lines 747--749
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 771--773
+Underfull \hbox (badness 10000) in paragraph at lines 750--752
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--776
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 777--779
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 780--782
-
- []
-
-
-LaTeX Warning: Reference `listing:rule3example3:Week' on page 35 undefined on i
-nput line 783.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 783--785
+Underfull \hbox (badness 10000) in paragraph at lines 753--755
 
  []
 
@@ -2189,32 +2851,56 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 786--788
+
+LaTeX Warning: Citation `oc2008' on page 36 undefined on input line 760.
+
+
+LaTeX Warning: Citation `telldontaskoriginal' on page 36 undefined on input lin
+e 760.
+
+
+LaTeX Warning: Reference `Description' on page 36 undefined on input line 760.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 760--762
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 789--791
+Underfull \hbox (badness 10000) in paragraph at lines 763--765
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--801
+Underfull \hbox (badness 10000) in paragraph at lines 766--768
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 802--804
+Underfull \hbox (badness 10000) in paragraph at lines 769--771
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--807
+LaTeX Warning: Reference `listing:rule3example3:Day' on page 36 undefined on in
+put line 772.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--774
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 808--810
+LaTeX Warning: Reference `listing:rule3example3:Week' on page 36 undefined on i
+nput line 775.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 775--777
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 778--780
 
  []
 
@@ -2225,53 +2911,50 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 812--814
+Underfull \hbox (badness 10000) in paragraph at lines 781--783
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 815--817
+Package acronym Warning: Acronym `AST' is not defined on input line 791.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 791.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 791.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 791.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 791--793
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 818--820
+Underfull \hbox (badness 10000) in paragraph at lines 794--796
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 821--823
+Package acronym Warning: Acronym `AST' is not defined on input line 797.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 797.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 797--799
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--826
+Underfull \hbox (badness 10000) in paragraph at lines 800--802
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 827--829
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 830--832
-
- []
-
-
-Overfull \hbox (62.97777pt too wide) in paragraph at lines 833--835
-[]\T1/ptm/m/n/12 Usually, one line is an ex-pres-sion state-ment with a semi-co
-lon ";". For ex-am-ple: \T1/ptm/m/it/12 Sys-tem.out.println("Object
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 833--835
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 836--838
+Underfull \hbox (badness 10000) in paragraph at lines 804--806
 
  []
 
@@ -2282,15 +2965,80 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 839--841
+
+Package acronym Warning: Acronym `AST' is not defined on input line 807.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 807.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 807--809
 
  []
 
 
-LaTeX Warning: Reference `JLS' on page 38 undefined on input line 850.
+Underfull \hbox (badness 10000) in paragraph at lines 810--812
+
+ []
 
 
-LaTeX Warning: Reference `JLS' on page 38 undefined on input line 850.
+Underfull \hbox (badness 10000) in paragraph at lines 813--815
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 816--818
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--821
+
+ []
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 822.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 822.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 822.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 822.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 822--824
+
+ []
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 825.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 825.
+
+
+Overfull \hbox (62.97777pt too wide) in paragraph at lines 825--827
+[]\T1/ptm/m/n/12 Usually, one line is an ex-pres-sion state-ment with a semi-co
+lon ";". For ex-am-ple: \T1/ptm/m/it/12 Sys-tem.out.println("Object
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 825--827
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 828--830
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--833
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2299,24 +3047,16 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [38]
-Overfull \hbox (2.4831pt too wide) in paragraph at lines 852--853
+
+LaTeX Warning: Reference `JLS' on page 39 undefined on input line 842.
+
+
+LaTeX Warning: Reference `JLS' on page 39 undefined on input line 842.
+
+
+Overfull \hbox (2.4831pt too wide) in paragraph at lines 844--845
 []\T1/ptm/m/n/12 The Su-per-Con-struc-tor-In-vo-ca-tion has the foll-wo-ing str
 uc-ture:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 860--862
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 863--865
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 866--868
-
  []
 
 
@@ -2326,34 +3066,35 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [39]
-Overfull \hbox (18.57513pt too wide) in paragraph at lines 873--874
-[]\T1/ptm/m/n/12 The Su-per-Me-thod-In-vo-ca-tion has a very sim-i-lar struc-tu
-re like Method-
- []
+
+Package acronym Warning: Acronym `AST' is not defined on input line 852.
 
 
-Overfull \hbox (5.08575pt too wide) in paragraph at lines 875--876
-[]\T1/ptm/m/n/12 The Su-per-Fiel-d-Ac-cess has a very sim-i-lar struc-ture like
- Fiel-d-Ac-cess there-
- []
+Package acronym Warning: Acronym `AST' is not defined on input line 852.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--882
+Underfull \hbox (badness 10000) in paragraph at lines 852--854
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--886
+Underfull \hbox (badness 10000) in paragraph at lines 855--857
 
  []
 
 
-LaTeX Warning: Reference `oc2008' on page 40 undefined on input line 887.
+Package acronym Warning: Acronym `AST' is not defined on input line 858.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--889
+Package acronym Warning: Acronym `AST' is not defined on input line 858.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--860
 
  []
+
+
+LaTeX Warning: Reference `Description' on page 40 undefined on input line 861.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2362,32 +3103,56 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 890--892
+Overfull \hbox (18.57513pt too wide) in paragraph at lines 864--865
+[]\T1/ptm/m/n/12 The Su-per-Me-thod-In-vo-ca-tion has a very sim-i-lar struc-tu
+re like Method-
+ []
+
+
+Overfull \hbox (5.08575pt too wide) in paragraph at lines 866--867
+[]\T1/ptm/m/n/12 The Su-per-Fiel-d-Ac-cess has a very sim-i-lar struc-ture like
+ Fiel-d-Ac-cess there-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 871--873
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--897
+Package acronym Warning: Acronym `AST' is not defined on input line 875.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 875.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 875.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 875.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 875.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 875.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 875.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 875.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 874--877
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 898--901
-
- []
+LaTeX Warning: Reference `oc2008' on page 41 undefined on input line 878.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 902--904
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 905--907
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 909--911
+Underfull \hbox (badness 10000) in paragraph at lines 878--880
 
  []
 
@@ -2398,37 +3163,40 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 912--914
+Underfull \hbox (badness 10000) in paragraph at lines 881--883
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 915--917
+Underfull \hbox (badness 10000) in paragraph at lines 885--888
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--920
+LaTeX Warning: Citation `wiki' on page 42 undefined on input line 890.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--892
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 925--927
+Underfull \hbox (badness 10000) in paragraph at lines 893--895
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--930
+Underfull \hbox (badness 10000) in paragraph at lines 896--898
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 931--933
+Underfull \hbox (badness 10000) in paragraph at lines 900--902
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 934--936
+Underfull \hbox (badness 10000) in paragraph at lines 903--905
 
  []
 
@@ -2439,38 +3207,49 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-Overfull \hbox (4.55098pt too wide) in paragraph at lines 937--939
+Underfull \hbox (badness 10000) in paragraph at lines 906--908
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--911
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 916--918
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 919--921
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 922.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 922.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--924
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 925--927
+
+ []
+
+
+Overfull \hbox (4.55098pt too wide) in paragraph at lines 928--930
 \T1/ptm/m/n/12 ForState-ment, If-S-tate-ment, Re-turn-State-ment, Su-per-Con-st
 ruc-tor-In-vo-ca-tion, Switch-Case, Switch-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 937--939
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 940--942
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 943--945
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 946--948
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 952--954
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 955--957
+Underfull \hbox (badness 10000) in paragraph at lines 928--930
 
  []
 
@@ -2481,27 +3260,62 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 958--960
+Underfull \hbox (badness 10000) in paragraph at lines 931--933
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--963
+Package acronym Warning: Acronym `AST' is not defined on input line 934.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 934.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 934.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 934.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--936
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 988--990
+Underfull \hbox (badness 10000) in paragraph at lines 937--939
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 994--996
+Package acronym Warning: Acronym `AST' is not defined on input line 940.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 940.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 943--945
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 997--999
+Package acronym Warning: Acronym `JLS' is not defined on input line 946.
+
+
+Package acronym Warning: Acronym `JLS' is not defined on input line 946.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 946.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 946.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 946--948
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--951
 
  []
 
@@ -2513,7 +3327,94 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [44]
 
-LaTeX Warning: Reference `Discussion' on page 45 undefined on input line 1000.
+Package acronym Warning: Acronym `AST' is not defined on input line 952.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 952.
+
+
+LaTeX Warning: Reference `ast:rule7' on page 45 undefined on input line 952.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 952--954
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 979.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 979.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 979--981
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 985--987
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 988.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 988.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 988--990
+
+ []
+
+
+LaTeX Warning: Citation `wiki' on page 45 undefined on input line 991.
+
+
+LaTeX Warning: Reference `Discussion' on page 45 undefined on input line 991.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 991--993
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45]
+
+LaTeX Warning: Reference `listing:rule9example1:speaker' on page 46 undefined o
+n input line 994.
+
+
+LaTeX Warning: Reference `describe:rule9' on page 46 undefined on input line 99
+4.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 994--996
+
+ []
+
+
+Overfull \hbox (27.4356pt too wide) in paragraph at lines 997--999
+\T1/ptm/m/it/12 name>()\T1/ptm/m/n/12 . In most cases, the mod-i-fiers are pub-
+lic, not static, and the method name is \T1/ptm/m/it/12 get<Fieldname>\T1/ptm/m
+/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 997--999
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1000.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1000.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1000--1002
@@ -2526,16 +3427,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1003--1005
  []
 
 
-Overfull \hbox (27.4356pt too wide) in paragraph at lines 1006--1008
-\T1/ptm/m/it/12 name>()\T1/ptm/m/n/12 . In most cases, the mod-i-fiers are pub-
-lic, not static, and the method name is \T1/ptm/m/it/12 get<Fieldname>\T1/ptm/m
-/n/12 .
- []
+LaTeX Warning: Reference `listing:rule9example3' on page 46 undefined on input 
+line 1006.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1006--1008
 
  []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1009.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1009.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1009--1011
@@ -2548,17 +3452,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1012--1014
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1015--1017
-
- []
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1017
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1018--1020
 
  []
@@ -2572,6 +3476,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 1021--1023
 Underfull \hbox (badness 10000) in paragraph at lines 1024--1026
 
  []
+
+
+LaTeX Warning: Citation `wiki' on page 47 undefined on input line 1027.
+
+
+LaTeX Warning: Reference `listing:rule9example1' on page 47 undefined on input 
+line 1027.
+
+
+LaTeX Warning: Reference `listing:rule9example3' on page 47 undefined on input 
+line 1027.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1027.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1027.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1027--1029
@@ -2589,39 +3510,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1033--1035
  []
 
 
-LaTeX Warning: Reference `listing:rule9example1' on page 46 undefined on input 
-line 1036.
+Package acronym Warning: Acronym `AST' is not defined on input line 1036.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1038
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 1039--1041
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1042--1044
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1051
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1054
-
- []
+Package acronym Warning: Acronym `AST' is not defined on input line 1036.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2630,57 +3522,32 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [47]
-Chapter 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1084
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1042
 
  []
 
 
-LaTeX Warning: Reference `evaluation' on page 48 undefined on input line 1085.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1085--1087
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1045
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1088--1090
-
- []
-
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 1093
-.
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [48
-
-]
-
-LaTeX Warning: Reference `evaluation' on page 49 undefined on input line 1116.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1119--1121
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1052
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1122--1124
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1056
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1125--1127
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1059
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1128--1130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1133
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1062
 
  []
 
@@ -2690,18 +3557,77 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 1134--1136
+[48]
+Chapter 4.
+
+LaTeX Warning: Reference `p:requirements' on page 49 undefined on input line 10
+84.
+
+
+LaTeX Warning: Reference `p:architecture' on page 49 undefined on input line 10
+84.
+
+
+LaTeX Warning: Reference `p:example' on page 49 undefined on input line 1084.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1091
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1137--1139
+LaTeX Warning: Reference `evaluation' on page 49 undefined on input line 1092.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1092--1094
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1144--1146
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1097
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 1100
+.
+(c:/texlive/2013/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [49
+
+]
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 1108.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 1108.
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 1108.
+
+
+LaTeX Warning: Reference `evaluation' on page 50 undefined on input line 1123.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1135--1137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1138--1140
 
  []
 
@@ -2712,17 +3638,84 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [50]
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1164
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 1141.
+
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 1141.
+
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 1141.
+
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 1141.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1141--1143
 
  []
 
 
-LaTeX Warning: Reference `[' on page 51 undefined on input line 1165.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1167--1169
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1146
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1151
+
+ []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1155.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1155.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+LaTeX Warning: Reference `e:evaluation' on page 51 undefined on input line 1163
+.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1163.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -2731,25 +3724,104 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [51]
-Package acronym Info: Label `acro:ASTVisitor' newly defined as it shall be over
-ridden
-although it is yet undefined on input line 1196.
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1167.
 
 
-Package acronym Warning: Acronym `ASTVisitor' is not defined on input line 1196
-.
+Package acronym Warning: Acronym `AST' is not defined on input line 1167.
 
 
-Package acronym Warning: Acronym `ASTVisitor' is not defined on input line 1196
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1196--1199
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1244
+Package acronym Warning: Acronym `AST' is not defined on input line 1170.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1170.
+
+
+LaTeX Warning: Reference `[' on page 52 undefined on input line 1170.
+
+
+LaTeX Warning: Citation `eclipseast' on page 52 undefined on input line 1170.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1170.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1170.
+
+
+LaTeX Warning: Reference `picture:workflowast' on page 52 undefined on input li
+ne 1170.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1172.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1172.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1172.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1172.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1172.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1172.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1172--1174
+
+ []
+
+
+LaTeX Warning: Reference `p:example' on page 52 undefined on input line 1175.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1175.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1175.
+
+
+LaTeX Warning: Reference `listing:simplevisitor' on page 52 undefined on input 
+line 1175.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1175.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1175.
+
+Package acronym Info: Label `acro:ASTVisitor' newly defined as it shall be over
+ridden
+although it is yet undefined on input line 1201.
+
+Package acronym Warning: Acronym `ASTVisitor' is not defined on input line 1201
+.
+
+
+Package acronym Warning: Acronym `ASTVisitor' is not defined on input line 1201
+.
+
+
+LaTeX Warning: Reference `listing:simplevisitor' on page 52 undefined on input 
+line 1201.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1202.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1202.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1204
 
  []
 
@@ -2760,48 +3832,24 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52]
-Package acronym Info: Label `acro:DTO' newly defined as it shall be overridden
-although it is yet undefined on input line 1246.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1248
-
- []
+LaTeX Warning: Reference `listing:violationhandlerinterface' on page 53 undefin
+ed on input line 1205.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1251
-
- []
-
-
-Package acronym Warning: Acronym `ASTVisitor' is not defined on input line 1258
-.
+LaTeX Warning: Reference `listing:violationhandlerinterface' on page 53 undefin
+ed on input line 1217.
 
 
-Package acronym Warning: Acronym `ASTVisitor' is not defined on input line 1258
-.
+LaTeX Warning: Reference `listing:violationdomain' on page 53 undefined on inpu
+t line 1217.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1258--1260
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1261--1263
-
- []
+LaTeX Warning: Reference `listing:violationdomain' on page 53 undefined on inpu
+t line 1247.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1264--1266
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1271--1273
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1276
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1249
 
  []
 
@@ -2812,6 +3860,103 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [53]
+Package acronym Info: Label `acro:DTO' newly defined as it shall be overridden
+although it is yet undefined on input line 1251.
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1251.
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1251.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1251--1253
+
+ []
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1254.
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1254.
+
+
+LaTeX Warning: Citation `wiki' on page 54 undefined on input line 1254.
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1254.
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1254.
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1254.
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1254.
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1254.
+
+
+Package acronym Warning: Acronym `DTO' is not defined on input line 1254.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1256
+
+ []
+
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 1257.
+
+
+Package acronym Warning: Acronym `IDE' is not defined on input line 1257.
+
+
+LaTeX Warning: Reference `picture:violationtable' on page 54 undefined on input
+ line 1257.
+
+
+Package acronym Warning: Acronym `ASTVisitor' is not defined on input line 1261
+.
+
+
+Package acronym Warning: Acronym `ASTVisitor' is not defined on input line 1261
+.
+
+
+LaTeX Warning: Reference `astvisitorexample' on page 54 undefined on input line
+ 1261.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1263
+
+ []
+
+
+LaTeX Warning: Reference `listing:elsevisitor' on page 54 undefined on input li
+ne 1264.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1266
+
+ []
+
+
+LaTeX Warning: Reference `evaluation:validationruletwo' on page 54 undefined on
+ input line 1267.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1267--1269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1274--1276
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1277--1279
 
  []
@@ -2822,12 +3967,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1280--1282
  []
 
 
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 1283--1285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1290--1292
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1288
 
  []
 
@@ -2837,12 +3988,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1293--1295
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1296--1299
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1298
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1300--1302
+Package acronym Warning: Acronym `AST' is not defined on input line 1300.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 1300.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1302
 
  []
 
@@ -2852,12 +4009,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1303--1305
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Underfull \hbox (badness 10000) in paragraph at lines 1306--1308
 
-[54])
+ []
+
+)
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2865,6 +4021,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [55]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[56]
 \openout2 = `Inhalt/abkuerzungen.aux'.
 
  (./Inhalt/abkuerzungen.tex)
@@ -2874,15 +4037,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56
+[57
 
 
 ]
 \openout2 = `Inhalt/appendixListing.aux'.
 
  (./Inhalt/appendixListing.tex
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 1.
 
@@ -2902,7 +4063,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57
+[58
 
 
 ])
@@ -2927,7 +4088,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58])
+[59])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 14--14
 [][][][][][][] 
  []
@@ -2939,7 +4100,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59])
+[60])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 17--17
 [][][][][][][] 
  []
@@ -2966,7 +4127,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60])
+[61])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 37--37
 [][][][][][][] 
  []
@@ -2988,7 +4149,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61])
+[62])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 43--43
 [][][][][][][] 
  []
@@ -3005,7 +4166,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62])
+[63])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 46--46
 [][][][][][][] 
  []
@@ -3022,7 +4183,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63])
+[64])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 48--48
 [][][][][][][] 
  []
@@ -3039,7 +4200,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64]
+[65]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 52--52
 [][][][][][][] 
  []
@@ -3056,7 +4217,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65])
+[66])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 56--56
 [][][][][][][] 
  []
@@ -3072,7 +4233,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66] (./listings/rule8/example2/Doors.java)
+[67] (./listings/rule8/example2/Doors.java)
 Overfull \hbox (6.0pt too wide) in paragraph at lines 58--58
 [][][][][][][] 
  []
@@ -3084,7 +4245,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67])
+[68])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 61--61
 [][][][][][][] 
  []
@@ -3106,7 +4267,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[68])
+[69])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 64--64
 [][][][][][][] 
  []
@@ -3118,7 +4279,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69])
+[70])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 65--65
 [][][][][][][] 
  []
@@ -3129,53 +4290,18 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 66--66
  []
 
 (./listings/rule9/example3/Speaker.java)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.68 ...else Keyword\"]{listings/ElseVisitor.java}
-                                                  
-? 
-! Extra \endcsname.
-<argument> \endcsname 
-                      
-l.68 ...else Keyword\"]{listings/ElseVisitor.java}
-                                                  
-? 
-! Extra \endcsname.
-<recently read> \endcsname 
-                           
-l.68 ...else Keyword\"]{listings/ElseVisitor.java}
-                                                  
-? 
-
-! Package keyval Error: \"Don't Use the else Keyword\" undefined.
-
-See the keyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.68 ...else Keyword\"]{listings/ElseVisitor.java}
-                                                  
-? 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[70]
+[71]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 68--68
 [][][][][][][] 
  []
 
-(./listings/ElseVisitor.java)
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[71])
+(./listings/ElseVisitor.java))
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -3200,6 +4326,18 @@ File: Bilder/StrategyPattern.png Graphic file (type png)
 Package pdftex.def Info: Bilder/StrategyPattern.png used on input line 12.
 (pdftex.def)             Requested size: 256.95937pt x 160.5996pt.
 
+
+Package acronym Warning: Acronym `UML' is not defined on input line 13.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 13.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 13.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 13.
+
 <Bilder/StatePattern.png, id=287, 471.7625pt x 170.6375pt>
 File: Bilder/StatePattern.png Graphic file (type png)
 
@@ -3211,6 +4349,18 @@ Overfull \hbox (18.79338pt too wide) in paragraph at lines 20--21
  [][] 
  []
 
+
+Package acronym Warning: Acronym `UML' is not defined on input line 21.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 21.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 21.
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 21.
+
 <Bilder/workflowAST.png, id=288, 542.025pt x 281.05pt>
 File: Bilder/workflowAST.png Graphic file (type png)
 
@@ -3221,6 +4371,18 @@ Package pdftex.def Info: Bilder/workflowAST.png used on input line 27.
 Overfull \hbox (89.05571pt too wide) in paragraph at lines 27--28
  [][] 
  []
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 28.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 28.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 28.
+
+
+Package acronym Warning: Acronym `AST' is not defined on input line 28.
 
 <Bilder/violationtable.png, id=289, 805.50937pt x 511.9125pt>
 File: Bilder/violationtable.png Graphic file (type png)
@@ -3310,15 +4472,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 20008 strings out of 493308
- 374955 string characters out of 6141367
- 557261 words of memory out of 5000000
- 22844 multiletter control sequences out of 15000+600000
- 94432 words of font info for 111 fonts, out of 8000000 for 9000
+ 19991 strings out of 493308
+ 374583 string characters out of 6141367
+ 553121 words of memory out of 5000000
+ 22840 multiletter control sequences out of 15000+600000
+ 97200 words of font info for 113 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  65i,12n,76p,1950b,1709s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2013/texm
@@ -3330,7 +4492,7 @@ texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb><c:/texlive/2013/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmbi8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/t
 exlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (84 pages, 448604 bytes).
+Output written on Bachelorarbeit.pdf (84 pages, 452652 bytes).
 PDF statistics:
  348 PDF objects out of 1000 (max. 8388607)
  223 compressed objects within 3 object streams

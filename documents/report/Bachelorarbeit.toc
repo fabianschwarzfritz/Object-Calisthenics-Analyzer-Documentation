@@ -11,19 +11,19 @@
 \contentsline {section}{\numberline {2.2}Advantages of Object Orientation}{7}
 \contentsline {section}{\numberline {2.3}The Rules and their Background}{11}
 \contentsline {section}{\numberline {2.4}Discussion}{27}
-\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics -- Evaluation}{29}
-\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{29}
-\contentsline {section}{\numberline {3.2}Working Environment}{29}
-\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{31}
-\contentsline {section}{\numberline {3.4}Result of the Evaluation}{47}
-\contentsline {section}{\numberline {3.5}Future Work}{47}
-\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{48}
-\contentsline {section}{\numberline {4.1}Requirements}{48}
-\contentsline {section}{\numberline {4.2}Architecture}{50}
-\contentsline {subsection}{\numberline {4.2.1}The generation of the AST model}{50}
-\contentsline {subsection}{\numberline {4.2.2}The Application of the rule validators}{51}
-\contentsline {subsection}{\numberline {4.2.3}The User Interface}{53}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{53}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{53}
-\contentsline {section}{\numberline {4.5}Conclusion and Future Work}{54}
+\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics -- Evaluation}{30}
+\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{30}
+\contentsline {section}{\numberline {3.2}Working Environment}{30}
+\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{32}
+\contentsline {section}{\numberline {3.4}Result of the Evaluation}{48}
+\contentsline {section}{\numberline {3.5}Future Work}{48}
+\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{49}
+\contentsline {section}{\numberline {4.1}Requirements}{49}
+\contentsline {section}{\numberline {4.2}Architecture}{51}
+\contentsline {subsection}{\numberline {4.2.1}The generation of the AST model}{51}
+\contentsline {subsection}{\numberline {4.2.2}The Application of the rule validators}{52}
+\contentsline {subsection}{\numberline {4.2.3}The User Interface}{54}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{54}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{54}
+\contentsline {section}{\numberline {4.5}Conclusion and Future Work}{55}
 \contentsline {chapter}{Bibliography}{76}
