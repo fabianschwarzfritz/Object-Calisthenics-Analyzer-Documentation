@@ -1,13 +1,7 @@
-% TODO: Bedeute es gibt noch was zu tun
-% WEG: Weggestrichene, fertige saetze
-
 \chapter{Introduction}
-%What is the purpose of this paper? What is the content of the next two sections?
 Jeff Bay's "Object Calisthenics" \cite{bay2008} are nine rules that train the software developer to write better object oriented code.  He created concrete rules out of general software principals and patterns. These rules shall be applied in a short exercise, usually about two to four hours. With these concrete rules the trainee doing the exercise can improve his software development skills, which is helping him when applying general software principals and patterns to real world software projects. 
-%=== What shall be reached in the end of this paper?
 This paper is divided into three chapters.\\
 The exercise and the reasons for it are described in this chapter in section \ref{i:exercising}.\\
-
 
 Chapter \ref{Description} describes Jeff Bay's rule and what let him establish the nine rules. It poses Jeff Bay's reasons for today's problems of software development.\\
 
@@ -25,8 +19,7 @@ The book "The ThoughtWorks Anthology. Essays on Software Technology and Innovati
 
 All essays in the book \cite{oc2008} are written by developers working at the company "Thoughtworks inc.". The company is well known for creating, designing and supporting high quality software. The company is said to be one of the most future oriented company in terms of technology and software principals. They describe themselves as "[\dots] a software company and community of passionate individuals whose purpose is to revolutionize software design, creation and delivery, while advocating for positive social change." \cite{twWeb}\\
 
-%=== What are the Object Calisthenics in general (nine rules...) 
-The Object Calisthenics are nine programming rules helping to write good object oriented code. But moreover the Object Calisthenics are an exercise to improve the quality of object oriented code. Good object oriented code is hard to learn when coming procedural code. Many developers think in object oriented code – but do they really write good object oriented software? That is the question that Jeff Bay poses in his essay.\\
+The Object Calisthenics are nine programming rules helping to write good object oriented code. But moreover the Object Calisthenics are an exercise to improve the quality of object oriented code. Good object oriented code is hard to learn when coming procedural code. Many developers think in object oriented code -- but do they really write good object oriented software? That is the question that Jeff Bay poses in his essay.\\
 
 Usually the developer doesn't use these rules in real world project but applies them in short two hour exercises in which he designs and implements minimalist software with little requirements. This could be a Minesweeper or a Tic Tac Toe game for example. These training challenges should lead the developer to write better code and be more aware of code quality in real world projects.\\
 
@@ -39,19 +32,7 @@ Of course this will only work if the developer recognizes the ideas and principa
 
 Improving the quality of software's implementation by little training sessions -- that is basically his idea. Jeff Bay also includes this idea in the name of the rules. The word "Calisthenics" indistinguishable describes the approach, the idea and the outcome of the exercise.\\
 
-%WEG: As already said, the background of every rule is described in chapter \ref{Description}.
-
-%TODO checken: ist klargestellt, das (research seite 7):  - strict coding standards, used without doubts during the excercise ==> unerstand 100 percent pure object orientaiton "in perfection" in a small project. --=> Remember the lessons learned when coding  in the "wildlife". 
-
 \section{Tool Support to Validate the Object Calisthenics}
-%=== Describe the outcome of a tool validating the rules of the Object Calisthenics.
-%=== How might it support the developer?
-
-%=== How might the tool boost the speed and efficiency of the developer while doing the exercise?
-
-%=== Say: Tool support is examined and elucidated in chapter 3.
-
-%=== Say: Prototype in the last chapter: 4. 
 The purpose of the Object Calisthenics was already described. However, in this paper the focus lies on the evaluation and prototypical implementation of tool support, validating the rules of the Object Calisthenics. \\
 
 Evaluating the possibility to create tool support validating the Object Calisthenics is the main part of this report. It has two main advantages -- efficiency and quality.\\
@@ -92,7 +73,6 @@ Another problem, closely related to the problem of maintainbility, is the unders
 
 \subsection*{No Modularity}
 \label{problem:nomodularity}
-%cohesion shcon einfuerne, damit  in advantages of oo zur verfuegung steht
 In modern software development the separation in different modules is a core concept.\\
 
 According to Juergen Haas, modular programming "[\dots{}] breaks down program functions into modules, each of which accomplishes one function and contains all the source code and variables needed to accomplish that function." \cite{about} He also states that the concept of modularity enables the programmer to debug and maintain difficult source code more easily. \\
@@ -348,8 +328,6 @@ Factory objects are following the commonly known factory pattern. The factory me
 \\
 The model in \ac{DDD} as the "heart of the model", the "backbonde language used by the team" and the "distilled knowledge" \cite[p. 25]{dddbook} is the summary of the idea. Especially the idea of an entity and aggregate really coincides with the idea of rule 3. A model that is strong in encapsulation, provides clear defined behavior that is located in the domain model itself reflects rule three. The readability is increased because it is very clear where to find which operation. Lastly, the resulting domain objects provide type safety, because there is no (domain) object that as a general type like integer, string or list. All these primitive types are pushed to their own well defined domain objects that offer a precise behavior reflecting real world operations. 
 
-
-
 \subsection*{Rule 4: "Use Only One Dot per Line"}
 The fourth rule of Jeff Bay, "use only one dot per line", increases the cohesion of classes and claims a clear separation of concerns. The rule tackles "misplaces responsibilities" \cite{oc2008} and focuses on a clear structure of tasks.\\
 
@@ -359,11 +337,32 @@ According to Jeff Bay, lines of code with multiple dots, indicate such "misplace
 The usage of another object or method that is executed on the return value of another object is not allowed in one single line. Then \ac{LoD} is not violated. Of course it is still possible to conduct those bad chained method calls in two lines with only one dot in each line -- however, this is bad practice. In \cite{paperboy}, David Bock calls this "lots of temporary object", because the object reference will only be used over two or three lines. Then it is never necessary again. In addition, according to rule six, the developer is only allowed to use a very limited amount of lines in one class. These two rules force the developer to stick with the \ac{LoD}.
 \\
 
-Before examining \ac{LoD} more deeply, a bad and a good example is given in the following. 
+Before examining \ac{LoD} more deeply, a bad example is given in \ref{listing:lodbadexample} and a good example is given in \ref{listing:lodgoodexample}. The better approach which is shown in \ref{listing:lodgoodexample} requires that the instance of class \textit{Anotherclass} takes the responsibility to perform the action that was conducted by the method \textit{getInternalObject()} before.
 \\
+\begin{lstlisting}
+class Someclass {
 
-TODO EXAMPLE OF CODE
-\\
+	private AnotherClass another = new AnotherClass();
+
+	public void method() {
+		another.getInternalObject().performAction();
+	}
+}
+\end{lstlisting}
+\label{listing:lodbadexample}
+
+\begin{lstlisting}
+class Someclass {
+
+	private AnotherClass another = new AnotherClass();
+
+	public void method() {
+		another.performAction();
+	}
+}
+\end{lstlisting}
+\label{listing:lodgoodexample}
+
 
 As a result of the violation of \ac{LoD}, the behavior should be moved closer to the data. This could be done by a method offered by object B and used by object A directly that is conducting the changes in C. Of course an additional method would be added to the object, but the amount of code in any class is restricted by rule 6. Therefore there is no chance that a class will have a lot of delegate methods, because rule six restricts that. 
 \\
@@ -428,7 +427,6 @@ According to Jeff Bay, when refactoring existing code and splitting up large cla
 \\
 
 Giving an example for long classes would go beyond the scope of the discussion about code examples, therefore no example is given.
-
 
 \subsection*{Rule 7: "Don’t Use Any Classes with More Than Two Instance Variables"}
 Jeff Bay's rule seven, "don't use any classes with more than two instance variables" strongly focuses on the decrease of cohesion.
@@ -550,6 +548,28 @@ As just said, the rules provide an easy to validate guideline -- in comparison t
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \chapter{Tool Support to Validate the Object Calisthenics -- Evaluation}
 \label{Evaluation}
 This chapter will evaluate tool support to validate the Object Calisthenics. The first section \ref{e:advantages} will explain the general advantages of tool support. The next chapter \ref{e:evaluation} will dive deeper into the validation of the rule of the Object Calisthenics.
@@ -561,26 +581,17 @@ A tool supports when conducting software development. The use of tools is given 
 
 The outcome of tools varies from the use-case. In general they make conducting tasks easier. A good project management tool makes the accomplishment of changes of the project plan easy, or it enables various team members to work on the plan at the same time. A debugging tool for example helps the developer to go through a piece of code step by step. Without the tool, the developer had to print variables on the console or to get information about the state of an algorithm at a specific time point. By using the tool, he might be able to set line breakpoints, exception breakpoints and can inspect the state of a system point of time. 
 
-%Possible outcome of tool support for the OC's? Already described in the Introduction (chapter 1). Describe this more in detail here if necessary. 
 The outcome of providing tool support is quite straight-forward: The developer does not have to check his coding for the rules anymore. A tool simply indicated the rule violations. Some rules of the Object Calisthenics are easier to validate and other rules are harder to validate. Independent from the difficulty of the rule: If a proper rule validation can be implemented, it is assumed that an indication on line level is enough. As seen later in this report, most of the rule violations could be conducted on a more granular level. For the developer, however, it is easier to get an information about the rule violation on a line level: This makes the presentation of the violations easier. The next chapter will explain in general, how a line indication can be created. Hence, a simple indication about the violation can be used on line level. 
 
 \section{Working Environment}
-%=== Describe AST generally. Say that Eclipse provides types representing the parts of code syntax. This is seen as given. 
 The evaluation of a tool validating the rules will be done on an abstract level. However, the prototype, which is explained in the third part of the report \ref{prototype}, will be implemented in Java using the Eclipse platform and its related mechanism to get information about source code structure. 
 \\
 For the abstract evaluation in this chapter, the code structure of the protoype will be presumed. Hence, the working environment is explained here. 
 \\
-%=== Refer to other references explaining AST.
+
 To create a tool validating the rules, the \acf{AST} of the code will be analysed. An \acf{AST} "is a tree representation of the abstract syntactic structure of source code written in a programming language" \cite[Abstract Syntax Tree]{wiki}. Because the protoype built during this research is written in Java, the \acf{AST} structure of the \acf{JLS} will be assumed \footnote{The \acf{JLS} is available online: http://docs.oracle.com/javase/specs/jls/se7/jls7.pdf}. The \acf{AST} that is provided by the Eclipse Framework is a semantic \acf{AST}, which means that it has more information than the syntax structure. It furthermore gives information about the semantic structure of the code. This is for example information about the semantic equality of variables and method calls, the inheritance structure of classes or the usage of object instances within the source code.
 \\
-%=== Describe shortly how it is possible to do an AST validation with eclpise. 
 
-%=== Say that: "Eclipse" terms for AST nodes are quite similar to general terms for java's nodes in ASTs. In this report the standard terms are used. These are not further described in this paper.
-
-%--> Example: Describe that "MethodDeclaration" consists of different other nodes representing the declaration of a method. Describe the structure of the child nodes of the node as far necessary. Do not embark on a discussion about what exactly is allowed as method declaration. 
-
-%=== Therefore: Give reference for questions about "parameter", "type", "class", "expression" or "statement".
-%Say that the validation in the next section is exactly implemented as described. One validation implementation example is explained exemplary in the Prototype chapter.
 The Eclipse platform, however provides a framework that already creates an \acf{AST} for given classfiles. The framework is part of the Eclipse \acf{JDT} can be used to access, change and read the elements of a Java source code. In this scenario the read access on code structures is necessary to find possible rule violation. The prototype itself will be written as an Eclipse plugin, and will use the framework. The \acf{JDT} framework is automatically integrated into the Eclipse plugin. 
 \\
 
@@ -614,26 +625,7 @@ Furthermore each section of this chapter will validate the quality of the algori
 \\
 
 In the end, the quality and the accuracy of each rule validation algorithm will be summarized. 
-%=== Say that the prioritization of the rules (in terms of the rule validation) and the "ranking" is given in the end. The sections of this chapter are "rule specific", even if the next subsections refer to each other.
 
-
-%=== FOREACH Rule/Subsection IN Rules/Subsections:
-
-% - Similarities found out in description may be similar in this validation? Categorize the rules in groups to form a validation perspective. (E.g.: Validation of rule y is very similar to the validation of rule x that was already explained.)
-  
-% - Use examples given in description chapter to describe the typical structure of the rule. 
- 
-% - Explain "the positive case": What is the positive structure, satisfying the rule. Where does a rule violation occur when the structure is not fulfilled. (Example: Positive case: maximum of two instance variables. If not fulfilled: Discussion Rule violation information occurs on the level of the class or on the level of the third instance variable?
- 
-% - What checks have to be done for the validation?
- 
-% - Discussion of 'rule dependencies' within one rule (example: wrapper has to determine possible wrapper classes first before beeing able to indicate the use of a primitive/string in a non-wrapper class...)
- 
-%  - --> solution found/no solution found
- 
-%  - Therefore: Be self-critical: Now, were a "solution" is found (or not), describe the problems that occur with the described implementation
-  
-% - If there are cases where the rule cannot be validated: Why is it hard to validate. Where does the validation fail? How is it possible to "trick" a good implementation (Example: wrap of primitives can be "tricked" with 'return new Wrapper(instancevariable)'...) 
 
 \subsection*{Validation of Rule 1}
 The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line, because in most languages the indentation does not affect the semantic of the source code. Jeff Bay's rule is very easy to imagine for the developer, however, from a tooling aspect, the rule is imprecise: Formatting can be changed by the developer. In his paper Jeff Bay presumes that an according formatter was used to format the source code. Most modern \acf{IDE}s apply a standard formatter to determine the indentations. This tool will analyse the \acf{AST} structure and therefore be independant from formatting. However to validate the \acf{AST}, the tool needs to know which statements usually cause their childnodes to be indented. Therefore the standard indentations of the Eclipse rule will be assumed.
@@ -866,7 +858,6 @@ As already explained in the introduction of the evaluation of this rule, the top
 IN the following, the description of the second step: the count of expressions in the subtree of the top level statement. In the algorithm of the prototype of the Eclipse framework, each type expression has to extract its subexpressions by using different methods. This is because each expression has a different type and some of those types have additional methods to retrieve the expressions of the statement. However, in the abstract representation of the \acf{AST}, the algorithm is much simpler: The number of expressions containing a dot has to be counted. If it exceeds one, a violation will occur. If the rule is violated a dot has to be removed somewhere in the statement. Therefore the statement is used to report a violation.
 \\
 
-
 The main question of the second step is: which expressions contains a dot? Many expressions contain a dot, however, not all of them are valid. As described in chapter \ref{Description} only method calls and field accesses are adressed by Jeff Bay. Dots in other expressions, for example a dot in a double value like \textit{26.3} are not important for the rule. The following list shows all expression types that contain a dot which is relevant for a proper rule validation. 
 \begin{description}
   \item[MethodInvocation] The expression type MethodInvocation contains a dot that is relevant for the proper implementation of tool support. It has the following structure: \textit{[ Expression . ] [ < Type { , Type } > ] Identifier ( [ Expression { , Expression } ] ) }. In this case, the dot is the dereferencing operator. It is referencing method and therefore relevant for the rule.
@@ -1054,17 +1045,37 @@ Rule three and rule eight were a bit more difficult: The challenge here was to d
 
 For rule five, it was possible to validate the naming successfully. This was done by determining a Regular Expression that matches all names that are allowed within the program. However there is still a risk of unappropriate naming: as shown in the evaluation of the rule, it is impossible to check the semantic of natural languages to match the behavior of the code.
 
-%=== Give a summary on how hard it was to implement the rules. Where does the rule validator fail. Summarize results of the evaluation. 
-%Be positive: Do not forget to emphasize the good and working parts of the evaluation tool and accent the positive outcome of them.
 \section{Future Work}
 \label{e:future}
-=== Be philosophical: What is still to be done in terms of rule validation. 
+This chapter described the evaulation of the rules and presented an solution how the rules of the Object Calithenics can be validated. However there are still ways to improve the presented algorithms. 
+\\
 
-=== If many rules cannot be validated: Future work might be a software where the user can "mark" structures as given. (Example: If it is not possible to determine if a class is a wrapper class, the user could "mark" it as a wrapper class and the validation algorithm might work...)
+The problem that makes rule three and eight difficult to validate is that it is hard to determine if a class is intended to be wrapper class or not. Especially when the class is not implemented already but still under development. 
+A solution of this problem is that the user tags the class as a wrapper class. Then the tool knows with certainty what rule the class will have in the future and can determine if a disallowed type was used. 
+\\
 
-=== If many rules can be validated: Future work might be the configuration of the rule validator. "pluggable" rules that the user can implement himself? Or "configurable" rule: Use of 2/3/4 instance variables per class.
+Futhermore the presented algorithms could be parameterized. That means that the user could set the exact behavior for the rules in the preferences. For example he could then determine how many indentations should be allowed, how many lines of code are allowed, or how many instance variables a class should use at the maximium.
+\\
 
-=== idea: introduce degree of violation
+Another possiblity is to tag the violations with a "degree". That means that the occurred violations has a degree, for example a number from 1-10. With this number more sophisticated statistical information could be generated during a training session. 
+\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1102,10 +1113,10 @@ Firstly, the requirements of the interviewed software developers that are possib
   \item RQA10: \textit{As a trainee, I want a easy-to-use user interface that focuses on the violation firstly and only secondly on other features.}
 \end{itemize}
 
-The persons that were interviewd are
+The persons that were interviewed are
 \begin{itemize}
   \item Max Leupolz, Business Informatics at EDEKA and Cooperative State University Karlsruhe. 
-  \item Julia Halberstadt, Medicine at University of Mahrburg
+  \item Christian Böhlke, Software Developer Intern at complete Genomics, Palo Alto US. 
 \end{itemize}
 
 As already described in the introduction, there are also techincal requirements that are not part of the actual rule evaluation. These technical requirements are related to the prototype. They are given by the developer of the prototype that is also a stakeholder of the project. These requirements are shown in the following, second part. 
@@ -1137,10 +1148,8 @@ RQA9 will be converted. The requirement for this research was the implementation
 RQA10 will be covered by an discussion with one of SAPs user interface designers. This ensures a proper user interface Design that exemplifies how rule violations could be displayed clearly.
 \\
 
-%=== Describe requirements for the prototype. Depends on how "good" the prototype is....
 \section{Architecture}
 \label{p:architecture}
-%=== Describe overall architecture. 
 The general architecture of the prototype is quite simple and will be described shortly in this chapter. 
 \\
 
@@ -1251,8 +1260,6 @@ The \acf{DTO}s follow the idea of Data Transfer Objects \cite{wiki}[Data Transfe
 
 The information is the displayed in the User Interface as part of the Eclipse \acf{IDE}. This is shown in picture \ref{picture:violationtable}.
 
-
-%=== How about a package overview and a short description: What do the classes of the package do and how do they interact in the software? 
 \section{Exemplary Rule Validation}
 \label{p:example}
 In this chapter an example for a rule violation is given. For every rule of the Object Calisthenics, there is an own rule violation visitor. The idea of the visitor pattern and the \acf{ASTVisitor} class was already described in \ref{astvisitorexample}. 
@@ -1264,34 +1271,43 @@ In this chapter the rule validator of rule two "Don't Use the Else keyword" is u
 As shown in line 30, the rule validator get notified about occurring If-Statements. For every exising If-Statement the rule validator checks if there is an Else-Statement as part of the If-Statement to satisfy the claimed rule validation described in \ref{evaluation:validationruletwo}. 
 \\
 
-To separate the different from each other clearly, each rule is part of it's own package. 
+To separate the different from each other clearly, each rule is part of it's own Java-package. 
 
 \section{Resulting Prototype}
 \label{p:result}
-%=== If the protype is really good: swagger and present it as a good software, that might be used in trianings?
+This chapter will summarize and validate the result of the prototype shortly. 
+\\
 
-%=== If not: Be proud of what is there :). This is only a prototype. What could be improved in a better implementation? Is it even possible to do a better implementation in terms of the rule validation (depends on the outcome of chapter 3).
+All in all the resulting prototype is working fine - the given requirements are fullfilled, exept for RQA5. The given requirements RQA3,RQA4 and RQA8 are fullfilled but could still be improved.
+\\
 
-%=== Show screenshot and describe UI. What is possible to do with the client
+RQA3 requires an aggressive rule violation. This aggressive rule violation was covered by integration tests. However, cases that might not yet be tested and validated in a wrong way might still exists in the prototype. These cases can only be covered in the future by user feedback.
+\\
 
-%=== Independent form the quality of the prototype: What are ideas that are still out there for the protoype? 
-%How could the product improve?
-\section{Outlook and Future Work}
+RQA4 requires a detailed information about the degree of the violation. This degree is implemented successfully. The determination of the degree of a violaiton might depend on the individual perspective of the developer. Hence, the degree of a violation might be depend on the expectation and experience of a developer. A different opinion on a rule violation could be given as a feedback in the feedback form of the application.
+\\
+
+RQA5 requires statistical information. However during the time of the development of the prototype it was not possible to generate sophisticated statistical information. This requirement couldn't be fullfilled. 
+\\
+
+All in all, even this is a prototype and not a professional implementation of the validation tool it could be used in trainings in which the Object Calisthenics are conducted. 
+
+\section{Conclusion and Future Work}
 \label{p:outlook}
-%=== Possible future work, dependent on what is said in the previous section.
+The desciption and explanation of the patterns and principles of the Object Calisthenics in the first chapter, the evaluation of rule validation in the second chapter and the prototypical implementation in the third chapter were part this paper. 
+\\
 
+In the first part, the patterns an principals were explained successfully and the chapter gave a deeper insight into patterns and principals behind the rule of the Object Calisthenics. 
+\\
 
-\chapter{Conclusion}
-%=== Conclusion of the result of this work. Do not explain in detail, but refer to the Introduction: What was good, what was bad?
+In the second part the actual algorithms and code structure analysis of the rules behind the Object Calisthenics were analyzed and described. In this chapter, the subtleties of realization of the rules where discussed. After the discussion, a concrete algorithm that validates a rule was proposed for every rule. Furthermore, disadvantages of and advantages of the rules were discussed and potential improvements were shown. 
+This chapter also gave an insight about how the structure of the \acf{AST} is analysed with the Eclipse framework that was used to create the prototype.
+\\
 
+The description of the prototype is the third and last chapter of this paper. In this chapter, the requirements to a validation tool where analyzed, the architecture of the prototype was explained and one rule validation was exemplified. Improvements and usable features were also described shortly in this chapter. 
+\\
 
-%TODO: Have fun writing and stay happy :)
+With the exact description of the rules in chapter two and first advantages and disadvantages of the prototype in chapter three, this paper can be used for a more sophisticated tool. As already described in chapter three, this tool could consist of enhanced statistical information and more views that display information about the rule violations.
+\\
 
-%\textbf{}
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=0.8\textwidth]{FHWTLogo.jpg}
-%\caption{Das Logo der FHWT}
-%\label{fig:FHWTLogo}
-%\end{figure}
-
+The presented problem, that the developer has to check if his coding style satisfies the rules of the Object Calisthenics, was tackled successfully in the report. The presented rules to validate the Object Calisthenics provide a effective way to check the rules as far as possible. The presented prototype shows that it is possible to implement the shown validation rules as a plugin for the Eclipse frameworks.

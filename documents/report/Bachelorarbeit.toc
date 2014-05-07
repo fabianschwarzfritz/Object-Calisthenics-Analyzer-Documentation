@@ -25,6 +25,5 @@
 \contentsline {subsection}{\numberline {4.2.3}The User Interface}{53}
 \contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{53}
 \contentsline {section}{\numberline {4.4}Resulting Prototype}{53}
-\contentsline {section}{\numberline {4.5}Outlook and Future Work}{53}
-\contentsline {chapter}{\numberline {5}Conclusion}{54}
-\contentsline {chapter}{Bibliography}{73}
+\contentsline {section}{\numberline {4.5}Conclusion and Future Work}{54}
+\contentsline {chapter}{Bibliography}{76}

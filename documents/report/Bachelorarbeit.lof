@@ -4,9 +4,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagramm showing the result when applying rule 1}}{70}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces \acf {UML} diagram of the strategy pattern}}{70}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces \acf {UML} diagram of the state pattern}}{71}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Workflow of the eclipse frameworks that allows to read and modify the \acf {AST}}}{71}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Table showing all the necessary violations in a table}}{72}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagramm showing the result when applying rule 1}}{73}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \acf {UML} diagram of the strategy pattern}}{73}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \acf {UML} diagram of the state pattern}}{74}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Workflow of the eclipse frameworks that allows to read and modify the \acf {AST}}}{74}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Table showing all the necessary violations in a table}}{75}
