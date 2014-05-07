@@ -1,5 +1,5 @@
 % Präambel
-\documentclass[12pt,a4paper,oneside, 
+\documentclass[11pt,a4paper,oneside, 
 liststotoc, 					% Tabellen- und Abbildungsverzeichnis ins Inhaltsverzeichnis
 bibtotoc,						% Literaturverzeichnis ins Inhaltsverzeichnis aufnehmen
 titlepage, 						% Titlepage-Umgebung statt \maketitle
@@ -100,6 +100,7 @@ english
 
   %\captionsetup[lstlisting]{singlelinecheck=false, labelfont={blue}, textfont={blue}}
 \usepackage{caption}
+\usepackage[hidelinks]{hyperref}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
@@ -151,7 +152,7 @@ english
 \tableofcontents							% Erzeugen des Inhalsverzeichnisses
 %\printnomenclature[2.0cm]					% Erzeugen des Abkürzungsverzeichnisses
 \listoffigures 								% Erzeugen des Abbildungsverzeichnisses 
-\listoftables 								% Erzeugen des Tabellenverzeichnisses
+% nicht benoetigt....   \listoftables 								% Erzeugen des Tabellenverzeichnisses
 \pagebreak
 
 % --------------------------------------------------------------------------------------------
@@ -198,30 +199,30 @@ english
 \emph{Structured Design: Fundamentals of a Discipline of Computer Program and Systems Design}. Yourdon Press, 1979
 
 \bibitem{telldontaskoriginal} Hunt, Andy; Thomas, Dave:
-\emph{The Art of Enbugging} \\ URL http://media.pragprog.com/articles/jan\_03\_enbug.pdf
+\emph{The Art of Enbugging} \\ URL \url{http://media.pragprog.com/articles/jan_03_enbug.pdf}
 
 \bibitem{telldontask} Clean Code Developer:
-\emph{Tell, don't ask!} \\ URL http://www.clean-code-developer.de/Tell-don-t-ask.ashx
+\emph{Tell, don't ask!} \\ URL \url{http://www.clean-code-developer.de/Tell-don-t-ask.ashx}
 
 \bibitem{paperboy} Bock, David
-\emph{The Paperboy, The Wallet, and The Law Of Demeter}. \\ URL http://www.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/paper-boy/demeter.pdf.
+\emph{The Paperboy, The Wallet, and The Law Of Demeter}. \\ URL \url{http://www.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/paper-boy/demeter.pdf}.
 
 \bibitem{ba.com} Appleton, Brad:
-\emph{Introducing Demeter and its Laws}. \\ URL http://www.bradapp.com/docs/demeter-intro.html
+\emph{Introducing Demeter and its Laws}. \\ URL \url{http://www.bradapp.com/docs/demeter-intro.html}.
 
 \bibitem{jls} Gosling, James; Joy, Bill; Steele, Guy; Bracha, Gilad; Buckley, Axel:
-\emph{Java Language Specification}. \\ URL http://docs.oracle.com/javase/specs/jls/se7/jls7.pdf
+\emph{Java Language Specification}. \\ URL \url{http://docs.oracle.com/javase/specs/jls/se7/jls7.pdf}.
 
 \bibitem{eclipseDocu} The Eclipse Foundation: 
-\emph{Eclipse documentation - Eclipse Kepler}. \\ URL http://help.eclipse.org/kepler/index.jsp.
+\emph{Eclipse documentation - Eclipse Kepler}. \\ URL \url{http://help.eclipse.org/kepler/index.jsp}.
 
-\bibitem[Wikipedia]{wiki} Wikipedia. The Free Encyclopedia. \\ URL http://www.wikipedia.org. 
+\bibitem{about} Haas, Juergen: \emph{Modular Programming}.\\ URL \url{http://linux.about.com/cs/linux101/g/modularprogramm.htm}.
 
-\bibitem{about} Haas, Juergen: \emph{Modular Programming}.\\ URL http://linux.about.com/cs/linux101/g/modularprogramm.htm.
+\bibitem{twWeb} Thoughtworks inc. \\ URL \url{thoughtworks.com/about-us}.
 
-\bibitem{twWeb} Thoughtworks inc. \\ URL thoughtworks.com/about-us  (17 November 2013).
+\bibitem{eclipseast} Kuhn, Thomas; Thomann, Oliver: Abstract Syntax Tree. \\ URL \url{http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html}
 
-\bibitem{eclipseast} Kuhn, Thomas; Thomann, Oliver: Abstract Syntax Tree. \\ URL http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html.
+\bibitem[Wikpedia]{wiki} Wikipedia. The Free Encyclopedia. \\ URL \url{http://www.wikipedia.org}.
 
 \end{thebibliography}
 

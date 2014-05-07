@@ -1,29 +1,28 @@
 \select@language {ngerman}
 \select@language {english}
-\contentsline {chapter}{Eidesstattliche Erkl\IeC {\"a}rung}{I}
-\contentsline {chapter}{List of Figures}{IV}
-\contentsline {chapter}{List of Tables}{V}
-\contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {1.1}Exercising better Object Oriented Programming Skills: a Concept by Jeff Bay}{1}
-\contentsline {section}{\numberline {1.2}Tool Support to Validate the Object Calisthenics}{3}
-\contentsline {chapter}{\numberline {2}Object Calisthenics by Jeff Bay -- Patterns and Principals}{4}
-\contentsline {section}{\numberline {2.1}Problems of Procedural Code}{4}
-\contentsline {section}{\numberline {2.2}Advantages of Object Orientation}{7}
-\contentsline {section}{\numberline {2.3}The Rules and their Background}{11}
-\contentsline {section}{\numberline {2.4}Discussion}{27}
-\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics -- Evaluation}{30}
-\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{30}
-\contentsline {section}{\numberline {3.2}Working Environment}{30}
-\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{32}
-\contentsline {section}{\numberline {3.4}Result of the Evaluation}{48}
-\contentsline {section}{\numberline {3.5}Future Work}{48}
-\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{50}
-\contentsline {section}{\numberline {4.1}Requirements}{50}
-\contentsline {section}{\numberline {4.2}Architecture}{52}
-\contentsline {subsection}{\numberline {4.2.1}The generation of the AST model}{52}
-\contentsline {subsection}{\numberline {4.2.2}The Application of the rule validators}{53}
-\contentsline {subsection}{\numberline {4.2.3}The User Interface}{55}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{55}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{55}
-\contentsline {section}{\numberline {4.5}Conclusion and Future Work}{56}
-\contentsline {chapter}{Bibliography}{77}
+\contentsline {chapter}{Eidesstattliche Erkl\IeC {\"a}rung}{I}{chapter*.1}
+\contentsline {chapter}{List of Figures}{IV}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Exercising better Object Oriented Programming Skills: a Concept by Jeff Bay}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Tool Support to Validate the Object Calisthenics}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Object Calisthenics by Jeff Bay -- Patterns and Principals}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Problems of Procedural Code}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Advantages of Object Orientation}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}The Rules and their Background}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}Discussion}{24}{section.2.4}
+\contentsline {chapter}{\numberline {3}Tool Support to Validate the Object Calisthenics -- Evaluation}{26}{chapter.3}
+\contentsline {section}{\numberline {3.1}Advantages of Tool Support}{26}{section.3.1}
+\contentsline {section}{\numberline {3.2}Working Environment}{26}{section.3.2}
+\contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{28}{section.3.3}
+\contentsline {section}{\numberline {3.4}Result of the Evaluation}{42}{section.3.4}
+\contentsline {section}{\numberline {3.5}Future Work}{42}{section.3.5}
+\contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{43}{chapter.4}
+\contentsline {section}{\numberline {4.1}Requirements}{43}{section.4.1}
+\contentsline {section}{\numberline {4.2}Architecture}{45}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}The generation of the AST model}{45}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}The Application of the rule validators}{45}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}The User Interface}{47}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{47}{section.4.3}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{48}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion and Future Work}{48}{section.4.5}
+\contentsline {chapter}{Bibliography}{71}{chapter*.60}
