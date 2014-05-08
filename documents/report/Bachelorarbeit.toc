@@ -14,15 +14,15 @@
 \contentsline {section}{\numberline {3.1}Advantages of Tool Support}{26}{section.3.1}
 \contentsline {section}{\numberline {3.2}Working Environment}{26}{section.3.2}
 \contentsline {section}{\numberline {3.3}Evaluation of Rule Validation}{28}{section.3.3}
-\contentsline {section}{\numberline {3.4}Result of the Evaluation}{42}{section.3.4}
+\contentsline {section}{\numberline {3.4}Result of the Evaluation}{41}{section.3.4}
 \contentsline {section}{\numberline {3.5}Future Work}{42}{section.3.5}
 \contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{43}{chapter.4}
 \contentsline {section}{\numberline {4.1}Requirements}{43}{section.4.1}
 \contentsline {section}{\numberline {4.2}Architecture}{45}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}The generation of the AST model}{45}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}The Application of the rule validators}{45}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}The User Interface}{47}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{47}{section.4.3}
-\contentsline {section}{\numberline {4.4}Resulting Prototype}{48}{section.4.4}
-\contentsline {section}{\numberline {4.5}Conclusion and Future Work}{48}{section.4.5}
-\contentsline {chapter}{Bibliography}{71}{chapter*.60}
+\contentsline {subsection}{\numberline {4.2.3}The User Interface}{46}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{46}{section.4.3}
+\contentsline {section}{\numberline {4.4}Resulting Prototype}{47}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{48}{chapter.5}
+\contentsline {chapter}{Bibliography}{70}{chapter*.59}

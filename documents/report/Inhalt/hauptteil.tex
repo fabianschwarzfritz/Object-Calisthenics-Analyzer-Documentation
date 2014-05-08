@@ -25,10 +25,10 @@ Usually the developer doesn't use these rules in real world project but applies 
 
 With these little training sessions, the Object Calisthenics help to create highly object oriented code  in small projects. When applying the rules, the developers automatically fulfill many important software patterns and principals leading to higher code quality than the code would have without the given rules. By training developers to focus the rules they automatically apply various helpful and important software principals and software patterns. \\
 
-The developer is supposed to "spend 20 hours and 1,000 lines writing code that conforms 100 "\%"  to these rules" \cite[p. 80]{oc2008}. He is convinced the developer will "break old habits" \cite[p. 80]{oc2008}. Furthermore he promises that the exercise will change the way "that you may have lived with for your whole programming life." \cite[p. 80]{oc2008}. According to Bay, this change is the result of the developer's need to rethink and lateral thinking. By going trough this process, the developer's perspective on existing code and the way he will write code in the future, will change radically. As just described this rethinking is only possible in small, lucid projects. This is for example a project with 1,000 lines of code, as suggested by Jeff Bay. \\
+The developer is supposed to "spend 20 hours and 1,000 lines writing code that conforms 100 \%"  to these rules" \cite[p. 80]{oc2008}. He is convinced the developer will "break old habits" \cite[p. 80]{oc2008}. Furthermore he promises that the exercise will change the way "that you may have lived with for your whole programming life." \cite[p. 80]{oc2008}. According to Bay, this change is the result of the developer's need to rethink and lateral thinking. By going trough this process, the developer's perspective on existing code and the way he will write code in the future, will change radically. As just described this rethinking is only possible in small, lucid projects. This is for example a project with about 1,000 lines of code, as suggested by Jeff Bay. \\
 
 However, Jeff Bay's idea is that by this process of rethinking the code quality of the code written by the developer will improve.
-Of course this will only work if the developer recognizes the ideas and principals behind the rules, and hereby accepts the positive outcome of the resulting code. The goal of the exercise is that he is able to accept the positive value of the resulting code. When he is working in real world projects he hopefully remembers parts of the rules, resulting ideas or principals and concepts behind the rules. Because of the improvement of his software development skill, he is then able to apply the concepts to real world project. The result is a tremendously improved code quality in the real world project.\\
+Of course this will only work if the developer recognizes the ideas and principals behind the rules, and hereby accepts the positive outcome of the resulting code. The goal of the exercise is that he is able to accept the positive value of the resulting code. When he is working in real world projects he hopefully remembers parts of the rules, resulting ideas or principals and concepts behind the rules. Because of the improvement of his software development skill, he is then able to apply the concepts to real world projects. The result is a tremendously improved code quality in the real world projects.\\
 
 Improving the quality of software's implementation by little training sessions -- that is basically his idea. Jeff Bay also includes this idea in the name of the rules. The word "Calisthenics" indistinguishable describes the approach, the idea and the outcome of the exercise.\\
 
@@ -37,9 +37,7 @@ The purpose of the Object Calisthenics was already described. However, in this p
 
 Evaluating the possibility to create tool support validating the Object Calisthenics is the main part of this report. It has two main advantages -- efficiency and quality.\\
 
-Providing tool support for the rules of the Object Calisthenics could improve the time the developer uses to conduct the exercise. This efficiency increase simply makes it easier to do the exercise.\\
-
-Furthermore it might reveal rule violations that were not detected by the developer yet. Therefore it could guarantee that the developer sticks to the rules. This is a quality improvement. \\
+Providing tool support for the rules of the Object Calisthenics could improve the time the developer uses to conduct the exercise. This efficiency increase simply makes it easier to do the exercise. Furthermore it might reveal rule violations that were not detected by the developer yet. Therefore it could guarantee that the developer sticks to the rules. This is a quality improvement. \\
 
 Therefore, the next chapter  \ref{Description} describes the rules Object Calisthenics to understand the software principals and quality metrics behind the Object Calisthenics. 
 
@@ -85,7 +83,7 @@ As already said, procedural code is only structured in different algorithm steps
 \subsection*{Missing Overview}
 This point is closely related to the just explained problem of structuring the program. The only way to sort or separate something can be done by using separate files. But still, this does not solve the problem of information hiding and therefore an overview is not given.
 
-In procedural code it is not possible to put problem related data into a abstract data types.
+In procedural code it is not possible to put problem related data into abstract data types.
 
 \subsection*{No Reusability}
 In procedural code it is hard to reuse code. This is a result of the missing encapsulation and the missing modularity that was explained previously.\\
@@ -94,7 +92,7 @@ As already said in procedural code, a method often interacts with many variables
 
 When using multiple files in procedural code, at some point the order of inclusion of these files has to be determined. When another file is imported there is no guarantee that the included files does already execute an operation. Furthermore, cyclic dependencies can occur that have to be resolved manually. \\
 
-However in object oriented software the concept of encapsulation of data structures is integrated in the concept of object orientation.  In good object oriented software every module and object has a clear scope and is well encapsulated. This makes it easy to reuse the object or module. Firstly, it's dependencies are clearly visible. They are not order specific, because they do not determine the order of the inclusion of files, but they determine the types that are used by the class. Secondly, the inner state expressed by data structures is hidden from everything that is not part of the module. The developer does not have to apprehend other modules to change internal states of the module. Thirdly, the operations that can be executed on the object are well defined. The developer can document those interfaces to help developers using the interface to understand how the module or object works.
+In object oriented software the concept of encapsulation of data structures is integrated in the concept of object orientation.  In good object oriented software every module and object has a clear scope and is well encapsulated. This makes it easy to reuse the object or module. Firstly, it's dependencies are clearly visible. They are not order specific, because they do not determine the order of the inclusion of files, but they determine the types that are used by the class. Secondly, the inner state expressed by data structures is hidden from everything that is not part of the module. The developer does not have to apprehend other modules to change internal states of the module. Thirdly, the operations that can be executed on the object are well defined. The developer can document those interfaces to help developers using the interface to understand how the module or object works.
 
 \section{Advantages of Object Orientation}
 The described problems and disadvantages that where described in the previous chapter \ref{d:problemsprocedural}, lead to the use of object orientation. 
@@ -103,7 +101,7 @@ All in all, it is generally stated that object orientation and its related princ
 \\
 
 According to Jeff Bay the change from programming in a procedural way towards programming object oriented style is hard to learn. "Transitioning from procedural development to object-oriented design requires a major shift in thinking that is more difficult than it seems" \cite[p. 70]{bay2008}. 
-According to Jeff Bay, however, the procedural way of thinking is still in the mind of many developers.
+According to Jeff Bay, the procedural way of thinking is still in the mind of many developers.
 
 "Many developers assume they’re doing a good job with OO design, when in reality they’re unconsciously
 stuck in procedural habits that are hard to break." \cite[p. 70]{bay2008} Not only the problem of the difficulty to learn a different way of thinking and coding when changing from procedural to object oriented code is a problem. But also the fact that it is easy for a developer to write procedural code. The disadvantages of procedural code do not occur immediately. Many of the problems when dealing with procedural source code occur late. That means that the developer does not get an immediate feedback about the quality of his code while writing it, but realizes the bad design of the procedural written code after he conducted a change. 
@@ -130,8 +128,8 @@ There is a third point that is typical for object orientation. The things that a
 This enables to separate in different models and make the models reusable. By doing so the particular modules are reusable and are simple and easy to use. 
 This led object orientation to the four pillars of object orientation: encapsulation, abstraction, inheritance, polymorphism. These pillars are the generally accepted basic advantages of object orientation. \\
 
-Jeff Bay however enhances the advantages by "core concepts" and "core qualities" that mark good object oriented code. The qualities are: cohesion, loose coupling, zero duplication, encapsulation, testability, readability and focus.
-Bay does not further explain these qualities. In the next paragraph I will go through all the qualities and explain them shortly. \\
+Jeff Bay enhances the advantages by "core concepts" and "core qualities" that mark good object oriented code. The qualities are: cohesion, loose coupling, zero duplication, encapsulation, testability, readability and focus.
+Jeff Bay does not further explain these qualities. In the next paragraph I will go through all the qualities and explain them shortly. \\
 
 Because Jeff Bay's exercise was already described in \ref{i:exercising}, after the description of the code qualities, the detailed explanation of Jeff Bay's nine rules will follow. 
 
@@ -141,14 +139,16 @@ Cohesion describes the "degree to which the elements of a module belong together
 
 There are different advantages of high cohesion. In object orientation for example, when methods of a class have similar responsibilities, the object tends to have a high cohesion. All object's methods are dedicated to the one task dedicated for the object. The object does not provide any other methods and does not perform any other tasks that are not related its actual task. Therefore it is easy for the developer to understand the behavior of the object and to understand what the object is doing, when it is interacting within application. High cohesion can also enhance the readability of code, because the reader is not distracted by method calls that are related to other tasks than the dedicated one. It is ensured that the operations of the implemented methods is only related to the task that the methods shall perform. \\
 
-Low cohesion in contrast is bad, because the just described advantages of focus, readability and easiness to understand. The cohesion is decreased from high cohesion to low cohesion, when different aspects are implemented in one class. The result is a system that is more difficult to maintain and to understand. 
+Low cohesion in contrast is bad, because the code has no focus, is hard to read and difficult to understand. The cohesion is decreased from high cohesion to low cohesion, when different aspects are implemented in one class. The result is a system that is more difficult to maintain and to understand. 
 
 \subsection*{Coupling}
 \label{coupling}
 Coupling is a metric that describes the knowledge of a class about its surrounding objects. Loose coupling can be described by two attributes. 
 \\
+
 Firstly, if a class knows less about the surrounding classes and only uses well defined, generic interfaces to those classes. It does not have knowledge about the concrete implementation of the class. 
 \\
+
 Secondly, if the state of a class does not depend on the state of another state, or at least only depends on the state provided by the class directly, and not by other classes provided by that class but only uses the provided methods. 
 When this is not given, the classes are strongly coupled. The "lack of coupling means that the elements of our system are better isolated from each other and from change." \cite[Loose Coupling]{wiki}
 Because the changes of classes or an interface, for example when conducting a refactoring, do only spread to the directly related neighbor classes. Therefore loose coupling is considered a good object oriented style. It is easier to change loosely coupled classes than strongly coupled classes. When classes are coupled loosely they are more separate and independant from each other. 
@@ -181,15 +181,15 @@ The first aspect refers to the easiness of understanding a certain amount of sou
 
 Two other aspects are important when looking at the readability of source code. It is generally known that well placed documentation at parts of the code that are hard to understand, help the reader to grasp the code he reads. Therefore good documentation enhances the readability of source code.\\
 
-In \cite{cc} Martin describes the third important factor for ensuring readability. Martins "step down rule" is a rule ensuring the separation of different layers of abstraction. Classes or components describe different levels of abstractions. Abstract level classes are usually the top-level entry point when calling a module or a library, whereas low level classes execute very problem specific operations. The step down rule states that this hierarchical ordering of functions exists. In addition it says that all functions that are declared in one class should all be on the same level of abstractions. Furthermore a method of a higher level should only call functions declarated on a lower level. The result is a composition of functions going from an abstract to a concrete level. For the reader of the code it is easier to understand the resulting code because he knows exactly in which level of abstraction he is located. He can therefore navigate more easily to the desired code positions. Furthermore he doesn't have to understand every detail of the whole code, but can use the the higher levels of abstraction to understand quickly what the code is doing. 
+In \cite{cc} Robert C. Martin describes the third important factor for ensuring readability. Robert C. Martins "step down rule" is a rule ensuring the separation of different layers of abstraction. Classes or components describe different levels of abstractions. Abstract level classes are usually the top-level entry point when calling a module or a library, whereas low level classes execute very problem specific operations. The step down rule states that this hierarchical ordering of functions exists. In addition it says that all functions that are declared in one class should all be on the same level of abstractions. Furthermore a method of a higher level should only call functions declarated on a lower level. The result is a composition of functions going from an abstract to a concrete level. For the reader of the code it is easier to understand the resulting code because he knows exactly in which level of abstraction he is located. He can therefore navigate more easily to the desired code positions. Furthermore he doesn't have to understand every detail of the whole code, but can use the the higher levels of abstraction to understand quickly what the code is doing. 
 
 \subsection*{Focus}
 \label{focus}
-The last quality Jeff Bay describes in \cite{oc2008} is focus. Focus is the description of "doing one thing". Every unit is dedicated to one task it has to manage and fullfill successfully. Focus describes not only this dedication, but furthermore states that the unit shouldn't do anything more. Consequently, the module contains no operations that are not related to that task. If it has to trigger other tasks that are not related to its dedication, it uses methods on other units that are specialized on this task. This means the module delegates all tasks that are not part of its dedication to other units. These units themselves are dedicated to the delegated task. Focus is very similar to the just described quality coupling in chapter \ref{i:exercising}.
+The last quality Jeff Bay describes in \cite{oc2008} is focus. Focus is the description of "doing one thing". Every unit is dedicated to one task it has to manage and fulfill successfully. Focus describes not only this dedication, but furthermore states that the unit shouldn't do anything more. Consequently, the module contains no operations that are not related to that task. If it has to trigger other tasks that are not related to its dedication, it uses methods on other units that are specialized on this task. This means the module delegates all tasks that are not part of its dedication to other units. These units themselves are dedicated to the delegated task. Focus is very similar to the just described quality coupling in chapter \ref{i:exercising}.
 
 \section{The Rules and their Background}
 \label{d:background}
- The instruction on how to conduct the excercise was already describe in the beginning, in chapter \ref{i:exercising}. This section describes the rules of the Objct Calisthenics itself. \\
+ The instruction on how to conduct the excercise was already describe in the beginning, in chapter \ref{i:exercising}. This section describes the rules of the Object Calisthenics itself. \\
  In the chapter I will go through every rule, step by step. Every section will describe the patterns an principals behind the rules, elucidate design patterns and best practices that correspond with the rules. Each rule will furthermore exemplify the rule by a good and a bad example. 
 
 \subsection*{Rule 1: "Use One Level of Indentation per Method"}
@@ -198,12 +198,13 @@ With his first rule, "use one level of indentation per method", Jeff Bay tries t
 
 The metric cohesion describes how well an object is focused and how well it is dedicated to one single task. Cohesion was already described previsouly. The principle of "doing one thing", that Robert C. Martin describes in \cite{cc}, was already mentioned in the short explanation of focus in section \ref{focus}. Jeff Bay's Rule  "use one level of indentation per method" takes the principle of cohesion which is often applied on a class level and applies it on the method level. By doing so he ensures that a method is only doing what it is supposed to do and therefore delegates all non-relevant tasks. \\
 
-There are two important principles behind the rule. 
+There are two important principles behind the rule.
+\\
 
 The idea of delegating all non releveant work and therefore raise the cohesion can be done in the following way.
 This is ensuring that the method is only manipulating data that is related directly to the method. Hence ensuring the method does not mainpulate data that is accessed via muliple getter methods, other method calls or iterations. Such an access would change data that is not related directly to the object itself. Therefore a foreign object would mainpulate the data of another object -- instead of calling a method on the object. As already described other, just called "foreign objects", can be accessed via method calls and control structures like while, for and do-while loops. Therefore when accessing an object with nested control structures, the methods is likely to change such foreign object. There are two rules by Jeff Bay that prohibit such a "deep" access to those foreign objects' data structures. One is this rule, restricting the nesting of control-structures and the other rule is rule four, "use only one dot per line", restricting the deep access via chained method calls. \\
 
-As already mentioned, there is another principle that plays an important role, when looking at the rule. The idea of "one level of abstraction", which is described by Robert C. Martin in \cite{cc}, is the other one. The basic idea of the "one level of abstraction" principle was already introduced when describing readability in section \ref{readability}. Robert C. Martin states that a method should only operate within one level of abstraction and delegate all other tasks that are on a lower level to another class. He states the rule as important, because it hard for developers to follow. "This may be the hardest of these heuristics to interpret and follow. Though the idea is plain enough, humans are just far too good at seamlessly mixing levels of abstraction." \cite{cc}. When a method is operation on two levels of abstraction, not always, but often using nested control structures in order to acces the deeper objects and to conduct data manipulation on a lower level. Transfering those operations not only results in a better abstraction, but also increases the cohesion of the affected objects. After splitting up tasks in objects that operate on different levels of abstraction, the cohesion of the objects raises. The objects are more concentrated and only operate on one abstraction level. The object on a abstract level does not have to do operations on a low level, but is using another object to undertake the task. The result in many cases is that the object on the abstract level does not have to use that much control structures do perform the task, because it simply delegates all work that is not on its abstraction level. Therefore the nesting of control structures disappears automatically. In his rule, however, Jeff Bay prohibits the nesting of control structure and therewith forces the developer to use different levels of abstraction from the beginning. 
+As already mentioned, there is another principle that plays an important role, when looking at the rule. The idea of "one level of abstraction", which is described by Robert C. Martin in \cite{cc}, is the other one. The basic idea of the "one level of abstraction" principle was already introduced when describing readability in section \ref{readability}. Robert C. Martin states that a method should only operate within one level of abstraction and delegate all other tasks that are on a lower level to another class. He states the rule as important, because it hard for developers to follow. "This may be the hardest of these heuristics to interpret and follow. Though the idea is plain enough, humans are just far too good at seamlessly mixing levels of abstraction." \cite{cc}. When a method is operation on two levels of abstraction, not always, but often using nested control structures in order to acces the deeper objects and to conduct data manipulation on a lower level. Transfering those operations not only results in a better abstraction, but also increases the cohesion of the affected objects. After splitting up tasks in objects that operate on different levels of abstraction, the cohesion of the objects raises. The objects are more concentrated and only operate on one abstraction level. The object on a abstract level does not have to do operations on a low level, but is using another object to undertake the task. The result in many cases is that the object on the abstract level does not have to use that much control structures do perform the task, because it simply delegates all work that is not on its abstraction level. Therefore the nesting of control structures disappears automatically. In his rule, Jeff Bay prohibits the nesting of control structure and therewith forces the developer to use different levels of abstraction from the beginning. 
 \\
 
 The reduce of the nesting of loops and conditionals furthermore reduces the metric cyclomatic complexity to a minimum. The metric "[\dots] measures the number of linearly independent paths through a program's source code [\dots]" \cite[Cyclomatic complexity]{wiki} on the level of a method. By reducing the number of allowed nested statements the number different paths is pushed to a minimum.
@@ -217,9 +218,9 @@ For reasons of simplicity, the following java examples do not contain imports an
 The problem implemented to exemplify is quite simple: A school has multiple classes with students. The goal is to get the avearge age of all students in the school. 
 \\
 
-As listing \ref{listing:rule1example1} shows, the method \textit{count} simply iterates over all classes of the school, then reads out all students of the class and counts their number. This operation uses nested for loops to determine the number of students. A first improvement would be to use multimple methods to get rid of the nested control structures. This is depicted in listing \ref{listing:rule1example2}. In this example, the control structures are not nested anymore, but method calls are used to conduct the counting of the deeper data. The deeper data in this case are the \textit{Student}s because their are contained by the \textit{SchoolClass}. 
+As listing \ref{listing:rule1example1} shows, the method \textit{count()} simply iterates over all classes of the school, then reads out all students of the class and counts their number. This operation uses nested for loops to determine the number of students. A first improvement would be to use multimple methods to get rid of the nested control structures. This is depicted in listing \ref{listing:rule1example2}. In this example, the control structures are not nested anymore, but method calls are used to conduct the counting of the deeper data. The deeper data in this case are the \textit{Student}s because their are contained by the \textit{SchoolClass}. 
 
-Even if \ref{listing:rule1example2} now fullfils the rule, there is still a problem remaining. The class \textit{School} is still operating on the data that is contained by the class \textit{SchoolClass}. However the number of students in a school and the number of students in a class are two different concerns and they should not only be separated but be well placed in their corresponding classes. Then the result is a higher cohesion, because the operations are placed precisely at the classes. Therefore extracting the method that is counting the students of a class to the \textit{SchoolClass} is a step, improving the code even more. Listing \ref{listing:rule1example3:school} and \ref{listing:rule1example3:schoolclass} show the two classes with their corresponding counting methods, that are now located to the proper classes. 
+Even if \ref{listing:rule1example2} now fulfills the rule, there is still a problem remaining. The class \textit{School} is still operating on the data that is contained by the class \textit{SchoolClass}. However the number of students in a school and the number of students in a class are two different concerns and they should not only be separated but be well placed in their corresponding classes. Then the result is a higher cohesion, because the operations are placed precisely at the classes. Therefore extracting the method that is counting the students of a class to the \textit{SchoolClass} is a step, improving the code even more. Listing \ref{listing:rule1example3:school} and \ref{listing:rule1example3:schoolclass} show the two classes with their corresponding counting methods, that are now located to the proper classes. 
 \\
 
 The example shows how rule one "use one level of indentation per method" can improve the readability of code and the cohesion of the classes. The resulting classes are therefore easier to test, easier to understand and more focused on doing one dedicated task. Graphic \ref{picture:rule1abstraction} shows exactly this. The operations on a deep abstraction level or operations on nested structures are not done on the abstract level. In contrast, the abstract level uses the lower level object to conduct low level operations. 
@@ -230,7 +231,7 @@ Jeff Bay's rule two "don’t use the else keyword", tackles the lack of understa
 In \cite{oc2008} he states that many developers learn if/else constructs from day one. Therefore they are used to the usage of the construct. Even worse they learn the proper usage of polymorphism later on in their career. As a result the "way of thinking" in if/else constructs is still firmly established in developers' brains.
 \\
 
-As commonly stated, the abundant use of conditionals leads to code that is hardly readable\cite[p. 338]{gof}. "Like long procedures, large conditional statements are undesirable." \cite[p. 340]{gof} Even worse, it leads to code duplication because the code with a lot of conditionals "is difficult to extend and to modify" \cite{gof}. This is because the deveoper does not see the usage of an if/else construct from the outside of the class. Therefore if he does not know the class where object is used, he simply rewrites the behavior that is already implemented in another method. Assumed there would be an object that had a clear description of the implemented behavior and could be reused, then this errors would not occur. Furthermore the conditional within the method could also be implemented by different implementation behind a common interface, which is the basic idea of polymorphism. The setting of the direction would then not happen when passing the if/else construct, but the method would simply call another method of an object and the concrete implementation of a common interface determines the code that is executed. By doing so the metric indicating cyclomatic complexity is reduced because the number of alternative of going throught a method is reduced -- there are less if/else conditionals. The number of variants is pushed away from the method by making use of polymorphism.
+As commonly stated, the abundant use of conditionals leads to code that is hardly readable \cite[p. 338]{gof}. "Like long procedures, large conditional statements are undesirable." \cite[p. 340]{gof} Even worse, it leads to code duplication because the code with a lot of conditionals "is difficult to extend and to modify" \cite{gof}. This is because the developer does not see the usage of an if/else construct from the outside of the class. Therefore if he does not know the class where object is used, he simply rewrites the behavior that is already implemented in another method. Assumed there would be an object that had a clear description of the implemented behavior and could be reused, then this errors would not occur. Furthermore the conditional within the method could also be implemented by different implementation behind a common interface, which is the basic idea of polymorphism. The setting of the direction would then not happen when passing the if/else construct, but the method would simply call another method of an object and the concrete implementation of a common interface determines the code that is executed. By doing so the metric indicating cyclomatic complexity is reduced because the number of alternative of going throught a method is reduced -- there are less if/else conditionals. The number of variants is pushed away from the method by making use of polymorphism.
 \\
 
 In order to increase the reusability and conduct a better separation of concerns, Jeff Bay restricts the usage of if/else constructs, concretely the usage of the else keyword.
@@ -245,19 +246,11 @@ Early return is a very simple way of decreasing the amount of if/else conditiona
 The second example, shown in \ref{listing:rule2examplenull:mainnull}, depicts the solution that was just proposed. As clearly visible there is no else keyword used anymore, but the control is also done by early returns. The advantage of this approach occurs when reading through the method step by step. When seeing a return statement while reading through the method, the developer knows immediately what happens. The reader of the method knows that no other statement on the bottom of the method body will be executed. It is very clear that the method passes the control and that the execution is continued in the method of the initially caller of the method. There is no long decision making by conditionals which navigate through the different cases. In contrast, after the improvement of the source code there is a clear end of the method -- simliar to the semicolon or the dot in a sentence. Therefore Jeff Bay states that the the practice of using early returns increases the  readablility. 
 \\
 
-However others state that the opposite is the case and that the variable that is returned should always be defined at the beginning of the method. This makes use of the advantage that the developer already knows at the beginning of the method which variable is returned -- a clear advantage in contrast to the early return approach. However, when reading through a method the developer always has to remember the variable that is returned and how it was changed. Furthermore, when returning a default value, the value is initialized in the beginning of the method -- but the return statement and the return variable are in the end of the method. Therefore the developer might have to look up the default value of the variable again. Whereas when using the the early return approach, this is prevented more likely.
+There are also others that state that the opposite is the case and that the variable that is returned should always be defined at the beginning of the method. This makes use of the advantage that the developer already knows at the beginning of the method which variable is returned -- a clear advantage in contrast to the early return approach. However, when reading through a method the developer always has to remember the variable that is returned and how it was changed. Furthermore, when returning a default value, the value is initialized in the beginning of the method -- but the return statement and the return variable are in the end of the method. Therefore the developer might have to look up the default value of the variable again. Whereas when using the the early return approach, this is prevented more likely.
 
 \subsection*{Null Object Pattern}
 The use of the null object pattern is the way of getting rid of if/else constructs. The pattern is mainly used in static typed language, like Java for example. When a method is returning the value null, a problem occurs for the callee. He has to check with a condition if the reference on the return value is null or is null. An example for such a null check is shown in listing \ref{listing:nullcheck}. This construct tries to achieve the execution of some lines of code only if a value is not null. However this has to be checked with an if condition. With the null object pattern, polymorphism instead of if contisions is used to achieve the shown behavior.
 \\
-
-\begin{lstlisting}
-Object result = something.operation();
-if(result != null) {
-	performAnotherOperation();
-}
-\end{lstlisting}
-\label{listing:nullcheck}
 
 The null object pattern commonly has two implementations behind one common interface. One implementation however contains the code in which of the if clause's body that is shown in listing \ref{listing:nullobject1}, and the other object simply contains no code. The two classes are shown in the following. The \ref{listing:nullobject3} shows the Null Object itself and the other listing \ref{listing:nullobject2} shows the implementation containing the code. Within the method \textit{method()}, a concrete implementation of the common interface \ref{listing:nullobjectoperationinterface} is returned. If the object shall be \textit{null}, an implementation of the Null Object \textit{NullObject} is returned, if not the \ref{listing:nullobject3} is returned. By doing so, the call check of the conditions in the caller's method disappears, as depicted in listing \ref{listing:nullobject4}.
 
@@ -272,7 +265,7 @@ The use of polymorphism means, in most cases, applying the strategy pattern. Thi
 The strategie pattern is a software pattern allowing different polymorphic implementations, that are hidden behind a common interface. Which version of the method is executed is not determined within the object itself, but the concrete implementation of the object is determined by another object. The used implementation is plugged in by a deciding instance that determines the strategy that is used. The object itself, however does not care about the object that is used anymore, but simply calls the method of the common interface. The strategy pattern is used to create configurable algorithms with different behavior of the implementation \cite[p. 349]{gof}. The output on a given input however is defined by the common strategy interface. The \ac{UML} diagram of the strategy pattern is shown in picture \ref{picture:strategypattern}. An example of this is shown in the following.
 \\
 
-The example shows a \textit{Printer} (\ref{listing:strategypatternexample1:printer}) that offer a method \textit{print(String string)} printing the given string. However the \textit{Printer} is configurable via its method \textit{Style} (\ref{listing:strategypatternexample1:style}). Dependant on which concrete implementation of \textit{Style} is used -- \textit{BoldFont} (\ref{listing:strategypatternexample1:boldfont}) or \textit{ItalicFont} \ref{listing:strategypatternexample1:italicfont} -- the tiven text is printed differently. In this example, the \textit{Main} (\ref{listing:strategypatternexample1:main}) represents the context, shown in the graphic \ref{picture:strategypattern}. The interface abstracting the two pluggable "style strategies" \textit{Style} is the common interface. The two possible strategies that determine how the string is printed are the classes \textit{BoldFont} and the classe \textit{ItalicFont}.
+The example shows a \textit{Printer} (\ref{listing:strategypatternexample1:printer}) that offer a method \textit{print(String string)} printing the given string. However the \textit{Printer} is configurable via its method \textit{Style} (\ref{listing:strategypatternexample1:style}). Dependant on which concrete implementation of \textit{Style} is used -- \textit{BoldFont} (\ref{listing:strategypatternexample1:boldfont}) or \textit{ItalicFont} (\ref{listing:strategypatternexample1:italicfont}) -- the tiven text is printed differently. In this example, the \textit{Main} (\ref{listing:strategypatternexample1:main}) represents the context, shown in the graphic \ref{picture:strategypattern}. The interface abstracting the two pluggable "style strategies". \textit{Style} is the common interface of both classes. The two possible strategies that determine how the string is printed are the classes \textit{BoldFont} and the classe \textit{ItalicFont}.
 \\
 
 Like the strategy pattern, the state pattern is a behavioral software pattern as well. The state pattern can be seen as specialization of it. The state pattern also makes use of polymorphism. In contrast to the strategy pattern, the implementation used next can be changed by an implementation itself. In the state pattern, the different implementations of the common interface are representing the object's state. The objects state is expressed by the concrete state implementation, that is hidden behind the common interface, which is valid for all states. Therefore a state can change the state to another state.
@@ -291,7 +284,7 @@ The \ac{LSP} states that "a computer program, if S is a subtype of T, then objec
  To guarantee the correctness of the class that is using the interchangable classes, each of the concrete implementations of those classes have to behave exactly as their abstract specifications hence interfaces. These interfaces should be well documented and provide a clear description of what is expected to be the output on every possible given imput. The documentation can then describe the specialties of the concrete implementations. However, under no circumstances the subclasses should disagree the interface's documentation but should follow the \ac{LSP} very strictly. 
  \\
 
- All in all, these patterns enable the developer to "move multiconditionals and branches to own strategy [or state] classes" \cite[p. 350]{gof} and by this dramatically reduce the use of conditionals. By pushing login into interchangable own components, the cohesion of the class increases. It has less if/else conditionals and is, in result more readable and focused. The focus increases because the class does not determine the code to apply with conditionals to then treat them differently. Instead it uses method calls with the hidden and interchangable logic. To engage developers to use the described patterns and to benefit from their advantage, Jeff Bay permits the use of the else keyword with this rule. 
+ All in all, these patterns enable the developer to "move multiconditionals and branches to own strategy [or state] classes" \cite[p. 350]{gof} and by this dramatically reduce the use of conditionals. By pushing logic into interchangable own components, the cohesion of the class increases. It has less if/else conditionals and is, in result more readable and focused. The focus increases because the class does not determine the code to apply with conditionals to then treat them differently. Instead it uses method calls with the hidden and interchangable logic. To engage developers to use the described patterns and to benefit from their advantage, Jeff Bay permits the use of the else keyword with this rule. 
 
 \subsection*{Rule 3: "Wrap All Primitives and Strings"}
 Jeff Bay's third rule "wrap all primitives and strings" tries to force the developer to push logic close the data. The basic problem, this rule tackles is that most primitive values only relate to their meaning by its variable names. 
@@ -331,7 +324,7 @@ The model in \ac{DDD} as the "heart of the model", the "backbonde language used 
 \subsection*{Rule 4: "Use Only One Dot per Line"}
 The fourth rule of Jeff Bay, "use only one dot per line", increases the cohesion of classes and claims a clear separation of concerns. The rule tackles "misplaces responsibilities" \cite{oc2008} and focuses on a clear structure of tasks.\\
 
-According to Jeff Bay, lines of code with multiple dots, indicate such "misplaces responsiblities" \cite{oc2008}. If a line with multiple dots occurs, it is indicated that the developer "violate[s] encapsulation" \cite{oc2008}. Such lines indicate that there is an object acting "as a middleman" \cite{oc2008}. "It knows too much about too many people." \cite{oc2008} By this, Jeff Bay means that an object A is using another object B to access object instances in object C to manipulate C's instance variable or call a method on instance C. As a result, the actual operation is located in object A but the data is located is in object C. This violates the \ac{LoD}. The essence of \ac{LoD} is exactly what is just explained. According to \ac{LoD} a object is only allowed to talk to "itself, its parameters, any objects it creates [\dots] [and] its direct component objects" \cite{ba.com}. These communication partners are sometimes called "friends" of the objects. They are known by the object because they were deliberately passed to the object or were created by the object itself.  
+According to Jeff Bay, lines of code with multiple dots, indicate such "misplaces responsiblities" \cite{oc2008}. If a line with multiple dots occurs, it is indicated that the developer "violate[s] encapsulation" \cite{oc2008}. Such lines indicate that there is an object acting "as a middleman" \cite{oc2008}. "It knows too much about too many people." \cite{oc2008}. By this, Jeff Bay means that an object A is using another object B to access object instances in object C to manipulate C's instance variable or call a method on instance C. As a result, the actual operation is located in object A but the data is located is in object C. This violates the \ac{LoD}. The essence of \ac{LoD} is exactly what is just explained. According to \ac{LoD} a object is only allowed to talk to "itself, its parameters, any objects it creates [\dots] [and] its direct component objects" \cite{ba.com}. These communication partners are sometimes called "friends" of the objects. They are known by the object because they were deliberately passed to the object or were created by the object itself.  
 \\
 
 The usage of another object or method that is executed on the return value of another object is not allowed in one single line. Then \ac{LoD} is not violated. Of course it is still possible to conduct those bad chained method calls in two lines with only one dot in each line -- however, this is bad practice. In \cite{paperboy}, David Bock calls this "lots of temporary object", because the object reference will only be used over two or three lines. Then it is never necessary again. In addition, according to rule six, the developer is only allowed to use a very limited amount of lines in one class. These two rules force the developer to stick with the \ac{LoD}.
@@ -339,30 +332,6 @@ The usage of another object or method that is executed on the return value of an
 
 Before examining \ac{LoD} more deeply, a bad example is given in \ref{listing:lodbadexample} and a good example is given in \ref{listing:lodgoodexample}. The better approach which is shown in \ref{listing:lodgoodexample} requires that the instance of class \textit{Anotherclass} takes the responsibility to perform the action that was conducted by the method \textit{getInternalObject()} before.
 \\
-\begin{lstlisting}
-class Someclass {
-
-	private AnotherClass another = new AnotherClass();
-
-	public void method() {
-		another.getInternalObject().performAction();
-	}
-}
-\end{lstlisting}
-\label{listing:lodbadexample}
-
-\begin{lstlisting}
-class Someclass {
-
-	private AnotherClass another = new AnotherClass();
-
-	public void method() {
-		another.performAction();
-	}
-}
-\end{lstlisting}
-\label{listing:lodgoodexample}
-
 
 As a result of the violation of \ac{LoD}, the behavior should be moved closer to the data. This could be done by a method offered by object B and used by object A directly that is conducting the changes in C. Of course an additional method would be added to the object, but the amount of code in any class is restricted by rule 6. Therefore there is no chance that a class will have a lot of delegate methods, because rule six restricts that. 
 \\
@@ -396,9 +365,9 @@ Secondly, Jeff Bay proposes another hint for methods names. They should always m
 In the following block, there examples for bad method and class names are given. The naming of those artifacts is then improved and the improved names are depicted. 
 \\
 
-A class \textit{Car} with the method \textit{startEngine} can be simplified by changing the method name to \textit{start}. Imagine a car in a real world and imagine a situation where you speak to a friend directly. The easy and more colloquial language would be \textit{"let's go, start the car"} rather than \textit{"let's go start the car's engine"}. This is simply because the description "start" describes the conducted action as well as "start the engine" -- from the perspective of someone using a car.\\
+A class \textit{Car} with the method \textit{startEngine()} can be simplified by changing the method name to \textit{start}. Imagine a car in a real world and imagine a situation where you speak to a friend directly. The easy and more colloquial language would be \textit{"let's go, start the car"} rather than \textit{"let's go start the car's engine"}. This is simply because the description "start" describes the conducted action as well as "start the engine" -- from the perspective of someone using a car.\\
 
-A class \textit{LaptopScreen} describes the screen of a laptop and is created and managed by a class \textit{Laptop}. Given this class only has the operations \textit{adjustBrightness(BrithnessLevel brightnesslevel)} and \textit{changeScreenResolution(ScreenResolution resolution)}. In this example the classnames are used as placeholders for the instance variable names of these types, simply assuming that the name might be similar. Often such a variable is named with the lower case version of the classname: \textit{laptopScreen}. However the best solution is when the variable name describes the context in which the type is used and does not duplicate the information that was already given via the type.  
+A class \textit{LaptopScreen} describes the screen of a laptop and is created and managed by a class \textit{Laptop}. Given this class only has the operations \textit{adjustBrightness(BrightnessLevel brightnesslevel)} and \textit{changeScreenResolution(ScreenResolution resolution)}. In this example the classnames are used as placeholders for the instance variable names of these types, simply assuming that the name might be similar. Often such a variable is named with the lower case version of the classname: \textit{laptopScreen}. However the best solution is when the variable name describes the context in which the type is used and does not duplicate the information that was already given via the type.  
 
 In this example there are several improvements that can be done to improve the naming. The first improvement is regarding the class name. Because the \textit{LaptopScreen} is only used in the context of a \textit{Laptop}, the duplication of the word "laptop" is unnecessary.
 
@@ -417,13 +386,13 @@ Many other frameworks also use abbreviations, for example the \ac{GWT} with its 
 As shown in the examples and the restrictions of the rule, given by Jeff Bay, there are various ways to improve names of classes, methods and variable names. 
 
 \subsection*{Rule 6: "Keep All Entities Small"}
-Jeff Bay's rule six, "keep all entities small", prohibits to write classes "with more than fifty lines and no package that's more than ten files.". Long classes are commonly known as hardly readable and understandable because simply the variance and the number of statements makes it difficult to understand. 
+Jeff Bay's rule six, "keep all entities small", prohibits to write classes "with more than fifty lines and no package that's more than ten files". Long classes are commonly known as hardly readable and understandable because simply the variance and the number of statements makes it difficult to understand. 
 \\
 
 Classes that consist of very many lines of code are hard to overview and to understand. They are likely to multiple behaviors and do not follow the pattern of "doing one thing" as stated in \cite{cc}. Long classes with many lines of code do more than one thing and mostly have more than one purpose. Therefore they shall be splitted up in diffent units with a high cohesion, focus and a clear separation of concerns and a differentiation of the levels of abstraction. 
 \\
 
-According to Jeff Bay, when refactoring existing code and splitting up large classes into several smaller units, package reveal their real purpose. Whereas classes will become unit that only fulfill one dedicated task, packages bundle those small units and provide bigger process. "As your classes become smaller and have fewer responsibilities and as you limit package size you will start to see that packages represent clusters of related classes that work together to achieve one goal." \cite{oc2008} Furthermore resulting package provides a small functionality. The rules of cohesion, focus, overview, structure which applies for classes, definitely also apply for packages. Even more -- whereas the package might not have had an identity before, it now serves to one bigger task that is represented in different units, hence classes. 
+According to Jeff Bay, when refactoring existing code and splitting up large classes into several smaller units, package reveal their real purpose. Whereas classes will become unit that only fulfill one dedicated task, packages bundle those small units and provide bigger process. "As your classes become smaller and have fewer responsibilities and as you limit package size you will start to see that packages represent clusters of related classes that work together to achieve one goal." \cite{oc2008} Furthermore resulting package provides a small functionality. The rules of cohesion, focus, overview, structure which applies for classes, definitely also apply for packages. Whereas the package might not have had an identity before, it now serves to one bigger task that is represented in different units, hence classes. 
 \\
 
 Giving an example for long classes would go beyond the scope of the discussion about code examples, therefore no example is given.
@@ -577,7 +546,7 @@ This chapter will evaluate tool support to validate the Object Calisthenics. The
 \section{Advantages of Tool Support}
 \label{e:advantages}
 %=== What is a tool? Why do tools help? What makes tools strong? Why do tools matter for developers?
-A tool supports when conducting software development. The use of tools is given in various phases of software development. It can reach from project planning, architecture design, software debugging to software testing. Some of the tools are closely related to the actual coding, like a debugging tool or an \acf{IDE}, and some are not directly related to coding but to a adjacent discipline, a project management tool. 
+A tool supports when conducting software development. The use of tools is given in various phases of software development. It can reach from project planning, architecture design, software debugging to software testing. Some of the tools are closely related to the actual coding, like a debugging tool or an \ac{IDE}, and some are not directly related to coding but to a adjacent discipline, a project management tool. 
 
 The outcome of tools varies from the use-case. In general they make conducting tasks easier. A good project management tool makes the accomplishment of changes of the project plan easy, or it enables various team members to work on the plan at the same time. A debugging tool for example helps the developer to go through a piece of code step by step. Without the tool, the developer had to print variables on the console or to get information about the state of an algorithm at a specific time point. By using the tool, he might be able to set line breakpoints, exception breakpoints and can inspect the state of a system point of time. 
 
@@ -589,36 +558,36 @@ The evaluation of a tool validating the rules will be done on an abstract level.
 For the abstract evaluation in this chapter, the code structure of the protoype will be presumed. Hence, the working environment is explained here. 
 \\
 
-To create a tool validating the rules, the \acf{AST} of the code will be analysed. An \acf{AST} "is a tree representation of the abstract syntactic structure of source code written in a programming language" \cite[Abstract Syntax Tree]{wiki}. Because the protoype built during this research is written in Java, the \acf{AST} structure of the \acf{JLS} will be assumed \footnote{\label{foot:jls}The \acf{JLS} is available online: \url{http://docs.oracle.com/javase/specs/jls/se7/jls7.pdf}} In the following of the report, the acronym "JLS" will be used for "Java Language Specification" and will always refer to the given specification document \ref{foot:jls}. The \acf{AST} that is provided by the Eclipse Framework is a semantic \acf{AST}, which means that it has more information than the syntax structure. It furthermore gives information about the semantic structure of the code. This is for example information about the semantic equality of variables and method calls, the inheritance structure of classes or the usage of object instances within the source code.
+To create a tool validating the rules, the \ac{AST} of the code will be analysed. An \ac{AST} "is a tree representation of the abstract syntactic structure of source code written in a programming language" \cite[Abstract Syntax Tree]{wiki}. Because the protoype built during this research is written in Java, the \ac{AST} structure of the \ac{JLS} will be assumed \footnote{\label{foot:jls}The \ac{JLS} is available online: \url{http://docs.oracle.com/javase/specs/jls/se7/jls7.pdf}} In the following of the report, the acronym "JLS" will be used for "Java Language Specification" and will always refer to the given specification document \ref{foot:jls}. The \ac{AST} that is provided by the Eclipse Framework is a semantic \ac{AST}, which means that it has more information than the syntax structure. It furthermore gives information about the semantic structure of the code. This is for example information about the semantic equality of variables and method calls, the inheritance structure of classes or the usage of object instances within the source code.
 \\
 
-The Eclipse platform, however provides a framework that already creates an \acf{AST} for given classfiles. The framework is part of the Eclipse \acf{JDT} can be used to access, change and read the elements of a Java source code. In this scenario the read access on code structures is necessary to find possible rule violation. The prototype itself will be written as an Eclipse plugin, and will use the framework. The \acf{JDT} framework is automatically integrated into the Eclipse plugin. 
+The Eclipse platform, however provides a framework that already creates an \ac{AST} for given classfiles. The framework is part of the Eclipse \ac{JDT} can be used to access, change and read the elements of a Java source code. In this scenario the read access on code structures is necessary to find possible rule violation. The prototype itself will be written as an Eclipse plugin, and will use the framework. The \ac{JDT} framework is automatically integrated into the Eclipse plugin. 
 \\
 
 
 In the next paragraph, the rough structure of a rule validation will be explained to give an overview about which steps have to be done in the prototype and which structures and mechanism are given by the framework.
 \\
 
-To use the structure of an \acf{AST} of a class file, the visitor pattern \cite{gof}[p. 366] is used. Each element of the \acf{JLS} is represented as a concrete java object. The visitor traverses the general \acf{AST} and calls a corresponding method when an element is found. For example, the traversing algorithm the \acf{AST} comes upon a while statement, the \textit{visit} methods with the given element as parameter is called: \textit{void visit(WhileStatement)}. The general visitor is provided by the framework and implements such a \textit{visit} method for every possible element. The general visitor is represented by the framework class \textit{ASTVisitor}. If the concrete validator wants to get informed about the traversion of a specific element, it simply overrides the method of the element in a class that subclasses \textit{ASTVisitor}. 
+To use the structure of an \ac{AST} of a class file, the visitor pattern \cite{gof}[p. 366] is used. Each element of the \ac{JLS} is represented as a concrete java object. The visitor traverses the general \ac{AST} and calls a corresponding method when an element is found. For example, the traversing algorithm the \ac{AST} comes upon a while statement, the \textit{visit} methods with the given element as parameter is called: \textit{void visit(WhileStatement)}. The general visitor is provided by the framework and implements such a \textit{visit} method for every possible element. The general visitor is represented by the framework class \textit{ASTVisitor}. If the concrete validator wants to get informed about the traversion of a specific element, it simply overrides the method of the element in a class that subclasses \textit{ASTVisitor}. 
 \\
 
-The algorithms and \acf{AST} structure analysis that will be described in this chapter, assume that the user did not use Java's Reflection \acf{API} to change the number of instance variable during runtime. The Eclipse famework retrieves its information about the code structure directly from the \textit{.java} file and there is no possibility to retrieve updated information during runtime. The use of Java's Reflection \acf{API} to bypass the rule misses the training purpose of Jeff Bay's Object Calisthenics.  Therefore it is presumed that such a manipulation on runtime is not conducted. With this assumption the given \acf{AST} structure given when starting the analysis tool and getting the java source files can be presumed.
+The algorithms and \ac{AST} structure analysis that will be described in this chapter, assume that the user did not use Java's Reflection \ac{API} to change the number of instance variable during runtime. The Eclipse famework retrieves its information about the code structure directly from the \textit{.java} file and there is no possibility to retrieve updated information during runtime. The use of Java's Reflection \ac{API} to bypass the rule misses the training purpose of Jeff Bay's Object Calisthenics.  Therefore it is presumed that such a manipulation on runtime is not conducted. With this assumption the given \ac{AST} structure given when starting the analysis tool and getting the java source files can be presumed.
 \\
 
-When an algorithm found a node in the \acf{AST}s object representation that validate the rule, it pushed the node to the Eclipse framework. By doing so, the Eclipse framework automatically displays an indication. 
+When an algorithm found a node in the \ac{AST}s object representation that validate the rule, it pushed the node to the Eclipse framework. By doing so, the Eclipse framework automatically displays an indication. 
 \\
 
-To indicate the violation, the Eclipse framework does not have to know the exact position within the code. On the basis of the object representation, the framework can create a maker at the proper position of the code. Therefore when indicating the violation, the rule algorithm has to find the node within the \acf{AST}.
+To indicate the violation, the Eclipse framework does not have to know the exact position within the code. On the basis of the object representation, the framework can create a maker at the proper position of the code. Therefore when indicating the violation, the rule algorithm has to find the node within the \ac{AST}.
 \\
 
-To make the explanation of the concrete validation easier and to focus on the actual challenge, the validation of each rule, the general known terms like "method declaration", "statement" or "parameter" will be presumed. These terms can be looked up in detail in the \acf{JLS}\cite{jls}. 
+To make the explanation of the concrete validation easier and to focus on the actual challenge, the validation of each rule, the general known terms like "method declaration", "statement" or "parameter" will be presumed. These terms can be looked up in detail in the \ac{JLS}\cite{jls}. 
 
 \section{Evaluation of Rule Validation}
 \label{e:evaluation}
 This section will dive deeper into the validation of each rule. If a working algorithm for finding a rule violation was found, it will be explained.
 \\
 
-In this chapter the word "algorithm" will be used -- even if no source code of flow diagram will be shown. The procedure of the violationg \acf{AST}  structure will be described. This detailed description replaces the need to depict a step by step algorithm. Another advantage of explaining the violations and rule validations with example and \acf{AST} structures is that the result of this evaluation will not depend on a concrete language or framework. 
+In this chapter the word "algorithm" will be used -- even if no source code of flow diagram will be shown. The procedure of the violationg \ac{AST}  structure will be described. This detailed description replaces the need to depict a step by step algorithm. Another advantage of explaining the violations and rule validations with example and \ac{AST} structures is that the result of this evaluation will not depend on a concrete language or framework. 
 \\
 
 Furthermore each section of this chapter will validate the quality of the algorithm and discuss cases in which the algorithm indicates a wrong violation. Such a wrong violation indication can be either a violation indication where there is actually no rule violation, or a missing violation indication. Therefore each chapter will give information about the quality of the rule violation. If similarities of the different rules in terms of the validation algorithm were found it will elucidate those. If no adequate rule validation algorithm was found, occurred problems will be explained.
@@ -628,16 +597,16 @@ In the end, the quality and the accuracy of each rule validation algorithm will 
 
 
 \subsection*{Validation of Rule 1}
-The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line, because in most languages the indentation does not affect the semantic of the source code. Jeff Bay's rule is very easy to imagine for the developer, however, from a tooling aspect, the rule is imprecise: Formatting can be changed by the developer. In his paper Jeff Bay presumes that an according formatter was used to format the source code. Most modern \acf{IDE}s apply a standard formatter to determine the indentations. This tool will analyse the \acf{AST} structure and therefore be independant from formatting. However to validate the \acf{AST}, the tool needs to know which statements usually cause their childnodes to be indented. Therefore the standard indentations of the Eclipse rule will be assumed.
+The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line, because in most languages the indentation does not affect the semantic of the source code. Jeff Bay's rule is very easy to imagine for the developer, however, from a tooling aspect, the rule is imprecise: Formatting can be changed by the developer. In his paper Jeff Bay presumes that an according formatter was used to format the source code. Most modern \ac{IDE}s apply a standard formatter to determine the indentations. This tool will analyse the \ac{AST} structure and therefore be independant from formatting. However to validate the \ac{AST}, the tool needs to know which statements usually cause their childnodes to be indented. Therefore the standard indentations of the Eclipse rule will be assumed.
 \\
 
-As seen in example \ref{listing:rule1example1}, the violation occurs in the \textit{count} method at line 13. Because the for-statement will cause it's child statement to be indented, it is causing the violation of the rule. Obviously all statements within the loop, therefore all childnodes in the \acf{AST} will also violate the rule. The refactored solution, shown in \ref{listing:rule1example2} does not violate the rule. 
+As seen in example \ref{listing:rule1example1}, the violation occurs in the \textit{count} method at line 13. Because the for-statement will cause it's child statement to be indented, it is causing the violation of the rule. Obviously all statements within the loop, therefore all childnodes in the \ac{AST} will also violate the rule. The refactored solution, shown in \ref{listing:rule1example2} does not violate the rule. 
 \\
 
-The rule states that the indentation is on a method level. Therefore this rule has to examine the levels of indentation on method level. Hence, when anlyzing the \acf{AST}, only the subtree of the node \textit{MethodDeclaration} has to be analyzed, all other parts of the \acf{AST} are not relevant for the validation of this rule.
+The rule states that the indentation is on a method level. Therefore this rule has to examine the levels of indentation on method level. Hence, when anlyzing the \ac{AST}, only the subtree of the node \textit{MethodDeclaration} has to be analyzed, all other parts of the \ac{AST} are not relevant for the validation of this rule.
 \\
 
-As defined by the rule, the number of indentation is restricted to one indentation per method maximum. The simplified illustration of an \acf{AST} in \ref{ast:rule1} shows a structure that is not allowed. All nodes named "Non indenting" indicate node which do not have a child node that causes an indention. All nodes named "Indenting" indicate a node which has child node and therefore causes an indention.
+As defined by the rule, the number of indentation is restricted to one indentation per method maximum. The simplified illustration of an \ac{AST} in \ref{ast:rule1} shows a structure that is not allowed. All nodes named "Non indenting" indicate node which do not have a child node that causes an indention. All nodes named "Indenting" indicate a node which has child node and therefore causes an indention.
 \\
 
 In the graphic, all nodes causing it's children to be indent are marked blue. All nodes that are not causing it's children to be indent are marked in black. 
@@ -687,20 +656,20 @@ The maximum height of the method's subtree is two: Each child of the method is a
 Each indenting statement, e.g. each statement node that possibly has subnodes, determines if the pathlength to the next method declaration node is greater than two. If so, this statement is violating the rule. Because only statements which possibly have children change the indentation. Therefore it is enough to check the statements causing an indentation of its' childnotes only.
 \\
 
-All statements that have indented subnodes can be simply read up in the \acf{JLS}. In the following, these nodes are listed. In this report, the classname of the object representation of the Eclipse \acf{JDT} framework is used. The names are similar to the names used in the \acf{JLS}: DoStatement, EnhancedForStatement, ForStatement, IfStatement, SwitchStatement, WhileStatement, and TryStatement. 
+All statements that have indented subnodes can be simply read up in the \ac{JLS}. In the following, these nodes are listed. In this report, the classname of the object representation of the Eclipse \ac{JDT} framework is used. The names are similar to the names used in the \ac{JLS}: DoStatement, EnhancedForStatement, ForStatement, IfStatement, SwitchStatement, WhileStatement, and TryStatement. 
 \\
 
-With this simple \acf{AST} structure analysis, the first rule is validated successfully. During this research, no case in which this validation failed was found. The implementation of the rule validator is validating the rule successfully using the described algorithm.
+With this simple \ac{AST} structure analysis, the first rule is validated successfully. During this research, no case in which this validation failed was found. The implementation of the rule validator is validating the rule successfully using the described algorithm.
 
 \subsection*{Validation of Rule 2}
 \label{evaluation:validationruletwo}
 The valdation of the second rule "don’t use the else keyword" is the simplest rule to validate.
 \\
 
-The rule prohibits the use of the else keyword. According to the \acf{JLS}, the else statement is the body part of the if statement. In the \acf{AST} representation, the if statement has several child nodes. The two mandatory child nodes of the if statement are the condition and the body. The else body is optional. 
+The rule prohibits the use of the else keyword. According to the \ac{JLS}, the else statement is the body part of the if statement. In the \ac{AST} representation, the if statement has several child nodes. The two mandatory child nodes of the if statement are the condition and the body. The else body is optional. 
 \\
 
-The rule prohibits the use of the else keyword. Within the \acf{AST} structure the else keyword is represented by an object, which is a child node of the if statement.
+The rule prohibits the use of the else keyword. Within the \ac{AST} structure the else keyword is represented by an object, which is a child node of the if statement.
 \\
 
 To analyze the structure with an proper algorithm, the if statement's structure has to be examined. If the if statement does have a child node representing the else part of the if statement, a rule violation shall occur.
@@ -710,7 +679,7 @@ The simple structure of an if-statement's subtree is shown in \ref{ast:rule2}. T
 Be aware that the if as well as the else body, might contain further statements which might might be if statements again. These if statements can contain further else keywords. The condition is not a block but a condition and can't contain further if statement.
 \\
 
-Because the visitor pattern, given by the framework, visits each node of the \acf{AST}, the algorithm can be applied on every existing if statement extisting in the soucre code. This works also if nested if statements are given in the source code.
+Because the visitor pattern, given by the framework, visits each node of the \ac{AST}, the algorithm can be applied on every existing if statement extisting in the soucre code. This works also if nested if statements are given in the source code.
 \\
 
 \begin{tikzpicture}
@@ -788,13 +757,13 @@ To clarify the all steps to performed to check rule violation, they are summariz
   \item Analyse all other types. Every variable declaration, including field declarations, variable declarations, return values and parameters, shall not contain any other primitives. 
 \end{enumerate}
 
-As already explained these concrete rules can be easily validated using an \acf{AST}. However the structures are already elucidated in detail -- on an abstract level as well as by using an example. The validation of the \acf{AST} is equal to the three steps and the detailed illustration given.
+As already explained these concrete rules can be easily validated using an \ac{AST}. However the structures are already elucidated in detail -- on an abstract level as well as by using an example. The validation of the \ac{AST} is equal to the three steps and the detailed illustration given.
 \\
 
 As already stated in the beginning of the presented structural analysis, the determination if a given type is wrapped applies for primitives, strings, and collections. 
 \\
 
-It is not only necessary to check if primitives, strings, and collections are used directly. As a result of this research it is also meaningful to treat classes that inherited from one of those type in the same way as the actual types. This is because those types also provide functionality that is not domain specific. This can be conducted easily with the \acf{AST} generated by the Eclipse framework. 
+It is not only necessary to check if primitives, strings, and collections are used directly. As a result of this research it is also meaningful to treat classes that inherited from one of those type in the same way as the actual types. This is because those types also provide functionality that is not domain specific. This can be conducted easily with the \ac{AST} generated by the Eclipse framework. 
 \\
 
 Beside the shown example, the rule validation algorithm is working. During the test of the algorithm no other example than the depicated one was found which results in a wrong validation. This rule was already implemented in the prototype and is working fine so far. However, this is the most difficult rule and the usage of prototype in the future will show if the implemented algorithm is working as successfully as it did within this research. To conclude the rule validation of the rule three and eight it has to be said that a solid solution was found to validate the rule.
@@ -804,7 +773,7 @@ Beside the shown example, the rule validation algorithm is working. During the t
 Rule four, "use only one dot per line", is a more sophisticated rule to validate. The rule is violated, when a line contains more than one dot. 
 \\
 
-To validate the rule, two question occur. The first one is: What is the meaning of "a line" when looking at simple statements like an statement expression concluded with a semicolon and when looking at more complex statements like loops or conditions? This question is similar to the interrogation of code formatting, stated when evaluating rule one. The second question is: What is the exact meaning of "one dot" from the perspective of a tool analyzing an \acf{AST}?
+To validate the rule, two question occur. The first one is: What is the meaning of "a line" when looking at simple statements like an statement expression concluded with a semicolon and when looking at more complex statements like loops or conditions? This question is similar to the interrogation of code formatting, stated when evaluating rule one. The second question is: What is the exact meaning of "one dot" from the perspective of a tool analyzing an \ac{AST}?
 \\
 
 The algorithm that was found during this research consists of two steps. 
@@ -819,11 +788,11 @@ The second step is to analyze the extracted expressions and determine how many d
 The result is the number of dots for each expression. When each expression coming with a dot of the top level statement was extracted and the overall number of dots within these expression was counted, the sum of dots within the top level statement results. 
 \\
 
-As already announced in the introduction of this evaluation chapter, the terms of the \acf{JLS} (which have very similar names like the object representations in the Eclipse \acf{AST} representation) will be used during this evaluation. 
+As already announced in the introduction of this evaluation chapter, the terms of the \ac{JLS} (which have very similar names like the object representations in the Eclipse \ac{AST} representation) will be used during this evaluation. 
 \\
 
 Usually, one line is an expression statement with a semicolon ";". 
-For example: \textit{System.out.println("Object Calisthenics");}. The representation in the \acf{JLS} is ExpressionStatement. As already said, there are also more sophisticated structures like loops and conditions, which at least partly, also represent a line but are not covered by the ExpressionStatement. These are for example the WhileStatement or the TryStatement. The examination of those top level statements is the first step and is described in the following.
+For example: \textit{System.out.println("Object Calisthenics");}. The representation in the \ac{JLS} is ExpressionStatement. As already said, there are also more sophisticated structures like loops and conditions, which at least partly, also represent a line but are not covered by the ExpressionStatement. These are for example the WhileStatement or the TryStatement. The examination of those top level statements is the first step and is described in the following.
 \\
 
 All these different kinds of statements are described by a general Statement class. What follows is a classification of statements in two groups: The first group consists of the number of statements that have further expressions to be analysed ("top level statements") and the second group consists of the number of statements that do not have to examined for more expressions because they do not contain any expressions. 
@@ -840,7 +809,7 @@ The list contains a short explanation why the listed statements are part of the 
   }. The ForInit part is described by the structure \textit{Expression \{ , Expression \}} and the ForUpdate  part is described by the structure \textit{ Expression \{ , Expression \}}. Because the three expression parts in the parentheses are usually written in one line, the total number of those statements shall not exceed one. 
   \item[EnhancedForStatement] The EnhancedForStatement has the following structure: \textit{for ( FormalParameter : Expression ) Statement }. As commonly known the expression in parantheses is in one line. Therefore the expression part has to be analyzed and it has to be checked if it contains more than one dot.
   \item[IfStatement] The IfStatement has the follwing structure: \textit{if ( Expression ) Statement [ else Statement]}. Like in the while- and dostatement, the expression in paranthesis shall be analyzed because it is normally written in its own line. 
-  \item[AssertStatement] The AssertStatement  has the following structure: \textit{assert Expression [ : Expression ] ;}. There are two expressions which both have to be analyzed together. The number of dots in both expressions shall not be greater than one. The first part is called the "first expression of the assert statement"\acf{JLS} and the second part is "called message"\acf{JLS}. Because both parts are usually written in one line, the total number of dots in both expressions shall not exceed one.
+  \item[AssertStatement] The AssertStatement  has the following structure: \textit{assert Expression [ : Expression ] ;}. There are two expressions which both have to be analyzed together. The number of dots in both expressions shall not be greater than one. The first part is called the "first expression of the assert statement"\ac{JLS} and the second part is "called message"\ac{JLS}. Because both parts are usually written in one line, the total number of dots in both expressions shall not exceed one.
   \item[ConstructorInvocation] The ConstructorInvocation has the following structure: \textit{this ( [ Expression \{ , Expression \} ] ) ;}. Because this statement normally is written in a single line, the number of dots in all expressions within the statement shall not exceed one.
   \item[SuperConstructorInvocation] The SuperConstructorInvocation has the follwoing structure: \textit{[ Expression . ][ < Type \{ , Type \} > ] super ( [ Expression \{ , Expression \} ] ) ;}. Because the statement is usually written in one line, all expressions have to be analyzed to have a maximum of one dot in all statements.
   \item[ReturnStatement] The ReturnStatement has the following structure: \textit{return [ Expression ] ;}. The statement is usually written in one line and consists of one expression that has to be analyzed.
@@ -850,13 +819,13 @@ The list contains a short explanation why the listed statements are part of the 
   \item[ThrowStatement] The structure of a ThrowStatement is the following: \textit{throw Expression ;}. This throw expression is usually in one line and shall be analyzed further.
 \end{description}
 
-All other statements do not contain directly expressions. Therefore they do not have to be analyzsed further. Some of them do not contain any expressions and other contain statements that themselves have child statements that are already analyzed. However, because of the \acf{AST} traversal of the Eclipse framework, these substatements will be visited. The statements with no directly related subexpressions are: Block, BreakStatement, ContinueStatement, EmptyStatement, LabeledStatement, TryStatement, TypeDeclarationStatement, and VariableDeclarationStatement.
+All other statements do not contain directly expressions. Therefore they do not have to be analyzsed further. Some of them do not contain any expressions and other contain statements that themselves have child statements that are already analyzed. However, because of the \ac{AST} traversal of the Eclipse framework, these substatements will be visited. The statements with no directly related subexpressions are: Block, BreakStatement, ContinueStatement, EmptyStatement, LabeledStatement, TryStatement, TypeDeclarationStatement, and VariableDeclarationStatement.
 \\
 
 As already explained in the introduction of the evaluation of this rule, the top level statements contain expressions. Within the subtree of these top level statements, only a one expression containing a dot is allowed.
 \\
 
-IN the following, the description of the second step: the count of expressions in the subtree of the top level statement. In the algorithm of the prototype of the Eclipse framework, each type expression has to extract its subexpressions by using different methods. This is because each expression has a different type and some of those types have additional methods to retrieve the expressions of the statement. However, in the abstract representation of the \acf{AST}, the algorithm is much simpler: The number of expressions containing a dot has to be counted. If it exceeds one, a violation will occur. If the rule is violated a dot has to be removed somewhere in the statement. Therefore the statement is used to report a violation.
+In the following, the description of the second step: the count of expressions in the subtree of the top level statement. In the algorithm of the prototype of the Eclipse framework, each type expression has to extract its subexpressions by using different methods. This is because each expression has a different type and some of those types have additional methods to retrieve the expressions of the statement. However, in the abstract representation of the \ac{AST}, the algorithm is much simpler: The number of expressions containing a dot has to be counted. If it exceeds one, a violation will occur. If the rule is violated a dot has to be removed somewhere in the statement. Therefore the statement is used to report a violation.
 \\
 
 The main question of the second step is: which expressions contains a dot? Many expressions contain a dot, however, not all of them are valid. As described in chapter \ref{Description} only method calls and field accesses are adressed by Jeff Bay. Dots in other expressions, for example a dot in a double value like \textit{26.3} are not important for the rule. The following list shows all expression types that contain a dot which is relevant for a proper rule validation. 
@@ -873,7 +842,7 @@ All other type of expression are not relevant for the tool, because they do not 
 \\
 
 The two described steps showed how it is possible to find the number of dots in statements that are usually in one line.
-The advantages of the resulting algorithm lies in the fixted structure of the \acf{AST}: The actual formatting of the code does not matter for the tool. Independently of the code formatting, the \acf{AST} structure analysis always works. It will furthermore find the same violations when having two pieces of source code with a different formatting but describing the same \acf{AST}. This makes the \acf{AST} analysis robust and the developer cannot remove violations by separating two dots with a new line.
+The advantages of the resulting algorithm lies in the fixted structure of the \ac{AST}: The actual formatting of the code does not matter for the tool. Independently of the code formatting, the \ac{AST} structure analysis always works. It will furthermore find the same violations when having two pieces of source code with a different formatting but describing the same \ac{AST}. This makes the \ac{AST} analysis robust and the developer cannot remove violations by separating two dots with a new line.
 \\
 
 The disadvantage of the rule is that the rule is not precicely defined from the view of a tool by Jeff Bay in \cite{oc2008}. Even if the developer can imagine very clearly what the purpose of the rule and the resulting code structure is, there are many possibilities to elude the rule. Take for example the QualifiedName, which was not addressed by Jeff Bay. However, this expression also seperates two different name spaces and can also be included within the rule. This and other assumptions presumed to conduct a proper tool validation were explained in this chapter. 
@@ -920,7 +889,7 @@ Rule six, "keep all entities small", restricts the number of lines in a class.
 One way to create tool support for this rule is to create the lines of code within every given \textit{.java} file. but then the developer could elude the purpose of the rule by putting multiple statements in the same line. Therefore it is more applicable to count the number of statements within each declared class. Hence, the concrete formatting will not be considered. Counting the number of statement of a type is quite easy: The subtree of a type declaration mustn't contain more than a specific number of statements. Every statements that is more than 50 should be reported as a violation. 
 \\
 
-Because the Eclipse framework traverses the \acf{AST} with a greedy algorithm, statements that are later within the document are visited later in the framework. Therefore the prototypical implementation counts the number of statements and reports every statement used after the 50est statement.
+Because the Eclipse framework traverses the \ac{AST} with a greedy algorithm, statements that are later within the document are visited later in the framework. Therefore the prototypical implementation counts the number of statements and reports every statement used after the 50est statement.
 \\
 
 As described, the algorithm counts all statements within a subtree. When doing so the algorithm has to know what kind of statements are reprenting a line. These statement increase the number of "lines". Definetely there are some kind of statements that should not count as a line, because they are not related to the actual size of the entity. Those statements are for example documentation blocks or comments. 
@@ -932,25 +901,25 @@ For the stated reasons, the following types of statements are counted by the alg
 These are all statements found during this report that have a semantic meaning and are actually part of the coding. Furthermore these statements are part of a single line using most standard formatting tools.
 \\
 
-As a result, all important statements are counted. However the algorithm does not reflect the rule precisely. As described in the introduction of this section, the formatting is considered by the rule - the proposed \acf{AST} analysis not considered. The advantages of using the \acf{AST} were already described. However, the original rule is not devaluated in any way: The explanation on number of lines per class is much more conceivable than a number of statements. For tool support counting statements is better because it is more precise and the developer can't trick the tool by changing the formatting.
+As a result, all important statements are counted. However the algorithm does not reflect the rule precisely. As described in the introduction of this section, the formatting is considered by the rule - the proposed \ac{AST} analysis not considered. The advantages of using the \ac{AST} were already described. However, the original rule is not devaluated in any way: The explanation on number of lines per class is much more conceivable than a number of statements. For tool support counting statements is better because it is more precise and the developer can't trick the tool by changing the formatting.
 \\
 
 As shown this approach is not precisely representing the number of lines of class. The number of allowed statement was set to 50 statements, as the rule proposes. Some statements, like loops or conditionals, use a conclusive bracket to indicate the end of a statement: \textit{\}}. These closing curly brackets are usually written in a separate line. But because they are part of the loop or conditional statement, they are not counted as a separate line. To mitigate this problem, a future prototype could enable the user to change the maximum number of statements per class from 50 to a user defined value. Because the count 50 is only a guideline making this parameter adjustable is reasonable. This also provides a solution to the formatting problem, stated in the beginnig: If the developer actually wants to count comments or empty lines,  his intention is to toughten the rule. Then, he can simply reduce the number of allowed statements to toughen the rule compliance of the rule. 
 \\
 
-All in all the outlined approach reflects the rule very well. The advantages of not having imprecise number of lines per class but a clear \acf{AST} structure was used, which results in the proposed solution.
+All in all the outlined approach reflects the rule very well. The advantages of not having imprecise number of lines per class but a clear \ac{AST} structure was used, which results in the proposed solution.
 
 \subsection*{Validation of Rule 7}
 Rule seven, "don’t use any classes with more than two instance variables", is very easy to validate. In the rule Jeff Bay limits the number of instance variables of a class. 
 \\
 
-According to the \acf{JLS}, a TypeDeclaration node in the \acf{AST} has  a child FieldDeclaration among other nodes. The field declaration represents the declaration of a field within a class. 
+According to the \ac{JLS}, a TypeDeclaration node in the \ac{AST} has  a child FieldDeclaration among other nodes. The field declaration represents the declaration of a field within a class. 
 \\
 
 With his rule, Jeff Bay limits this number of instance variables to two per type. When analyzing the rule closer, he doesn't limit the number of field declarations, but limits the number of instance variables. Static field declarations, which are defined using the \textit{static} keyword, are no instance variables. The algorithm to determine the number of field of a class simply counts the number of non-static fields of a type declaration. 
 \\
 
-An \acf{AST} structure that described the definition of a type, could look like the in figure \ref{ast:rule7}. As depicted in the figure, the TypeDeclaration consists of four field declarations. One of them is static, and therefore not relevant for the validation. In the type declaration there are three instance variables. According to the rule two are allowed, the third one is not allowed anymore. This third field declaration, which is too much to satisfy the rule, is marked in red.
+An \ac{AST} structure that described the definition of a type, could look like the in figure \ref{ast:rule7}. As depicted in the figure, the TypeDeclaration consists of four field declarations. One of them is static, and therefore not relevant for the validation. In the type declaration there are three instance variables. According to the rule two are allowed, the third one is not allowed anymore. This third field declaration, which is too much to satisfy the rule, is marked in red.
 \\
 
 \begin{tikzpicture}
@@ -977,7 +946,7 @@ An \acf{AST} structure that described the definition of a type, could look like 
 \end{tikzpicture}
 \label{ast:rule7}
 
-The shown strategy to analyze the \acf{AST} structure, is quite simple and effective. 
+The shown strategy to analyze the \ac{AST} structure, is quite simple and effective. 
 \\
 
 The resulting analysis algorithm for the rule is very effective. The implementation as part of the prototype provided successful validation. During the research, no example was found that this algorithm did not validate successfully. Also the implementation as part of the prototype was successfull. 
@@ -986,7 +955,7 @@ The resulting analysis algorithm for the rule is very effective. The implementat
 Jeff Bays rule nine, "don't use any getters/setters/properties", the use of public fields and the use of getters and setters is restricted. This section will be devided into two parts. The first part will explain the AST structure of public fields and the second part will explain the typical structure of getters and setters in detail.
 \\
 
-Properties are field declarations of classes that are accessable from the outside -- they are not encapsulated and can be changed by every object referencing the object holding the fields. Properties are public fields, indicated by the public modifier. Therefore the algorithm simply has to find all public fields. In the \acf{AST} the modifiers are stored as part of the field declaration. The definition of a field has the following structure: \textit{\{ ExtendedModifier \} Type VariableDeclarationFragment \{ , VariableDeclarationFragment \} ;}. The modifiers are part of the ExtendedModifier. With the Eclipse framework, the modifier can be retrieved and the algorithm simply reports a violation if a field declaration with a public modifier was found. 
+Properties are field declarations of classes that are accessable from the outside -- they are not encapsulated and can be changed by every object referencing the object holding the fields. Properties are public fields, indicated by the public modifier. Therefore the algorithm simply has to find all public fields. In the \ac{AST} the modifiers are stored as part of the field declaration. The definition of a field has the following structure: \textit{\{ ExtendedModifier \} Type VariableDeclarationFragment \{ , VariableDeclarationFragment \} ;}. The modifiers are part of the ExtendedModifier. With the Eclipse framework, the modifier can be retrieved and the algorithm simply reports a violation if a field declaration with a public modifier was found. 
 \\
 
 As just described, the second part is about the identification of getters and setters. Therefore it is necessary to analyze and to define the typical structure of getter and setter methods. Getters and setters are commonly known as mutator methods \cite{wiki}[Mutator method]. The setter is called mutator and the getter is called accessor. Both methods are used to retrieve or modify the field declaration. Often this is called encapsulation, but as Jeff Bay argued, the use of getters and setters is commonly not a good practice. However the discussion of good and bad encapsulation and the disadvanteges of getters and setters in a domain specific object model were already described and evaluated in chapter \ref{d:discussion}.
@@ -998,7 +967,7 @@ Such a typical getter and setter method might look as shown in \ref{listing:rule
 A getter method typically has the following signature: \textit{<modifiers> <fieldtype> <methodname>()}. In most cases, the modifiers are public, not static, and the method name is \textit{get<Fieldname>}. One way to determine if a method is a getter method is to analyze the method's signature. Unfortunately there are several disadvantages when doing so. Firstly there is no guarantee that the developer actually names the getter method as usually: \textit{get<Fieldname>}. He might use a shorter name to represent the field name. Or, if class represents a calculation, he might just name it \textit{retrive} or {result}. 
 \\
 
-Another way to analyze a getter method is to analyze the whole \acf{AST} structure of the method. Then not only the signature but also the whole structure of the method body would be analyzed. Within the body only one statement would be allowed: \textit{return <field>;}. 
+Another way to analyze a getter method is to analyze the whole \ac{AST} structure of the method. Then not only the signature but also the whole structure of the method body would be analyzed. Within the body only one statement would be allowed: \textit{return <field>;}. 
 \\
 
 When just checking on the type of the field, there is no guarantee that the getter method actually returns the field instance. It could also return an arbitraty object with the same type. Therfore a syntactical check using type infomation seems to be not enough to cover the proper validation of the rule. 
@@ -1007,7 +976,7 @@ When just checking on the type of the field, there is no guarantee that the gett
 Furthermore there is no guarantee that the getter method doesn't conduct checks on the field value before returning it. For example an integrity check. Such a modified getter method is shown in listing \ref{listing:rule9example3:speaker}. In this example the if conditional is only a representation for any more sophisticated integrity check. Obviously there are better ways to conduct such an integrity check, but as part of this dogmatic example it represents a more sophisticated check sufficiently. When looking at such a getter method with an integrity check the method would still be a getter method but the body's structure would have changed significantly. It would not be recognized as a getter method when performing a structural check including signature and body.
 \\
 
-The getter method could be distinguished by the signature or by body and signature. Because of the just stated reasons, this way of analyzing an \acf{AST} is not reliable. During this research, a better way was found to determine if a method is a getter method. 
+The getter method could be distinguished by the signature or by body and signature. Because of the just stated reasons, this way of analyzing an \ac{AST} is not reliable. During this research, a better way was found to determine if a method is a getter method. 
 \\
 
 Typically a getter method returns a field value. Because with the Eclipse framework it is also possible to get semantic information. With the help of this semantic information it is possible to determined if a method returns a field value directly. Hence, there might also be other statements within the getter method. 
@@ -1025,7 +994,7 @@ When looking at setter methods the similar problem occurs. As the getter method,
 During this report rules for the semantical structure of setter methods where found. These rules are similar to the just described rule of the semantical structure of getter methods and are described in the following.
 \\
 
-A setter method manipulates field directly. According to \cite{wiki}[Mutator method], a setter method asserts the value of the parameter given to a field of the object. Furthermore a setter method has only one parameter and usually returns the \textit{void} type. The typical structure of a setter method has only one parameter: the value to use for updating the field reference. Like the typical structure of a getter method, integrity checks might be performed on the given parameter before asserting the value. Therefore a typical structure is shown in \ref{listing:rule9example1:speaker}. A setter method having an integrity check is shown in \ref{listing:rule9example3:speaker}. Similar to the \acf{AST} analysis of the getter method, the setter method also uses semantic analysis to reveal direct assertions of fields to parameter.
+A setter method manipulates field directly. According to \cite{wiki}[Mutator method], a setter method asserts the value of the parameter given to a field of the object. Furthermore a setter method has only one parameter and usually returns the \textit{void} type. The typical structure of a setter method has only one parameter: the value to use for updating the field reference. Like the typical structure of a getter method, integrity checks might be performed on the given parameter before asserting the value. Therefore a typical structure is shown in \ref{listing:rule9example1:speaker}. A setter method having an integrity check is shown in \ref{listing:rule9example3:speaker}. Similar to the \ac{AST} analysis of the getter method, the setter method also uses semantic analysis to reveal direct assertions of fields to parameter.
 \\
 
 The algorithm to detect setter methods currently can be bypassed easily by simple adding a second parameter: Then the method would not be recognized as a setter method. When thinking about Jeff Bay's idea behind the rule, it would also be sensible to generally permit changing a field reference with parameter -- except for the constructor, which some also view as a method. 
@@ -1034,7 +1003,7 @@ The algorithm to detect setter methods currently can be bypassed easily by simpl
 This second approach is viable very easily. When removing the check of the number of parameters, the analysis of assertions remains. With this simplified rule, even more violations of the encapsulation principle can be found. 
 \\
 
-All in all the \acf{AST} structure analysis algorithm found during this research detects getters, setters and properties very efficiently. The use of the prototypical implementation of the rule given in this section showed that the concrete validation rules evaluated in for this ninth rule detect properties, getters and setters effectively. 
+All in all the \ac{AST} structure analysis algorithm found during this research detects getters, setters and properties very efficiently. The use of the prototypical implementation of the rule given in this section showed that the concrete validation rules evaluated in for this ninth rule detect properties, getters and setters effectively. 
 
 \section{Result of the Evaluation}
 \label{e:result}
@@ -1058,7 +1027,7 @@ A solution of this problem is that the user tags the class as a wrapper class. T
 Futhermore the presented algorithms could be parameterized. That means that the user could set the exact behavior for the rules in the preferences. For example he could then determine how many indentations should be allowed, how many lines of code are allowed, or how many instance variables a class should use at the maximium.
 \\
 
-Another possiblity is to tag the violations with a "degree". That means that the occurred violations has a degree, for example a number from 1-10. With this number more sophisticated statistical information could be generated during a training session. 
+Another possiblity is to tag the violations with a "degree". That means that the occurred violations has a degree, for example a number from one to ten (1-10). With this number more sophisticated statistical information could be generated during a training session. 
 \\
 
 
@@ -1103,19 +1072,19 @@ Firstly, the requirements of the interviewed software developers that are possib
   \item RQA1: \textit{As a trainee I want to get an indication at the line where the violation occurred.}
   \item RQA2: \textit{As a trainee, I want an overview about the different types of rule violations.}
   \item RQA3: \textit{As a trainee, I want a sensitive rule violation that indicates rule violations aggressively.}
-  \item RQA4: \textit{As a trainee, I want to get an overview about the degree of violation that gives me an overview about my improvements.}
+  \item RQA4: \textit{As a trainee, I want to get an overview about the degree of violation that gives me an indication about my improvements.}
   \item RQA5: \textit{As a trainee, I want statistics about my various training sessions.}
   \item RQA6: \textit{As a trainee, I want an overview in form of a table.}
   \item RQA7: \textit{As a trainee, when I click on a violation in a table, I want to navigate to the code line of the violation.}
   \item RQA8: \textit{As a trainee, when I activate the violation I want to get immediate feedback on the analysis process and the analysis result.}
-  \item RQA9: \textit{As a trainee, I want to the tool to be integrated into my \acf{IDE}.}
+  \item RQA9: \textit{As a trainee, I want to the tool to be integrated into my \ac{IDE}.}
   \item RQA10: \textit{As a trainee, I want a easy-to-use user interface that focuses on the violation firstly and only secondly on other features.}
 \end{itemize}
 
 The persons that were interviewed are
 \begin{itemize}
-  \item Max Leupolz, Business Informatics at EDEKA and Cooperative State University Karlsruhe. 
-  \item Christian Böhlke, Software Developer Intern at complete Genomics, Palo Alto US. 
+  \item Max Leupolz, Business Informatics at EDEKA and Cooperative State University, Karlsruhe, Germany. 
+  \item Christian Böhlke, Cloud Backend Engineer at Complete Genomics Inc, Palo Alto, US
 \end{itemize}
 
 As already described in the introduction, there are also techincal requirements that are not part of the actual rule evaluation. These technical requirements are related to the prototype. They are given by the developer of the prototype that is also a stakeholder of the project. These requirements are shown in the following, second part. 
@@ -1135,13 +1104,13 @@ Some of these requirements can be implemented as part of this report, and others
 The prototype that was developed during this report will cover RQA1, RQA2, RQA3, RQA4, RQA6, RQA7 and RQA9. 
 \\
 
-RQA5 will be partly implemented as part of the prototype. The information of the last training sessions will be recorded by the software. The displaying in a view is not part of the requirements for the first prototype and therefore this requirement cannot be implemented with a user view giving additional statistical information. 
+RQA5 will be partly implemented in the prototype. The information of the last training sessions will be recorded by the software. The displaying in a view is not part of the requirements for the first prototype and therefore this requirement cannot be implemented with a user view giving additional statistical information. 
 \\
 
 RQA8 will be covered by performance tests that record the performance of the violation and indicate where the rule violation is slow. With this information a later prototype could then focus on performance optimization of the validation. An user interface element that indicates if the rule violation is still running or already done will be part of the resulting prototype.
 \\
 
-RQA9 will be converted. The requirement for this research was the implementation of a prototype with using the Eclipse Framework. This \acf{IDE} will be supported. The implementation for other \acf{IDE}s will not be part of this report.
+RQA9 will be converted. The requirement for this research was the implementation of a prototype with using the Eclipse Framework. This \ac{IDE} will be supported. The implementation for other \ac{IDE}s will not be part of this report.
 \\
 
 RQA10 will be covered by an discussion with one of SAPs user interface designers. This ensures a proper user interface Design that exemplifies how rule violations could be displayed clearly.
@@ -1155,7 +1124,7 @@ The general architecture of the prototype is quite simple and will be described 
 The flow of the application is simple and consists of three basic steps. During this report, the prototype is only described with these three simple step to guarantee the overview about the prototype of the application and to make the flow of the data vivid.
 
 \begin{enumerate}
-  \item The \acf{AST} model generation from Java projects in the workspace,
+  \item The \ac{AST} model generation from Java projects in the workspace,
   \item The application of the rule validators that generate violations,
   \item The creation of the object models that are represented in the user interface. 
 \end{enumerate}
@@ -1163,108 +1132,49 @@ The flow of the application is simple and consists of three basic steps. During 
 These three steps will be described in detail in the following. 
 
 \subsection{The generation of the AST model}
-This part will explain the first step of the prototype. In this first step, all open projects within the workspace will be used to model the \acf{AST} model. This step is called the "extraction". All Java files of open projects are used as the base for the model generation. Then the Eclipse Framework is used to generate the  \acf{AST} model. The result is a semantic \acf{AST} that represents the source code of the projects. This semantic \acf{AST}  is the foundation for the rule validators that will be applied in the next step. Whereas a normal b \acf{AST} only gives information about the syntaxt structure, a semantic \acf{AST} allows to gather information about the usage of objects, method calls or the inheritance structure of classes. This is crucial for example for the validation of the wrapper rules, because the validator has to recognize specific classes in order to implement the rule validation as described in chapter \ref{e:evaluation}. As already said, the result of this step is the semantic \acf{AST} model of the projects to be analysed. 
+This part will explain the first step of the prototype. In this first step, all open projects within the workspace will be used to model the \ac{AST} model. This step is called the "extraction". All Java files of open projects are used as the base for the model generation. Then the Eclipse Framework is used to generate the  \ac{AST} model. The result is a semantic \ac{AST} that represents the source code of the projects. This semantic \ac{AST}  is the foundation for the rule validators that will be applied in the next step. Whereas a normal \ac{AST} only gives information about the syntaxt structure, a semantic \ac{AST} allows to gather information about the usage of objects, method calls or the inheritance structure of classes. This is crucial for example for the validation of the wrapper rules, because the validator has to recognize specific classes in order to implement the rule validation as described in chapter \ref{e:evaluation}. As already said, the result of this step is the semantic \ac{AST} model of the projects to be analysed. 
 
 \subsection{The Application of the rule validators}
 \label{astvisitorexample}
-The application of the actual rule validators is the second basic step. The validators use the \acf{AST} model and apply the rule validator to the model. The prototype uses it's own validator for every rule. 
+The application of the actual rule validators is the second basic step. The validators use the \ac{AST} model and apply the rule validator to the model. The prototype uses it's own validator for every rule. 
 \\
 
-In order to get the necessary information of the \acf{AST} tree the validator does not have to handle the whole tree itself. The eclipse framework promotes the use of the visitor pattern. This is described in \cite[p. 366]{gof}. According to \cite{eclipseast}, the Eclipse Framework leverages the visitor pattern to enable the developer to get information about specific elements of the \acf{AST}. The workflow of the framework is shown in \ref{picture:workflowast}. 
+In order to get the necessary information of the \ac{AST} tree the validator does not have to handle the whole tree itself. The eclipse framework promotes the use of the visitor pattern. This is described in \cite[p. 366]{gof}. According to \cite{eclipseast}, the Eclipse Framework leverages the visitor pattern to enable the developer to get information about specific elements of the \ac{AST}. The workflow of the framework is shown in \ref{picture:workflowast}. 
 
-The Java source file generates an \acf{AST} tree and the different nodes of the \acf{AST} can then be edited or selected. The modified structure can then be be converted to a Java source file. Because the prototype only analyses the files and does not modify them, the modification of the \acf{AST} is not necessary. 
+The Java source file generates an \ac{AST} tree and the different nodes of the \ac{AST} can then be edited or selected. The modified structure can then be be converted to a Java source file. Because the prototype only analyses the files and does not modify them, the modification of the \ac{AST} is not necessary. 
 \\
 
-As already said, there is one rule for every validator. One implementation of a validator is described in the next section \ref{p:example}. In this part, the general structure of a validator is shown. A validator class that validates one rule of the Object Calisthenics subclasses \textit{ASTVisitor}, as designated by the framework. It can then override the methods \textit{void endVisit(Type)} and \textit{visit(Type)} to get visited when the element is appearing in the tree. The \textit{Type} of the methods is the object representation of the java source code in the \acf{AST} model. In listing \ref{listing:simplevisitor}, a simple visitor is shown. As depicted it get notified when the element \textit{IfStatement} is appearing in the \acf{AST}. The IfStatement obviously represents an \textit{if(...)} statement in the source code. 
+As already said, there is one rule for every validator. One implementation of a validator is described in the next section \ref{p:example}. In this part, the general structure of a validator is shown. A validator class that validates one rule of the Object Calisthenics subclasses \textit{ASTVisitor}, as designated by the framework. It can then override the methods \textit{void endVisit(Type)} and \textit{visit(Type)} to get visited when the element is appearing in the tree. The \textit{Type} of the methods is the object representation of the java source code in the \ac{AST} model. In listing \ref{listing:simplevisitor}, a simple visitor is shown. As depicted it get notified when the element \textit{IfStatement} is appearing in the \ac{AST}. The IfStatement obviously represents an \textit{if(...)} statement in the source code. 
+\\
 
-\begin{lstlisting}
-class DummyVisitor extends ASTVisitor {
-
-	private ViolationHandler violationHandler;
-
-	public DummyVisitor(ViolationHandler violationHandler) {
-		this.violationHandler = violationHandler;
-	}
-
-	@Override
-	public void endVisit(IfStatement ifStatement) {
-		// Determine if a rule was violated
-	}
-
-
-	@Override
-	public boolean visit(IfStatement ifStatement) {
-		// Determine if a rule was violated
-	}
-}
-
-\end{lstlisting}
-\label{listing:simplevisitor}
-
-The custom visitor that exemplifies the typical structure of an \acf{ASTVisitor} in \ref{listing:simplevisitor} is named \textit{DummyVisitor} and overrides the two visit-methods.
-For every \acf{AST} element like \textit{IfStatement} there are two methods that can be overridden by the custom \textit{ASTVisitor}. 
+The custom visitor that exemplifies the typical structure of an \textit{ASTVisitor} in \ref{listing:simplevisitor} is named \textit{DummyVisitor} and overrides the two visit-methods.
+For every \ac{AST} element like \textit{IfStatement} there are two methods that can be overridden by the custom \textit{ASTVisitor}. 
 \\
 
 In the prototype each custom visitor uses a reference to a \textit{ViolationHandler} to report a violation. The \textit{ViolationHandler} is a simple interface that reports the node to a reporter that is responsible for the type of rule that is analysed. The interface is shown in listing \ref{listing:violationhandlerinterface}. 
-
-\begin{lstlisting}
-public interface ViolationHandler {
-
-	public abstract void printInfo(ASTNode node);
-
-	public abstract void printInfo(ASTNode type, String customMessage);
-}
-\end{lstlisting}
-\label{listing:violationhandlerinterface}
+\\
 
 The concrete implementation of \ref{listing:violationhandlerinterface}, which is specific for each rule, receives the \textit{ASTNode} and the optional message and assembles the main domain object: \textit{Violation} repectively \textit{ViolationImpl}. \textit{ViolationImpl} is shown in \ref{listing:violationdomain}.
-
-\begin{lstlisting}
-public class ViolationImpl implements Violation {
-
-	private Name name;
-	private Message message;
-	private Degree degree;
-	private Position position;
-
-	public ViolationImpl(Name name, Message message, Degree degree,
-			Position position) {
-		super();
-		this.name = name;
-		this.message = message;
-		this.degree = degree;
-		this.position = position;
-	}
-
-	@Override
-	public ViolationDTO createDTO() {
-		return new ViolationDTO(name.createDTO(), message.createDTO(),
-				degree.createDTO(), position.createDTO(),
-				position.getResource());
-	}
-
-}
-\end{lstlisting}
-\label{listing:violationdomain}
+\\
 
 As depicted in \ref{listing:violationdomain}, the main domain object \textit{ViolationImpl} consists of multiple fields. These fields are not explained in detail. The domain objects that are referenced \textit{ViolationImpl} give further information about the location of the violation in the source code, the degree of the violation and further information about of violation. Furthermore the \textit{ViolationImpl} gives is part of a \textit{RunImpl} object which represents one validation iteration. This \textit{RunImpl} is part of the \textit{TrainingImpl}, which represents one object calisthenics training session. These two domain objects that are holding the \textit{ViolationImpl} are not shown in this report, to keep the prototype simple and to focus on the implementation of the actual rule validation. 
 \\
 
 \subsection{The User Interface}
-In the third an last step, \acf{DTO}s are generated from the domain model that was described in the previous section. 
+In the third an last step, \ac{DTO}s are generated from the domain model that was described in the previous section. 
 \\
 
-The \acf{DTO}s follow the idea of Data Transfer Objects \cite{wiki}[Data Transfer Object]. This allows the User Interface to create it's own data models that fit the representation of the User Interface elements. All necessary information for the User Interface is then accessible in the \acf{DTO}s without making the field of the main domain model accessible from outside other classes. The \acf{DTO}s provide full read and write access to all attributes: Every \acf{DTO} has full access of every field by getter- and setter methods. 
+The \ac{DTO}s follow the idea of Data Transfer Objects \cite{wiki}[Data Transfer Object]. This allows the User Interface to create it's own data models that fit the representation of the User Interface elements. All necessary information for the User Interface is then accessible in the \ac{DTO}s without making the field of the main domain model accessible from outside other classes. The \ac{DTO}s provide full read and write access to all attributes: Every \ac{DTO} has full access of every field by getter- and setter methods. 
 \\
 
-The information is the displayed in the User Interface as part of the Eclipse \acf{IDE}. This is shown in picture \ref{picture:violationtable}.
+The information is the displayed in the User Interface as part of the Eclipse \ac{IDE}. This is shown in picture \ref{picture:violationtable}.
 
 \section{Exemplary Rule Validation}
 \label{p:example}
-In this chapter an example for a rule violation is given. For every rule of the Object Calisthenics, there is an own rule violation visitor. The idea of the visitor pattern and the \acf{ASTVisitor} class was already described in \ref{astvisitorexample}. 
+In this chapter an example for a rule violation is given. For every rule of the Object Calisthenics, there is an own rule violation visitor. The idea of the visitor pattern and the \textit{ASTVisitor} class was already described in \ref{astvisitorexample}. 
 \\
 
-In this chapter the rule validator of rule two "Don't Use the Else keyword" is used to exemplify a rule validation. The class is depicted in listing \ref{listing:elsevisitor}.
+In this chapter the rule validator of rule two "don't use the else keyword" is used to exemplify a rule validation. The class is depicted in listing \ref{listing:elsevisitor}.
 \\
 
 As shown in line 30, the rule validator get notified about occurring If-Statements. For every exising If-Statement the rule validator checks if there is an Else-Statement as part of the If-Statement to satisfy the claimed rule validation described in \ref{evaluation:validationruletwo}. 
@@ -1277,21 +1187,21 @@ To separate the different from each other clearly, each rule is part of it's own
 This chapter will summarize and validate the result of the prototype shortly. 
 \\
 
-All in all the resulting prototype is working fine - the given requirements are fullfilled, exept for RQA5. The given requirements RQA3,RQA4 and RQA8 are fullfilled but could still be improved.
+All in all the resulting prototype is working fine - the given requirements are fulfilled, exept for RQA5. The given requirements RQA3,RQA4 and RQA8 are fulfilled but could still be improved.
 \\
 
 RQA3 requires an aggressive rule violation. This aggressive rule violation was covered by integration tests. However, cases that might not yet be tested and validated in a wrong way might still exists in the prototype. These cases can only be covered in the future by user feedback.
 \\
 
-RQA4 requires a detailed information about the degree of the violation. This degree is implemented successfully. The determination of the degree of a violaiton might depend on the individual perspective of the developer. Hence, the degree of a violation might be depend on the expectation and experience of a developer. A different opinion on a rule violation could be given as a feedback in the feedback form of the application.
+RQA4 requires a detailed information about the degree of the violation. This degree is implemented successfully. The determination of the degree of a violation depends on the individual perspective of the developer. Hence, the degree of a violation might be depend on the expectation and experience of a developer. A different opinion on a rule violation could be given as a feedback in the feedback form of the application.
 \\
 
-RQA5 requires statistical information. However during the time of the development of the prototype it was not possible to generate sophisticated statistical information. This requirement couldn't be fullfilled. 
+RQA5 requires statistical information. However during the time of the development of the prototype it was not possible to generate sophisticated statistical information. This requirement couldn't be fulfilled. 
 \\
 
 All in all, even this is a prototype and not a professional implementation of the validation tool it could be used in trainings in which the Object Calisthenics are conducted. 
 
-\section{Conclusion and Future Work}
+\chapter{Conclusion and Future Work}
 \label{p:outlook}
 The desciption and explanation of the patterns and principles of the Object Calisthenics in the first chapter, the evaluation of rule validation in the second chapter and the prototypical implementation in the third chapter were part this paper. 
 \\
@@ -1300,7 +1210,7 @@ In the first part, the patterns an principals were explained successfully and th
 \\
 
 In the second part the actual algorithms and code structure analysis of the rules behind the Object Calisthenics were analyzed and described. In this chapter, the subtleties of realization of the rules where discussed. After the discussion, a concrete algorithm that validates a rule was proposed for every rule. Furthermore, disadvantages of and advantages of the rules were discussed and potential improvements were shown. 
-This chapter also gave an insight about how the structure of the \acf{AST} is analysed with the Eclipse framework that was used to create the prototype.
+This chapter also gave an insight about how the structure of the \ac{AST} is analysed with the Eclipse framework that was used to create the prototype.
 \\
 
 The description of the prototype is the third and last chapter of this paper. In this chapter, the requirements to a validation tool where analyzed, the architecture of the prototype was explained and one rule validation was exemplified. Improvements and usable features were also described shortly in this chapter. 

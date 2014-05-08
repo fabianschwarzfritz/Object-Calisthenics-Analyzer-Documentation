@@ -3,7 +3,7 @@ package reportexamples.rule2.examplenull;
 public class MainNull {
 
 	public void conditionalMethod() {
-		if (conditionIsFullfilled()) {
+		if (conditionIsfulfilled()) {
 			doTrue();
 			veryComplexAndLongOperations();
 			return;
@@ -13,7 +13,7 @@ public class MainNull {
 		return;
 	}
 
-	private boolean conditionIsFullfilled() {
+	private boolean conditionIsfulfilled() {
 		return false;
 	}
 
