@@ -558,7 +558,7 @@ The evaluation of a tool validating the rules will be done on an abstract level.
 For the abstract evaluation in this chapter, the code structure of the protoype will be presumed. Hence, the working environment is explained here. 
 \\
 
-To create a tool validating the rules, the \ac{AST} of the code will be analysed. An \ac{AST} "is a tree representation of the abstract syntactic structure of source code written in a programming language" \cite[Abstract Syntax Tree]{wiki}. Because the protoype built during this research is written in Java, the \ac{AST} structure of the \ac{JLS} will be assumed \footnote{\label{foot:jls}The \ac{JLS} is available online: \url{http://docs.oracle.com/javase/specs/jls/se7/jls7.pdf}} In the following of the report, the acronym "JLS" will be used for "Java Language Specification" and will always refer to the given specification document \ref{foot:jls}. The \ac{AST} that is provided by the Eclipse Framework is a semantic \ac{AST}, which means that it has more information than the syntax structure. It furthermore gives information about the semantic structure of the code. This is for example information about the semantic equality of variables and method calls, the inheritance structure of classes or the usage of object instances within the source code.
+To create a tool validating the rules, the \ac{AST} of the code will be analyzed. An \ac{AST} "is a tree representation of the abstract syntactic structure of source code written in a programming language" \cite[Abstract Syntax Tree]{wiki}. Because the protoype built during this research is written in Java, the \ac{AST} structure of the \ac{JLS} will be assumed \footnote{\label{foot:jls}The \ac{JLS} is available online: \url{http://docs.oracle.com/javase/specs/jls/se7/jls7.pdf}} In the following of the report, the acronym "JLS" will be used for "Java Language Specification" and will always refer to the given specification document \ref{foot:jls}. The \ac{AST} that is provided by the Eclipse Framework is a semantic \ac{AST}, which means that it has more information than the syntax structure. It furthermore gives information about the semantic structure of the code. This is for example information about the semantic equality of variables and method calls, the inheritance structure of classes or the usage of object instances within the source code.
 \\
 
 The Eclipse platform, however provides a framework that already creates an \ac{AST} for given classfiles. The framework is part of the Eclipse \ac{JDT} can be used to access, change and read the elements of a Java source code. In this scenario the read access on code structures is necessary to find possible rule violation. The prototype itself will be written as an Eclipse plugin, and will use the framework. The \ac{JDT} framework is automatically integrated into the Eclipse plugin. 
@@ -597,7 +597,7 @@ In the end, the quality and the accuracy of each rule validation algorithm will 
 
 
 \subsection*{Validation of Rule 1}
-The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line, because in most languages the indentation does not affect the semantic of the source code. Jeff Bay's rule is very easy to imagine for the developer, however, from a tooling aspect, the rule is imprecise: Formatting can be changed by the developer. In his paper Jeff Bay presumes that an according formatter was used to format the source code. Most modern \ac{IDE}s apply a standard formatter to determine the indentations. This tool will analyse the \ac{AST} structure and therefore be independant from formatting. However to validate the \ac{AST}, the tool needs to know which statements usually cause their childnodes to be indented. Therefore the standard indentations of the Eclipse rule will be assumed.
+The first rule "use one level of indentation per method" confines the number of indentations. However, the indentation can be set arbitrary in each line, because in most languages the indentation does not affect the semantic of the source code. Jeff Bay's rule is very easy to imagine for the developer, however, from a tooling aspect, the rule is imprecise: Formatting can be changed by the developer. In his paper Jeff Bay presumes that an according formatter was used to format the source code. Most modern \ac{IDE}s apply a standard formatter to determine the indentations. This tool will analyze the \ac{AST} structure and therefore be independant from formatting. However to validate the \ac{AST}, the tool needs to know which statements usually cause their childnodes to be indented. Therefore the standard indentations of the Eclipse rule will be assumed.
 \\
 
 As seen in example \ref{listing:rule1example1}, the violation occurs in the \textit{count} method at line 13. Because the for-statement will cause it's child statement to be indented, it is causing the violation of the rule. Obviously all statements within the loop, therefore all childnodes in the \ac{AST} will also violate the rule. The refactored solution, shown in \ref{listing:rule1example2} does not violate the rule. 
@@ -716,7 +716,7 @@ Jeff Bay's third rule "wrap all primitives and strings", is about proper encapsu
 During this research, concrete rules that describe how to wrap a type were established. These rules apply for collections, primitives and string in the same way. The strategy to determine violations of rule three and eight is elucidated in this section. The research showed that these two rules are the most difficult rules to validate.
 \\
 
-Firstly, an insight on the typical structure of wrapping a class is given by example. On the basis of this example the typical structure is extracted. The strategy to analyse this structure is then explained. In a second step, examples are given in which the proposed rule violation fails. 
+Firstly, an insight on the typical structure of wrapping a class is given by example. On the basis of this example the typical structure is extracted. The strategy to analyze this structure is then explained. In a second step, examples are given in which the proposed rule violation fails. 
 \\
 
 To prevent confusion, the next section will explain the violation and use primitive as an example. In the end the algorithm and structure analysis used to detect violations with primitives will be demised on the wrapping of strings and collections.
@@ -753,8 +753,8 @@ During research it was also considered to mark this class as a wrapper class. Th
 To clarify the all steps to performed to check rule violation, they are summarized in the following. The reasons for those results were already illustrated and will not be explained again. Instead an overview of the steps is given.
 \begin{enumerate}
   \item Determine all wrapper types within the application. Classes that have fields with primitives are considered to be wrapper classes.
-  \item Analyse all wrapper types. Every type that is not one of the wrapped types, but is part of a wrapper type is not allowed, neither within the signature (parameter or return value) value nor as a variable declaration.
-  \item Analyse all other types. Every variable declaration, including field declarations, variable declarations, return values and parameters, shall not contain any other primitives. 
+  \item Analyze all wrapper types. Every type that is not one of the wrapped types, but is part of a wrapper type is not allowed, neither within the signature (parameter or return value) value nor as a variable declaration.
+  \item Analyze all other types. Every variable declaration, including field declarations, variable declarations, return values and parameters, shall not contain any other primitives. 
 \end{enumerate}
 
 As already explained these concrete rules can be easily validated using an \ac{AST}. However the structures are already elucidated in detail -- on an abstract level as well as by using an example. The validation of the \ac{AST} is equal to the three steps and the detailed illustration given.
@@ -795,7 +795,7 @@ Usually, one line is an expression statement with a semicolon ";".
 For example: \textit{System.out.println("Object Calisthenics");}. The representation in the \ac{JLS} is ExpressionStatement. As already said, there are also more sophisticated structures like loops and conditions, which at least partly, also represent a line but are not covered by the ExpressionStatement. These are for example the WhileStatement or the TryStatement. The examination of those top level statements is the first step and is described in the following.
 \\
 
-All these different kinds of statements are described by a general Statement class. What follows is a classification of statements in two groups: The first group consists of the number of statements that have further expressions to be analysed ("top level statements") and the second group consists of the number of statements that do not have to examined for more expressions because they do not contain any expressions. 
+All these different kinds of statements are described by a general Statement class. What follows is a classification of statements in two groups: The first group consists of the number of statements that have further expressions to be analyzed ("top level statements") and the second group consists of the number of statements that do not have to examined for more expressions because they do not contain any expressions. 
 \\
 
 The list contains a short explanation why the listed statements are part of the group of top level statement.
@@ -1010,24 +1010,24 @@ All in all the \ac{AST} structure analysis algorithm found during this research 
 This short section will summarize the results of the evaluation. Rule one, two, four, six, seven, and nine can be validated properly by tool support. 
 \\
 
-Rule three and rule eight were a bit more difficult: The challenge here was to determine weather a class is a wrapper type or not. The provided solution, to use the type of the first instance variable, if existent, was implemented and provides a working validation. The problematic code structures were shown in the respective chapter.
+Rule three and rule eight were a bit more difficult: The challenge here was to determine whether a class is a wrapper type or not. The provided solution, to use the type of the first instance variable, if existent, was implemented and provides a working validation. The problematic code structures were shown in the respective chapter.
 \\
 
 For rule five, it was possible to validate the naming successfully. This was done by determining a Regular Expression that matches all names that are allowed within the program. However there is still a risk of unappropriate naming: as shown in the evaluation of the rule, it is impossible to check the semantic of natural languages to match the behavior of the code.
 
 \section{Future Work}
 \label{e:future}
-This chapter described the evaulation of the rules and presented an solution how the rules of the Object Calithenics can be validated. However there are still ways to improve the presented algorithms. 
+This chapter describes the evaluation of the rules and presented a solution how the rules of the Object Calisthenics can be validated. However there are still ways to improve the presented algorithms. 
 \\
 
-The problem that makes rule three and eight difficult to validate is that it is hard to determine if a class is intended to be wrapper class or not. Especially when the class is not implemented already but still under development. 
+The problem that makes rule three and eight difficult to validate is that it is hard to determine if a class is intended to be a wrapper class or not. Especially when the class is not implemented already but still under development. 
 A solution of this problem is that the user tags the class as a wrapper class. Then the tool knows with certainty what rule the class will have in the future and can determine if a disallowed type was used. 
 \\
 
 Futhermore the presented algorithms could be parameterized. That means that the user could set the exact behavior for the rules in the preferences. For example he could then determine how many indentations should be allowed, how many lines of code are allowed, or how many instance variables a class should use at the maximium.
 \\
 
-Another possiblity is to tag the violations with a "degree". That means that the occurred violations has a degree, for example a number from one to ten (1-10). With this number more sophisticated statistical information could be generated during a training session. 
+Another possiblity is to tag the violations with a "degree". That means that the occurred violations have a degree, for example a number from one to ten (1-10). With this number more sophisticated statistical information could be generated during a training session. 
 \\
 
 
@@ -1051,34 +1051,34 @@ Another possiblity is to tag the violations with a "degree". That means that the
 
 \chapter{Prototypical Implementation of Tool Support}
 \label{Prototype}
-This chapter describe the prototypical implementation of tool support that was conducted as part of the work of this report. Firstly, chapter \ref{p:requirements} will explain the requirements of the prototype. Afterwards chapter \ref{p:architecture} will elude the basic architecture of the software. In chapter \ref{p:example} an example of an rule validator will be shown shortly. Finally, the resulting prototype will be evaluated shortly. 
+This chapter describes the prototypical implementation of tool support that was conducted as part of the work of this report. Firstly, chapter \ref{p:requirements} will explain the requirements of the prototype. Afterwards chapter \ref{p:architecture} will elude the basic architecture of the software. In chapter \ref{p:example} an example of a rule validator will be shown shortly. Finally, the resulting prototype will be evaluated briefly. 
 
 %=== This chapter describes the implementation of the prototype. 
 \section{Requirements}
 \label{p:requirements}
-The requirements of the prototype will be explained shortly in this chapter. In this chapter only the results of the requirement analysis are shown.
+The requirements of the prototype will be explained in this chapter. In this chapter only the results of the requirement analysis are shown.
 \\
 
-The prototype that was implemented and the professional implementation of the validation tool that validates the Object Calisthenics is only used by developers. This is simply because the tool is only focused on the validation of the Object Calisthenics. The training is only conducted by learning programmers and professional software developers. During this report, an anlysis of the requirements was conducted. Because the analysis of the rule validation itself was already done as part of this report in chapter \ref{Evaluation}, this requirement analysis is not a technical but a end user analysis. 
+The prototype that was implemented and the professional implementation of the validation tool that validates the Object Calisthenics is only used by developers. This is simply because the tool is only focused on the validation of the Object Calisthenics. The training is only conducted by learning programmers and professional software developers. During this report, an anlaysis of the requirements was conducted. Because the analysis of the rule validation itself was already done as part of this report in chapter \ref{Evaluation}, this requirement analysis is not a technical but an end user analysis. 
 
 %Because this is a prototype and there will definitely things that can be improved in the future, the view of the tool developer is also part of the requirement analysis.
 \\
 
-Each analysis was part of an interview. In the following the result of the interviews are shown in the form of user stories. The extracted user stories from the interview are shown in the following.
+Each analysis was part of an interview. In the following the results of the interviews are shown in the form of user stories. The extracted user stories from the interviews are shown in the following.
 \\
 
 Firstly, the requirements of the interviewed software developers that are possible trainees of the software. 
 \begin{itemize}
-  \item RQA1: \textit{As a trainee I want to get an indication at the line where the violation occurred.}
-  \item RQA2: \textit{As a trainee, I want an overview about the different types of rule violations.}
-  \item RQA3: \textit{As a trainee, I want a sensitive rule violation that indicates rule violations aggressively.}
-  \item RQA4: \textit{As a trainee, I want to get an overview about the degree of violation that gives me an indication about my improvements.}
-  \item RQA5: \textit{As a trainee, I want statistics about my various training sessions.}
-  \item RQA6: \textit{As a trainee, I want an overview in form of a table.}
-  \item RQA7: \textit{As a trainee, when I click on a violation in a table, I want to navigate to the code line of the violation.}
-  \item RQA8: \textit{As a trainee, when I activate the violation I want to get immediate feedback on the analysis process and the analysis result.}
-  \item RQA9: \textit{As a trainee, I want to the tool to be integrated into my \ac{IDE}.}
-  \item RQA10: \textit{As a trainee, I want a easy-to-use user interface that focuses on the violation firstly and only secondly on other features.}
+  \item Requirement 1: \textit{As a trainee I want to get an indication at the line where the violation occurred.}
+  \item Requirement 2: \textit{As a trainee, I want an overview about the different types of rule violations.}
+  \item Requirement 3: \textit{As a trainee, I want a sensitive rule violation that indicates rule violations aggressively.}
+  \item Requirement 4: \textit{As a trainee, I want to get an overview about the degree of violation that gives me an indication about my improvements.}
+  \item Requirement 5: \textit{As a trainee, I want statistics about my various training sessions.}
+  \item Requirement 6: \textit{As a trainee, I want an overview in form of a table.}
+  \item Requirement 7: \textit{As a trainee, when I click on a violation in a table, I want to navigate to the code line of the violation.}
+  \item Requirement 8: \textit{As a trainee, when I activate the violation I want to get immediate feedback on the analysis process and the analysis result.}
+  \item Requirement 9: \textit{As a trainee, I want to the tool to be integrated into my \ac{IDE}.}
+  \item Requirement 10: \textit{As a trainee, I want a easy-to-use user interface that focuses on the violation firstly and only secondly on other features.}
 \end{itemize}
 
 The persons that were interviewed are
@@ -1095,25 +1095,25 @@ As already described in the introduction, there are also techincal requirements 
   \item RQB3: \textit{As a developer of the prototype, I want a rule violator that validates the rule as described in chapter \ref{Evaluation}.}
 \end{itemize}
 
-The persons that where are the stakeholders that develop and support the prototype. This is only me, Fabian Schwarz-Fritz. 
+The persons that are the stakeholders that develop and support the prototype. This is only me, Fabian Schwarz-Fritz. 
 \\
 
-Some of these requirements can be implemented as part of this report, and others cannot be implemented during the time of this report but versions that remain for future work. 
+Some of these requirements can be implemented as part of this report, and others cannot be implemented during the time of this report. The requirements that cannot be implemented remain version that might follow in the future.
 \\
 
-The prototype that was developed during this report will cover RQA1, RQA2, RQA3, RQA4, RQA6, RQA7 and RQA9. 
+The prototype that was developed during this report will cover Requirement 1, Requirement 2, Requirement 3, Requirement 4, Requirement 6, Requirement 7 and Requirement 9. 
 \\
 
-RQA5 will be partly implemented in the prototype. The information of the last training sessions will be recorded by the software. The displaying in a view is not part of the requirements for the first prototype and therefore this requirement cannot be implemented with a user view giving additional statistical information. 
+Requirement 5 will be partly implemented in the prototype. The information of the last training sessions will be recorded by the software. The displaying in a view is not part of the requirements for the first prototype and therefore this requirement cannot be implemented with a user view giving additional statistical information. 
 \\
 
-RQA8 will be covered by performance tests that record the performance of the violation and indicate where the rule violation is slow. With this information a later prototype could then focus on performance optimization of the validation. An user interface element that indicates if the rule violation is still running or already done will be part of the resulting prototype.
+Requirement 8 will be covered by performance tests that record the performance of the violation and indicate where the rule violation is slow. With this information a later prototype could then focus on performance optimization of the validation. An user interface element that indicates if the rule violation is still running or already done will be part of the resulting prototype.
 \\
 
-RQA9 will be converted. The requirement for this research was the implementation of a prototype with using the Eclipse Framework. This \ac{IDE} will be supported. The implementation for other \ac{IDE}s will not be part of this report.
+Requirement 9 will be converted. The requirement for this research was the implementation of a prototype with using the Eclipse Framework. This \ac{IDE} will be supported. The implementation for other \ac{IDE}s will not be part of this report.
 \\
 
-RQA10 will be covered by an discussion with one of SAPs user interface designers. This ensures a proper user interface Design that exemplifies how rule violations could be displayed clearly.
+Requirement 10 will be covered by an discussion with one of SAPs user interface designers. This ensures a proper user interface design that exemplifies how rule violations could be displayed clearly.
 \\
 
 \section{Architecture}
@@ -1121,37 +1121,37 @@ RQA10 will be covered by an discussion with one of SAPs user interface designers
 The general architecture of the prototype is quite simple and will be described shortly in this chapter. 
 \\
 
-The flow of the application is simple and consists of three basic steps. During this report, the prototype is only described with these three simple step to guarantee the overview about the prototype of the application and to make the flow of the data vivid.
+The flow of the application is simple and consists of three basic steps. During this report, the prototype is only described with these three simple steps to guarantee the overview on the prototype of the application and to make the flow of the data vivid.
 
 \begin{enumerate}
-  \item The \ac{AST} model generation from Java projects in the workspace,
-  \item The application of the rule validators that generate violations,
+  \item The \ac{AST} model generation from Java projects in the workspace.
+  \item The application of the rule validators that generate violations.
   \item The creation of the object models that are represented in the user interface. 
 \end{enumerate}
 
 These three steps will be described in detail in the following. 
 
-\subsection{The generation of the AST model}
-This part will explain the first step of the prototype. In this first step, all open projects within the workspace will be used to model the \ac{AST} model. This step is called the "extraction". All Java files of open projects are used as the base for the model generation. Then the Eclipse Framework is used to generate the  \ac{AST} model. The result is a semantic \ac{AST} that represents the source code of the projects. This semantic \ac{AST}  is the foundation for the rule validators that will be applied in the next step. Whereas a normal \ac{AST} only gives information about the syntaxt structure, a semantic \ac{AST} allows to gather information about the usage of objects, method calls or the inheritance structure of classes. This is crucial for example for the validation of the wrapper rules, because the validator has to recognize specific classes in order to implement the rule validation as described in chapter \ref{e:evaluation}. As already said, the result of this step is the semantic \ac{AST} model of the projects to be analysed. 
+\subsection{The Generation of the AST Model}
+This part will explain the first step of the prototype. In this first step, all open projects within the workspace will be used to model the \ac{AST} model. This step is called the "extraction". All Java files of open projects are used as the base for the model generation. Then the Eclipse Framework is used to generate the  \ac{AST} model. The result is a semantic \ac{AST} that represents the source code of the projects. This semantic \ac{AST}  is the foundation for the rule validators that will be applied in the next step. Whereas a normal \ac{AST} only gives information about the syntax structure, a semantic \ac{AST} allows to gather information about the usage of objects, method calls or the inheritance structure of classes. This is crucial for example for the validation of the wrapper rules, because the validator has to recognize specific classes in order to implement the rule validation as described in chapter \ref{e:evaluation}. As already said, the result of this step is the semantic \ac{AST} model of the projects to be analyzed. 
 
-\subsection{The Application of the rule validators}
+\subsection{The Application of the Rule Validators}
 \label{astvisitorexample}
 The application of the actual rule validators is the second basic step. The validators use the \ac{AST} model and apply the rule validator to the model. The prototype uses it's own validator for every rule. 
 \\
 
-In order to get the necessary information of the \ac{AST} tree the validator does not have to handle the whole tree itself. The eclipse framework promotes the use of the visitor pattern. This is described in \cite[p. 366]{gof}. According to \cite{eclipseast}, the Eclipse Framework leverages the visitor pattern to enable the developer to get information about specific elements of the \ac{AST}. The workflow of the framework is shown in \ref{picture:workflowast}. 
+In order to get the necessary information of the \ac{AST} tree the validator does not have to handle the whole tree itself. The Eclipse framework promotes the use of the visitor pattern. This is described in \cite[p. 366]{gof}. According to \cite{eclipseast}, the Eclipse Framework leverages the visitor pattern to enable the developer to get information about specific elements of the \ac{AST}. The workflow of the framework is shown in \ref{picture:workflowast}. 
 
-The Java source file generates an \ac{AST} tree and the different nodes of the \ac{AST} can then be edited or selected. The modified structure can then be be converted to a Java source file. Because the prototype only analyses the files and does not modify them, the modification of the \ac{AST} is not necessary. 
+The Java source file generates an \ac{AST} tree and the different nodes of the \ac{AST} can then be edited or selected. The modified structure can then be converted to a Java source file. Because the prototype only analyzes the files and does not modify them, the modification of the \ac{AST} is not necessary. 
 \\
 
-As already said, there is one rule for every validator. One implementation of a validator is described in the next section \ref{p:example}. In this part, the general structure of a validator is shown. A validator class that validates one rule of the Object Calisthenics subclasses \textit{ASTVisitor}, as designated by the framework. It can then override the methods \textit{void endVisit(Type)} and \textit{visit(Type)} to get visited when the element is appearing in the tree. The \textit{Type} of the methods is the object representation of the java source code in the \ac{AST} model. In listing \ref{listing:simplevisitor}, a simple visitor is shown. As depicted it get notified when the element \textit{IfStatement} is appearing in the \ac{AST}. The IfStatement obviously represents an \textit{if(...)} statement in the source code. 
+As already said, there is one rule for every validator. One implementation of a validator is described in the next section \ref{p:example}. In this part, the general structure of a validator is shown. A validator class that validates one rule of the Object Calisthenics subclasses \textit{ASTVisitor}, as designated by the framework. It can then override the methods \textit{void endVisit(Type)} and \textit{visit(Type)} to get visited when the element is appearing in the tree. The \textit{Type} of the methods is the object representation of the java source code in the \ac{AST} model. In listing \ref{listing:simplevisitor}, a simple visitor is shown. As depicted it gets notified when the element \textit{IfStatement} is appearing in the \ac{AST}. The IfStatement obviously represents an \textit{if(...)} statement in the source code. 
 \\
 
 The custom visitor that exemplifies the typical structure of an \textit{ASTVisitor} in \ref{listing:simplevisitor} is named \textit{DummyVisitor} and overrides the two visit-methods.
 For every \ac{AST} element like \textit{IfStatement} there are two methods that can be overridden by the custom \textit{ASTVisitor}. 
 \\
 
-In the prototype each custom visitor uses a reference to a \textit{ViolationHandler} to report a violation. The \textit{ViolationHandler} is a simple interface that reports the node to a reporter that is responsible for the type of rule that is analysed. The interface is shown in listing \ref{listing:violationhandlerinterface}. 
+In the prototype each custom visitor uses a reference to a \textit{ViolationHandler} to report a violation. The \textit{ViolationHandler} is a simple interface that reports the node to a reporter that is responsible for the type of rule that is analyzed. The interface is shown in listing \ref{listing:violationhandlerinterface}. 
 \\
 
 The concrete implementation of \ref{listing:violationhandlerinterface}, which is specific for each rule, receives the \textit{ASTNode} and the optional message and assembles the main domain object: \textit{Violation} repectively \textit{ViolationImpl}. \textit{ViolationImpl} is shown in \ref{listing:violationdomain}.
@@ -1164,10 +1164,10 @@ As depicted in \ref{listing:violationdomain}, the main domain object \textit{Vio
 In the third an last step, \ac{DTO}s are generated from the domain model that was described in the previous section. 
 \\
 
-The \ac{DTO}s follow the idea of Data Transfer Objects \cite{wiki}[Data Transfer Object]. This allows the User Interface to create it's own data models that fit the representation of the User Interface elements. All necessary information for the User Interface is then accessible in the \ac{DTO}s without making the field of the main domain model accessible from outside other classes. The \ac{DTO}s provide full read and write access to all attributes: Every \ac{DTO} has full access of every field by getter- and setter methods. 
+The \ac{DTO}s follow the idea of Data Transfer Objects \cite{wiki}[Data Transfer Object]. This allows the User Interface to create its own data models that fit the representation of the User Interface elements. All necessary information for the User Interface is then accessible in the \ac{DTO}s without making the field of the main domain model accessible from outside other classes. The \ac{DTO}s provide full read and write access to all attributes: Every \ac{DTO} has full access on every field by getter- and setter methods. 
 \\
 
-The information is the displayed in the User Interface as part of the Eclipse \ac{IDE}. This is shown in picture \ref{picture:violationtable}.
+The information is the displayed in the User Interface as part of the Eclipse \ac{IDE}. This is shown in figure \ref{picture:violationtable}.
 
 \section{Exemplary Rule Validation}
 \label{p:example}
@@ -1177,46 +1177,46 @@ In this chapter an example for a rule violation is given. For every rule of the 
 In this chapter the rule validator of rule two "don't use the else keyword" is used to exemplify a rule validation. The class is depicted in listing \ref{listing:elsevisitor}.
 \\
 
-As shown in line 30, the rule validator get notified about occurring If-Statements. For every exising If-Statement the rule validator checks if there is an Else-Statement as part of the If-Statement to satisfy the claimed rule validation described in \ref{evaluation:validationruletwo}. 
+As shown in line 30, the rule validator get notified about occurring If-Statements. For every existing If-Statement the rule validator checks if there is an Else-Statement as part of the If-Statement to satisfy the claimed rule validation described in \ref{evaluation:validationruletwo}. 
 \\
 
-To separate the different from each other clearly, each rule is part of it's own Java-package. 
+To separate the difference from each other clearly, each rule is part of its own Java-package. 
 
 \section{Resulting Prototype}
 \label{p:result}
 This chapter will summarize and validate the result of the prototype shortly. 
 \\
 
-All in all the resulting prototype is working fine - the given requirements are fulfilled, exept for RQA5. The given requirements RQA3,RQA4 and RQA8 are fulfilled but could still be improved.
+All in all the resulting prototype is working fine - the given requirements are fulfilled, except for Requirement 5. The given requirements Requirement 3, Requirement 4 and Requirement 8 are fulfilled but could still be improved.
 \\
 
-RQA3 requires an aggressive rule violation. This aggressive rule violation was covered by integration tests. However, cases that might not yet be tested and validated in a wrong way might still exists in the prototype. These cases can only be covered in the future by user feedback.
+Requirement 3 requires an aggressive rule violation. This aggressive rule violation was covered by integration tests. However, cases that might not yet be tested and validated in a wrong way might still exist in the prototype. These cases can only be covered in the future by user feedback.
 \\
 
-RQA4 requires a detailed information about the degree of the violation. This degree is implemented successfully. The determination of the degree of a violation depends on the individual perspective of the developer. Hence, the degree of a violation might be depend on the expectation and experience of a developer. A different opinion on a rule violation could be given as a feedback in the feedback form of the application.
+Requirement 4 requires a detailed information about the degree of the violation. This degree is implemented successfully. The determination of the degree of a violation depends on the individual perspective of the developer. Hence, the degree of a violation might depend on the expectation and experience of a developer. A different opinion on a rule violation could be given as a feedback in the feedback form of the application.
 \\
 
-RQA5 requires statistical information. However during the time of the development of the prototype it was not possible to generate sophisticated statistical information. This requirement couldn't be fulfilled. 
+Requirement 5 requires statistical information. However during the time of the development of the prototype it was not possible to generate sophisticated statistical information. This requirement couldn't be fulfilled. 
 \\
 
-All in all, even this is a prototype and not a professional implementation of the validation tool it could be used in trainings in which the Object Calisthenics are conducted. 
+All in all, even this is a prototype and not a professional implementation of the validation tool that could be used in trainings in which the Object Calisthenics are conducted. 
 
 \chapter{Conclusion and Future Work}
 \label{p:outlook}
-The desciption and explanation of the patterns and principles of the Object Calisthenics in the first chapter, the evaluation of rule validation in the second chapter and the prototypical implementation in the third chapter were part this paper. 
+The description and explanation of the patterns and principles of the Object Calisthenics in chapter \ref{Description}, the evaluation of rule validation in chapter \ref{Evaluation} and the prototypical implementation in chapter \ref{Prototype} were part of this paper. 
 \\
 
-In the first part, the patterns an principals were explained successfully and the chapter gave a deeper insight into patterns and principals behind the rule of the Object Calisthenics. 
+In chapter \ref{Description}, the patterns and principals were explained successfully and the chapter gave a deeper insight into patterns and principals behind the rules of the Object Calisthenics. 
 \\
 
-In the second part the actual algorithms and code structure analysis of the rules behind the Object Calisthenics were analyzed and described. In this chapter, the subtleties of realization of the rules where discussed. After the discussion, a concrete algorithm that validates a rule was proposed for every rule. Furthermore, disadvantages of and advantages of the rules were discussed and potential improvements were shown. 
-This chapter also gave an insight about how the structure of the \ac{AST} is analysed with the Eclipse framework that was used to create the prototype.
+In chapter \ref{Evaluation} the actual algorithms and code structure analysis of the rules behind the Object Calisthenics were analyzed and described. In this chapter, the subtleties of realization of the rules where discussed. After the discussion, a concrete algorithm that validates a rule was proposed for every rule. Furthermore, advantages and disadvantages of the rules were discussed and potential improvements were shown. 
+This chapter also gave an insight about how the structure of the \ac{AST} is analyzed with the Eclipse framework that was used to create the prototype.
 \\
 
-The description of the prototype is the third and last chapter of this paper. In this chapter, the requirements to a validation tool where analyzed, the architecture of the prototype was explained and one rule validation was exemplified. Improvements and usable features were also described shortly in this chapter. 
+The description of the prototype is eluded in chapter \ref{Prototype}. In this chapter, the requirements to a validation tool where analyzed, the architecture of the prototype was explained and one rule validation was exemplified. Improvements and usable features were also described shortly in this chapter. 
 \\
 
-With the exact description of the rules in chapter two and first advantages and disadvantages of the prototype in chapter three, this paper can be used for a more sophisticated tool. As already described in chapter three, this tool could consist of enhanced statistical information and more views that display information about the rule violations.
+With the exact description of the rules in chapter \ref{Description} and first advantages and disadvantages of the prototype in chapter \ref{Prototype}, this paper can be used for a more sophisticated tool. As already described in chapter \ref{Prototype}, this tool could consist of enhanced statistical information and more views that display information about the rule violations.
 \\
 
-The presented problem, that the developer has to check if his coding style satisfies the rules of the Object Calisthenics, was tackled successfully in the report. The presented rules to validate the Object Calisthenics provide a effective way to check the rules as far as possible. The presented prototype shows that it is possible to implement the shown validation rules as a plugin for the Eclipse frameworks.
+The presented problem, that the developer has to check if his coding style satisfies the rules of the Object Calisthenics, was tackled successfully in the report. The presented rules to validate the Object Calisthenics provide an effective way to check the rules as far as possible. The presented prototype shows that it is possible to implement the shown validation rules as a plugin for the Eclipse frameworks.
