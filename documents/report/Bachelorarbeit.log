@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  8 MAY 2014 11:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2013.11.9)  12 MAY 2014 12:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1062,7 +1062,7 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 \openout2 = `Inhalt/titelseite.aux'.
 
- (./Inhalt/titelseite.tex <Bilder/logo_dhbw.jpg, id=127, 86.9649pt x 44.3256pt>
+ (./Inhalt/titelseite.tex <Bilder/logo_dhbw.jpg, id=123, 86.9649pt x 44.3256pt>
 File: Bilder/logo_dhbw.jpg Graphic file (type jpg)
 
 <use Bilder/logo_dhbw.jpg>
@@ -1155,7 +1155,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 ]
 \openout2 = `Inhalt/abstract.aux'.
 
- (./Inhalt/abstract.tex) [2
+ (./Inhalt/abstract.tex
+(c:/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+
+ []
+
+) [2
 
 
 
@@ -1163,25 +1196,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 \tf@toc=\write6
 \openout6 = `Bachelorarbeit.toc'.
 
- [3
 
+
+Class scrreprt Warning: Usage of deprecated \float@listhead!
+(scrreprt)              You should use the features of package `tocbasic'
+(scrreprt)              instead of \float@listhead.
+(scrreprt)              Definition of \float@listhead my be removed from
+(scrreprt)              `scrreprt' soon, so it should not be used  on input lin
+e 154.
+
+[3
+
+
+] (./Bachelorarbeit.lol [4
 
 ]
-(./Bachelorarbeit.lof
+Package acronym Info: Label `acro:LoD' newly defined as it shall be overridden
+although it is yet undefined on input line 48.
+)
+\tf@lol=\write7
+\openout7 = `Bachelorarbeit.lol'.
+
+ [5] (./Bachelorarbeit.lof
 Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
 although it is yet undefined on input line 9.
 Package acronym Info: Label `acro:AST' newly defined as it shall be overridden
 although it is yet undefined on input line 11.
 )
-\tf@lof=\write7
-\openout7 = `Bachelorarbeit.lof'.
+\tf@lof=\write8
+\openout8 = `Bachelorarbeit.lof'.
 
- [4
+ [6
 
 ]
 \openout2 = `Inhalt/hauptteil.aux'.
 
- (./Inhalt/hauptteil.tex
+
+(./Inhalt/hauptteil.tex
 Chapter 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -1189,11 +1240,6 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              instead of \float@addtolists.
 (scrreprt)              Support for \float@addtolists may be removed from
 (scrreprt)              `scrreprt' soon .
-
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
-
-LaTeX Warning: Citation `bay2008' on page 1 undefined on input line 2.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--5
@@ -1214,12 +1260,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
-
-
-LaTeX Warning: Citation `bay2008' on page 1 undefined on input line 16.
-
-
-LaTeX Warning: Citation `bay2008' on page 1 undefined on input line 16.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
@@ -1352,15 +1392,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 Underfull \hbox (badness 10000) in paragraph at lines 100--102
 
  []
-
-
-LaTeX Warning: Citation `bay2008' on page 6 undefined on input line 103.
-
-(c:/texlive/2013/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-
-LaTeX Warning: Citation `bay2008' on page 6 undefined on input line 107.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--109
@@ -1595,17 +1626,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--280
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--283
-
- []
-
-
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [14]
+Underfull \hbox (badness 10000) in paragraph at lines 281--283
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 284--286
 
  []
@@ -1659,8 +1690,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
-Package acronym Info: Label `acro:LoD' newly defined as it shall be overridden
-although it is yet undefined on input line 327.
 
 Underfull \hbox (badness 10000) in paragraph at lines 327--329
 
@@ -2801,20 +2830,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1219--1221
 ]
 \openout2 = `Inhalt/abkuerzungen.aux'.
 
- (./Inhalt/abkuerzungen.tex)
+ (./Inhalt/abkuerzungen.tex) [49
 
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[49
 
 
 ]
 \openout2 = `Inhalt/appendixListing.aux'.
 
  (./Inhalt/appendixListing.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
@@ -3181,35 +3206,35 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 \openout2 = `Inhalt/appendixImages.aux'.
 
  (./Inhalt/appendixImages.tex
-<Bilder/Rule1Abstraction.png, id=1784, 394.47375pt x 249.18094pt>
+<Bilder/Rule1Abstraction.png, id=1855, 394.47375pt x 249.18094pt>
 File: Bilder/Rule1Abstraction.png Graphic file (type png)
 
 <use Bilder/Rule1Abstraction.png>
 Package pdftex.def Info: Bilder/Rule1Abstraction.png used on input line 4.
 (pdftex.def)             Requested size: 394.47278pt x 249.18031pt.
 
-<Bilder/StrategyPattern.png, id=1786, 256.96pt x 160.6pt>
+<Bilder/StrategyPattern.png, id=1857, 256.96pt x 160.6pt>
 File: Bilder/StrategyPattern.png Graphic file (type png)
 
 <use Bilder/StrategyPattern.png>
 Package pdftex.def Info: Bilder/StrategyPattern.png used on input line 12.
 (pdftex.def)             Requested size: 256.95937pt x 160.5996pt.
 
-<Bilder/StatePattern.png, id=1789, 471.7625pt x 170.6375pt>
+<Bilder/StatePattern.png, id=1860, 471.7625pt x 170.6375pt>
 File: Bilder/StatePattern.png Graphic file (type png)
 
 <use Bilder/StatePattern.png>
 Package pdftex.def Info: Bilder/StatePattern.png used on input line 20.
 (pdftex.def)             Requested size: 341.43306pt x 123.4994pt.
 
-<Bilder/workflowAST.png, id=1792, 542.025pt x 281.05pt>
+<Bilder/workflowAST.png, id=1863, 542.025pt x 281.05pt>
 File: Bilder/workflowAST.png Graphic file (type png)
 
 <use Bilder/workflowAST.png>
 Package pdftex.def Info: Bilder/workflowAST.png used on input line 27.
 (pdftex.def)             Requested size: 341.43306pt x 177.04527pt.
 
-<Bilder/violationtable.png, id=1795, 805.50937pt x 511.9125pt>
+<Bilder/violationtable.png, id=1866, 805.50937pt x 511.9125pt>
 File: Bilder/violationtable.png Graphic file (type png)
 
 <use Bilder/violationtable.png>
@@ -3231,13 +3256,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [69 <./Bilder/workflowAST.png> <./Bilder/violationtable.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 203--205
+Underfull \hbox (badness 10000) in paragraph at lines 205--207
 \T1/ptm/m/n/10.95 URL []$\T1/pcr/l/n/10.95 http : / / www . ccs . neu . edu / r
 esearch / demeter / demeter-[]method /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 \T1/ptm/m/n/10.95 URL []$\T1/pcr/l/n/10.95 http : / / www . eclipse . org / art
 icles / article . php ? file =
  []
@@ -3255,35 +3280,32 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [71]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
  (./Bachelorarbeit.aux (./Inhalt/titelseite.aux) (./Inhalt/erklaerung.aux)
 (./Inhalt/abstract.aux) (./Inhalt/hauptteil.aux) (./Inhalt/abkuerzungen.aux)
 (./Inhalt/appendixListing.aux) (./Inhalt/appendixImages.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 8B7A91F34527B45E17EB315839DA8CD9;1896.
+(rerunfilecheck)             Checksum: 9A0998DDA8AAFA301506C462A2BE0765;1735.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  ) 
 Here is how much of TeX's memory you used:
- 24628 strings out of 493308
- 447143 string characters out of 6141367
- 646293 words of memory out of 5000000
- 26334 multiletter control sequences out of 15000+600000
- 90277 words of font info for 102 fonts, out of 8000000 for 9000
+ 24632 strings out of 493308
+ 447161 string characters out of 6141367
+ 646197 words of memory out of 5000000
+ 26332 multiletter control sequences out of 15000+600000
+ 89170 words of font info for 101 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,12n,76p,1943b,1868s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,76p,1946b,1870s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{lstnumber.5.44.20} has been referenced but does n
 ot exist, replaced by a fixed one
 
@@ -3295,10 +3317,10 @@ texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2013/texmf
 -dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on Bachelorarbeit.pdf (76 pages, 473929 bytes).
+Output written on Bachelorarbeit.pdf (78 pages, 480339 bytes).
 PDF statistics:
- 2088 PDF objects out of 2487 (max. 8388607)
- 1953 compressed objects within 20 object streams
- 1101 named destinations out of 1200 (max. 500000)
- 353 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2160 PDF objects out of 2487 (max. 8388607)
+ 2022 compressed objects within 21 object streams
+ 1105 named destinations out of 1200 (max. 500000)
+ 345 words of extra memory for PDF output out of 10000 (max. 10000000)
 

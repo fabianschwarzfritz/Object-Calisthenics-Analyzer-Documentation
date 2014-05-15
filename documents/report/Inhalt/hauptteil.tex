@@ -822,7 +822,7 @@ The list contains a short explanation why the listed statements are part of the 
 All other statements do not contain directly expressions. Therefore they do not have to be analyzsed further. Some of them do not contain any expressions and other contain statements that themselves have child statements that are already analyzed. However, because of the \ac{AST} traversal of the Eclipse framework, these substatements will be visited. The statements with no directly related subexpressions are: Block, BreakStatement, ContinueStatement, EmptyStatement, LabeledStatement, TryStatement, TypeDeclarationStatement, and VariableDeclarationStatement.
 \\
 
-As already explained in the introduction of the evaluation of this rule, the top level statements contain expressions. Within the subtree of these top level statements, only a one expression containing a dot is allowed.
+As already explained in the introduction of the evaluation of this rule, the top level statements contain expressions. Within the subtree of these top level statements, only one expression containing a dot is allowed.
 \\
 
 In the following, the description of the second step: the count of expressions in the subtree of the top level statement. In the algorithm of the prototype of the Eclipse framework, each type expression has to extract its subexpressions by using different methods. This is because each expression has a different type and some of those types have additional methods to retrieve the expressions of the statement. However, in the abstract representation of the \ac{AST}, the algorithm is much simpler: The number of expressions containing a dot has to be counted. If it exceeds one, a violation will occur. If the rule is violated a dot has to be removed somewhere in the statement. Therefore the statement is used to report a violation.
@@ -838,21 +838,21 @@ The main question of the second step is: which expressions contains a dot? Many 
   \item[QualifiedName] Similar to the type literal, the QualifiedName is also accessing a different area of the application. The structure of the QualifiedName is \textit{Name . SimpleName}. The dot is also describing an access to another namespace, therefore the dot of this expression will also be counted. This encourages the developer to use a simple name directly and to resolve the QualifiedName, for example by using \textit{import}s in Java.
 \end{description}
 
-All other type of expression are not relevant for the tool, because they do not represent the access on a foreign field, the call on a foreign method or the separation of different namespaces.
+All other types of expression are not relevant for the tool, because they do not represent the access on a foreign field, the call on a foreign method or the separation of different namespaces.
 \\
 
 The two described steps showed how it is possible to find the number of dots in statements that are usually in one line.
-The advantages of the resulting algorithm lies in the fixted structure of the \ac{AST}: The actual formatting of the code does not matter for the tool. Independently of the code formatting, the \ac{AST} structure analysis always works. It will furthermore find the same violations when having two pieces of source code with a different formatting but describing the same \ac{AST}. This makes the \ac{AST} analysis robust and the developer cannot remove violations by separating two dots with a new line.
+The advantages of the resulting algorithm lies in the fixed structure of the \ac{AST}: The actual formatting of the code does not matter for the tool. Independently of the code formatting, the \ac{AST} structure analysis always works. It will furthermore find the same violations when having two pieces of source code with a different formatting but describing the same \ac{AST}. This makes the \ac{AST} analysis robust and the developer cannot remove violations by separating two dots with a new line.
 \\
 
-The disadvantage of the rule is that the rule is not precicely defined from the view of a tool by Jeff Bay in \cite{oc2008}. Even if the developer can imagine very clearly what the purpose of the rule and the resulting code structure is, there are many possibilities to elude the rule. Take for example the QualifiedName, which was not addressed by Jeff Bay. However, this expression also seperates two different name spaces and can also be included within the rule. This and other assumptions presumed to conduct a proper tool validation were explained in this chapter. 
+The disadvantage of the rule is that the rule is not precicely defined from the view of a tool by Jeff Bay in \cite{oc2008}. Even if the developer can imagine very clearly what the purpose of the rule and the resulting code structure is, there are many possibilities to elude the rule. Take for example the QualifiedName, which was not addressed by Jeff Bay. However, this expression also separates two different name spaces and can also be included within the rule. This and other assumptions presumed to conduct a proper tool validation were explained in this chapter. 
 \\
 
 All in all the described approach works fine in the prototype. When accepting the assumptions that describe the expressions containing a dot more precicely, the rule validation is very precice and works fine.
 \\
 
 \subsection*{Validation of Rule 5}
-Rule five, "don't abbreviate" is a very simple rule. It's basic statement is about the use of abbreviations.
+Rule five, "don't abbreviate" is a very simple rule. Its basic statement is about the use of abbreviations.
 Jeff Bay permits all abbreviations and states that names should only consist of two words. He furthermore explains why this structure is useful for methods and types. However, this structure is also useful for variable names. Therefore this tool will conduct a analysis on type, method and variable names
 \\
 
@@ -873,7 +873,7 @@ Even with this regular expression restriction, the developer can still use very 
 If a name does not match the given regular expressions, a violation has to occur. The position of the violation is very clear when applying this rule: It simply occurs at the position where the type, method, or variable name appeared. 
 \\
 
-The presented types of violation do not save the developer from using unreasonable naming. Because there is no semantic check, the tool can't validate if the developer uses proper namings. Even worse, there is no check examining if the developer used arbitraty letter, like \textit{AbcdefGhi} for example. Using this name as a type name can't be validate by the tool with the algorithm currently proposed. A dictionary or a similar structure could be used to cover this functionality. But even then, the developer can use existing words that describe the entity or method inapplicably. It is impossible to check if the semantic of natural languages matches the behavior of the corresponding source code.
+The presented types of violation do not save the developer from using unreasonable naming. Because there is no semantic check, the tool can't validate if the developer uses proper namings. Even worse, there is no check examining if the developer used arbitraty letter, like \textit{AbcdefGhi} for example. Using this name as a type name can't be validated by the tool with the algorithm currently proposed. A dictionary or a similar structure could be used to cover this functionality. But even then, the developer can use existing words that describe the entity or method inapplicably. It is impossible to check if the semantic of natural languages matches the behavior of the corresponding source code.
 \\
 
 All in all the concrete restrictions of the tool that represent the rule, model the rule successfully. They continuously remind the developer to use short names and prevent him from using abbreviations. 
@@ -886,13 +886,13 @@ Even though, the regular expression and the restriction of length, match the rul
 Rule six, "keep all entities small", restricts the number of lines in a class.
 \\
 
-One way to create tool support for this rule is to create the lines of code within every given \textit{.java} file. but then the developer could elude the purpose of the rule by putting multiple statements in the same line. Therefore it is more applicable to count the number of statements within each declared class. Hence, the concrete formatting will not be considered. Counting the number of statement of a type is quite easy: The subtree of a type declaration mustn't contain more than a specific number of statements. Every statements that is more than 50 should be reported as a violation. 
+One way to create tool support for this rule is to create the lines of code within every given \textit{.java} file. but then the developer could elude the purpose of the rule by putting multiple statements in the same line. Therefore it is more applicable to count the number of statements within each declared class. Hence, the concrete formatting will not be considered. Counting the number of statement of a type is quite easy: The subtree of a type declaration mustn't contain more than a specific number of statements. Every statement that is more than 50 should be reported as a violation. 
 \\
 
 Because the Eclipse framework traverses the \ac{AST} with a greedy algorithm, statements that are later within the document are visited later in the framework. Therefore the prototypical implementation counts the number of statements and reports every statement used after the 50est statement.
 \\
 
-As described, the algorithm counts all statements within a subtree. When doing so the algorithm has to know what kind of statements are reprenting a line. These statement increase the number of "lines". Definetely there are some kind of statements that should not count as a line, because they are not related to the actual size of the entity. Those statements are for example documentation blocks or comments. 
+As described, the algorithm counts all statements within a subtree. When doing so the algorithm has to know what kind of statements are reprenting a line. These statements increase the number of "lines". Definetely there are some kind of statements that should not count as a line, because they are not related to the actual size of the entity. Those statements are for example documentation blocks or comments. 
 \\
 
 For the stated reasons, the following types of statements are counted by the algorithm: ExpressionStatement, WhileStatement, AssertStatement, ConstructuorInvocation, DoStatement, ForStatement, IfStatement, ReturnStatement, SuperConstructorInvocation, SwitchCase, SwitchStatement, SynchronizedStatement, ThrowStatement, FieldDeclaration, MethodDeclaration, and ImportDeclaration.
@@ -904,7 +904,7 @@ These are all statements found during this report that have a semantic meaning a
 As a result, all important statements are counted. However the algorithm does not reflect the rule precisely. As described in the introduction of this section, the formatting is considered by the rule - the proposed \ac{AST} analysis not considered. The advantages of using the \ac{AST} were already described. However, the original rule is not devaluated in any way: The explanation on number of lines per class is much more conceivable than a number of statements. For tool support counting statements is better because it is more precise and the developer can't trick the tool by changing the formatting.
 \\
 
-As shown this approach is not precisely representing the number of lines of class. The number of allowed statement was set to 50 statements, as the rule proposes. Some statements, like loops or conditionals, use a conclusive bracket to indicate the end of a statement: \textit{\}}. These closing curly brackets are usually written in a separate line. But because they are part of the loop or conditional statement, they are not counted as a separate line. To mitigate this problem, a future prototype could enable the user to change the maximum number of statements per class from 50 to a user defined value. Because the count 50 is only a guideline making this parameter adjustable is reasonable. This also provides a solution to the formatting problem, stated in the beginnig: If the developer actually wants to count comments or empty lines,  his intention is to toughten the rule. Then, he can simply reduce the number of allowed statements to toughen the rule compliance of the rule. 
+As shown this approach is not precisely representing the number of lines of class. The number of allowed statements was set to 50 statements, as the rule proposes. Some statements, like loops or conditionals, use a conclusive bracket to indicate the end of a statement: \textit{\}}. These closing curly brackets are usually written in a separate line. But because they are part of the loop or conditional statement, they are not counted as a separate line. To mitigate this problem, a future prototype could enable the user to change the maximum number of statements per class from 50 to a user defined value. Because the count 50 is only a guideline making this parameter adjustable is reasonable. This also provides a solution to the formatting problem, stated in the beginnig: If the developer actually wants to count comments or empty lines,  his intention is to toughen the rule. Then, he can simply reduce the number of allowed statements to toughen the rule compliance of the rule. 
 \\
 
 All in all the outlined approach reflects the rule very well. The advantages of not having imprecise number of lines per class but a clear \ac{AST} structure was used, which results in the proposed solution.
@@ -919,7 +919,7 @@ According to the \ac{JLS}, a TypeDeclaration node in the \ac{AST} has  a child F
 With his rule, Jeff Bay limits this number of instance variables to two per type. When analyzing the rule closer, he doesn't limit the number of field declarations, but limits the number of instance variables. Static field declarations, which are defined using the \textit{static} keyword, are no instance variables. The algorithm to determine the number of field of a class simply counts the number of non-static fields of a type declaration. 
 \\
 
-An \ac{AST} structure that described the definition of a type, could look like the in figure \ref{ast:rule7}. As depicted in the figure, the TypeDeclaration consists of four field declarations. One of them is static, and therefore not relevant for the validation. In the type declaration there are three instance variables. According to the rule two are allowed, the third one is not allowed anymore. This third field declaration, which is too much to satisfy the rule, is marked in red.
+An \ac{AST} structure that described the definition of a type, could look like figure \ref{ast:rule7}. As depicted in the figure, the TypeDeclaration consists of four field declarations. One of them is static, and therefore not relevant for the validation. In the type declaration there are three instance variables. According to the rule two are allowed, the third one is not allowed anymore. This third field declaration, which is too much to satisfy the rule, is marked in red.
 \\
 
 \begin{tikzpicture}
@@ -979,13 +979,13 @@ Furthermore there is no guarantee that the getter method doesn't conduct checks 
 The getter method could be distinguished by the signature or by body and signature. Because of the just stated reasons, this way of analyzing an \ac{AST} is not reliable. During this research, a better way was found to determine if a method is a getter method. 
 \\
 
-Typically a getter method returns a field value. Because with the Eclipse framework it is also possible to get semantic information. With the help of this semantic information it is possible to determined if a method returns a field value directly. Hence, there might also be other statements within the getter method. 
+Typically a getter method returns a field value. Because with the Eclipse framework it is also possible to get semantic information. With the help of this semantic information it is possible to determine if a method returns a field value directly. Hence, there might also be other statements within the getter method. 
 \\
 
 As just described the getter method might contain arbitratry integrity checks and the name of the method might not match the typical name for a getter method. But a getter method is distinguished by the fact that it directly returns an object's field. The return statement has to be part of a non-static and non-private variable. Furthermore it has to return a field of the object directly. This is the definition of the semantical structure of a getter method, when regarding integrity checks. This approach also ensures that the getter not only returns an object of the same type but actually returns the field. 
 \\
 
-Using a semantical check to analyze getter methods has proven to be a reliable way to discover getter and setter methods.
+Using a semantical check to analyze getter methods has proved to be a reliable way to discover getter and setter methods.
 \\
 
 When looking at setter methods the similar problem occurs. As the getter method, a setter method has a typical structure: \textit{<modifiers> void <methodname>(<fieldtype> <variablename>)}. The methodname is typically \textit{setFieldname}. When conducting a syntactical check on the method's structure, the same problems as the syntactical check of the getter method occur. There is no guarantee for the method name to match the convention, the signature only does not give enough information if the method is actually behaving like a setter method, and lastly doing a full check of signature and body does not regard integrity checks.
@@ -1131,10 +1131,10 @@ The flow of the application is simple and consists of three basic steps. During 
 
 These three steps will be described in detail in the following. 
 
-\subsection{The Generation of the AST Model}
+\subsection*{The Generation of the AST Model}
 This part will explain the first step of the prototype. In this first step, all open projects within the workspace will be used to model the \ac{AST} model. This step is called the "extraction". All Java files of open projects are used as the base for the model generation. Then the Eclipse Framework is used to generate the  \ac{AST} model. The result is a semantic \ac{AST} that represents the source code of the projects. This semantic \ac{AST}  is the foundation for the rule validators that will be applied in the next step. Whereas a normal \ac{AST} only gives information about the syntax structure, a semantic \ac{AST} allows to gather information about the usage of objects, method calls or the inheritance structure of classes. This is crucial for example for the validation of the wrapper rules, because the validator has to recognize specific classes in order to implement the rule validation as described in chapter \ref{e:evaluation}. As already said, the result of this step is the semantic \ac{AST} model of the projects to be analyzed. 
 
-\subsection{The Application of the Rule Validators}
+\subsection*{The Application of the Rule Validators}
 \label{astvisitorexample}
 The application of the actual rule validators is the second basic step. The validators use the \ac{AST} model and apply the rule validator to the model. The prototype uses it's own validator for every rule. 
 \\
@@ -1160,7 +1160,7 @@ The concrete implementation of \ref{listing:violationhandlerinterface}, which is
 As depicted in \ref{listing:violationdomain}, the main domain object \textit{ViolationImpl} consists of multiple fields. These fields are not explained in detail. The domain objects that are referenced \textit{ViolationImpl} give further information about the location of the violation in the source code, the degree of the violation and further information about of violation. Furthermore the \textit{ViolationImpl} gives is part of a \textit{RunImpl} object which represents one validation iteration. This \textit{RunImpl} is part of the \textit{TrainingImpl}, which represents one object calisthenics training session. These two domain objects that are holding the \textit{ViolationImpl} are not shown in this report, to keep the prototype simple and to focus on the implementation of the actual rule validation. 
 \\
 
-\subsection{The User Interface}
+\subsection*{The User Interface}
 In the third an last step, \ac{DTO}s are generated from the domain model that was described in the previous section. 
 \\
 

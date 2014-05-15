@@ -1,7 +1,8 @@
 \select@language {ngerman}
 \select@language {english}
-\contentsline {chapter}{Eidesstattliche Erkl\IeC {\"a}rung}{I}{chapter*.1}
-\contentsline {chapter}{List of Figures}{IV}{chapter*.4}
+\contentsline {chapter}{Assertion Under Oath}{I}{chapter*.1}
+\contentsline {chapter}{Listings}{IV}{chapter*.4}
+\contentsline {chapter}{List of Figures}{VI}{chapter*.6}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Exercising better Object Oriented Programming Skills: a Concept by Jeff Bay}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Tool Support to Validate the Object Calisthenics}{3}{section.1.2}
@@ -19,10 +20,8 @@
 \contentsline {chapter}{\numberline {4}Prototypical Implementation of Tool Support}{43}{chapter.4}
 \contentsline {section}{\numberline {4.1}Requirements}{43}{section.4.1}
 \contentsline {section}{\numberline {4.2}Architecture}{45}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}The generation of the AST model}{45}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}The Application of the rule validators}{45}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}The User Interface}{46}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Exemplary Rule Validation}{46}{section.4.3}
 \contentsline {section}{\numberline {4.4}Resulting Prototype}{47}{section.4.4}
 \contentsline {chapter}{\numberline {5}Conclusion and Future Work}{48}{chapter.5}
-\contentsline {chapter}{Bibliography}{70}{chapter*.59}
+\contentsline {chapter}{Abbreviations}{49}{chapter*.58}
+\contentsline {chapter}{Bibliography}{70}{chapter*.64}
